@@ -1,0 +1,188 @@
+.header
+    &-t 
+        border-bottom: 1px solid $gray
+        padding: 4px 0
+    &-c
+        padding: 18px 0 25px
+        &_left 
+            width: 345px
+        &_right
+            width: calc(100% - 345px)
+            padding-left: 38px
+
+.circle
+    +box(38px)
+    border-radius: 50%
+    margin-right: 16px
+    svg 
+        fill: $white 
+        margin: 0 auto
+        display: block
+        height: 100%
+    .icon-messenger 
+        width: 17.5px
+    .icon-viber, .icon-phone 
+        width: 16px
+    .icon-telegram
+        width: 19px
+    .icon-phone
+        fill: $white
+
+.lang
+    +centerY
+    right: 15px
+    a 
+        font-size: 10px
+        line-height: 13px
+        text-transform: uppercase
+        color: #2C2C2C
+        margin-left: 15px
+        &.active
+            border-bottom: 1px solid #2C2C2C
+
+.logo 
+    svg 
+        +box(27px,34px)
+        margin: 0 5px
+    .fs-30 
+        letter-spacing: 0.02em
+        text-transform: uppercase
+        font-weight: 700
+    .fs-15 
+        letter-spacing: -0.01em
+
+.burger
+    +box(23px,17px)
+    position: relative
+    flex-shrink: 0
+    z-index: 9
+    display: none
+    &-line
+        background-color: $black
+        +centerX
+        +box(23px,3px)
+        transition: all 0.3s ease
+        &-top
+            top: 0
+        &-center
+            top: 50% 
+            transform: translate(-50%,-50%)
+        &-bottom
+            bottom: 0
+    &.active 
+        .burger-line-top
+            top: 50% 
+            transform: translate(-50%,-50%) rotate(225deg)
+        .burger-line-center
+            opacity: 0
+        .burger-line-bottom
+            top: 50% 
+            transform: translate(-50%,-50%) rotate(-225deg)
+
+.dropdowm 
+    +centerX
+    top: 100%
+    background: $white
+    box-shadow: $shadow
+    border-radius: 6px
+    padding: 20px 19px
+    width: max-content
+    opacity: 0
+    pointer-events: none 
+    &.active 
+        opacity: 1
+        pointer-events: auto 
+    li 
+        margin-bottom: 9px
+        &:last-child 
+            margin-bottom: 0
+    .btn 
+        margin-top: 15px
+
+.messenger
+    &-item
+        cursor: pointer
+        padding: 5px 0
+        .icon-phone2
+            +box(22px)
+            margin-right: 15px
+            fill: $black
+        .icon-arrow-down 
+            +box(12px)
+            stroke: $black
+            margin-left: 24px
+
+.search 
+    position: relative
+    width: 50.5%
+    z-index: 1
+    input 
+        font-size: 14px
+        line-height: 18px
+        background: #E8E8E8
+        padding: 13px 19px
+        border: none
+        &:focus, &:valid
+            background: #F4F4F4
+        &:valid ~ .search-drop 
+            display: block
+    &-drop
+        position: absolute
+        top: calc(100% - 4px)
+        left: 0
+        width: 100% 
+        background: #F4F4F4
+        border-radius: 0 0 5px 5px
+        padding: 22px
+        z-index: -1
+        display: none
+        li 
+            margin-bottom: 10px
+            img 
+                margin-right: 30px
+                +box(89px)
+                object-fit: cover
+        &:hover 
+            display: block
+    &-more 
+        display: block 
+        margin: 20px auto 0
+        border-bottom: 1px solid $black
+
+
+.btn-search
+    +centerY 
+    right: 0
+    +box(64px,100%)
+    svg 
+        +box(17px)
+        stroke: $black
+        stroke-width: 2px
+.navbotom
+    li 
+        padding: 0 17px
+    img 
+        +box(22px)
+    svg 
+        +box(21px)
+        fill: $black
+        &.icon-heart 
+            fill: none 
+            stroke: $black
+            stroke-width: 1.5px
+        &.icon-calculate
+            fill: none 
+            stroke: $black
+            stroke-width: 1px
+
+.btn-cart 
+    border-radius: 50%
+    background: #E44937
+    +box(55px)
+    padding-right: 3px
+    padding-top: 4px
+    svg 
+        +box(29px,100%)
+        margin: 0 auto
+        fill: $white
+        display: block

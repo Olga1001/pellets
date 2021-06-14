@@ -1,0 +1,80 @@
+header.header
+    .header-t
+        .container.relative
+            .justify-content-center
+                .align-items-center
+                    .swiper-button-prev.swiper-button
+                        +icon('arrow-left')
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide Купи котел Stropuwa и получи монтаж совершенно БЕСПЛАТНО
+                            .swiper-slide Купи котел Stropuwa и получи монтаж совершенно БЕСПЛАТНО
+                    .swiper-button-next.swiper-button
+                        +icon('arrow-right')
+            .lang.d-flex 
+                a(href='#') ua
+                a.active(href='#') ru    
+    .header-c 
+        .container
+            .d-flex
+                .header-c_left
+                    button.burger(type="button")
+                        span.burger-line.burger-line-top
+                        span.burger-line.burger-line-center
+                        span.burger-line.burger-line-bottom
+                    a.logo(href='#')  
+                        span.fs-30.align-items-baseline Pellets
+                            +icon('logo', 'c-red')
+                            | Home
+                        span.fs-15 твердотопливные котлы №1 в Украине 
+                .header-c_right.flex-center-between
+                    .messenger.relative
+                        .align-items-center.messenger-item
+                            +icon('phone2')
+                            p (044) 384-25-65 
+                            +icon('arrow-down')
+                        .dropdowm 
+                            ul
+                                each val in [{icon: 'messenger', text: 'Messenger', bg: 'bg-blue'}, {icon: 'viber', text: 'Viber', bg: 'bg-purple'},{icon: 'telegram', text: 'Telegram', bg: 'bg-blue2'}]
+                                    li.align-items-center 
+                                        .circle(class=val.bg)
+                                            +icon(val.icon) 
+                                        p.fs-14=val.text
+                                li.align-items-center 
+                                    .circle.bg-red
+                                        +icon('phone') 
+                                    div
+                                        p.fs-17 (044) 384-25-65 
+                                        p.fs-12.c-gray-light пн-пт 09:00 - 19:00 
+                            a.btn(href='#') Консультация
+                    form.search 
+                        input(type='text' placeholder='Поиск товаров' required)
+                        button.btn-search(type='submit')
+                            +icon('magnifier')
+                        .search-drop 
+                            ul 
+                                -var n = 3
+                                -while(n--)
+                                    li 
+                                        a.align-items-center(href='#')
+                                            img(src='img/common/product.png' alt='product image')
+                                            span Котел твердопаливний 
+                                                span.d-block KRONAS EKO  
+                            button.fs-14.search-more(type='button') показать все результаты поиска
+
+
+                    nav.navbotom 
+                        ul.align-items-center 
+                            each val, index in [{name: 'Вхід', icon: 'user'},{name: 'Обране', icon: 'heart'},{name: 'Калькулятор', icon: 'calculate.svg'},{name: 'Подзвонити', icon: 'phone'}]
+                                li(class=index==3 ? 'd-md-none': '')
+                                    a(href='#')
+                                        if (index==2)
+                                            img(src='img/common/'+val.icon)
+                                        else
+                                            +icon(val.icon)
+                                        span.d-md-none=val.name
+                    a.btn-cart(href='#')
+                        +icon('cart')
+                    
+
+                    
