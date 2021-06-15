@@ -1,0 +1,28 @@
+.card
+    &-reverse
+        width: 222px
+        height: 343px
+        position: relative
+        z-index: 1
+        padding: 21px 21px 25px
+        display: grid
+        &:before
+            content: ''
+            position: absolute
+            left: 0 
+            top: 0 
+            +box(100%)
+            background: linear-gradient(90deg, #000000 5.39%, rgba(0, 0, 0, 0) 81.13%)
+            z-index: -1
+        img 
+            object-fit: cover
+            position: absolute
+            left: 0
+            top: 0 
+            +box(100%)
+            z-index: -2
+        .fs-11
+            margin: 20px 0
+            max-width: 152px
+        .btn 
+            margin-top: auto

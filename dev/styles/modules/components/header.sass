@@ -3,12 +3,27 @@
         border-bottom: 1px solid $gray
         padding: 4px 0
     &-c
-        padding: 18px 0 25px
-        &_left 
-            width: 345px
-        &_right
-            width: calc(100% - 345px)
-            padding-left: 38px
+        padding: 15px 0 13px
+    &-b 
+        background: #E44937
+        position: relative
+        z-index: 1
+        .header_right
+            background: #333333
+            position: relative
+            &:after 
+                content: ''
+                position: absolute
+                left: 100% 
+                top: 0
+                +box(100vw,100%)
+                background: #333333
+    &_left 
+        width: 345px
+    &_right
+        width: calc(100% - 345px)
+        padding-left: 35px
+        max-width: 1073px
 
 .circle
     +box(38px)
@@ -89,6 +104,7 @@
     width: max-content
     opacity: 0
     pointer-events: none 
+    z-index: 7
     &.active 
         opacity: 1
         pointer-events: auto 
@@ -110,7 +126,7 @@
         .icon-arrow-down 
             +box(12px)
             stroke: $black
-            margin-left: 24px
+            margin-left: 30px
 
 .search 
     position: relative
@@ -149,7 +165,6 @@
         margin: 20px auto 0
         border-bottom: 1px solid $black
 
-
 .btn-search
     +centerY 
     right: 0
@@ -158,6 +173,7 @@
         +box(17px)
         stroke: $black
         stroke-width: 2px
+
 .navbotom
     li 
         padding: 0 17px
@@ -186,3 +202,80 @@
         margin: 0 auto
         fill: $white
         display: block
+
+
+.catalog
+    position: relative
+    &-h
+        padding: 23px 0
+        .icon-menu 
+            +box(27px)
+            margin-right: 50px
+            fill: $white
+    &-drop  
+        position: absolute
+        left: 0 
+        top: 100%
+        width: 100%
+        background: #F3F3F3
+        padding: 28px 0 22px
+        &:before
+            content: ''
+            background: #F3F3F3
+            position: absolute
+            right: 100% 
+            top: 0
+            +box(100vw,100%)
+        svg 
+            +box(10px)
+            stroke: #C6C6C6
+            stroke-width: 2px
+            margin-left: auto
+    &-m
+        position: absolute
+        left: 100%
+        top: 0
+        background: #FFFFFF
+        padding: 43px 0 31px 75px
+        width: 1073px
+        z-index: -1
+        &_img 
+            margin-right: 20px
+        .col
+            max-width: 307px
+            margin-right: 20px
+        &:after 
+            content: ''
+            position: absolute
+            left: 0
+            top: 34px
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 15.5px 0 15.5px 15.5px
+            border-color: transparent transparent transparent #F3F3F3
+            z-index: 1
+        &:before 
+            content: ''
+            position: absolute
+            left: 0
+            top: 0 
+            +box(100vw,100%)
+            background: #FFFFFF
+            box-shadow: 18px -2px 10px rgba(0, 0, 0, 0.31)
+            z-index: -1
+    &-item
+        margin-bottom: 18px
+        padding-right: 20px
+        cursor: pointer
+        &_img 
+            +box(35px)
+            flex-shrink: 0
+            margin-right: 29px
+    &-list
+        margin-top: 24px
+        list-style-type: disc
+        li 
+            margin-left: 16px
+            margin-bottom: 11px
+            line-height: 18px

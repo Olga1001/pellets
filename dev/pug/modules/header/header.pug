@@ -17,7 +17,7 @@ header.header
     .header-c 
         .container
             .d-flex
-                .header-c_left
+                .header_left
                     button.burger(type="button")
                         span.burger-line.burger-line-top
                         span.burger-line.burger-line-center
@@ -27,7 +27,7 @@ header.header
                             +icon('logo', 'c-red')
                             | Home
                         span.fs-15 твердотопливные котлы №1 в Украине 
-                .header-c_right.flex-center-between
+                .header_right.flex-center-between
                     .messenger.relative
                         .align-items-center.messenger-item
                             +icon('phone2')
@@ -62,7 +62,6 @@ header.header
                                                 span.d-block KRONAS EKO  
                             button.fs-14.search-more(type='button') показать все результаты поиска
 
-
                     nav.navbotom 
                         ul.align-items-center 
                             each val, index in [{name: 'Вхід', icon: 'user'},{name: 'Обране', icon: 'heart'},{name: 'Калькулятор', icon: 'calculate.svg'},{name: 'Подзвонити', icon: 'phone'}]
@@ -75,6 +74,48 @@ header.header
                                         span.d-md-none=val.name
                     a.btn-cart(href='#')
                         +icon('cart')
+    .header-b 
+        .flex-wrap.justify-content-center
+            .header_left 
+                .catalog 
+                    .catalog-h.align-items-center 
+                        +icon('menu')
+                        p.fs-15.fw-medium.c-white.text-up Каталог товаров
+                    ul.catalog-drop 
+                        each val in [{icon: 'catalog1.svg', name: 'Твердотопливные котлы'}, {icon: 'catalog2.svg', name: 'Водонагреватели'}, {icon: 'catalog3.svg', name: 'Печи и камины'}, {icon: 'catalog4.svg', name: 'Котельное оборудование'}, {icon: 'catalog5.svg', name: 'Обслуживание и чистка котлов, каминов и дымоходов'}, {icon: 'catalog6.svg', name: 'Альтернативное отопление'}, {icon: 'catalog7.svg', name: 'Биотопливо'}]
+                            li.align-items-center.catalog-item
+                                img.catalog-item_img(src='img/catalog/'+val.icon alt='catalog')
+                                p.fs-15=val.name
+                                +icon('arrow-right')
+                                .catalog-m.justify-content-between
+                                    .col 
+                                        .align-items-center 
+                                            img.catalog-m_img(src='img/catalog/img1.png' alt='image')
+                                            p.fs-21.fw-medium Бытовые твердотопливные котлы
+                                        ul.catalog-list 
+                                            each val in ['Котлы на дровах и угле традиционного горения','Котлы длительного горения','Пиролизные котлы (газогенераторные)','Пеллетные котлы с автоматической подачей топлива','Твердотопливные теплогенераторы','Котлы на щепе','Котлы-плиты с варочной поверхностью']
+                                                li.fs-14=val
+                                    .col 
+                                        .align-items-center 
+                                            img.catalog-m_img(src='img/catalog/img2.png' alt='image')
+                                            p.fs-21.fw-medium Промышленный твердотопливные котлы
+                                        ul.catalog-list 
+                                            each val in ['Промышленные автоматизированные котлые','Промышленные котлы с ручной загрузкой','Блочно-модульные котельные','Парогенераторы на твердом топливе']
+                                                li.fs-14=val
+
+                                    .card-reverse
+                                        img(src='img/common/product.jpg' alt='product')
+                                        .c-white
+                                            p.fs-20.fw-medium
+                                                span.c-orange.d-block Проектирование
+                                                | промышленных котелен
+                                            p.fs-11.opensans Успей поставить котел, пока не отключили отопление! 
+                                        a.btn.bg-orange(href='#') Подробнее   
+
+
+
+            .header_right
+
                     
 
                     
