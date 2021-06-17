@@ -1,4 +1,35 @@
 .card
+    border: 1px solid #DDDDDD
+    border-left-width: 0
+    padding: 0 19px 19px
+    position: relative
+    &-info 
+        padding-bottom: 20px
+        li 
+            p
+                margin-bottom: 2px
+            &:first-child
+                width: 130px 
+                padding-right: 10px
+    &-title
+        font-size: 16px
+        line-height: 20px
+        margin-bottom: 20px
+    &-top 
+        height: 260px 
+        display: inline-flex
+        width: 100%
+        img 
+            margin: auto 
+    .btn-heart 
+        position: absolute
+        right: 19px
+        top: 17px 
+        z-index: 1
+        +box(17px,15px)
+        svg
+            stroke: #DDDDDD
+            +box(100%)
     &-reverse
         width: 222px
         height: 343px
@@ -26,3 +57,258 @@
             max-width: 152px
         .btn 
             margin-top: auto
+.main
+    &-f
+        overflow: hidden
+        &_block
+            display: flex 
+            align-items: flex-end
+            margin-left: auto
+            padding: 41px 65px
+            width: 100%
+            max-width: 1175px
+            height: 421px 
+            margin-right: -100px
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22)), url('../img/common/depositphotos_28097689_xl-2015.jpg') no-repeat center / cover
+    &-s
+        .container 
+            max-width: 1616px
+            padding: 0
+        &_title 
+            font-size: 24px
+            line-height: 110%
+            padding-top: 20px
+            display: block
+            &.big
+                font-size: 38px
+        &_item
+            width: 33.33%
+            position: relative 
+            height: 375px
+            z-index: 1
+            padding: 10px 35px 35px
+            background: no-repeat center / cover
+            font-weight: 500
+            font-size: 16px
+            color: #FFFFFF
+            display: flex 
+            flex-direction: column 
+            justify-content: space-between
+            img
+                position: absolute
+                left: 0
+                top: 0
+                +box(100%)
+                object-fit: cover
+                z-index: -1
+            &.full-h
+                width: 66.67%
+            &.full-v
+                width: 25%
+                height: 750px
+                padding: 20px 40px 35px
+        
+.rate-area
+    display: flex
+    direction: rtl
+    // float: left
+    border-style: none
+    margin-right: 8px
+
+    &:not(:checked)
+        & > input
+            display: none
+        & > label
+            float: right
+            +box(14px)
+            cursor: pointer
+            margin: 0 2px
+            background: url("../img/common/star-gray.svg") no-repeat center / contain
+    &.checked:not(:checked) > label      
+        background: url("../img/common/star.svg") no-repeat center / contain 
+    & > input:checked ~ label
+        background-image: url("../img/common/star.svg")
+
+.rate-area:not(:checked) > label:hover,
+.rate-area:not(:checked) > label:hover ~ label
+    background-image: url("../img/common/star.svg")
+.rate-area > input:checked + label:hover,
+.rate-area > input:checked + label:hover ~ label,
+.rate-area > input:checked ~ label:hover,
+.rate-area > input:checked ~ label:hover ~ label,
+.rate-area > label:hover ~ input:checked ~ label
+    background-image: url("../img/common/star.svg")
+
+.popular-products 
+    padding: 43px 0 72px
+    .slider
+        margin-top: 35px
+        border-width: 0 0.5px 0 1px 
+        border-style: solid 
+        border-color: transparent #DDDDDD transparent #DDDDDD
+
+.i-comments 
+    margin-left: 10px
+    p 
+        color: #787878
+        margin-left: 4px
+
+.price
+    font-weight: 500
+    font-size: 20px
+    line-height: 20px
+    color: #E44937
+
+.stock-new
+    position: absolute
+    left: 26px
+    top: 17px
+
+.stock, .new
+    border-radius: 50% 
+    +box(50px)
+    font-weight: 500
+    font-size: 15px
+    line-height: 51px
+    color: $white
+    text-align: center 
+    margin-bottom: 4px
+    text-transform: uppercase
+    flex-shrink: 0
+
+.stock
+    background: #E44937
+    &.big
+        background: #FFB321
+        +box(115px)
+        font-size: 39px
+        line-height: 115px
+
+.new
+    background: #FFB321
+
+.status-product
+    font-size: 12px
+    line-height: 25px
+    padding: 0 10px
+    color: $white
+    background: #6C9D15
+    border-radius: 2px
+    position: absolute
+    left: 14px 
+    top: 14px
+
+.services
+    .slider
+        margin: 0 -15px
+        padding: 20px 7.5px
+.card-s
+    margin: 0 7.5px
+    &_top
+        position: relative
+        height: 186px
+        z-index: 1
+        padding: 26px 28px
+        display: flex 
+        flex-direction: column 
+        justify-content: space-between
+        img 
+            +box(100%)
+            object-fit: cover
+            position: absolute
+            top: 0
+            left: 0
+            z-index: -2
+        span 
+            display: block
+        &:before 
+            content: ''
+            +box(230px,100%)
+            position: absolute
+            left: 0
+            top: 0
+            z-index: -1
+            background: linear-gradient(90deg, #000000 5.39%, rgba(0, 0, 0, 0) 81.13%)
+        &-title  
+            font-weight: 500
+            font-size: 22px
+            line-height: 24px
+            color: $white
+            span 
+                color: #FFB321
+        &-span 
+            font-size: 10px
+            line-height: 13px
+            font-family: 'OpenSans', sans-serif
+            color: $white
+            margin-top: 16px
+    &_bottom 
+        padding: 25px 0
+        a 
+            margin-bottom: 20px
+
+.section-articles
+    padding-bottom: 75px
+    .slider 
+        margin: 0 -15px 50px
+        padding: 0 7.5px
+
+.card-article
+    margin: 0 7.5px
+    &_top
+        position: relative
+        +box(100%,186px)
+        img 
+            position: absolute
+            top: 0
+            left: 0
+            +box(100%)
+            object-fit: cover
+    &_bottom 
+        padding: 25px 0
+
+.play
+    background: rgba(228, 73, 55, 0.8)
+    +box(87px)
+    border-radius: 50%
+    +centerXY
+    cursor: pointer
+    &:before
+        content: ''
+        +centerXY
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 13.5px 0 13.5px 11px
+        border-color: transparent transparent transparent $white
+
+.newsletter
+    .container 
+        max-width: 1616px
+        padding: 0
+    .w-100
+        min-height: 506px
+    &-left
+        display: grid
+        padding: 80px 70px 55px
+        height: 100%
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), url('../img/common/img6.jpg') no-repeat center / cover
+        .btn
+            margin-top: auto
+        .fs-23
+            margin-bottom: 35px
+    &-right 
+        background: #E44937 url("../img/common/fire.svg") no-repeat right -105% / auto 557px
+
+.form-subscription
+    display: flex
+    max-width: 560px
+    input
+        background: #E7E7E7
+        border-radius: 5px 0 0 5px
+        border: none
+        padding: 21px 22px
+    .btn.bg-orange
+        width: 165px
+        font-size: 18px
+        padding: 0 31px

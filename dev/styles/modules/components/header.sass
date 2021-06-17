@@ -131,7 +131,7 @@
 .search 
     position: relative
     width: 50.5%
-    z-index: 1
+    z-index: 2
     input 
         font-size: 14px
         line-height: 18px
@@ -190,18 +190,6 @@
             fill: none 
             stroke: $black
             stroke-width: 1px
-
-.btn-cart 
-    border-radius: 50%
-    background: #E44937
-    +box(55px)
-    padding-right: 3px
-    padding-top: 4px
-    svg 
-        +box(29px,100%)
-        margin: 0 auto
-        fill: $white
-        display: block
 
 .catalog
     position: relative
@@ -288,3 +276,14 @@
             margin-left: 16px
             margin-bottom: 11px
             line-height: 18px
+
+.menu
+    display: flex
+    margin-left: auto
+    a
+        text-transform: capitalize
+        color: $white
+        margin-left: 62px
+        transition: all 0.3s ease
+        &:hover 
+            color: #FFB321

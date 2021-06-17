@@ -7,24 +7,236 @@
     <meta name="viewport" content="width=375,initial-scale=1">
     <meta name="keywords" content="">
     <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="container">
-          <div class="header-top"> 
-            <div class="swiper-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">Купи котел Stropuwa и получи монтаж совершенно БЕСПЛАТНО</div>
-                <div class="swiper-slide">Купи котел Stropuwa и получи монтаж совершенно БЕСПЛАТНО</div>
+        <div class="header-t">
+          <div class="container relative">
+            <div class="justify-content-center">
+              <div class="align-items-center">
+                <div class="swiper-button-prev swiper-button">
+                  <svg class="svg-sprite-icon icon-arrow-left">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#arrow-left"></use>
+                  </svg>
+                </div>
+                <div class="slider-one">
+                  <div class="slide">Купи котел Stropuwa и получи монтаж совершенно БЕСПЛАТНО</div>
+                  <div class="slide">Купи котел Stropuwa и получи монтаж совершенно БЕСПЛАТНО</div>
+                </div>
+                <div class="swiper-button-next swiper-button">
+                  <svg class="svg-sprite-icon icon-arrow-right">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
+                  </svg>
+                </div>
               </div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-scrollbar"></div>
+            </div>
+            <div class="lang d-flex"> <a href="#">ua</a><a class="active" href="#">ru    </a></div>
+          </div>
+        </div>
+        <div class="header-c"> 
+          <div class="container">
+            <div class="d-flex">
+              <div class="header_left">
+                <button class="burger" type="button"><span class="burger-line burger-line-top"></span><span class="burger-line burger-line-center"></span><span class="burger-line burger-line-bottom"></span></button><a class="logo" href="#"> <span class="fs-30 align-items-baseline">Pellets
+                    <svg class="svg-sprite-icon icon-logo c-red">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#logo"></use>
+                    </svg>Home</span><span class="fs-15">твердотопливные котлы №1 в Украине </span></a>
+              </div>
+              <div class="header_right flex-center-between">
+                <div class="messenger relative">
+                  <div class="align-items-center messenger-item">
+                    <svg class="svg-sprite-icon icon-phone2">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#phone2"></use>
+                    </svg>
+                    <p>(044) 384-25-65 </p>
+                    <svg class="svg-sprite-icon icon-arrow-down">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                    </svg>
+                  </div>
+                  <div class="dropdowm"> 
+                    <ul>
+                      <li class="align-items-center"> 
+                        <div class="circle bg-blue">
+                          <svg class="svg-sprite-icon icon-messenger">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#messenger"></use>
+                          </svg>
+                        </div>
+                        <p class="fs-14">Messenger</p>
+                      </li>
+                      <li class="align-items-center"> 
+                        <div class="circle bg-purple">
+                          <svg class="svg-sprite-icon icon-viber">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#viber"></use>
+                          </svg>
+                        </div>
+                        <p class="fs-14">Viber</p>
+                      </li>
+                      <li class="align-items-center"> 
+                        <div class="circle bg-blue2">
+                          <svg class="svg-sprite-icon icon-telegram">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#telegram"></use>
+                          </svg>
+                        </div>
+                        <p class="fs-14">Telegram</p>
+                      </li>
+                      <li class="align-items-center"> 
+                        <div class="circle bg-red">
+                          <svg class="svg-sprite-icon icon-phone">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#phone"></use>
+                          </svg>
+                        </div>
+                        <div>
+                          <p class="fs-17">(044) 384-25-65 </p>
+                          <p class="fs-12 c-gray-light">пн-пт 09:00 - 19:00 </p>
+                        </div>
+                      </li>
+                    </ul><a class="btn" href="#">Консультация</a>
+                  </div>
+                </div>
+                <form class="search"> 
+                  <input type="text" placeholder="Поиск товаров" required>
+                  <button class="btn-search" type="submit">
+                    <svg class="svg-sprite-icon icon-magnifier">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#magnifier"></use>
+                    </svg>
+                  </button>
+                  <div class="search-drop"> 
+                    <ul> 
+                      <li> <a class="align-items-center" href="#"><img src="img/common/product.png" alt="product image"><span>Котел твердопаливний <span class="d-block">KRONAS EKO  </span></span></a></li>
+                      <li> <a class="align-items-center" href="#"><img src="img/common/product.png" alt="product image"><span>Котел твердопаливний <span class="d-block">KRONAS EKO  </span></span></a></li>
+                      <li> <a class="align-items-center" href="#"><img src="img/common/product.png" alt="product image"><span>Котел твердопаливний <span class="d-block">KRONAS EKO  </span></span></a></li>
+                    </ul>
+                    <button class="fs-14 search-more" type="button">показать все результаты поиска</button>
+                  </div>
+                </form>
+                <nav class="navbotom"> 
+                  <ul class="align-items-center"> 
+                    <li><a href="#">
+                        <svg class="svg-sprite-icon icon-user">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#user"></use>
+                        </svg><span class="d-md-none">Вхід</span></a></li>
+                    <li><a href="#">
+                        <svg class="svg-sprite-icon icon-heart">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
+                        </svg><span class="d-md-none">Обране</span></a></li>
+                    <li><a href="#"><img src="img/common/calculate.svg"><span class="d-md-none">Калькулятор</span></a></li>
+                    <li class="d-md-none"><a href="#">
+                        <svg class="svg-sprite-icon icon-phone">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#phone"></use>
+                        </svg><span class="d-md-none">Подзвонити</span></a></li>
+                  </ul>
+                </nav><a class="btn-cart" href="#">
+                  <svg class="svg-sprite-icon icon-cart">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#cart"></use>
+                  </svg></a>
+              </div>
             </div>
           </div>
-          <button class="burger" type="button"><span class="burger-line burger-line-top"></span><span class="burger-line burger-line-center"></span><span class="burger-line burger-line-bottom"></span></button>
+        </div>
+        <div class="header-b"> 
+          <div class="flex-wrap justify-content-center">
+            <div class="header_left"> 
+              <div class="catalog"> 
+                <div class="catalog-h align-items-center"> 
+                  <svg class="svg-sprite-icon icon-menu">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#menu"></use>
+                  </svg>
+                  <p class="fs-15 fw-medium c-white text-up">Каталог товаров</p>
+                </div>
+                <ul class="catalog-drop"> 
+                  <li class="align-items-center catalog-item"><img class="catalog-item_img" src="img/catalog/catalog1.svg" alt="catalog">
+                    <p class="fs-15">Твердотопливные котлы</p>
+                    <svg class="svg-sprite-icon icon-arrow-right">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </li>
+                  <li class="align-items-center catalog-item"><img class="catalog-item_img" src="img/catalog/catalog2.svg" alt="catalog">
+                    <p class="fs-15">Водонагреватели</p>
+                    <svg class="svg-sprite-icon icon-arrow-right">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </li>
+                  <li class="align-items-center catalog-item"><img class="catalog-item_img" src="img/catalog/catalog3.svg" alt="catalog">
+                    <p class="fs-15">Печи и камины</p>
+                    <svg class="svg-sprite-icon icon-arrow-right">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </li>
+                  <li class="align-items-center catalog-item"><img class="catalog-item_img" src="img/catalog/catalog4.svg" alt="catalog">
+                    <p class="fs-15">Котельное оборудование</p>
+                    <svg class="svg-sprite-icon icon-arrow-right">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </li>
+                  <li class="align-items-center catalog-item"><img class="catalog-item_img" src="img/catalog/catalog5.svg" alt="catalog">
+                    <p class="fs-15">Обслуживание и чистка котлов, каминов и дымоходов</p>
+                    <svg class="svg-sprite-icon icon-arrow-right">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </li>
+                  <li class="align-items-center catalog-item"><img class="catalog-item_img" src="img/catalog/catalog6.svg" alt="catalog">
+                    <p class="fs-15">Альтернативное отопление</p>
+                    <svg class="svg-sprite-icon icon-arrow-right">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </li>
+                  <li class="align-items-center catalog-item"><img class="catalog-item_img" src="img/catalog/catalog7.svg" alt="catalog">
+                    <p class="fs-15">Биотопливо</p>
+                    <svg class="svg-sprite-icon icon-arrow-right">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </li>
+                </ul>
+                <div class="catalog-m justify-content-between">
+                  <div class="col"> 
+                    <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img1.png" alt="image">
+                      <p class="fs-21 fw-medium">Бытовые твердотопливные котлы</p>
+                    </div>
+                    <ul class="catalog-list"> 
+                      <li class="fs-14">Котлы на дровах и угле традиционного горения</li>
+                      <li class="fs-14">Котлы длительного горения</li>
+                      <li class="fs-14">Пиролизные котлы (газогенераторные)</li>
+                      <li class="fs-14">Пеллетные котлы с автоматической подачей топлива</li>
+                      <li class="fs-14">Твердотопливные теплогенераторы</li>
+                      <li class="fs-14">Котлы на щепе</li>
+                      <li class="fs-14">Котлы-плиты с варочной поверхностью</li>
+                    </ul>
+                  </div>
+                  <div class="col"> 
+                    <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img2.png" alt="image">
+                      <p class="fs-21 fw-medium">Промышленный твердотопливные котлы</p>
+                    </div>
+                    <ul class="catalog-list"> 
+                      <li class="fs-14">Промышленные автоматизированные котлые</li>
+                      <li class="fs-14">Промышленные котлы с ручной загрузкой</li>
+                      <li class="fs-14">Блочно-модульные котельные</li>
+                      <li class="fs-14">Парогенераторы на твердом топливе</li>
+                    </ul>
+                  </div>
+                  <div class="card-reverse"><img src="img/common/product.jpg" alt="product">
+                    <div class="c-white">
+                      <p class="fs-20 fw-medium"><span class="c-orange d-block">Проектирование</span>промышленных котелен</p>
+                      <p class="fs-11 opensans">Успей поставить котел, пока не отключили отопление! </p>
+                    </div><a class="btn bg-orange" href="#">Подробнее   </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav class="header_right align-items-center">
+              <ul class="menu"> 
+                <li><a href="#">Акции %</a></li>
+                <li><a href="#">Производители</a></li>
+                <li><a href="#">Объекты</a></li>
+                <li><a href="#">Монтаж</a></li>
+                <li><a href="#">Клиентам</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </header>
       <div class="wrapper-content">
@@ -33,6 +245,8 @@
         <div class="footer-top"></div>
       </footer>
     </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

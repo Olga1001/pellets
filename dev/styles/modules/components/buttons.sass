@@ -10,3 +10,22 @@
     &.bg-orange
         color: $black
         font-size: 14px
+    &.big 
+        font-size: 16px 
+        line-height: 54px
+
+.btn-cart 
+    border-radius: 50%
+    background: #E44937
+    +box(55px)
+    padding-right: 3px
+    padding-top: 4px
+    svg 
+        +box(29px,100%)
+        margin: 0 auto
+        fill: $white
+        display: block
+    &.small 
+        +box(42px)
+        svg 
+            +box(21px,100%)

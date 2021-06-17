@@ -3,14 +3,11 @@ header.header
         .container.relative
             .justify-content-center
                 .align-items-center
-                    .swiper-button-prev.swiper-button
-                        +icon('arrow-left')
-                    .swiper-container
-                        .swiper-wrapper
-                            .swiper-slide Купи котел Stropuwa и получи монтаж совершенно БЕСПЛАТНО
-                            .swiper-slide Купи котел Stropuwa и получи монтаж совершенно БЕСПЛАТНО
-                    .swiper-button-next.swiper-button
-                        +icon('arrow-right')
+                    .slider-one
+                        .slide 
+                            p Купи котел Stropuwa и получи монтаж совершенно БЕСПЛАТНО
+                        .slide 
+                            p Купи котел Stropuwa и получи монтаж совершенно БЕСПЛАТНО
             .lang.d-flex 
                 a(href='#') ua
                 a.active(href='#') ru    
@@ -111,11 +108,8 @@ header.header
                                     | промышленных котелен
                                 p.fs-11.opensans Успей поставить котел, пока не отключили отопление! 
                             a.btn.bg-orange(href='#') Подробнее   
-
-
-
-            .header_right
-
-                    
-
-                    
+            nav.header_right.align-items-center
+                ul.menu 
+                    each val in ['Акции %','Производители','Объекты','Монтаж','Клиентам','Контакты']
+                        li
+                            a(href='#')=val

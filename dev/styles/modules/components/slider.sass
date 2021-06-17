@@ -1,22 +1,39 @@
-.swiper-container 
+.slider-one
     width: fit-content 
     margin: 0  
     text-align: center
     max-width: 640px
 
-.swiper-wrapper
-    max-width: 540px
-
-.swiper-button
+.slick-arrow
     margin: 0 32px
     +box(12px)
-    position: initial
-
-.swiper-button svg
-    +box(12px)
     stroke: $black
+    background: no-repeat center / contain 
+    &:before 
+        content: none
 
-.swiper-button-prev
-    left: 0
-.swiper-button-next
-    right: 0
+.slick-prev
+    background-image: url('../img/common/arrow-left.svg')
+
+.slick-next
+    background-image: url('../img/common/arrow-right.svg')
+
+.slider-button
+    position: static
+    +box(35px)
+    border-radius: 3px
+    border: 1px solid #E7E7E7
+    background: #FFFFFF
+    margin: 0 0 0 6px
+    display: inline-flex
+    cursor: pointer
+    transition: all 0.3s ease
+    svg 
+        +box(13px)
+        stroke: #9E9E9E
+        margin: auto
+    &:hover 
+        background: #E7E7E7
+
+.slick-track
+    display: flex

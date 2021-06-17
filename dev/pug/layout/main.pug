@@ -13,6 +13,8 @@ html(lang="ru-RU")
 		meta(name="keywords" content="")
 		meta(name="format-detection" content="telephone=no")
 		block link
+		link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+		link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css")
 		link(rel="stylesheet" type='text/css' href="css/styles.css")
 	body
 		.wrapper
@@ -21,4 +23,6 @@ html(lang="ru-RU")
 				block content
 			include ../modules/footer/footer
 		block script
+		script(src="js/jquery.min.js")
+		script(src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
 		script(src="js/main.js")
