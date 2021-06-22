@@ -1,3 +1,45 @@
 footer.footer
     .footer-top
-      
+        .container.flex-wrap.justify-content-between
+            .col.justify-content-between.flex-column
+                a.logo.c-white(href='#')
+                    span.fs-30.align-items-baseline Pellets
+                        +icon('logo', 'c-red')
+                        | Home
+                    span.fs-15 твердотопливные котлы №1 в Украине 
+                .c-white.lh-23
+                    p Киев, ул. Большая Кольцевая, 4, оф.333 <br> ТРЦ "Променада Парк", "Ашан"
+                    p пн-пт 09:00-18:00
+                p.c-white info@pelletshome.com.ua
+            .col.justify-content-between.flex-column 
+                div
+                    a.fs-24.c-white.mb-9.fw-medium(href='tel:380674617749‬') +380 (67) 461-77-49‬
+                    a.fs-24.c-white.mb-9.fw-medium(href='tel:380443842565') +380 (44) 384-25-65
+                ul.socials.d-flex
+                    each val in [{social: 'telegram', color: 'bg-blue2'},{social: 'viber', color: 'bg-purple'},{social: 'messenger', color: 'bg-blue'}]
+                        li 
+                            a(href='#' class=val.color)
+                                +icon(val.social)
+
+                a.btn.bg-orange.big.max-200(href='#') Обратний звонок
+            ul.col.footer-menu
+                each val in ['Твердотопливные котлы','Водонагреватели','Печи и камины','Котельное оборудование','Обслуживание и чистка котлов, каминов и дымоходов','Альтернативное отопление','Биотопливо']
+                    li 
+                        a.c-white(href='#')=val
+            ul.col.footer-menu
+                each val in ['Акции %','Производители','Объекты','Монтаж','Клиентам','Контакты']
+                    li
+                        a.c-white(href='#')=val
+    .footer-bottom
+        .container.flex-wrap.flex-center-between.c-gray-300
+            .col 
+                p.fs-13 © Copyright pelletshome.com.ua © 2011–2021
+            .col.align-items-center 
+                img(src='img/common/visa.png' alt='visa')
+                img(src='img/common/mastercard.png' alt='mastercard')
+            .col
+                a.c-gray-300(href='#') Политика конфиденциальности
+            .col
+                p Design by DDForce
+
+        

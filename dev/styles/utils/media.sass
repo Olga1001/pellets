@@ -3,66 +3,24 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)   
-    // .flex-xl-center-end
-    //     +d-flex(center, flex-end)
-    // .d-xl-block
-    //     display: block
-    // .d-xl-none
-    //     display: none
-    // .flex-xl-center-between
-    //     +d-flex(space-between, center)
-    // .flex-xl-wrap
-    //     flex-wrap: wrap
-    // .mr-xl-16
-    //     margin-right: 16px
-    // .w-xl-50
-    //     width: 50%
-    // .flex-xl-row  
-    //     display: flex 
-    //     flex-direction: row
-    // .align-xl-items-center 
-    //     display: flex 
-    //     align-items: center
-    // .vertical-xl
-    //     width: 1px
-    //     height: 56px
-    //     margin: 0 40px
-    // .mb-xl-135
-    //     margin-bottom: 135px
-    // .pt-xl-80
-    //     padding-top: 80px
-    // .pt-xl-0 
-    //     padding-top: 0
-    // .mb-xl-0
-    //     margin-bottom: 0
+@media only screen and (min-width : 1200px) 
+    .justify-content-xl-center
+        display: flex 
+        justify-content: center
+    .d-xl-none
+        display: none
+    .align-items-xl-center
+        display: flex 
+        align-items: center
+    .d-xl-flex
+        display: flex
+    .d-xl-block 
+        display: block
+    .footer-bottom .col:last-child
+        text-align: right
 @media only screen and (min-width : 992px)     
     .w-lg-50
         width: 50% 
-    // .w-lg-56
-    //     width: 56% 
-    // .w-lg-44 
-    //     width: 44%
-    // .pl-lg-40
-    //     padding-left: 40px 
-    // .pl-lg-20   
-    //     padding-left: 20px  
-    // .pl-lg-14
-    //     padding-left: 14px  
-    // .pr-lg-14 
-    //     padding-right: 14px    
-    // .pr-lg-40
-    //     padding-right: 40px 
-    // .mb-lg-80 
-    //     margin-bottom: 80px
-    // .mb-lg-48
-    //     margin-bottom: 48px
-    // .mb-lg-8
-    //     margin-bottom: 8px
-    // .mb-lg-0
-    //     margin-bottom: 0
-    // .mt-lg-24
-    //     margin-top: 24px
     // .d-lg-block
     //     display: block
     // .d-lg-none 
@@ -80,24 +38,167 @@
     //     display: flex 
     //     flex-direction: row
 @media only screen and (min-width : 768px)
-    // .flex-md-nowrap
-    //     display: flex
-    //     flex-wrap: nowrap
-    // .flex-md-center-between 
-    //     +d-flex(space-between, center) 
-    // .flex-md-center-center
-    //     +d-flex(center, center) 
-    // .d-md-block
-    //     display: block
     .d-md-none
         display: none
+    .w-md-75
+        width: 75%
 
 @media only screen and (min-width : 576px)
     // .flex-sm-center-center
     //     +d-flex(center,center)
+@media only screen and (max-width : 1459px)
+    .header_right
+        padding-left: 0
+    .menu a
+        margin-left: 45px
 @media only screen and (max-width : 1199px)
-    //
+    .btn-cart
+        +box(45px)
+        svg 
+            width: 25px
+    .search
+        width: calc(100% - 75px)
+    .header-c .header_right
+        width: calc(100% - 45px)
+    .header-c .header_left
+        width: 58px
+    .burger 
+        display: block
+    .navbotom 
+        position: fixed 
+        bottom: 0
+        left: 0
+        width: calc(100% - 60px)
+        background: #E0E0E0
+        padding: 15px 0
+        z-index: 999
+        justify-content: space-between
+        opacity: 0
+        pointer-events: none 
+        transition: all 0.3s ease 
+        &.active 
+            opacity: 1
+            pointer-events: auto 
+    .header-b .lang 
+        position: static
+        transform: none
+    .messenger, .catalog-drop 
+        display: none
+    .header-b .header_right
+        opacity: 0
+        pointer-events: none 
+        position: fixed 
+        z-index: 99
+        top: 0
+        left: 0
+        +box(100%)
+        background: #E5E5E5
+        transition: all 0.3s ease 
+        &.active 
+            opacity: 1
+            pointer-events: auto 
+    .menu 
+        width: calc(100% - 60px)
+        background: #FFFFFF
+        margin: 0
+        height: calc(100vh - 76px)
+        padding: 20px 16px
+        ul 
+            display: block
+    .main-f .slider-fade
+        margin: 0 -16px
+        width: calc(100% + 32px)
+        max-width: none
+    .menu ul a
+        font-size: 18px 
+        line-height: 14px 
+        margin: 35px 0 0 0
+    .menu ul a, .menu a
+        color: $black
+    .menu a
+        margin: 0
+    .menu .lang a 
+        margin-left: 17px
+        font-size: 16px
+        line-height: 21px
+    .logo
+        line-height: 1
+        .fs-30  
+            font-size: 16px     
+            line-height: 5px
+        .fs-15 
+            font-size: 8px 
+    .logo svg
+        width: 17px
+        height: 21px
+        margin: 0 3px
+    .main-f_block
+        padding: 66px 15px
+    .main-s_item.full-v
+        padding: 20px 15px 10px
+    .main-s_item
+        padding: 10px
+    .stock.big 
+        width: 80px
+        height: 80px
+        font-size: 21px
+        line-height: 80px
+    .main-s_title.big 
+        font-size: 26px
+    .main-s_title
+        font-size: 18px
+    .main-s_item
+        height: 25.8vw
+        font-size: 14px
+    .main-s_item.full-v
+        height: 51.6vw
+    .newsletter-right
+        padding: 95px 15px
+    .newsletter-left
+        padding: 60px 15px 35px
+    .footer-bottom .col
+        width: 100%
+        min-width: auto
+    .footer-top .col
+        width: 50%
+        margin-bottom: 35px
+    .footer-top
+        padding: 20px 0
 @media only screen and (max-width : 991px)
-    //
+    .footer-menu 
+        display: none
 @media only screen and (max-width : 767px)
-    //
+    .main-f_block
+        height: 378px
+    h1
+        font-size: 36px
+        line-height: 36px
+    .main-s_item.full-v
+        width: 100%
+        height: 100vw
+        padding: 38px 16px
+    .main-s_title.big
+        font-size: 30px 
+        line-height: 33px
+    .main-s_title
+        padding-top: 0
+    .main-s_item
+        padding: 16px
+    .stock.big
+        +box(56px)
+        line-height: 56px
+        font-size: 15px
+    .main-s_item
+        width: 50%
+        height: 50vw
+        font-size: 16px
+    .w-lg-75
+        .main-s_item
+            &:first-child, &:nth-child(3) 
+                order: 1
+            &:nth-child(2), &:nth-child(4), &:nth-child(5)   
+                order: 2
+    .main-s_item.full-h
+        width: 100%
+        height: 80vw
+        padding: 30px 16px

@@ -8,18 +8,15 @@ header.header
                             p Купи котел Stropuwa и получи монтаж совершенно БЕСПЛАТНО
                         .slide 
                             p Купи котел Stropuwa и получи монтаж совершенно БЕСПЛАТНО
-            .lang.d-flex 
+            .lang.d-xl-flex.d-none 
                 a(href='#') ua
                 a.active(href='#') ru    
     .header-c 
         .container
-            .d-flex
+            .align-items-center
                 .header_left
                     button.burger(type="button")
-                        span.burger-line.burger-line-top
-                        span.burger-line.burger-line-center
-                        span.burger-line.burger-line-bottom
-                    a.logo(href='#')  
+                    a.logo.d-xl-block.d-none(href='#')  
                         span.fs-30.align-items-baseline Pellets
                             +icon('logo', 'c-red')
                             | Home
@@ -59,20 +56,20 @@ header.header
                                                 span.d-block KRONAS EKO  
                             button.fs-14.search-more(type='button') показать все результаты поиска
 
-                    nav.navbotom 
-                        ul.align-items-center 
-                            each val, index in [{name: 'Вхід', icon: 'user'},{name: 'Обране', icon: 'heart'},{name: 'Калькулятор', icon: 'calculate.svg'},{name: 'Подзвонити', icon: 'phone'}]
-                                li(class=index==3 ? 'd-md-none': '')
+                    nav.navbotom.stopPropagation 
+                        ul.flex-center-around 
+                            each val, index in [{name: 'Вхід', icon: 'user'},{name: 'Обране', icon: 'heart'},{name: 'Калькулятор', icon: 'calculate.svg'},{name: 'Подзвонити', icon: 'phone2'}]
+                                li(class=index==3 ? 'd-xl-none': '')
                                     a(href='#')
                                         if (index==2)
                                             img(src='img/common/'+val.icon)
                                         else
                                             +icon(val.icon)
-                                        span.d-md-none=val.name
+                                        span.d-xl-none.d-block=val.name
                     a.btn-cart(href='#')
                         +icon('cart')
     .header-b 
-        .flex-wrap.justify-content-center
+        .justify-content-xl-center
             .header_left 
                 .catalog 
                     .catalog-h.align-items-center 
@@ -108,8 +105,19 @@ header.header
                                     | промышленных котелен
                                 p.fs-11.opensans Успей поставить котел, пока не отключили отопление! 
                             a.btn.bg-orange(href='#') Подробнее   
-            nav.header_right.align-items-center
-                ul.menu 
-                    each val in ['Акции %','Производители','Объекты','Монтаж','Клиентам','Контакты']
-                        li
-                            a(href='#')=val
+            nav.header_right.align-items-xl-center
+                .menu.stopPropagation
+                    .d-xl-none.flex-center-between
+                        a.logo(href='#')  
+                            span.fs-30.align-items-baseline Pellets
+                                +icon('logo', 'c-red')
+                                | Home
+                            span.fs-15 твердотопливные котлы №1 в Украине 
+                        .lang.d-flex 
+                            a(href='#') ua
+                            a.active(href='#') ru  
+                    ul 
+                        each val in ['Акции %','Производители','Объекты','Монтаж','Клиентам','Контакты']
+                            li
+                                a(href='#')=val
+                button.btn-close.d-xl-none(type='button')

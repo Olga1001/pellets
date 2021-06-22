@@ -18,7 +18,60 @@ $(document).ready(function () {
       arrows: true,
       prevArrow: $('.slider-button-prev').eq(i),
       nextArrow: $('.slider-button-next').eq(i),
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+      ]
     });
   }
+  $('.slider-fade ').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    speed: 700,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          dots: true,
+        }
+      },
+    ]
+  });
+
+  // menu
+  $(".burger").on('click',()=> {
+    $('.navbotom').addClass('active');
+    $('.header-b .header_right').addClass('active');
+  });
+  $(".btn-close, .header-b .header_right").on('click',()=> {
+    $('.navbotom').removeClass('active');
+    $('.header-b .header_right').removeClass('active');
+  });
+
+  $(".catalog-h").on('click', ()=> {
+    $('.catalog-drop').slideToggle(300);
+  });
+
+  //stopPropagation
+  $(".stopPropagation").on('click',(e)=> {
+    e.stopPropagation();
+  });
 
 });

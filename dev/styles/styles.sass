@@ -192,8 +192,25 @@ table
   +box(13px)
   stroke: #666666
 
+.icon-messenger 
+  +box(17.5px,100%)
+
+.icon-viber, .icon-phone 
+  +box(16px,100%)
+
+.icon-telegram
+  +box(19px,100%)
+
 @import "modules/modules"
 
+.gradient
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22))
+  left: 0
+  top: 0
+  position: absolute
+  z-index: -1
+  +box(100%)
+  
 .max-200
   max-width: 200px
 
@@ -226,6 +243,9 @@ table
 
 .d-block
   display: block
+
+.d-none
+  display: none
 // .w-33
 //   width: 33% 
 
