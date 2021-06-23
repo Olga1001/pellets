@@ -7,7 +7,6 @@
     &-b 
         background: #E44937
         position: relative
-        z-index: 3
         padding: 0 16px
         .header_right
             background: #333333
@@ -62,7 +61,7 @@
         letter-spacing: -0.01em
 
 .burger
-    +box(23px,17px)
+    +box(27px,20px)
     flex-shrink: 0
     display: none
     background: url('../img/common/burger.svg') no-repeat center / contain
@@ -106,7 +105,7 @@
 .search 
     position: relative
     width: 50.5%
-    z-index: 2
+    z-index: 4
     input 
         font-size: 14px
         line-height: 18px
@@ -178,21 +177,23 @@
             stroke: $black
        
 
-.catalog
-    position: relative
-    &-h
-        padding: 23px 0
-        .icon-menu 
-            +box(27px)
-            margin-right: 50px
-            fill: $white
-    &-drop  
-        position: absolute
-        left: 0 
-        top: 100%
-        width: 100%
-        background: #F3F3F3
-        padding: 28px 0 22px
+.icon-menu, .icon-close 
+    +box(27px)
+    margin-right: 50px
+    fill: $white
+    display: none
+    &.active 
+        display: block
+
+.icon-close 
+    stroke: $white
+    stroke-width: 4px
+
+.main-page 
+    .catalog-h
+        pointer-events: none
+    .catalog-drop
+        display: block
         &:before
             content: ''
             background: #F3F3F3
@@ -200,21 +201,42 @@
             right: 100% 
             top: 0
             +box(100vw,100%)
+
+.catalog
+    position: relative
+    &-h
+        padding: 23px 0
+    &-drop  
+        position: absolute
+        left: -16px
+        top: 100%
+        width: calc(100% + 16px)
+        background: #F3F3F3
+        padding: 28px 0 22px 0
+        z-index: 2
+        display: none
         svg 
             +box(10px)
             stroke: #C6C6C6
             stroke-width: 2px
             margin-left: auto
+
+        li:hover 
+            .catalog-m 
+                opacity: 1
+                pointer-events: auto
     &-m
         position: absolute
         left: 100%
-        top: 100%
+        top: 0
         background: #FFFFFF
         padding: 43px 0 31px 75px
         width: 1073px
-        z-index: -1
+        z-index: 1
         opacity: 0
         pointer-events: none
+        min-height: 421px
+        transition: all 0.3s ease
         &.active 
             opacity: 1
             pointer-events: auto
@@ -235,9 +257,10 @@
     &-item
         margin-bottom: 18px
         padding-right: 20px
+        padding-left: 16px
         cursor: pointer
         position: relative
-        &.active
+        &.active, &:hover
             &:after 
                 opacity: 1
         &_img 
@@ -253,9 +276,10 @@
             border-style: solid
             border-width: 15.5px 0 15.5px 15.5px
             border-color: transparent transparent transparent #F3F3F3
-            z-index: 1
+            z-index: 2
             opacity: 0
             pointer-events: none
+            transition: all 0.3s ease
     &-list
         margin-top: 24px
         list-style-type: disc

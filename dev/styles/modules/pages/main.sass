@@ -8,9 +8,9 @@
         li 
             p
                 margin-bottom: 2px
-            &:first-child
-                width: 130px 
-                padding-right: 10px
+                &:first-child
+                    width: 130px 
+                    padding-right: 10px
     &-title
         font-size: 16px
         line-height: 20px
@@ -21,15 +21,8 @@
         width: 100%
         img 
             margin: auto 
-    .btn-heart 
-        position: absolute
-        right: 19px
-        top: 17px 
-        z-index: 1
-        +box(17px,15px)
-        svg
-            stroke: #DDDDDD
-            +box(100%)
+            height: 178px
+            width: 100%
     &-reverse
         width: 222px
         height: 343px
@@ -57,6 +50,13 @@
             max-width: 152px
         .btn 
             margin-top: auto
+
+.sticky-right
+    position: absolute
+    right: 19px
+    top: 17px 
+    z-index: 1
+
 .main
     &-f
         overflow: hidden
@@ -211,6 +211,7 @@
     .slider
         margin: 0 -15px
         padding: 20px 7.5px
+
 .card-s
     margin: 0 7.5px
     &_top
@@ -342,6 +343,10 @@
         height: 140px
         z-index: 9
         pointer-events: none
+        opacity: 1
+        transition: all 0.3s ease
         background: linear-gradient(to top, rgba(255,255,255,1) 2%, rgba(255,255,255,0))
     &.active 
         height: 100%
+        &:before 
+            opacity: 0

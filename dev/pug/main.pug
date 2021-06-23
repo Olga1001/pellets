@@ -1,0 +1,297 @@
+extends layout/main
+
+block variables
+	-var title = 'Главная страница'
+
+block link
+
+block content
+	main.main-page
+		section.main-f
+			.container
+				.slider-fade 
+					.w-100
+						.main-f_block
+							img(src='img/common/depositphotos_28097689_xl-2015.jpg' alt='image')
+							.gradient
+							h1.c-white Промышленные <br>твердотопливные <br>котлы
+					.w-100
+						.main-f_block
+							img(src='img/common/depositphotos_28097689_xl-2015.jpg' alt='image')
+							.gradient
+							h1.c-white Промышленные <br>твердотопливные <br>котлы2
+		section.popular-products 
+			.container
+				.flex-center-between.mb-20
+					h2 Популярные товары
+					
+					.align-items-center
+						.slider-button.slider-button-prev
+							+icon('arrow-left')
+						.slider-button.slider-button-next
+							+icon('arrow-right')
+
+				.slider 
+					-var n = 6 
+					-var i = 0
+					while (n--)
+						.card 
+							if (i==1) 
+								.stock-new 
+									.stock -20%
+									.new NEW
+							if (i==2) 
+								.status-product Ожидается
+							a.card-top(href='#')
+								img(src='img/common/product2.jpg' alt='product')
+								.sticky-right
+									button.btn-heart(type='button')
+										+icon('heart2')
+									button.btn-weigher(type='button')
+										+icon('weigher')
+							.flex-center-between.opensans.mb-16.flex-wrap
+								.align-items-center
+									.rate-area.checked
+										input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+										label(for=`5-star${i}` title='Amazing') 
+										input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+										label(for=`4-star${i}` title='Good') 
+										input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+										label(for=`3-star${i}` title='Average')
+										input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+										label(for=`2-star${i}` title='Not Good') 
+										input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+										label(for=`1-star${i}` title='Bad')
+									.i-comments.align-items-center
+										+icon('comments')
+										p.text-small 21
+								p.text-small.c-gray Код: 79059000-1
+							a.card-title(href='#') Котел твердопаливний <br> KRONAS EKO 
+							ul.card-info.opensans.text-small
+								li.d-flex
+									p Производитель:
+									p Кronas
+								li.d-flex 
+									p Мощность:
+									p от 12 кВт
+							.flex-center-between
+								p.price от 12 800 грн
+								button.btn-cart.small(type='button')
+									+icon('cart')
+						-i++
+		section.main-s 
+			.container 
+				.flex-wrap 
+					a.main-s_item.full-v(href='#' style='background-image: url(img/common/depositphotos_43318949_xl-2015m.jpg)')
+						span.main-s_title.big Монтаж твердотопливных котлов
+						span Подробнее
+					.flex-wrap.w-md-75.w-100
+						a.main-s_item(href='#' style='background-image: url(img/common/img1.jpg)')
+							span.justify-content-between
+								span.main-s_title Акционные <br>товары
+								span.stock.big -20%
+							span Все акции
+						a.main-s_item.full-h(href='#' style='background-image: url(img/common/img2.jpg)')
+							span.main-s_title.big Твердотопливные котлы
+							span Все котлы
+						a.main-s_item(href='#' style='background-image: url(img/common/img3.jpg)')
+							span.main-s_title Котельное <br>оборудование
+							span Cмотреть все
+						a.main-s_item(href='#' style='background-image: url(img/common/img4.jpg)')
+							span.main-s_title Водонагреватели
+							span Все продукты
+						a.main-s_item(href='#' style='background-image: url(img/common/img5.jpg)')
+							span.main-s_title Обслуживание <br>и чистка котлов <br>и каминов
+							span Подробнее
+		section.popular-products 
+			.container
+				.flex-center-between.mb-20
+					h2 Акционные товары
+					
+					.align-items-center
+						.slider-button.slider-button-prev
+							+icon('arrow-left')
+						.slider-button.slider-button-next
+							+icon('arrow-right')
+
+				.slider 
+					-var n = 6 
+					-var i = 6
+					while (n--)
+						.card 
+							a.card-top(href='#')
+								img(src='img/common/product2.jpg' alt='product')
+								.sticky-right
+									button.btn-heart(type='button')
+										+icon('heart2')
+									button.btn-weigher(type='button')
+										+icon('weigher')
+							.flex-center-between.opensans.mb-16.flex-wrap
+								.align-items-center
+									.rate-area.checked
+										input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+										label(for=`5-star${i}` title='Amazing') 
+										input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+										label(for=`4-star${i}` title='Good') 
+										input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+										label(for=`3-star${i}` title='Average')
+										input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+										label(for=`2-star${i}` title='Not Good') 
+										input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+										label(for=`1-star${i}` title='Bad')
+									.i-comments.align-items-center
+										+icon('comments')
+										p.text-small 21
+								p.text-small.c-gray Код: 79059000-1
+							a.card-title(href='#') Котел твердопаливний <br> KRONAS EKO 
+							ul.card-info.opensans.text-small
+								li.d-flex
+									p Производитель:
+									p Кronas
+								li.d-flex 
+									p Мощность:
+									p от 12 кВт
+							.flex-center-between
+								p.price от 12 800 грн
+								button.btn-cart.small(type='button')
+									+icon('cart')
+						-i++
+		section.services
+			.container 
+				.flex-center-between.mb-20
+					h2 Услуги
+					.align-items-center
+						.slider-button.slider-button-prev
+							+icon('arrow-left')
+						.slider-button.slider-button-next
+							+icon('arrow-right')
+				.slider-services 
+					-var n = 6
+					while (n--)
+						.card-s
+							a.card-s_top(href='#')
+								img(src='img/common/car.jpg' alt='service')
+								span.card-s_top-title 
+									span Бесплатная <br> доствка котлов 
+									| по Украине
+								span.card-s_top-span Успей поставить котел,<br> пока не отключили <br>отопление! 
+							.card-s_bottom 
+								a.fs-18.fw-medium(href='#') Доставляем котлы по всей Украине. Вам нужно только выбрать
+								p.text-small Установка котла, быстро и без регистрации. Всего за 20 фризпинов, без рекламы. Успей поставить котел сегодня, пока не отключили отопление! 
+
+		section.popular-products 
+			.container
+				.flex-center-between.mb-20
+					h2 Новинки на сайте
+					
+					.align-items-center
+						.slider-button.slider-button-prev
+							+icon('arrow-left')
+						.slider-button.slider-button-next
+							+icon('arrow-right')
+
+				.slider 
+					-var n = 6 
+					-var i = 12
+					while (n--)
+						.card 
+							a.card-top(href='#')
+								img(src='img/common/product2.jpg' alt='product')
+								.sticky-right
+									button.btn-heart(type='button')
+										+icon('heart2')
+									button.btn-weigher(type='button')
+										+icon('weigher')
+							.flex-center-between.opensans.mb-16.flex-wrap
+								.align-items-center
+									.rate-area.checked
+										input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+										label(for=`5-star${i}` title='Amazing') 
+										input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+										label(for=`4-star${i}` title='Good') 
+										input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+										label(for=`3-star${i}` title='Average')
+										input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+										label(for=`2-star${i}` title='Not Good') 
+										input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+										label(for=`1-star${i}` title='Bad')
+									.i-comments.align-items-center
+										+icon('comments')
+										p.text-small 21
+								p.text-small.c-gray Код: 79059000-1
+							a.card-title(href='#') Котел твердопаливний <br> KRONAS EKO 
+							ul.card-info.opensans.text-small
+								li.d-flex
+									p Производитель:
+									p Кronas
+								li.d-flex 
+									p Мощность:
+									p от 12 кВт
+							.flex-center-between
+								p.price от 12 800 грн
+								button.btn-cart.small(type='button')
+									+icon('cart')
+						-i++
+		section.section-articles
+			.container 
+				.flex-center-between.mb-20
+					h2 Статьи
+					.align-items-center
+						.slider-button.slider-button-prev
+							+icon('arrow-left')
+						.slider-button.slider-button-next
+							+icon('arrow-right')
+				.slider-articles 
+					-var n = 6
+					-var i = 0
+					while (n--)
+						.card-article
+							if(i==2)
+								.card-article_top
+									img(src='img/common/img2.jpg' alt='service')
+									span.play
+							else
+								a.card-article_top(href='#')
+									img(src='img/common/img2.jpg' alt='service')
+							.card-article_bottom 
+								if(i==2)
+									a.fs-18.fw-medium(href='#') Конец отопительного сезона. Что нужно сделать?
+								else
+									a.fs-18.fw-medium(href='#') Водный теплый пол. Установка
+						-i++
+
+				h2.mb-20 Отопление твердотопливными котлами
+				.content
+					p.fs-13.pt-20 PELLETSHOME предлагает отличные решения в сфере отопления твердым топливом в сочетании с возобновляемыми источниками тепла и правильным обслуживанием. Такой комплекс услуг дает наилучший экономический эффект и комфорт от отопления биомассой (дровами, углем, брикетами, пеллетами и т.д.).
+					p.fs-13.pt-20 Мы являемся не только продавцами такой продукции, но и можем построить всю систему отопления с нуля, настроить ее работу и обеспечить гарантийным и сервисным обслуживанием. Что, согласитесь, является очень важным аспектом, поскольку неправильно настроенный и подключенный отопительный прибор не только не согреет вас, а и принесет как минимум неприятные хлопоты, а в худшем случае – опасность для вашего дома.
+					p.fs-13.pt-20 Дополнительными и важными элементами для построения системы являются циркуляционные насосы для теплоносителя, дымоходы из нержавеющей стали, различные контроллеры, батареи и запорная арматура.
+					p.fs-13.pt-20 Кроме основных источников тепла и различного оборудования в котельной, для добавления уюта и тепла в каждом доме, могут устанавливаться каминные дровяные топки или пеллетные печи. Они отличаются разнообразием дизайнов и форм, есть как классические модели, так и ультрасовременные. Среди всего ассортимента можно подобрать наиболее подходящий вариант, который идеально впишется в конкретный интерьер.
+					p.fs-13.pt-20 Также следует обратить внимание на то, что такие котлы и камины, а также их дымоходные системы нуждаются в регулярном обслуживании. Несвоевременная очистка и профилактика котловых и дымоходных систем приводит к их выходу из строя, неэффективной работе и снижению эффективности работы. Во избежание таких неприятностей в категории с аксессуарами доступны различные шомпольные щетки, химические средства для удаления смолы и сажи, уплотнительные шнуры и другой необходимый инструмент для чистки. Производители TOPBRUSH s.r.o и Hansa Flame являются одними из лидирующих в этом сегменте.
+					p.fs-13.pt-20 И помните, что вместе с оборудованием вы покупаете наш опыт, а его стоимость в большинстве случаев бесценна!
+				button.btn-more(type="button") смотреть больше
+		section.newsletter
+			.container
+				.flex-wrap.c-white 
+					.w-100.w-lg-50.newsletter-left
+						div
+							h2.big.mb-16 PELLETS HOME -
+							p.fs-23.fw-medium ЭТО КОМАНДА ПРОФЕССИОНАЛОВ, КОТОРЫЕ ЗНАЮТ ВСЕ ОБ ОТОПЛЕНИИ ТВЁРДЫМ ТОПЛИВОМ 
+							p Мы всегда готовы предложить не только продажу оборудования, но и комплексные услуги по расчету рентабельности проекта, проектные и монтажные работы по котельной
+						a.btn.big.max-200(href='#') Подробнее
+					.w-100.w-lg-50.newsletter-right
+						h2.text-up  Подпишись на рассылку
+						p.lh-21 Получайте последние новости <br> о акционных предложениях на e-mail 
+						form.form-subscription
+							input(type='email' placeholder='E-mail *' required)
+							button.btn.bg-orange.c-white(type='submit') Подписатся
+						p.fs-13 *Оформляя подписку вы даете согласие <br>на обработку 
+							a.c-white.underline(href='#') персональных данных
+
+
+
+					
+
+
+block script 
+
+	

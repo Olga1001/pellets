@@ -1,6 +1,8 @@
 "use strict";
 
 $(document).ready(function () {
+  var _this = this;
+
   $('.slider-one').slick({
     infinite: true,
     slidesToShow: 1,
@@ -19,8 +21,8 @@ $(document).ready(function () {
       slidesToScroll: 2,
       dots: false,
       arrows: true,
-      prevArrow: $('.slider-button-prev').eq(i),
-      nextArrow: $('.slider-button-next').eq(i),
+      prevArrow: $('.popular-products .slider-button-prev').eq(i),
+      nextArrow: $('.popular-products .slider-button-next').eq(i),
       responsive: [{
         breakpoint: 992,
         settings: {
@@ -35,7 +37,34 @@ $(document).ready(function () {
     });
   }
 
-  $('.slider-fade ').slick({
+  $('.slider-articles').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    dots: false,
+    arrows: true,
+    prevArrow: $('.section-articles .slider-button-prev'),
+    nextArrow: $('.section-articles .slider-button-next'),
+    responsive: [{
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true
+      }
+    }]
+  });
+  $('.slider-fade').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -52,6 +81,31 @@ $(document).ready(function () {
         dots: true
       }
     }]
+  });
+  $('.slider-services').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    dots: false,
+    arrows: true,
+    prevArrow: $('.services .slider-button-prev'),
+    nextArrow: $('.services .slider-button-next'),
+    responsive: [{
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
   }); // menu
 
   $(".burger").on('click', function () {
@@ -64,7 +118,20 @@ $(document).ready(function () {
   });
   $(".catalog-h").on('click', function () {
     $('.catalog-drop').slideToggle(300);
-  }); //stopPropagation
+    $('.icon-menu').toggleClass('active');
+    $('.icon-close').toggleClass('active');
+  });
+  $(".btn-more").on('click', function (e) {
+    e.preventDefault();
+    $('.content').toggleClass('active');
+    var text = $(_this).text();
+    $(_this).text(text == "смотреть больше" ? "cкрыть" : "смотреть больше");
+  }); // if (window.matchMedia("(max-width: 991px)").matches) {
+  //   $('.catalog-item').on('click', () => {
+  //     // $(this).closest('li').find('.catalog-m').slideToggle(300);
+  //   });
+  // }
+  //stopPropagation
 
   $(".stopPropagation").on('click', function (e) {
     e.stopPropagation();

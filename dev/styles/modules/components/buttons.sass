@@ -5,8 +5,8 @@
     background: #E44937
     border-radius: 4px
     padding: 0 20px 
-    width: 100%
     text-align: center
+    width: 100%
     &.bg-orange
         color: $black
         font-size: 14px
@@ -45,3 +45,15 @@
     position: absolute
     bottom: 0
     right: 0
+
+.btn-heart, .btn-weigher 
+    +box(19px,15px)
+    display: flex
+    margin-bottom: 10px
+    svg
+        +box(100%)
+        stroke: #DDDDDD
+
+.btn-weigher svg
+    stroke: none
+    fill: #DDDDDD 
