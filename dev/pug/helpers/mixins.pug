@@ -23,7 +23,7 @@ mixin pagination(adjacents, numPages, display, currentPage, base, arrow)
 	- base = base || '#';
 	- display = (display || 7) * 1;
 
-	nav.pagination.flex-center-between
+	nav.pagination.align-items-center
 		if (arrows === arrows)
 			a.disabled.align-items-center(href="#" title="Prev page")
 				+icon("arrow-left", "mr-16")
