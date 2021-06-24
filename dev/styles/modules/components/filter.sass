@@ -1,0 +1,77 @@
+.filter
+    padding-top: 25px
+    width: 240px 
+    padding-right: 15px
+    &-i
+        margin-top: 30px 
+        .fs-18 
+            padding-bottom: 15px
+        &_click 
+            &.active .icon-arrow-up 
+                transform: scaleY(1)
+
+.input-small
+    background: #FFFFFF
+    border: 1px solid #B9B9B9
+    border-radius: 5px
+    text-align: center 
+    font-size: 15px
+    line-height: 21px
+    color: #000000
+    padding: 7px 0 6px
+    margin-top: 3px
+
+.range 
+    margin: 22px 0 22px 8px 
+    &:before 
+        content: ''
+        +centerY 
+        right: 100%
+        width: 8px
+        height: 4px
+        background: #FFB321
+
+.ui-slider-horizontal
+    height: 4px
+    background: #FFB321
+    border-radius: 0
+
+.ui-widget-header
+    height: 4px
+    background: #F53C3C
+    border-radius: 0
+
+.ui-widget.ui-widget-content
+    border: none
+
+.ui-slider .ui-slider-handle
+    border-radius: 50%
+    +box(17px)
+    background: #F53C3C
+    border: none
+    outline: none
+
+.icon-arrow-up 
+    fill: $black
+    +box(15px,10px)
+    margin-bottom: 15px
+    transform: scaleY(-1)
+
+.filter-list
+    li 
+        margin-bottom: 11px 
+
+.tag 
+    font-size: 13px
+    line-height: 18px
+    text-transform: lowercase
+    color: #000000
+    background: #EEEEEE
+    border-radius: 3px
+    padding: 5px 10px
+    display: block 
+    margin-right: 10px
+    margin-bottom: 9px 
+
+
+    

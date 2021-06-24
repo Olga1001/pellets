@@ -117,23 +117,23 @@ $(document).ready(function () {
   });
 
   // menu
-  $(".burger").on('click',()=> {
+  $(".burger").on('click', function() {
     $('.navbotom').addClass('active');
     $('.header-b .header_right').addClass('active');
   });
 
-  $(".btn-close, .header-b .header_right").on('click',()=> {
+  $(".btn-close, .header-b .header_right").on('click', function() {
     $('.navbotom').removeClass('active');
     $('.header-b .header_right').removeClass('active');
   });
 
-  $(".catalog-h").on('click', ()=> {
+  $(".catalog-h").on('click', function() {
     $('.catalog-drop').slideToggle(300);
     $('.icon-menu').toggleClass('active');
     $('.icon-close').toggleClass('active');
   });
 
-  $(".btn-more").on('click', (e)=> {
+  $(".btn-more").on('click', function(e) {
     e.preventDefault();
     $('.content').toggleClass('active');
     let text = $(this).text();
@@ -146,8 +146,60 @@ $(document).ready(function () {
   // }
 
   //stopPropagation
-  $(".stopPropagation").on('click',(e)=> {
+  $(".stopPropagation").on('click', function(e) {
     e.stopPropagation();
   });
 
+  //ranges
+  $(".range").slider({
+    range: true,
+    min: 4445,
+    max: 2000000,
+    values: [4445, 971767],
+    slide: function( event, ui ) {
+      $( ".amount1" ).val(ui.values[0].toLocaleString());
+      $( ".amount2" ).val(ui.values[1].toLocaleString());
+    }
+  });
+  $( ".amount1" ).val($(".range" ).slider("values", 0 ).toLocaleString());
+  $( ".amount2" ).val($(".range" ).slider("values", 1 ).toLocaleString());
+
+  $('.filter-i_click').on('click', function() {
+    $(this).toggleClass('active');
+    $(this).siblings().slideToggle(300);
+  });
+
+
+function hideList () {
+  $('.filter-list').each(function (item) {
+    let child = item.find('li');
+    let listVisibleLength = item.find('.isVisible').length;
+    for (let i = listVisibleLength; i < child.length; i++) {
+        child[i].addClass('d-none');
+    }
+  });
+}
+
+hideList ();
+
 });
+
+document.querySelectorAll('.btn-all').forEach(function (item) {
+  item.addEventListener('click', () => {
+    let siblings = item.previousElementSibling,
+        child = siblings.children,
+        listVisibleLength = siblings.getElementsByClassName('isVisible').length;
+        
+    item.classList.toggle('active');
+
+    for (let i = listVisibleLength; i < child.length; i++) {
+      child[i].classList.toggle('d-none') ;
+      if (item.classList.contains('active')) {
+          item.innerHTML = 'Скрыть';
+      } else {
+          item.innerHTML = 'Показать все';
+      }
+    }
+  });
+});
+

@@ -1,8 +1,6 @@
 "use strict";
 
 $(document).ready(function () {
-  var _this = this;
-
   $('.slider-one').slick({
     infinite: true,
     slidesToShow: 1,
@@ -124,8 +122,8 @@ $(document).ready(function () {
   $(".btn-more").on('click', function (e) {
     e.preventDefault();
     $('.content').toggleClass('active');
-    var text = $(_this).text();
-    $(_this).text(text == "смотреть больше" ? "cкрыть" : "смотреть больше");
+    var text = $(this).text();
+    $(this).text(text == "смотреть больше" ? "cкрыть" : "смотреть больше");
   }); // if (window.matchMedia("(max-width: 991px)").matches) {
   //   $('.catalog-item').on('click', () => {
   //     // $(this).closest('li').find('.catalog-m').slideToggle(300);
@@ -135,5 +133,53 @@ $(document).ready(function () {
 
   $(".stopPropagation").on('click', function (e) {
     e.stopPropagation();
+  }); //ranges
+
+  $(".range").slider({
+    range: true,
+    min: 4445,
+    max: 2000000,
+    values: [4445, 971767],
+    slide: function slide(event, ui) {
+      $(".amount1").val(ui.values[0].toLocaleString());
+      $(".amount2").val(ui.values[1].toLocaleString());
+    }
+  });
+  $(".amount1").val($(".range").slider("values", 0).toLocaleString());
+  $(".amount2").val($(".range").slider("values", 1).toLocaleString());
+  $('.filter-i_click').on('click', function () {
+    $(this).toggleClass('active');
+    $(this).siblings().slideToggle(300);
+  });
+
+  function hideList() {
+    $('.filter-list').each(function (item) {
+      var child = item.find('li');
+      var listVisibleLength = item.find('.isVisible').length;
+
+      for (var _i = listVisibleLength; _i < child.length; _i++) {
+        child[_i].addClass('d-none');
+      }
+    });
+  }
+
+  hideList();
+});
+document.querySelectorAll('.btn-all').forEach(function (item) {
+  item.addEventListener('click', function () {
+    var siblings = item.previousElementSibling,
+        child = siblings.children,
+        listVisibleLength = siblings.getElementsByClassName('isVisible').length;
+    item.classList.toggle('active');
+
+    for (var i = listVisibleLength; i < child.length; i++) {
+      child[i].classList.toggle('d-none');
+
+      if (item.classList.contains('active')) {
+        item.innerHTML = 'Скрыть';
+      } else {
+        item.innerHTML = 'Показать все';
+      }
+    }
   });
 });

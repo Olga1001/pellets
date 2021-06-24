@@ -13,6 +13,128 @@ block content
 					ul.flex-wrap
 						+breadcrumbs-item('Главная','#')
 						+breadcrumbs-item('Твердотопливные котлы')
+				.flex-wrap 
+					each val, index in ['Котлы на дровах и угле традиционного горения','Котлы длительного горения','Пиролизные котлы (газогенераторные)','Пеллетные котлы с автоматической подачей топлива','Твердотопливные теплогенераторы','Котлы-плиты с варочной поверхностью','Котлы на щепе']
+						a.category-i(href='#')
+							.category-i_border
+								img(src=`img/common/category${index}.png` alt='catefory image')
+							span.fs-12.d-block=val
+				h2.fs-27 ТВЕРДОТОПЛИВНЫЕ КОТЛЫ
+				.flex-wrap 
+					.filter
+						p.text-up.fw-medium Фильтр по товарам
+						.filter-i 
+							p.fs-18.fw-medium Цена
+							.filter-price.d-flex
+								.w-50.mr-15
+									p.fs-15 от
+									input.input-small.amount1(type='text' value='4445')
+								.w-50 
+									p.fs-15 до
+									input.input-small.amount2(type='text' value='971767')
+							.range 
+						.filter-i 
+							.filter-i_click.flex-center-between.active
+								p.fs-18.fw-medium Производитель
+								+icon('arrow-up')
+							.filter-list
+								ul
+									each val, index in [{name: 'ALTEP ', count: '(15)'}, {name: 'Amica ', count: '(8)'}, {name: 'Ardenz', count: '(3)'}, {name: 'Aremikas', count: '(1)'}, {name: 'Atmos ', count: '(7)'}, {name: 'ATON', count: '(1)'} ,{name: 'BAXI ', count: '(1)'} ,{name: 'BEETERM', count: '(7)'},{name: 'BAXI ', count: '(1)'} ,{name: 'BEETERM (7)', count: '(7)'},]
+										li(class=index < 8 ? 'isVisible' : 'd-none')
+											label.align-items-center 
+												input.checkbox(type='checkbox')
+												span.check 
+												span.fs-14=val.name
+													span.c-gray-400=val.count
+								button.btn-all(type='button') Показать все
+						.filter-i 
+							.filter-i_click.flex-center-between.active
+								p.fs-18.fw-medium Мощность
+								+icon('arrow-up')
+							.filter-list
+								ul
+									each val, index in [{name: '7 ', count: '(15)'}, {name: '8 ', count: '(8)'}, {name: '9', count: '(3)'}, {name: '10', count: '(1)'}, {name: '11 ', count: '(7)'}, {name: '12', count: '(1)'} ,{name: '13 ', count: '(1)'} ,{name: '14', count: '(7)'},{name: '15 ', count: '(1)'} ,{name: '16 (7)', count: '(7)'},]
+										li(class=index < 8 ? 'isVisible' : 'd-none')
+											label.align-items-center 
+												input.checkbox(type='checkbox')
+												span.check 
+												span.fs-14=val.name
+													span.c-gray-400=val.count
+								button.btn-all(type='button') Показать все
+						.filter-i 
+							.filter-i_click.flex-center-between.active
+								p.fs-18.fw-medium Страна 
+								+icon('arrow-up')
+							.filter-list
+								ul
+									each val, index in [{name: 'Болгария ', count: '(15)'}, {name: 'Австрия', count: '(8)'}, {name: 'Германия', count: '(3)'}, {name: 'Литва', count: '(1)'}, {name: 'Польша ', count: '(7)'}, {name: 'Турция', count: '(1)'} ,{name: 'Украина ', count: '(1)'} ,{name: 'Чехия', count: '(7)'},{name: 'Китай ', count: '(1)'},]
+										li(class=index < 8 ? 'isVisible' : 'd-none')
+											label.align-items-center 
+												input.checkbox(type='checkbox')
+												span.check 
+												span.fs-14=val.name
+													span.c-gray-400=val.count
+								button.btn-all(type='button') Показать все
+						.filter-i 
+							.filter-i_click.flex-center-between.active
+								p.fs-18.fw-medium Тип котла 
+								+icon('arrow-up')
+							.filter-list
+								ul
+									each val, index in [{name: 'Шахтные (Холмова) ', count: '(15)'}, {name: 'Длительного горения', count: '(8)'}, {name: 'Пеллетные', count: '(3)'}, {name: 'Традиционные', count: '(1)'},]
+										li(class=index < 4 ? 'isVisible' : 'd-none')
+											label.align-items-center 
+												input.checkbox(type='checkbox')
+												span.check 
+												span.fs-14=val.name
+													span.c-gray-400=val.count
+						.filter-i 
+							.filter-i_click.flex-center-between.active
+								p.fs-18.fw-medium Материал
+								+icon('arrow-up')
+							.filter-list
+								ul
+									each val, index in [{name: 'Стальные', count: '(308)'}, {name: 'Чугунные', count: '(30)'},]
+										li(class=index < 2 ? 'isVisible' : 'd-none')
+											label.align-items-center 
+												input.checkbox(type='checkbox')
+												span.check 
+												span.fs-14=val.name
+													span.c-gray-400=val.count
+						.filter-i 
+							.filter-i_click.flex-center-between.active
+								p.fs-18.fw-medium Гарантия
+								+icon('arrow-up')
+							.filter-list
+								ul
+									each val, index in [{name: '12мес', count: '(3)'}, {name: '24мес', count: '(17)'},{name: '36мес', count: '(17)'},{name: '48мес', count: '(17)'},{name: '60мес', count: '(17)'},{name: '72мес', count: '(17)'},{name: '120мес', count: '(17)'},]
+										li(class=index < 7 ? 'isVisible' : 'd-none')
+											label.align-items-center 
+												input.checkbox(type='checkbox')
+												span.check 
+												span.fs-14=val.name
+													span.c-gray-400=val.count
+						.filter-i 
+							.filter-i_click.flex-center-between.active
+								p.fs-18.fw-medium Тип автоматики
+								+icon('arrow-up')
+							.filter-list
+								ul
+									each val, index in [{name: 'Электронная ', count: '(253)'}, {name: 'Энергонезависимая', count: '(108)'},]
+										li(class=index < 2 ? 'isVisible' : 'd-none')
+											label.align-items-center 
+												input.checkbox(type='checkbox')
+												span.check 
+												span.fs-14=val.name
+													span.c-gray-400=val.count
+						.filter-i 
+							p.fs-18.fw-medium Смотрите также
+							.flex-wrap 
+								each val in ['КОТЛЫ ДЛИТЕЛЬНОГО ГОРЕНИЯ','Котлы на щепу','Котлы киев','Котлы по низкой цене Киев','димоходная труба для котлов',]
+									a.tag(href='#')=val
+								
+
+						
 					
 
 

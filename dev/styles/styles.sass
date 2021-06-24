@@ -169,6 +169,22 @@ table
 
 .checkbox 
   display: none 
+  &:checked ~ .check:before 
+    content: ''
+
+.check
+  background: #FFFFFF
+  border: 1px solid #B9B9B9
+  border-radius: 2px
+  display: block 
+  +box(20px)
+  position: relative
+  margin-right: 22px
+  &:before
+    content: none
+    +centerXY 
+    +box(15px)
+    background: #B9B9B9
   
 .text-small
   font-size: 12px
@@ -194,6 +210,9 @@ table
 
 @import "modules/modules"
 
+.isVisible
+  display: block 
+  
 .gradient
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22))
   left: 0
