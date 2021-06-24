@@ -1,8 +1,10 @@
 .category-i
     max-width: 150px
     margin-right: 30px
+    flex-shrink: 0
     img 
         margin: auto
+        max-height: 100px
     &_border
         +box(120px)
         border: 1px solid #DDDDDD
@@ -20,4 +22,14 @@
             width: 25%
             height: auto
 
-    
+.btns 
+    button 
+        width: 50% 
+        border-right: 1px solid #DDDDDD
+        border-top: 1px solid #DDDDDD
+        padding: 11px 16px
+        +d-flex(center)
+        img
+            margin-right: 22px
+        &:last-child 
+            border-right: none

@@ -54,8 +54,12 @@
         display: flex
         align-items: center
 @media only screen and (min-width : 576px)
-    // .flex-sm-center-center
-    //     +d-flex(center,center)
+    .pt-sm-30
+        padding-top: 30px
+    .d-sm-block
+        display: block
+    .d-sm-inline
+        display: inline
 @media only screen and (max-width : 1459px)
     .header_right
         padding-left: 0
@@ -68,7 +72,7 @@
         max-width: 280px
         margin-right: 13px
 @media only screen and (max-width : 1199px)
-    .card-reverse
+    .header .card-reverse
         display: none
     .btn-cart
         +box(45px)
@@ -191,6 +195,12 @@
     .catalog-m .fs-21
         font-size: 15px
         line-height: 18px
+    .products-content .card, .products-content .card-reverse
+        width: 33.33%
+    .card-reverse.big
+        padding: 20px 16px
+        .btn
+            font-size: 16px
 @media only screen and (max-width : 991px)
     .footer-menu 
         display: none
@@ -228,6 +238,8 @@
     .catalog-item_img
         +box(30px)
         margin-right: 30px
+    .products-content .card, .products-content .card-reverse
+        width: 50%
 @media only screen and (max-width : 767px)
     .main-f_block
         height: 378px
@@ -325,8 +337,58 @@
         left: 14px
     .slick-next
         right: 14px
-    .slick-arrow
+    .header .slick-arrow
         margin: 0
+    .products-content .card, .products-content .card-reverse
+        width: 33.33%
+    .filter 
+        position: fixed 
+        top: 0
+        left: 0 
+        background: #fff 
+        width: 100% 
+        height: 100vh 
+        overflow-y: auto 
+        z-index: 9999
+        padding: 0
+        opacity: 0 
+        pointer-events: none
+        .text-up 
+            display: none
+    .filter-i 
+        padding: 0 29px
+    .card-info li p:first-child
+        width: auto
+    .btns
+        margin-left: -16px
+        margin-right: -16px
+    .products-content
+        margin-left: -16px
+        margin-right: -16px
+        border-left: none
+        .card:nth-child(3n+3)
+            border-right-width: 0
+    .products 
+        width: calc(100% + 32px)
+    .category-i
+        width: 109px
+        margin: 0 7.5px
+        &_border
+            +box(109px)
+        span 
+            font-size: 10px 
+            line-height: 13px
+    .category-slider 
+        margin-left: -16px
+        margin-right: -16px
+        width: calc(100% + 32px)
+    .category-i img
+        max-height: 75px
+    .card-reverse.big .btn
+        font-size: 14px
+        line-height: 32px
+        padding: 0 5px
+
 @media only screen and (max-width : 575px)
     .popular-products .slider
         margin: 27px -16px 0
@@ -365,7 +427,7 @@
     .catalog-h p
         font-size: 20px
         line-height: 26px
-    h2
+    h2, h2.fs-27
         font-size: 22px
         line-height: 24px
     .popular-products 
@@ -390,8 +452,6 @@
         margin-bottom: 9px
     .card-info
         padding-bottom: 9px
-    .card-info li p:first-child
-        width: auto
     .price
         font-size: 16px
         line-height: 20px
@@ -454,13 +514,32 @@
         padding: 0 21px
     .footer-bottom
         padding: 15px 0 10px
-    .slick-list
+    .header .slick-list
         max-width: 370px
     .slider-one
         max-width: 100%
     .catalog-m .col
         width: 100% 
         margin: 0 0 20px 0
+    .category-i_border
+        +box(109px)
+    .products-content .card, .products-content .card-reverse
+        width: 50%
+    .pagination 
+        .page 
+            &:last-child, &:nth-last-child(2) 
+                display: none 
+    .fs-30
+        font-size: 26px
+        line-height: 26px  
+    .products-content
+        .card:nth-child(3n+3)
+            border-right-width: 1px
+        .card:nth-child(2n+2)
+            border-right-width: 0 
+    .text 
+        font-size: 14px
+        line-height: 18px
 @media only screen and (max-width : 360px)
     .footer_phones a
         font-size: 14px

@@ -13,23 +13,40 @@ block content
 					ul.flex-wrap
 						+breadcrumbs-item('Главная','#')
 						+breadcrumbs-item('Твердотопливные котлы')
-				.flex-wrap 
+				.category-slider.pb-20
 					each val, index in ['Котлы на дровах и угле традиционного горения','Котлы длительного горения','Пиролизные котлы (газогенераторные)','Пеллетные котлы с автоматической подачей топлива','Твердотопливные теплогенераторы','Котлы-плиты с варочной поверхностью','Котлы на щепе']
 						a.category-i(href='#')
 							.category-i_border
 								img(src=`img/common/category${index}.png` alt='catefory image')
 							span.fs-12.d-block=val
-				h2.fs-27 ТВЕРДОТОПЛИВНЫЕ КОТЛЫ
+				.flex-center-between.flex-wrap 
+					h2.fs-27 ТВЕРДОТОПЛИВНЫЕ КОТЛЫ
+					.align-items-md-center.d-none 
+						p.fs-15.mr-5 Сортировать:
+						.select 
+							.select-item.flex-center-between
+								p.fs-15.fw-medium по популярности
+								+icon('arrow-down')
+
+							ul.select-drop.fs-14  
+								li по популярности
+								li по рейтингу
 				.flex-wrap 
 					.filter
+						.filter_head.d-md-none 
+							.align-items-center 
+								img.icon-filter(src='img/common/filter.svg' alt='filter icon')
+								p.fs-18.fw-medium Фильтрация
+							button.btn-close(type='button')
+								+icon('close2')
 						p.text-up.fw-medium Фильтр по товарам
 						.filter-i 
 							p.fs-18.fw-medium Цена
 							.filter-price.d-flex
-								.w-50.mr-15
+								.mr-15
 									p.fs-15 от
 									input.input-small.amount1(type='text' value='4445')
-								.w-50 
+								div
 									p.fs-15 до
 									input.input-small.amount2(type='text' value='971767')
 							.range 
@@ -39,7 +56,7 @@ block content
 								+icon('arrow-up')
 							.filter-list
 								ul
-									each val, index in [{name: 'ALTEP ', count: '(15)'}, {name: 'Amica ', count: '(8)'}, {name: 'Ardenz', count: '(3)'}, {name: 'Aremikas', count: '(1)'}, {name: 'Atmos ', count: '(7)'}, {name: 'ATON', count: '(1)'} ,{name: 'BAXI ', count: '(1)'} ,{name: 'BEETERM', count: '(7)'},{name: 'BAXI ', count: '(1)'} ,{name: 'BEETERM (7)', count: '(7)'},]
+									each val, index in [{name: 'ALTEP ', count: '(15)'}, {name: 'Amica ', count: '(8)'}, {name: 'Ardenz ', count: '(3)'}, {name: 'Aremikas ', count: '(1)'}, {name: 'Atmos ', count: '(7)'}, {name: 'ATON ', count: '(1)'} ,{name: 'BAXI ', count: '(1)'} ,{name: 'BEETERM ', count: '(7)'},{name: 'BAXI ', count: '(1)'} ,{name: 'BEETERM ', count: '(7)'},]
 										li(class=index < 8 ? 'isVisible' : 'd-none')
 											label.align-items-center 
 												input.checkbox(type='checkbox')
@@ -53,7 +70,7 @@ block content
 								+icon('arrow-up')
 							.filter-list
 								ul
-									each val, index in [{name: '7 ', count: '(15)'}, {name: '8 ', count: '(8)'}, {name: '9', count: '(3)'}, {name: '10', count: '(1)'}, {name: '11 ', count: '(7)'}, {name: '12', count: '(1)'} ,{name: '13 ', count: '(1)'} ,{name: '14', count: '(7)'},{name: '15 ', count: '(1)'} ,{name: '16 (7)', count: '(7)'},]
+									each val, index in [{name: '7 ', count: '(15)'}, {name: '8 ', count: '(8)'}, {name: '9 ', count: '(3)'}, {name: '10 ', count: '(1)'}, {name: '11 ', count: '(7)'}, {name: '12 ', count: '(1)'} ,{name: '13 ', count: '(1)'} ,{name: '14 ', count: '(7)'},{name: '15 ', count: '(1)'} ,{name: '16 ', count: '(7)'},]
 										li(class=index < 8 ? 'isVisible' : 'd-none')
 											label.align-items-center 
 												input.checkbox(type='checkbox')
@@ -67,7 +84,7 @@ block content
 								+icon('arrow-up')
 							.filter-list
 								ul
-									each val, index in [{name: 'Болгария ', count: '(15)'}, {name: 'Австрия', count: '(8)'}, {name: 'Германия', count: '(3)'}, {name: 'Литва', count: '(1)'}, {name: 'Польша ', count: '(7)'}, {name: 'Турция', count: '(1)'} ,{name: 'Украина ', count: '(1)'} ,{name: 'Чехия', count: '(7)'},{name: 'Китай ', count: '(1)'},]
+									each val, index in [{name: 'Болгария ', count: '(15)'}, {name: 'Австрия ', count: '(8)'}, {name: 'Германия ', count: '(3)'}, {name: 'Литва ', count: '(1)'}, {name: 'Польша ', count: '(7)'}, {name: 'Турция ', count: '(1)'} ,{name: 'Украина ', count: '(1)'} ,{name: 'Чехия ', count: '(7)'},{name: 'Китай ', count: '(1)'},]
 										li(class=index < 8 ? 'isVisible' : 'd-none')
 											label.align-items-center 
 												input.checkbox(type='checkbox')
@@ -81,7 +98,7 @@ block content
 								+icon('arrow-up')
 							.filter-list
 								ul
-									each val, index in [{name: 'Шахтные (Холмова) ', count: '(15)'}, {name: 'Длительного горения', count: '(8)'}, {name: 'Пеллетные', count: '(3)'}, {name: 'Традиционные', count: '(1)'},]
+									each val, index in [{name: 'Шахтные (Холмова) ', count: '(15)'}, {name: 'Длительного горения ', count: '(8)'}, {name: 'Пеллетные ', count: '(3)'}, {name: 'Традиционные ', count: '(1)'},]
 										li(class=index < 4 ? 'isVisible' : 'd-none')
 											label.align-items-center 
 												input.checkbox(type='checkbox')
@@ -132,7 +149,19 @@ block content
 							.flex-wrap 
 								each val in ['КОТЛЫ ДЛИТЕЛЬНОГО ГОРЕНИЯ','Котлы на щепу','Котлы киев','Котлы по низкой цене Киев','димоходная труба для котлов',]
 									a.tag(href='#')=val
+						.filter_footer.flex-center-between.d-md-none
+							button.align-items-center(type='reset')
+								+icon('close2')
+								span.fs-12.c-pink Очистить фильтр
+							button.fs-18.fw-medium.c-white(type='button') Применить
 					.products
+						.d-md-none.d-flex.btns 
+							button.btn-filter.align-items-center(type='button') 
+								img(src='img/common/filter.svg' alt='filter icon')
+								span.fw-medium Фильтрация
+							button.btn-sort(type='button') 
+								span.fw-medium Сортировка
+
 						.flex-wrap.products-content 
 							-var n = 23
 							-var i = 0
@@ -189,12 +218,14 @@ block content
 											p.fs-30.fw-medium.mb-20
 												span.c-orange.d-block Бесплатная доствка котлов 
 												| по Украине
-											p.fs-14.opensans Успей поставить котел,<br> пока не отключили<br> отопление! 
-										a.btn.bg-orange.fw-medium(href='#') Купи котел уже сейчас  
+											p.fs-14.opensans Успей поставить котел,<br class='d-sm-block d-none'> пока не отключили<br> отопление! 
+										a.btn.bg-orange.fw-medium(href='#') Купи котел 
+											span.d-sm-inline.d-none уже 
+											| сейчас  
 
 								-i++
 						+pagination(adjacents, 6, 6, 1, base, arrow)
-						p.pt-30 В настоящее время на рынке Украины существует широкий ассортимент моделей твердотопливных котлов различных типов и на любой диапазон по цене. В нашем интернет магазине представлены современные экономичные котлы на твердое топливо, которые удобны для использования, эффективные, простые и безопасные. Кроме того, благодаря использованию современных технологий они позволяют получить большую экономию топлива.
+						p.text.pt-sm-30 В настоящее время на рынке Украины существует широкий ассортимент моделей твердотопливных котлов различных типов и на любой диапазон по цене. В нашем интернет магазине представлены современные экономичные котлы на твердое топливо, которые удобны для использования, эффективные, простые и безопасные. Кроме того, благодаря использованию современных технологий они позволяют получить большую экономию топлива.
 
 block script 
 

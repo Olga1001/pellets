@@ -1,6 +1,10 @@
 "use strict";
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 $(document).ready(function () {
+  var _settings, _settings2;
+
   $('.slider-one').slick({
     infinite: true,
     slidesToShow: 1,
@@ -9,7 +13,8 @@ $(document).ready(function () {
     arrows: true,
     speed: 700,
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 3000,
+    focusOnSelect: true
   });
 
   for (var i = 0; i < $('.slider').length; i++) {
@@ -17,6 +22,7 @@ $(document).ready(function () {
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 2,
+      focusOnSelect: true,
       dots: false,
       arrows: true,
       prevArrow: $('.popular-products .slider-button-prev').eq(i),
@@ -41,6 +47,7 @@ $(document).ready(function () {
     slidesToScroll: 2,
     dots: false,
     arrows: true,
+    focusOnSelect: true,
     prevArrow: $('.section-articles .slider-button-prev'),
     nextArrow: $('.section-articles .slider-button-next'),
     responsive: [{
@@ -71,6 +78,7 @@ $(document).ready(function () {
     speed: 700,
     autoplay: true,
     autoplaySpeed: 3000,
+    focusOnSelect: true,
     fade: true,
     cssEase: 'linear',
     responsive: [{
@@ -86,6 +94,7 @@ $(document).ready(function () {
     slidesToScroll: 2,
     dots: false,
     arrows: true,
+    focusOnSelect: true,
     prevArrow: $('.services .slider-button-prev'),
     nextArrow: $('.services .slider-button-next'),
     responsive: [{
@@ -104,6 +113,43 @@ $(document).ready(function () {
         slidesToShow: 1
       }
     }]
+  });
+  $('.category-slider').slick({
+    infinite: false,
+    slidesToShow: 8,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    focusOnSelect: true,
+    responsive: [{
+      breakpoint: 1200,
+      settings: (_settings = {
+        slidesToShow: 7,
+        infinite: true
+      }, _defineProperty(_settings, "slidesToShow", 5), _defineProperty(_settings, "centerMode", true), _settings)
+    }, {
+      breakpoint: 992,
+      settings: (_settings2 = {
+        slidesToShow: 6,
+        infinite: true
+      }, _defineProperty(_settings2, "slidesToShow", 5), _defineProperty(_settings2, "centerMode", true), _settings2)
+    }, {
+      breakpoint: 768,
+      settings: {
+        infinite: true,
+        slidesToShow: 5,
+        centerMode: true
+      }
+    }, {
+      breakpoint: 576,
+      settings: {
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        variableWidth: true,
+        centerMode: true
+      }
+    }]
   }); // menu
 
   $(".burger").on('click', function () {
@@ -113,11 +159,21 @@ $(document).ready(function () {
   $(".btn-close, .header-b .header_right").on('click', function () {
     $('.navbotom').removeClass('active');
     $('.header-b .header_right').removeClass('active');
+    $('.filter').removeClass('active');
   });
   $(".catalog-h").on('click', function () {
     $('.catalog-drop').slideToggle(300);
     $('.icon-menu').toggleClass('active');
     $('.icon-close').toggleClass('active');
+  });
+  $(".select-item").on('click', function () {
+    $('.select-drop').slideToggle(300);
+    $(this).closest('.select').toggleClass('active');
+  });
+  $(".select-drop li").on('click', function () {
+    var text = $(this).text();
+    $(this).closest('.select').removeClass('active').find('.select-item p').text(text);
+    $('.select-drop').slideToggle(300);
   });
   $(".btn-more").on('click', function (e) {
     e.preventDefault();

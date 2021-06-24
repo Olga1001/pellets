@@ -470,7 +470,7 @@
                   </li>
                 </ul>
               </nav>
-              <div class="flex-wrap"> <a class="category-i" href="#">
+              <div class="category-slider pb-20"><a class="category-i" href="#">
                   <div class="category-i_border"><img src="img/common/category0.png" alt="catefory image"></div><span class="fs-12 d-block">Котлы на дровах и угле традиционного горения</span></a><a class="category-i" href="#">
                   <div class="category-i_border"><img src="img/common/category1.png" alt="catefory image"></div><span class="fs-12 d-block">Котлы длительного горения</span></a><a class="category-i" href="#">
                   <div class="category-i_border"><img src="img/common/category2.png" alt="catefory image"></div><span class="fs-12 d-block">Пиролизные котлы (газогенераторные)</span></a><a class="category-i" href="#">
@@ -479,18 +479,45 @@
                   <div class="category-i_border"><img src="img/common/category5.png" alt="catefory image"></div><span class="fs-12 d-block">Котлы-плиты с варочной поверхностью</span></a><a class="category-i" href="#">
                   <div class="category-i_border"><img src="img/common/category6.png" alt="catefory image"></div><span class="fs-12 d-block">Котлы на щепе</span></a>
               </div>
-              <h2 class="fs-27">ТВЕРДОТОПЛИВНЫЕ КОТЛЫ</h2>
+              <div class="flex-center-between flex-wrap"> 
+                <h2 class="fs-27">ТВЕРДОТОПЛИВНЫЕ КОТЛЫ</h2>
+                <div class="align-items-md-center d-none"> 
+                  <p class="fs-15 mr-5">Сортировать:</p>
+                  <div class="select"> 
+                    <div class="select-item flex-center-between">
+                      <p class="fs-15 fw-medium">по популярности</p>
+                      <svg class="svg-sprite-icon icon-arrow-down">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </div>
+                    <ul class="select-drop fs-14"> 
+                      <li>по популярности</li>
+                      <li>по рейтингу</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
               <div class="flex-wrap"> 
                 <div class="filter">
+                  <div class="filter_head d-md-none"> 
+                    <div class="align-items-center"> <img class="icon-filter" src="img/common/filter.svg" alt="filter icon">
+                      <p class="fs-18 fw-medium">Фильтрация</p>
+                    </div>
+                    <button class="btn-close" type="button">
+                      <svg class="svg-sprite-icon icon-close2">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
+                      </svg>
+                    </button>
+                  </div>
                   <p class="text-up fw-medium">Фильтр по товарам</p>
                   <div class="filter-i"> 
                     <p class="fs-18 fw-medium">Цена</p>
                     <div class="filter-price d-flex">
-                      <div class="w-50 mr-15">
+                      <div class="mr-15">
                         <p class="fs-15">от</p>
                         <input class="input-small amount1" type="text" value="4445">
                       </div>
-                      <div class="w-50"> 
+                      <div>
                         <p class="fs-15">до</p>
                         <input class="input-small amount2" type="text" value="971767">
                       </div>
@@ -518,12 +545,12 @@
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Ardenz<span class="c-gray-400">(3)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Ardenz <span class="c-gray-400">(3)</span></span>
                           </label>
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Aremikas<span class="c-gray-400">(1)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Aremikas <span class="c-gray-400">(1)</span></span>
                           </label>
                         </li>
                         <li class="isVisible">
@@ -533,7 +560,7 @@
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">ATON<span class="c-gray-400">(1)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">ATON <span class="c-gray-400">(1)</span></span>
                           </label>
                         </li>
                         <li class="isVisible">
@@ -543,7 +570,7 @@
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">BEETERM<span class="c-gray-400">(7)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">BEETERM <span class="c-gray-400">(7)</span></span>
                           </label>
                         </li>
                         <li class="d-none">
@@ -553,7 +580,7 @@
                         </li>
                         <li class="d-none">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">BEETERM (7)<span class="c-gray-400">(7)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">BEETERM <span class="c-gray-400">(7)</span></span>
                           </label>
                         </li>
                       </ul>
@@ -581,12 +608,12 @@
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">9<span class="c-gray-400">(3)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">9 <span class="c-gray-400">(3)</span></span>
                           </label>
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">10<span class="c-gray-400">(1)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">10 <span class="c-gray-400">(1)</span></span>
                           </label>
                         </li>
                         <li class="isVisible">
@@ -596,7 +623,7 @@
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">12<span class="c-gray-400">(1)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">12 <span class="c-gray-400">(1)</span></span>
                           </label>
                         </li>
                         <li class="isVisible">
@@ -606,7 +633,7 @@
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">14<span class="c-gray-400">(7)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">14 <span class="c-gray-400">(7)</span></span>
                           </label>
                         </li>
                         <li class="d-none">
@@ -616,7 +643,7 @@
                         </li>
                         <li class="d-none">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">16 (7)<span class="c-gray-400">(7)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">16 <span class="c-gray-400">(7)</span></span>
                           </label>
                         </li>
                       </ul>
@@ -639,17 +666,17 @@
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Австрия<span class="c-gray-400">(8)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Австрия <span class="c-gray-400">(8)</span></span>
                           </label>
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Германия<span class="c-gray-400">(3)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Германия <span class="c-gray-400">(3)</span></span>
                           </label>
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Литва<span class="c-gray-400">(1)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Литва <span class="c-gray-400">(1)</span></span>
                           </label>
                         </li>
                         <li class="isVisible">
@@ -659,7 +686,7 @@
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Турция<span class="c-gray-400">(1)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Турция <span class="c-gray-400">(1)</span></span>
                           </label>
                         </li>
                         <li class="isVisible">
@@ -669,7 +696,7 @@
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Чехия<span class="c-gray-400">(7)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Чехия <span class="c-gray-400">(7)</span></span>
                           </label>
                         </li>
                         <li class="d-none">
@@ -697,17 +724,17 @@
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Длительного горения<span class="c-gray-400">(8)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Длительного горения <span class="c-gray-400">(8)</span></span>
                           </label>
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Пеллетные<span class="c-gray-400">(3)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Пеллетные <span class="c-gray-400">(3)</span></span>
                           </label>
                         </li>
                         <li class="isVisible">
                           <label class="align-items-center"> 
-                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Традиционные<span class="c-gray-400">(1)</span></span>
+                            <input class="checkbox" type="checkbox"><span class="check"> </span><span class="fs-14">Традиционные <span class="c-gray-400">(1)</span></span>
                           </label>
                         </li>
                       </ul>
@@ -809,8 +836,20 @@
                     <div class="flex-wrap"> <a class="tag" href="#">КОТЛЫ ДЛИТЕЛЬНОГО ГОРЕНИЯ</a><a class="tag" href="#">Котлы на щепу</a><a class="tag" href="#">Котлы киев</a><a class="tag" href="#">Котлы по низкой цене Киев</a><a class="tag" href="#">димоходная труба для котлов</a>
                     </div>
                   </div>
+                  <div class="filter_footer flex-center-between d-md-none">
+                    <button class="align-items-center" type="reset">
+                      <svg class="svg-sprite-icon icon-close2">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
+                      </svg><span class="fs-12 c-pink">Очистить фильтр</span>
+                    </button>
+                    <button class="fs-18 fw-medium c-white" type="button">Применить</button>
+                  </div>
                 </div>
                 <div class="products">
+                  <div class="d-md-none d-flex btns"> 
+                    <button class="btn-filter align-items-center" type="button"> <img src="img/common/filter.svg" alt="filter icon"><span class="fw-medium">Фильтрация</span></button>
+                    <button class="btn-sort" type="button"> <span class="fw-medium">Сортировка</span></button>
+                  </div>
                   <div class="flex-wrap products-content"> 
                     <div class="card"> <a class="card-top" href="#"><img src="img/common/product2.jpg" alt="product">
                         <div class="sticky-right">
@@ -1096,8 +1135,8 @@
                     <div class="card-reverse big"><img src="img/common/car2.jpg" alt="product">
                       <div class="c-white">
                         <p class="fs-30 fw-medium mb-20"><span class="c-orange d-block">Бесплатная доствка котлов </span>по Украине</p>
-                        <p class="fs-14 opensans">Успей поставить котел,<br> пока не отключили<br> отопление! </p>
-                      </div><a class="btn bg-orange fw-medium" href="#">Купи котел уже сейчас  </a>
+                        <p class="fs-14 opensans">Успей поставить котел,<br class='d-sm-block d-none'> пока не отключили<br> отопление! </p>
+                      </div><a class="btn bg-orange fw-medium" href="#">Купи котел <span class="d-sm-inline d-none">уже </span>сейчас  </a>
                     </div>
                     <div class="card"> <a class="card-top" href="#"><img src="img/common/product2.jpg" alt="product">
                         <div class="sticky-right">
@@ -2090,23 +2129,23 @@
                       </div>
                     </div>
                   </div>
-                  <nav class="pagination align-items-center"><a class="disabled align-items-center" href="#" title="Prev page">
+                  <nav class="pagination align-items-sm-center flex-center-between"><a class="disabled align-items-center pagination-arrow" href="#" title="Prev page">
                       <svg class="svg-sprite-icon icon-arrow-left mr-16">
                         <use xlink:href="img/sprite/symbol/sprite.svg#arrow-left"></use>
-                      </svg><span class="d-lg-block d-none">Previous page</span></a>
+                      </svg></a>
                     <ul class="align-items-center">
-                      <li class="active"><a href="#1">1</a></li>
+                      <li class="page active"><a href="#1">1</a></li>
                       <li class="page"><a href="#2">2</a></li>
                       <li class="page"><a href="#3">3</a></li>
                       <li class="page"><a href="#4">4</a></li>
                       <li class="page"><a href="#5">5</a></li>
                       <li class="page"><a href="#6">6</a></li>
-                    </ul><a class="align-items-center" href="#" title="Next page"><span class="d-lg-block d-none">Next page</span>
+                    </ul><a class="align-items-center pagination-arrow" href="#" title="Next page">
                       <svg class="svg-sprite-icon icon-arrow-right ml-16">
                         <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
                       </svg></a>
                   </nav>
-                  <p class="pt-30">В настоящее время на рынке Украины существует широкий ассортимент моделей твердотопливных котлов различных типов и на любой диапазон по цене. В нашем интернет магазине представлены современные экономичные котлы на твердое топливо, которые удобны для использования, эффективные, простые и безопасные. Кроме того, благодаря использованию современных технологий они позволяют получить большую экономию топлива.</p>
+                  <p class="text pt-sm-30">В настоящее время на рынке Украины существует широкий ассортимент моделей твердотопливных котлов различных типов и на любой диапазон по цене. В нашем интернет магазине представлены современные экономичные котлы на твердое топливо, которые удобны для использования, эффективные, простые и безопасные. Кроме того, благодаря использованию современных технологий они позволяют получить большую экономию топлива.</p>
                 </div>
               </div>
             </div>
