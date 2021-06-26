@@ -87,6 +87,8 @@
     padding: 15px 17px 15px 29px
     position: sticky
     top: 0
+    z-index: 2
+    background: $white
     .icon-filter 
         margin-right: 27px
     .btn-close svg
@@ -102,3 +104,25 @@
         +box(11px)
         fill: #fff
         margin-right: 14px
+
+.sort
+    position: fixed 
+    top: 0
+    left: 0 
+    background: #fff 
+    width: 100% 
+    height: 100vh 
+    overflow-y: auto 
+    z-index: 9999
+    padding: 0
+    opacity: 0 
+    pointer-events: none
+    &.active 
+        opacity: 1
+        pointer-events: auto
+    &_body
+        height: calc(100vh - 59px - 60px)
+        padding: 29px
+        label 
+            margin-bottom: 20px
+

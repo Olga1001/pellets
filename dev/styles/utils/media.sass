@@ -21,22 +21,9 @@
 @media only screen and (min-width : 992px)     
     .w-lg-50
         width: 50% 
-    // .d-lg-block
-    //     display: block
-    // .d-lg-none 
-    //     display: none
-    // .flex-lg-center-end
-    //     +d-flex(flex-end,center)
-    // .align-item-lg-start 
-    //     +d-flex(flex-start,flex-start)
-    // .d-lg-flex 
-    //     display: flex
-    // .flex-lg-column
-    //     display: flex 
-    //     flex-direction: column
-    // .flex-lg-row
-    //     display: flex 
-    //     flex-direction: row
+    .catalog-drop li:hover .catalog-m
+        opacity: 1
+        pointer-events: auto
 @media only screen and (min-width : 768px)
     .d-md-none
         display: none
@@ -114,7 +101,7 @@
         top: 0
         left: 0
         +box(100%)
-        background: #E5E5E5
+        background: rgba($black,0.5)
         transition: all 0.3s ease 
         &.active 
             opacity: 1
@@ -123,8 +110,9 @@
         width: calc(100% - 60px)
         background: #FFFFFF
         margin: 0
-        height: calc(100vh - 76px)
-        padding: 20px 16px
+        height: 100vh
+        padding: 20px 16px 80px
+        overflow-y: auto
         ul 
             display: block
     .main-f .slider-fade
@@ -186,9 +174,9 @@
         margin-bottom: 35px
     .footer-top
         padding: 31px 0
-    .header .catalog-h
+    .main-page .catalog-h
         pointer-events: auto
-    .header .catalog-drop
+    .main-page .catalog-drop
         display: none
     .header-b .header_right
         max-width: 100%
@@ -212,7 +200,7 @@
         opacity: 1
         pointer-events: auto
         width: 100%
-        min-height: auto
+        min-height: 100%
         padding: 14px 26px
     .header-b .header_left
         width: 100%
@@ -223,17 +211,13 @@
     .catalog-m .col
         max-width: 100%
         width: calc(50% - 15px)
-    .catalog-drop li:hover 
-        .catalog-m
-            display: flex 
-            flex-wrap: wrap
-        .catalog-item 
-            background: #F4F4F4
-            p 
-                color: #E44937
-            svg 
-                transform: rotate(90deg)
-                stroke: #E44937
+    .catalog-drop li .catalog-item.active 
+        background: #F4F4F4
+        p 
+            color: #E44937
+        svg 
+            transform: rotate(90deg)
+            stroke: #E44937
     .catalog-item  
         padding: 13px 22px 13px 29px
         margin: 0
@@ -390,7 +374,6 @@
         font-size: 14px
         line-height: 32px
         padding: 0 5px
-
 @media only screen and (max-width : 575px)
     .popular-products .slider
         margin: 27px -16px 0
@@ -542,6 +525,14 @@
     .text 
         font-size: 14px
         line-height: 18px
+    .search-drop
+        padding: 20px 10px
+        span 
+            font-size: 13px
+            line-height: 16px
+    .search-drop li img
+        +box(40px)
+        margin-right: 10px
 @media only screen and (max-width : 360px)
     .footer_phones a
         font-size: 14px

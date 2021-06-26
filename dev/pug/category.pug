@@ -1,7 +1,8 @@
 extends layout/main
 
 block variables
-	-var title = 'Главная страница'
+	-var title = 'Категория'
+	-var page = 'category-page'
 
 block link
 
@@ -21,7 +22,7 @@ block content
 							span.fs-12.d-block=val
 				.flex-center-between.flex-wrap 
 					h2.fs-27 ТВЕРДОТОПЛИВНЫЕ КОТЛЫ
-					.align-items-md-center.d-none 
+					.align-items-md-center.d-none
 						p.fs-15.mr-5 Сортировать:
 						.select 
 							.select-item.flex-center-between
@@ -32,7 +33,23 @@ block content
 								li по популярности
 								li по рейтингу
 				.flex-wrap 
-					.filter
+					.sort(data-item='sort') 
+						.filter_head
+							p.fs-18.fw-medium Сортировать
+							button.btn-close(type='button')
+								+icon('close2')
+						.sort_body
+							label.align-items-center 
+								input.checkbox(type='radio' name='radio' checked)
+								span.check 
+								span.fs-14 по популярности
+							label.align-items-center 
+								input.checkbox(type='radio' name='radio')
+								span.check 
+								span.fs-14 по рейтингу
+						button.filter_footer.text-center.fs-18.fw-medium.c-white.w-100(type='button') Применить
+
+					.filter(data-item='filter')
 						.filter_head.d-md-none 
 							.align-items-center 
 								img.icon-filter(src='img/common/filter.svg' alt='filter icon')
@@ -156,10 +173,10 @@ block content
 							button.fs-18.fw-medium.c-white(type='button') Применить
 					.products
 						.d-md-none.d-flex.btns 
-							button.btn-filter.align-items-center(type='button') 
+							button.btn-filter.align-items-center(type='button' data-button='filter') 
 								img(src='img/common/filter.svg' alt='filter icon')
 								span.fw-medium Фильтрация
-							button.btn-sort(type='button') 
+							button.btn-sort(type='button' data-button='sort') 
 								span.fw-medium Сортировка
 
 						.flex-wrap.products-content 
@@ -175,31 +192,32 @@ block content
 										.status-product Ожидается
 									if (i==3) 
 										.status-product Нет в наличии
-									a.card-top(href='#')
-										img(src='img/common/product2.jpg' alt='product')
-										.sticky-right
-											button.btn-heart(type='button')
-												+icon('heart2')
-											button.btn-weigher(type='button')
-												+icon('weigher')
-									.flex-center-between.opensans.mb-16.flex-wrap
-										.align-items-center
-											.rate-area.checked
-												input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
-												label(for=`5-star${i}` title='Amazing') 
-												input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
-												label(for=`4-star${i}` title='Good') 
-												input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
-												label(for=`3-star${i}` title='Average')
-												input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
-												label(for=`2-star${i}` title='Not Good') 
-												input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
-												label(for=`1-star${i}` title='Bad')
-											.i-comments.align-items-center
-												+icon('comments')
-												p.text-small 21
-										p.text-small.c-gray Код: 79059000-1
-									a.card-title(href='#') Котел твердопаливний <br> KRONAS EKO 
+									a(href='#')
+										.card-top
+											img(src='img/common/product2.jpg' alt='product')
+											.sticky-right
+												button.btn-heart(type='button')
+													+icon('heart2')
+												button.btn-weigher(type='button')
+													+icon('weigher')
+										.flex-center-between.opensans.mb-16.flex-wrap
+											.align-items-center
+												.rate-area.checked
+													input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+													label(for=`5-star${i}` title='Amazing') 
+													input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+													label(for=`4-star${i}` title='Good') 
+													input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+													label(for=`3-star${i}` title='Average')
+													input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+													label(for=`2-star${i}` title='Not Good') 
+													input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+													label(for=`1-star${i}` title='Bad')
+												.i-comments.align-items-center
+													+icon('comments')
+													p.text-small 21
+											p.text-small.c-gray Код: 79059000-1
+										p.card-title Котел твердопаливний <br> KRONAS EKO 
 									ul.card-info.opensans.text-small
 										li.d-flex
 											p Производитель:

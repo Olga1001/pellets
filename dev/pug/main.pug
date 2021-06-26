@@ -2,11 +2,12 @@ extends layout/main
 
 block variables
 	-var title = 'Главная страница'
+	-var page = 'main-page'
 
 block link
 
 block content
-	main.main-page
+	main
 		section.main-f
 			.container
 				.slider-fade 
@@ -42,31 +43,33 @@ block content
 									.new NEW
 							if (i==2) 
 								.status-product Ожидается
-							a.card-top(href='#')
-								img(src='img/common/product2.jpg' alt='product')
-								.sticky-right
-									button.btn-heart(type='button')
-										+icon('heart2')
-									button.btn-weigher(type='button')
-										+icon('weigher')
-							.flex-center-between.opensans.mb-16.flex-wrap
-								.align-items-center
-									.rate-area.checked
-										input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
-										label(for=`5-star${i}` title='Amazing') 
-										input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
-										label(for=`4-star${i}` title='Good') 
-										input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
-										label(for=`3-star${i}` title='Average')
-										input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
-										label(for=`2-star${i}` title='Not Good') 
-										input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
-										label(for=`1-star${i}` title='Bad')
-									.i-comments.align-items-center
-										+icon('comments')
-										p.text-small 21
-								p.text-small.c-gray Код: 79059000-1
-							a.card-title(href='#') Котел твердопаливний <br> KRONAS EKO 
+							a(href='#')
+								object
+									.card-top
+										img(src='img/common/product2.jpg' alt='product')
+										.sticky-right
+											button.btn-heart(type='button')
+												+icon('heart2')
+											button.btn-weigher(type='button')
+												+icon('weigher')
+									.flex-center-between.opensans.mb-16.flex-wrap
+										.align-items-center
+											.rate-area.checked
+												input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+												label(for=`5-star${i}` title='Amazing') 
+												input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+												label(for=`4-star${i}` title='Good') 
+												input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+												label(for=`3-star${i}` title='Average')
+												input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+												label(for=`2-star${i}` title='Not Good') 
+												input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+												label(for=`1-star${i}` title='Bad')
+											.i-comments.align-items-center
+												+icon('comments')
+												p.text-small 21
+										p.text-small.c-gray Код: 79059000-1
+									p.card-title Котел твердопаливний <br> KRONAS EKO 
 							ul.card-info.opensans.text-small
 								li.d-flex
 									p Производитель:
@@ -119,31 +122,33 @@ block content
 					-var i = 6
 					while (n--)
 						.card 
-							a.card-top(href='#')
-								img(src='img/common/product2.jpg' alt='product')
-								.sticky-right
-									button.btn-heart(type='button')
-										+icon('heart2')
-									button.btn-weigher(type='button')
-										+icon('weigher')
-							.flex-center-between.opensans.mb-16.flex-wrap
-								.align-items-center
-									.rate-area.checked
-										input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
-										label(for=`5-star${i}` title='Amazing') 
-										input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
-										label(for=`4-star${i}` title='Good') 
-										input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
-										label(for=`3-star${i}` title='Average')
-										input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
-										label(for=`2-star${i}` title='Not Good') 
-										input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
-										label(for=`1-star${i}` title='Bad')
-									.i-comments.align-items-center
-										+icon('comments')
-										p.text-small 21
-								p.text-small.c-gray Код: 79059000-1
-							a.card-title(href='#') Котел твердопаливний <br> KRONAS EKO 
+							a(href='#')
+								object
+									.card-top
+										img(src='img/common/product2.jpg' alt='product')
+										.sticky-right
+											button.btn-heart(type='button')
+												+icon('heart2')
+											button.btn-weigher(type='button')
+												+icon('weigher')
+									.flex-center-between.opensans.mb-16.flex-wrap
+										.align-items-center
+											.rate-area.checked
+												input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+												label(for=`5-star${i}` title='Amazing') 
+												input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+												label(for=`4-star${i}` title='Good') 
+												input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+												label(for=`3-star${i}` title='Average')
+												input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+												label(for=`2-star${i}` title='Not Good') 
+												input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+												label(for=`1-star${i}` title='Bad')
+											.i-comments.align-items-center
+												+icon('comments')
+												p.text-small 21
+										p.text-small.c-gray Код: 79059000-1
+									p.card-title Котел твердопаливний <br> KRONAS EKO 
 							ul.card-info.opensans.text-small
 								li.d-flex
 									p Производитель:
@@ -195,31 +200,33 @@ block content
 					-var i = 12
 					while (n--)
 						.card 
-							a.card-top(href='#')
-								img(src='img/common/product2.jpg' alt='product')
-								.sticky-right
-									button.btn-heart(type='button')
-										+icon('heart2')
-									button.btn-weigher(type='button')
-										+icon('weigher')
-							.flex-center-between.opensans.mb-16.flex-wrap
-								.align-items-center
-									.rate-area.checked
-										input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
-										label(for=`5-star${i}` title='Amazing') 
-										input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
-										label(for=`4-star${i}` title='Good') 
-										input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
-										label(for=`3-star${i}` title='Average')
-										input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
-										label(for=`2-star${i}` title='Not Good') 
-										input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
-										label(for=`1-star${i}` title='Bad')
-									.i-comments.align-items-center
-										+icon('comments')
-										p.text-small 21
-								p.text-small.c-gray Код: 79059000-1
-							a.card-title(href='#') Котел твердопаливний <br> KRONAS EKO 
+							a(href='#')
+								object
+									.card-top
+										img(src='img/common/product2.jpg' alt='product')
+										.sticky-right
+											button.btn-heart(type='button')
+												+icon('heart2')
+											button.btn-weigher(type='button')
+												+icon('weigher')
+									.flex-center-between.opensans.mb-16.flex-wrap
+										.align-items-center
+											.rate-area.checked
+												input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+												label(for=`5-star${i}` title='Amazing') 
+												input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+												label(for=`4-star${i}` title='Good') 
+												input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+												label(for=`3-star${i}` title='Average')
+												input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+												label(for=`2-star${i}` title='Not Good') 
+												input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+												label(for=`1-star${i}` title='Bad')
+											.i-comments.align-items-center
+												+icon('comments')
+												p.text-small 21
+										p.text-small.c-gray Код: 79059000-1
+									p.card-title Котел твердопаливний <br> KRONAS EKO 
 							ul.card-info.opensans.text-small
 								li.d-flex
 									p Производитель:
@@ -270,27 +277,21 @@ block content
 					p.fs-13.pt-20 И помните, что вместе с оборудованием вы покупаете наш опыт, а его стоимость в большинстве случаев бесценна!
 				button.btn-more(type="button") смотреть больше
 		section.newsletter
-			.container
-				.flex-wrap.c-white 
-					.w-100.w-lg-50.newsletter-left
-						div
-							h2.big.mb-16 PELLETS HOME -
-							p.fs-23.fw-medium ЭТО КОМАНДА ПРОФЕССИОНАЛОВ, КОТОРЫЕ ЗНАЮТ ВСЕ ОБ ОТОПЛЕНИИ ТВЁРДЫМ ТОПЛИВОМ 
-							p Мы всегда готовы предложить не только продажу оборудования, но и комплексные услуги по расчету рентабельности проекта, проектные и монтажные работы по котельной
-						a.btn.big.max-200(href='#') Подробнее
-					.w-100.w-lg-50.newsletter-right
-						h2.text-up  Подпишись на рассылку
-						p.lh-21 Получайте последние новости <br> о акционных предложениях на e-mail 
-						form.form-subscription
-							input(type='email' placeholder='E-mail *' required)
-							button.btn.bg-orange.c-white(type='submit') Подписатся
-						p.fs-13 *Оформляя подписку вы даете согласие <br>на обработку 
-							a.c-white.underline(href='#') персональных данных
-
-
-
-					
-
+			.flex-wrap.c-white 
+				.w-100.w-lg-50.newsletter-left
+					div
+						h2.big.mb-16 PELLETS HOME -
+						p.fs-23.fw-medium ЭТО КОМАНДА ПРОФЕССИОНАЛОВ, КОТОРЫЕ ЗНАЮТ ВСЕ ОБ ОТОПЛЕНИИ ТВЁРДЫМ ТОПЛИВОМ 
+						p Мы всегда готовы предложить не только продажу оборудования, но и комплексные услуги по расчету рентабельности проекта, проектные и монтажные работы по котельной
+					a.btn.big.max-200(href='#') Подробнее
+				.w-100.w-lg-50.newsletter-right
+					h2.text-up  Подпишись на рассылку
+					p.lh-21 Получайте последние новости <br> о акционных предложениях на e-mail 
+					form.form-subscription
+						input(type='email' placeholder='E-mail *' required)
+						button.btn.bg-orange.c-white(type='submit') Подписатся
+					p.fs-13 *Оформляя подписку вы даете согласие <br>на обработку 
+						a.c-white.underline(href='#') персональных данных
 
 block script 
 

@@ -81,15 +81,11 @@
     border-radius: 6px
     padding: 20px 19px
     width: max-content
-    opacity: 0
-    pointer-events: none 
+    display: none
     z-index: 7
-    &.active 
-        opacity: 1
-        pointer-events: auto 
     li 
         margin-bottom: 9px
-        &:last-child 
+        &:last-child    
             margin-bottom: 0
     .btn 
         margin-top: 15px
@@ -98,7 +94,7 @@
     margin-right: 15px
     &-item
         cursor: pointer
-        padding: 5px 0
+        padding: 10px 0
         white-space: nowrap
         .icon-phone2
             +box(22px)
@@ -108,6 +104,10 @@
             +box(12px)
             stroke: $black
             margin-left: 30px
+            transform: scaleY(1)
+            transition: all 0.3s ease
+        &.active .icon-arrow-down 
+            transform: scaleY(-1)
 
 .search 
     position: relative
@@ -196,7 +196,7 @@
     stroke: $white
     stroke-width: 4px
 
-.header
+.main-page
     .catalog-h
         pointer-events: none
     .catalog-drop
@@ -220,18 +220,14 @@
         width: calc(100% + 16px)
         background: #F3F3F3
         padding: 28px 0 22px 0
-        z-index: 2
+        z-index: 3
         display: none
         svg 
             +box(10px)
             stroke: #C6C6C6
             stroke-width: 2px
             margin-left: auto
-
-        li:hover 
-            .catalog-m 
-                opacity: 1
-                pointer-events: auto
+            transition: all 0.3s ease
     &-m
         position: absolute
         left: 100%
@@ -243,7 +239,7 @@
         opacity: 0
         pointer-events: none
         min-height: 421px
-        transition: all 0.3s ease
+        transition: opacity 0.3s ease
         &.active 
             opacity: 1
             pointer-events: auto

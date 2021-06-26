@@ -49,12 +49,18 @@ header.header
                             ul 
                                 -var n = 3
                                 -while(n--)
-                                    li 
+                                    li.isVisible 
                                         a.align-items-center(href='#')
                                             img(src='img/common/product.png' alt='product image')
                                             span Котел твердопаливний 
                                                 span.d-block KRONAS EKO  
-                            button.fs-14.search-more(type='button') показать все результаты поиска
+                                li.d-none 
+                                    a.align-items-center(href='#')
+                                        img(src='img/common/product.png' alt='product image')
+                                        span Котел твердопаливний 
+                                            span.d-block KRONAS EKO 
+                            button.fs-14.search-more(type='button') показать все 
+                                span.d-sm-inline.d-none результаты поиска
 
                     nav.navbotom.stopPropagation 
                         ul.flex-center-around 
@@ -83,30 +89,31 @@ header.header
                                     img.catalog-item_img(src='img/catalog/'+val.icon alt='catalog')
                                     p.fs-15=val.name
                                     +icon('arrow-right')
-                                .catalog-m.justify-content-between
-                                    .col 
-                                        .align-items-center 
-                                            img.catalog-m_img(src='img/catalog/img1.png' alt='image')
-                                            p.fs-21.fw-medium Бытовые твердотопливные котлы
-                                        ul.catalog-list 
-                                            each val in ['Котлы на дровах и угле традиционного горения','Котлы длительного горения','Пиролизные котлы (газогенераторные)','Пеллетные котлы с автоматической подачей топлива','Твердотопливные теплогенераторы','Котлы на щепе','Котлы-плиты с варочной поверхностью']
-                                                li.fs-14=val
-                                    .col 
-                                        .align-items-center 
-                                            img.catalog-m_img(src='img/catalog/img2.png' alt='image')
-                                            p.fs-21.fw-medium Промышленный твердотопливные котлы
-                                        ul.catalog-list 
-                                            each val in ['Промышленные автоматизированные котлые','Промышленные котлы с ручной загрузкой','Блочно-модульные котельные','Парогенераторы на твердом топливе']
-                                                li.fs-14=val
+                                .catalog-m
+                                    .justify-content-between.flex-wrap
+                                        .col 
+                                            .align-items-center 
+                                                img.catalog-m_img(src='img/catalog/img1.png' alt='image')
+                                                p.fs-21.fw-medium Бытовые твердотопливные котлы
+                                            ul.catalog-list 
+                                                each val in ['Котлы на дровах и угле традиционного горения','Котлы длительного горения','Пиролизные котлы (газогенераторные)','Пеллетные котлы с автоматической подачей топлива','Твердотопливные теплогенераторы','Котлы на щепе','Котлы-плиты с варочной поверхностью']
+                                                    li.fs-14=val
+                                        .col 
+                                            .align-items-center 
+                                                img.catalog-m_img(src='img/catalog/img2.png' alt='image')
+                                                p.fs-21.fw-medium Промышленный твердотопливные котлы
+                                            ul.catalog-list 
+                                                each val in ['Промышленные автоматизированные котлые','Промышленные котлы с ручной загрузкой','Блочно-модульные котельные','Парогенераторы на твердом топливе']
+                                                    li.fs-14=val
 
-                                    .card-reverse
-                                        img(src='img/common/product.jpg' alt='product')
-                                        .c-white
-                                            p.fs-20.fw-medium
-                                                span.c-orange.d-block Проектирование
-                                                | промышленных котелен
-                                            p.fs-11.opensans Успей поставить котел, пока не отключили отопление! 
-                                        a.btn.bg-orange(href='#') Подробнее   
+                                        .card-reverse
+                                            img(src='img/common/product.jpg' alt='product')
+                                            .c-white
+                                                p.fs-20.fw-medium
+                                                    span.c-orange.d-block Проектирование
+                                                    | промышленных котелен
+                                                p.fs-11.opensans Успей поставить котел, пока не отключили отопление! 
+                                            a.btn.bg-orange(href='#') Подробнее   
             nav.header_right.align-items-xl-center
                 .menu.stopPropagation
                     .d-xl-none.flex-center-between
@@ -114,7 +121,6 @@ header.header
                             span.fs-30.align-items-baseline Pellets
                                 +icon('logo', 'c-red')
                                 | Home
-                            span.fs-15 твердотопливные котлы №1 в Украине 
                         .lang.d-flex 
                             a(href='#') ua
                             a.active(href='#') ru  
