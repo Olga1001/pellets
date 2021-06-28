@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=375,initial-scale=1">
     <meta name="keywords" content="">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/libs.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="preload" href="css/libs.css">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
@@ -101,11 +101,12 @@
                   </button>
                   <div class="search-drop"> 
                     <ul> 
-                      <li> <a class="align-items-center" href="#"><img src="img/common/product.png" alt="product image"><span>Котел твердопаливний <span class="d-block">KRONAS EKO  </span></span></a></li>
-                      <li> <a class="align-items-center" href="#"><img src="img/common/product.png" alt="product image"><span>Котел твердопаливний <span class="d-block">KRONAS EKO  </span></span></a></li>
-                      <li> <a class="align-items-center" href="#"><img src="img/common/product.png" alt="product image"><span>Котел твердопаливний <span class="d-block">KRONAS EKO  </span></span></a></li>
+                      <li class="isVisible"> <a class="align-items-center" href="#"><img src="img/common/product.png" alt="product image"><span>Котел твердопаливний <span class="d-block">KRONAS EKO  </span></span></a></li>
+                      <li class="isVisible"> <a class="align-items-center" href="#"><img src="img/common/product.png" alt="product image"><span>Котел твердопаливний <span class="d-block">KRONAS EKO  </span></span></a></li>
+                      <li class="isVisible"> <a class="align-items-center" href="#"><img src="img/common/product.png" alt="product image"><span>Котел твердопаливний <span class="d-block">KRONAS EKO  </span></span></a></li>
+                      <li class="d-none"> <a class="align-items-center" href="#"><img src="img/common/product.png" alt="product image"><span>Котел твердопаливний <span class="d-block">KRONAS EKO </span></span></a></li>
                     </ul>
-                    <button class="fs-14 search-more" type="button">показать все результаты поиска</button>
+                    <button class="fs-14 search-more" type="button">показать все <span class="d-sm-inline d-none">результаты поиска</span></button>
                   </div>
                 </form>
                 <nav class="navbotom stopPropagation"> 
@@ -153,37 +154,35 @@
                         <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
                       </svg>
                     </div>
-                    <div class="catalog-m justify-content-between">
-                      <div class="col"> 
-                        <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img1.png" alt="image">
-                          <p class="fs-21 fw-medium">Бытовые твердотопливные котлы</p>
+                    <div class="catalog-m">
+                      <div class="justify-content-between flex-wrap">
+                        <div class="col"> 
+                          <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img1.png" alt="image"><a class="fs-21 fw-medium" href="#">Бытовые твердотопливные котлы</a></div>
+                          <ul class="catalog-list"> 
+                            <li><a class="fs-14" href="#">Котлы на дровах и угле традиционного горения</a></li>
+                            <li><a class="fs-14" href="#">Котлы длительного горения</a></li>
+                            <li><a class="fs-14" href="#">Пиролизные котлы (газогенераторные)</a></li>
+                            <li><a class="fs-14" href="#">Пеллетные котлы с автоматической подачей топлива</a></li>
+                            <li><a class="fs-14" href="#">Твердотопливные теплогенераторы</a></li>
+                            <li><a class="fs-14" href="#">Котлы на щепе</a></li>
+                            <li><a class="fs-14" href="#">Котлы-плиты с варочной поверхностью</a></li>
+                          </ul>
                         </div>
-                        <ul class="catalog-list"> 
-                          <li class="fs-14">Котлы на дровах и угле традиционного горения</li>
-                          <li class="fs-14">Котлы длительного горения</li>
-                          <li class="fs-14">Пиролизные котлы (газогенераторные)</li>
-                          <li class="fs-14">Пеллетные котлы с автоматической подачей топлива</li>
-                          <li class="fs-14">Твердотопливные теплогенераторы</li>
-                          <li class="fs-14">Котлы на щепе</li>
-                          <li class="fs-14">Котлы-плиты с варочной поверхностью</li>
-                        </ul>
-                      </div>
-                      <div class="col"> 
-                        <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img2.png" alt="image">
-                          <p class="fs-21 fw-medium">Промышленный твердотопливные котлы</p>
+                        <div class="col"> 
+                          <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img2.png" alt="image"><a class="fs-21 fw-medium" href="#">Промышленный твердотопливные котлы</a></div>
+                          <ul class="catalog-list"> 
+                            <li><a class="fs-14" href="#">Промышленные автоматизированные котлые</a></li>
+                            <li><a class="fs-14" href="#">Промышленные котлы с ручной загрузкой</a></li>
+                            <li><a class="fs-14" href="#">Блочно-модульные котельные</a></li>
+                            <li><a class="fs-14" href="#">Парогенераторы на твердом топливе</a></li>
+                          </ul>
                         </div>
-                        <ul class="catalog-list"> 
-                          <li class="fs-14">Промышленные автоматизированные котлые</li>
-                          <li class="fs-14">Промышленные котлы с ручной загрузкой</li>
-                          <li class="fs-14">Блочно-модульные котельные</li>
-                          <li class="fs-14">Парогенераторы на твердом топливе</li>
-                        </ul>
-                      </div>
-                      <div class="card-reverse"><img src="img/common/product.jpg" alt="product">
-                        <div class="c-white">
-                          <p class="fs-20 fw-medium"><span class="c-orange d-block">Проектирование</span>промышленных котелен</p>
-                          <p class="fs-11 opensans">Успей поставить котел, пока не отключили отопление! </p>
-                        </div><a class="btn bg-orange" href="#">Подробнее   </a>
+                        <div class="card-reverse"><img src="img/common/product.jpg" alt="product">
+                          <div class="c-white">
+                            <p class="fs-20 fw-medium"><span class="c-orange d-block">Проектирование</span>промышленных котелен</p>
+                            <p class="fs-11 opensans">Успей поставить котел, пока не отключили отопление! </p>
+                          </div><a class="btn bg-orange" href="#">Подробнее   </a>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -194,37 +193,35 @@
                         <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
                       </svg>
                     </div>
-                    <div class="catalog-m justify-content-between">
-                      <div class="col"> 
-                        <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img1.png" alt="image">
-                          <p class="fs-21 fw-medium">Бытовые твердотопливные котлы</p>
+                    <div class="catalog-m">
+                      <div class="justify-content-between flex-wrap">
+                        <div class="col"> 
+                          <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img1.png" alt="image"><a class="fs-21 fw-medium" href="#">Бытовые твердотопливные котлы</a></div>
+                          <ul class="catalog-list"> 
+                            <li><a class="fs-14" href="#">Котлы на дровах и угле традиционного горения</a></li>
+                            <li><a class="fs-14" href="#">Котлы длительного горения</a></li>
+                            <li><a class="fs-14" href="#">Пиролизные котлы (газогенераторные)</a></li>
+                            <li><a class="fs-14" href="#">Пеллетные котлы с автоматической подачей топлива</a></li>
+                            <li><a class="fs-14" href="#">Твердотопливные теплогенераторы</a></li>
+                            <li><a class="fs-14" href="#">Котлы на щепе</a></li>
+                            <li><a class="fs-14" href="#">Котлы-плиты с варочной поверхностью</a></li>
+                          </ul>
                         </div>
-                        <ul class="catalog-list"> 
-                          <li class="fs-14">Котлы на дровах и угле традиционного горения</li>
-                          <li class="fs-14">Котлы длительного горения</li>
-                          <li class="fs-14">Пиролизные котлы (газогенераторные)</li>
-                          <li class="fs-14">Пеллетные котлы с автоматической подачей топлива</li>
-                          <li class="fs-14">Твердотопливные теплогенераторы</li>
-                          <li class="fs-14">Котлы на щепе</li>
-                          <li class="fs-14">Котлы-плиты с варочной поверхностью</li>
-                        </ul>
-                      </div>
-                      <div class="col"> 
-                        <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img2.png" alt="image">
-                          <p class="fs-21 fw-medium">Промышленный твердотопливные котлы</p>
+                        <div class="col"> 
+                          <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img2.png" alt="image"><a class="fs-21 fw-medium" href="#">Промышленный твердотопливные котлы</a></div>
+                          <ul class="catalog-list"> 
+                            <li><a class="fs-14" href="#">Промышленные автоматизированные котлые</a></li>
+                            <li><a class="fs-14" href="#">Промышленные котлы с ручной загрузкой</a></li>
+                            <li><a class="fs-14" href="#">Блочно-модульные котельные</a></li>
+                            <li><a class="fs-14" href="#">Парогенераторы на твердом топливе</a></li>
+                          </ul>
                         </div>
-                        <ul class="catalog-list"> 
-                          <li class="fs-14">Промышленные автоматизированные котлые</li>
-                          <li class="fs-14">Промышленные котлы с ручной загрузкой</li>
-                          <li class="fs-14">Блочно-модульные котельные</li>
-                          <li class="fs-14">Парогенераторы на твердом топливе</li>
-                        </ul>
-                      </div>
-                      <div class="card-reverse"><img src="img/common/product.jpg" alt="product">
-                        <div class="c-white">
-                          <p class="fs-20 fw-medium"><span class="c-orange d-block">Проектирование</span>промышленных котелен</p>
-                          <p class="fs-11 opensans">Успей поставить котел, пока не отключили отопление! </p>
-                        </div><a class="btn bg-orange" href="#">Подробнее   </a>
+                        <div class="card-reverse"><img src="img/common/product.jpg" alt="product">
+                          <div class="c-white">
+                            <p class="fs-20 fw-medium"><span class="c-orange d-block">Проектирование</span>промышленных котелен</p>
+                            <p class="fs-11 opensans">Успей поставить котел, пока не отключили отопление! </p>
+                          </div><a class="btn bg-orange" href="#">Подробнее   </a>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -235,37 +232,35 @@
                         <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
                       </svg>
                     </div>
-                    <div class="catalog-m justify-content-between">
-                      <div class="col"> 
-                        <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img1.png" alt="image">
-                          <p class="fs-21 fw-medium">Бытовые твердотопливные котлы</p>
+                    <div class="catalog-m">
+                      <div class="justify-content-between flex-wrap">
+                        <div class="col"> 
+                          <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img1.png" alt="image"><a class="fs-21 fw-medium" href="#">Бытовые твердотопливные котлы</a></div>
+                          <ul class="catalog-list"> 
+                            <li><a class="fs-14" href="#">Котлы на дровах и угле традиционного горения</a></li>
+                            <li><a class="fs-14" href="#">Котлы длительного горения</a></li>
+                            <li><a class="fs-14" href="#">Пиролизные котлы (газогенераторные)</a></li>
+                            <li><a class="fs-14" href="#">Пеллетные котлы с автоматической подачей топлива</a></li>
+                            <li><a class="fs-14" href="#">Твердотопливные теплогенераторы</a></li>
+                            <li><a class="fs-14" href="#">Котлы на щепе</a></li>
+                            <li><a class="fs-14" href="#">Котлы-плиты с варочной поверхностью</a></li>
+                          </ul>
                         </div>
-                        <ul class="catalog-list"> 
-                          <li class="fs-14">Котлы на дровах и угле традиционного горения</li>
-                          <li class="fs-14">Котлы длительного горения</li>
-                          <li class="fs-14">Пиролизные котлы (газогенераторные)</li>
-                          <li class="fs-14">Пеллетные котлы с автоматической подачей топлива</li>
-                          <li class="fs-14">Твердотопливные теплогенераторы</li>
-                          <li class="fs-14">Котлы на щепе</li>
-                          <li class="fs-14">Котлы-плиты с варочной поверхностью</li>
-                        </ul>
-                      </div>
-                      <div class="col"> 
-                        <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img2.png" alt="image">
-                          <p class="fs-21 fw-medium">Промышленный твердотопливные котлы</p>
+                        <div class="col"> 
+                          <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img2.png" alt="image"><a class="fs-21 fw-medium" href="#">Промышленный твердотопливные котлы</a></div>
+                          <ul class="catalog-list"> 
+                            <li><a class="fs-14" href="#">Промышленные автоматизированные котлые</a></li>
+                            <li><a class="fs-14" href="#">Промышленные котлы с ручной загрузкой</a></li>
+                            <li><a class="fs-14" href="#">Блочно-модульные котельные</a></li>
+                            <li><a class="fs-14" href="#">Парогенераторы на твердом топливе</a></li>
+                          </ul>
                         </div>
-                        <ul class="catalog-list"> 
-                          <li class="fs-14">Промышленные автоматизированные котлые</li>
-                          <li class="fs-14">Промышленные котлы с ручной загрузкой</li>
-                          <li class="fs-14">Блочно-модульные котельные</li>
-                          <li class="fs-14">Парогенераторы на твердом топливе</li>
-                        </ul>
-                      </div>
-                      <div class="card-reverse"><img src="img/common/product.jpg" alt="product">
-                        <div class="c-white">
-                          <p class="fs-20 fw-medium"><span class="c-orange d-block">Проектирование</span>промышленных котелен</p>
-                          <p class="fs-11 opensans">Успей поставить котел, пока не отключили отопление! </p>
-                        </div><a class="btn bg-orange" href="#">Подробнее   </a>
+                        <div class="card-reverse"><img src="img/common/product.jpg" alt="product">
+                          <div class="c-white">
+                            <p class="fs-20 fw-medium"><span class="c-orange d-block">Проектирование</span>промышленных котелен</p>
+                            <p class="fs-11 opensans">Успей поставить котел, пока не отключили отопление! </p>
+                          </div><a class="btn bg-orange" href="#">Подробнее   </a>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -276,37 +271,35 @@
                         <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
                       </svg>
                     </div>
-                    <div class="catalog-m justify-content-between">
-                      <div class="col"> 
-                        <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img1.png" alt="image">
-                          <p class="fs-21 fw-medium">Бытовые твердотопливные котлы</p>
+                    <div class="catalog-m">
+                      <div class="justify-content-between flex-wrap">
+                        <div class="col"> 
+                          <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img1.png" alt="image"><a class="fs-21 fw-medium" href="#">Бытовые твердотопливные котлы</a></div>
+                          <ul class="catalog-list"> 
+                            <li><a class="fs-14" href="#">Котлы на дровах и угле традиционного горения</a></li>
+                            <li><a class="fs-14" href="#">Котлы длительного горения</a></li>
+                            <li><a class="fs-14" href="#">Пиролизные котлы (газогенераторные)</a></li>
+                            <li><a class="fs-14" href="#">Пеллетные котлы с автоматической подачей топлива</a></li>
+                            <li><a class="fs-14" href="#">Твердотопливные теплогенераторы</a></li>
+                            <li><a class="fs-14" href="#">Котлы на щепе</a></li>
+                            <li><a class="fs-14" href="#">Котлы-плиты с варочной поверхностью</a></li>
+                          </ul>
                         </div>
-                        <ul class="catalog-list"> 
-                          <li class="fs-14">Котлы на дровах и угле традиционного горения</li>
-                          <li class="fs-14">Котлы длительного горения</li>
-                          <li class="fs-14">Пиролизные котлы (газогенераторные)</li>
-                          <li class="fs-14">Пеллетные котлы с автоматической подачей топлива</li>
-                          <li class="fs-14">Твердотопливные теплогенераторы</li>
-                          <li class="fs-14">Котлы на щепе</li>
-                          <li class="fs-14">Котлы-плиты с варочной поверхностью</li>
-                        </ul>
-                      </div>
-                      <div class="col"> 
-                        <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img2.png" alt="image">
-                          <p class="fs-21 fw-medium">Промышленный твердотопливные котлы</p>
+                        <div class="col"> 
+                          <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img2.png" alt="image"><a class="fs-21 fw-medium" href="#">Промышленный твердотопливные котлы</a></div>
+                          <ul class="catalog-list"> 
+                            <li><a class="fs-14" href="#">Промышленные автоматизированные котлые</a></li>
+                            <li><a class="fs-14" href="#">Промышленные котлы с ручной загрузкой</a></li>
+                            <li><a class="fs-14" href="#">Блочно-модульные котельные</a></li>
+                            <li><a class="fs-14" href="#">Парогенераторы на твердом топливе</a></li>
+                          </ul>
                         </div>
-                        <ul class="catalog-list"> 
-                          <li class="fs-14">Промышленные автоматизированные котлые</li>
-                          <li class="fs-14">Промышленные котлы с ручной загрузкой</li>
-                          <li class="fs-14">Блочно-модульные котельные</li>
-                          <li class="fs-14">Парогенераторы на твердом топливе</li>
-                        </ul>
-                      </div>
-                      <div class="card-reverse"><img src="img/common/product.jpg" alt="product">
-                        <div class="c-white">
-                          <p class="fs-20 fw-medium"><span class="c-orange d-block">Проектирование</span>промышленных котелен</p>
-                          <p class="fs-11 opensans">Успей поставить котел, пока не отключили отопление! </p>
-                        </div><a class="btn bg-orange" href="#">Подробнее   </a>
+                        <div class="card-reverse"><img src="img/common/product.jpg" alt="product">
+                          <div class="c-white">
+                            <p class="fs-20 fw-medium"><span class="c-orange d-block">Проектирование</span>промышленных котелен</p>
+                            <p class="fs-11 opensans">Успей поставить котел, пока не отключили отопление! </p>
+                          </div><a class="btn bg-orange" href="#">Подробнее   </a>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -317,37 +310,35 @@
                         <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
                       </svg>
                     </div>
-                    <div class="catalog-m justify-content-between">
-                      <div class="col"> 
-                        <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img1.png" alt="image">
-                          <p class="fs-21 fw-medium">Бытовые твердотопливные котлы</p>
+                    <div class="catalog-m">
+                      <div class="justify-content-between flex-wrap">
+                        <div class="col"> 
+                          <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img1.png" alt="image"><a class="fs-21 fw-medium" href="#">Бытовые твердотопливные котлы</a></div>
+                          <ul class="catalog-list"> 
+                            <li><a class="fs-14" href="#">Котлы на дровах и угле традиционного горения</a></li>
+                            <li><a class="fs-14" href="#">Котлы длительного горения</a></li>
+                            <li><a class="fs-14" href="#">Пиролизные котлы (газогенераторные)</a></li>
+                            <li><a class="fs-14" href="#">Пеллетные котлы с автоматической подачей топлива</a></li>
+                            <li><a class="fs-14" href="#">Твердотопливные теплогенераторы</a></li>
+                            <li><a class="fs-14" href="#">Котлы на щепе</a></li>
+                            <li><a class="fs-14" href="#">Котлы-плиты с варочной поверхностью</a></li>
+                          </ul>
                         </div>
-                        <ul class="catalog-list"> 
-                          <li class="fs-14">Котлы на дровах и угле традиционного горения</li>
-                          <li class="fs-14">Котлы длительного горения</li>
-                          <li class="fs-14">Пиролизные котлы (газогенераторные)</li>
-                          <li class="fs-14">Пеллетные котлы с автоматической подачей топлива</li>
-                          <li class="fs-14">Твердотопливные теплогенераторы</li>
-                          <li class="fs-14">Котлы на щепе</li>
-                          <li class="fs-14">Котлы-плиты с варочной поверхностью</li>
-                        </ul>
-                      </div>
-                      <div class="col"> 
-                        <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img2.png" alt="image">
-                          <p class="fs-21 fw-medium">Промышленный твердотопливные котлы</p>
+                        <div class="col"> 
+                          <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img2.png" alt="image"><a class="fs-21 fw-medium" href="#">Промышленный твердотопливные котлы</a></div>
+                          <ul class="catalog-list"> 
+                            <li><a class="fs-14" href="#">Промышленные автоматизированные котлые</a></li>
+                            <li><a class="fs-14" href="#">Промышленные котлы с ручной загрузкой</a></li>
+                            <li><a class="fs-14" href="#">Блочно-модульные котельные</a></li>
+                            <li><a class="fs-14" href="#">Парогенераторы на твердом топливе</a></li>
+                          </ul>
                         </div>
-                        <ul class="catalog-list"> 
-                          <li class="fs-14">Промышленные автоматизированные котлые</li>
-                          <li class="fs-14">Промышленные котлы с ручной загрузкой</li>
-                          <li class="fs-14">Блочно-модульные котельные</li>
-                          <li class="fs-14">Парогенераторы на твердом топливе</li>
-                        </ul>
-                      </div>
-                      <div class="card-reverse"><img src="img/common/product.jpg" alt="product">
-                        <div class="c-white">
-                          <p class="fs-20 fw-medium"><span class="c-orange d-block">Проектирование</span>промышленных котелен</p>
-                          <p class="fs-11 opensans">Успей поставить котел, пока не отключили отопление! </p>
-                        </div><a class="btn bg-orange" href="#">Подробнее   </a>
+                        <div class="card-reverse"><img src="img/common/product.jpg" alt="product">
+                          <div class="c-white">
+                            <p class="fs-20 fw-medium"><span class="c-orange d-block">Проектирование</span>промышленных котелен</p>
+                            <p class="fs-11 opensans">Успей поставить котел, пока не отключили отопление! </p>
+                          </div><a class="btn bg-orange" href="#">Подробнее   </a>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -358,37 +349,35 @@
                         <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
                       </svg>
                     </div>
-                    <div class="catalog-m justify-content-between">
-                      <div class="col"> 
-                        <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img1.png" alt="image">
-                          <p class="fs-21 fw-medium">Бытовые твердотопливные котлы</p>
+                    <div class="catalog-m">
+                      <div class="justify-content-between flex-wrap">
+                        <div class="col"> 
+                          <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img1.png" alt="image"><a class="fs-21 fw-medium" href="#">Бытовые твердотопливные котлы</a></div>
+                          <ul class="catalog-list"> 
+                            <li><a class="fs-14" href="#">Котлы на дровах и угле традиционного горения</a></li>
+                            <li><a class="fs-14" href="#">Котлы длительного горения</a></li>
+                            <li><a class="fs-14" href="#">Пиролизные котлы (газогенераторные)</a></li>
+                            <li><a class="fs-14" href="#">Пеллетные котлы с автоматической подачей топлива</a></li>
+                            <li><a class="fs-14" href="#">Твердотопливные теплогенераторы</a></li>
+                            <li><a class="fs-14" href="#">Котлы на щепе</a></li>
+                            <li><a class="fs-14" href="#">Котлы-плиты с варочной поверхностью</a></li>
+                          </ul>
                         </div>
-                        <ul class="catalog-list"> 
-                          <li class="fs-14">Котлы на дровах и угле традиционного горения</li>
-                          <li class="fs-14">Котлы длительного горения</li>
-                          <li class="fs-14">Пиролизные котлы (газогенераторные)</li>
-                          <li class="fs-14">Пеллетные котлы с автоматической подачей топлива</li>
-                          <li class="fs-14">Твердотопливные теплогенераторы</li>
-                          <li class="fs-14">Котлы на щепе</li>
-                          <li class="fs-14">Котлы-плиты с варочной поверхностью</li>
-                        </ul>
-                      </div>
-                      <div class="col"> 
-                        <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img2.png" alt="image">
-                          <p class="fs-21 fw-medium">Промышленный твердотопливные котлы</p>
+                        <div class="col"> 
+                          <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img2.png" alt="image"><a class="fs-21 fw-medium" href="#">Промышленный твердотопливные котлы</a></div>
+                          <ul class="catalog-list"> 
+                            <li><a class="fs-14" href="#">Промышленные автоматизированные котлые</a></li>
+                            <li><a class="fs-14" href="#">Промышленные котлы с ручной загрузкой</a></li>
+                            <li><a class="fs-14" href="#">Блочно-модульные котельные</a></li>
+                            <li><a class="fs-14" href="#">Парогенераторы на твердом топливе</a></li>
+                          </ul>
                         </div>
-                        <ul class="catalog-list"> 
-                          <li class="fs-14">Промышленные автоматизированные котлые</li>
-                          <li class="fs-14">Промышленные котлы с ручной загрузкой</li>
-                          <li class="fs-14">Блочно-модульные котельные</li>
-                          <li class="fs-14">Парогенераторы на твердом топливе</li>
-                        </ul>
-                      </div>
-                      <div class="card-reverse"><img src="img/common/product.jpg" alt="product">
-                        <div class="c-white">
-                          <p class="fs-20 fw-medium"><span class="c-orange d-block">Проектирование</span>промышленных котелен</p>
-                          <p class="fs-11 opensans">Успей поставить котел, пока не отключили отопление! </p>
-                        </div><a class="btn bg-orange" href="#">Подробнее   </a>
+                        <div class="card-reverse"><img src="img/common/product.jpg" alt="product">
+                          <div class="c-white">
+                            <p class="fs-20 fw-medium"><span class="c-orange d-block">Проектирование</span>промышленных котелен</p>
+                            <p class="fs-11 opensans">Успей поставить котел, пока не отключили отопление! </p>
+                          </div><a class="btn bg-orange" href="#">Подробнее   </a>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -399,37 +388,35 @@
                         <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
                       </svg>
                     </div>
-                    <div class="catalog-m justify-content-between">
-                      <div class="col"> 
-                        <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img1.png" alt="image">
-                          <p class="fs-21 fw-medium">Бытовые твердотопливные котлы</p>
+                    <div class="catalog-m">
+                      <div class="justify-content-between flex-wrap">
+                        <div class="col"> 
+                          <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img1.png" alt="image"><a class="fs-21 fw-medium" href="#">Бытовые твердотопливные котлы</a></div>
+                          <ul class="catalog-list"> 
+                            <li><a class="fs-14" href="#">Котлы на дровах и угле традиционного горения</a></li>
+                            <li><a class="fs-14" href="#">Котлы длительного горения</a></li>
+                            <li><a class="fs-14" href="#">Пиролизные котлы (газогенераторные)</a></li>
+                            <li><a class="fs-14" href="#">Пеллетные котлы с автоматической подачей топлива</a></li>
+                            <li><a class="fs-14" href="#">Твердотопливные теплогенераторы</a></li>
+                            <li><a class="fs-14" href="#">Котлы на щепе</a></li>
+                            <li><a class="fs-14" href="#">Котлы-плиты с варочной поверхностью</a></li>
+                          </ul>
                         </div>
-                        <ul class="catalog-list"> 
-                          <li class="fs-14">Котлы на дровах и угле традиционного горения</li>
-                          <li class="fs-14">Котлы длительного горения</li>
-                          <li class="fs-14">Пиролизные котлы (газогенераторные)</li>
-                          <li class="fs-14">Пеллетные котлы с автоматической подачей топлива</li>
-                          <li class="fs-14">Твердотопливные теплогенераторы</li>
-                          <li class="fs-14">Котлы на щепе</li>
-                          <li class="fs-14">Котлы-плиты с варочной поверхностью</li>
-                        </ul>
-                      </div>
-                      <div class="col"> 
-                        <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img2.png" alt="image">
-                          <p class="fs-21 fw-medium">Промышленный твердотопливные котлы</p>
+                        <div class="col"> 
+                          <div class="align-items-center"> <img class="catalog-m_img" src="img/catalog/img2.png" alt="image"><a class="fs-21 fw-medium" href="#">Промышленный твердотопливные котлы</a></div>
+                          <ul class="catalog-list"> 
+                            <li><a class="fs-14" href="#">Промышленные автоматизированные котлые</a></li>
+                            <li><a class="fs-14" href="#">Промышленные котлы с ручной загрузкой</a></li>
+                            <li><a class="fs-14" href="#">Блочно-модульные котельные</a></li>
+                            <li><a class="fs-14" href="#">Парогенераторы на твердом топливе</a></li>
+                          </ul>
                         </div>
-                        <ul class="catalog-list"> 
-                          <li class="fs-14">Промышленные автоматизированные котлые</li>
-                          <li class="fs-14">Промышленные котлы с ручной загрузкой</li>
-                          <li class="fs-14">Блочно-модульные котельные</li>
-                          <li class="fs-14">Парогенераторы на твердом топливе</li>
-                        </ul>
-                      </div>
-                      <div class="card-reverse"><img src="img/common/product.jpg" alt="product">
-                        <div class="c-white">
-                          <p class="fs-20 fw-medium"><span class="c-orange d-block">Проектирование</span>промышленных котелен</p>
-                          <p class="fs-11 opensans">Успей поставить котел, пока не отключили отопление! </p>
-                        </div><a class="btn bg-orange" href="#">Подробнее   </a>
+                        <div class="card-reverse"><img src="img/common/product.jpg" alt="product">
+                          <div class="c-white">
+                            <p class="fs-20 fw-medium"><span class="c-orange d-block">Проектирование</span>промышленных котелен</p>
+                            <p class="fs-11 opensans">Успей поставить котел, пока не отключили отопление! </p>
+                          </div><a class="btn bg-orange" href="#">Подробнее   </a>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -441,7 +428,7 @@
                 <div class="d-xl-none flex-center-between"><a class="logo" href="#"> <span class="fs-30 align-items-baseline">Pellets
                       <svg class="svg-sprite-icon icon-logo c-red">
                         <use xlink:href="img/sprite/symbol/sprite.svg#logo"></use>
-                      </svg>Home</span><span class="fs-15">твердотопливные котлы №1 в Украине </span></a>
+                      </svg>Home</span></a>
                   <div class="lang d-flex"> <a href="#">ua</a><a class="active" href="#">ru  </a></div>
                 </div>
                 <ul> 

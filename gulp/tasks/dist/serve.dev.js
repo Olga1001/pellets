@@ -33,3 +33,4 @@ module.exports = function serve(cb) {
   gulp.watch('dist/*.html').on('change', server.reload);
   return cb();
 };
+//# sourceMappingURL=serve.dev.js.map

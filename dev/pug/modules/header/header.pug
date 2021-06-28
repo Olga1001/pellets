@@ -94,17 +94,19 @@ header.header
                                         .col 
                                             .align-items-center 
                                                 img.catalog-m_img(src='img/catalog/img1.png' alt='image')
-                                                p.fs-21.fw-medium Бытовые твердотопливные котлы
+                                                a.fs-21.fw-medium(href='#') Бытовые твердотопливные котлы
                                             ul.catalog-list 
                                                 each val in ['Котлы на дровах и угле традиционного горения','Котлы длительного горения','Пиролизные котлы (газогенераторные)','Пеллетные котлы с автоматической подачей топлива','Твердотопливные теплогенераторы','Котлы на щепе','Котлы-плиты с варочной поверхностью']
-                                                    li.fs-14=val
+                                                    li
+                                                        a.fs-14(href='#')=val
                                         .col 
                                             .align-items-center 
                                                 img.catalog-m_img(src='img/catalog/img2.png' alt='image')
-                                                p.fs-21.fw-medium Промышленный твердотопливные котлы
+                                                a.fs-21.fw-medium(href='#') Промышленный твердотопливные котлы
                                             ul.catalog-list 
                                                 each val in ['Промышленные автоматизированные котлые','Промышленные котлы с ручной загрузкой','Блочно-модульные котельные','Парогенераторы на твердом топливе']
-                                                    li.fs-14=val
+                                                    li
+                                                        a.fs-14(href='#')=val
 
                                         .card-reverse
                                             img(src='img/common/product.jpg' alt='product')

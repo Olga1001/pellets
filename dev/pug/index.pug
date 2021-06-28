@@ -1,0 +1,169 @@
+extends layout/main
+
+block variables
+	-var title = 'Главная страница'
+	-var page = 'product-page'
+
+block link
+
+block content
+	main
+		.container
+			nav.breadcrumbs
+				ul.flex-wrap
+					+breadcrumbs-item('Главная', '#')
+					+breadcrumbs-item('Твердотопливные котлы ','#')
+					+breadcrumbs-item('Промышелнные твердотопливные котлы','#')
+					+breadcrumbs-item('ALTEP TRIO UNI PLUS (КТ-3ЕN)')
+		section
+			.container
+				h1.fs-40 ALTEP TRIO UNI PLUS (КТ-3ЕN)
+				.justify-content-end
+					button.btn-action.btn-action_compare(type='button')
+						+icon('weigher')
+					button.btn-action.btn-action_favorites(type='button')
+						+icon('heart2')
+
+		section.product
+			.container.flex-wrap
+				.product-about_left.flex-wrap
+					.slider-nav 
+						-var n = 5
+						while (n--)
+							.slide 
+								img(src='img/common/product.png' alt='product')
+					.relative
+						.product-stock
+						.slider-fun
+							-var j = 5
+							while (j--)
+								.slide 
+									img(src='img/common/product.png' alt='product')
+				.product-about_right
+					ul.tabs.d-flex 
+						each val in ['Все о товаре','Характеристики','Отзывы (21)','Инструкция','Оплата/доставка']
+							li=val
+					.flex-center-between 
+						.align-items-center
+							-var i = 1
+							.rate-area.checked
+								input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+								label(for=`5-star${i}` title='Amazing') 
+								input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+								label(for=`4-star${i}` title='Good') 
+								input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+								label(for=`3-star${i}` title='Average')
+								input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+								label(for=`2-star${i}` title='Not Good') 
+								input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+								label(for=`1-star${i}` title='Bad')
+							.i-comments.align-items-center
+								+icon('comments')
+								p.fs-13 
+									span.underline отзывы 
+									| (21)
+						p.fs-13.c-gray Артикул    11294038
+					a.program-block.d-flex(href='#')
+						img(src='img/common/' alt='img') 
+						span.c-white Данный товар – участник программы 
+							b IQ ENERGY
+							|. Покупайте котлы 
+							b Альтеп в кредит 
+							| и получите 
+							b гарантировано компенсацию до 35% 
+							| от стоимости оборудования!
+					.flex-center-between 
+						a.take-credit.align-items-center(href='#')
+							img(src='img/common/take-credit.png' alt='take-credit')
+							span.fw-medium.fs-20 Купить в кредит
+						a.underline.c-gray-500(href='#') Условия кредитования
+
+					.product-info 
+						.d-flex.fs-18.fw-medium
+							p Производитель:
+							p ALTEP
+						.flex-wrap.fs-18.fw-medium
+							p Мощность:
+							.select.select-b 
+								.select-item.flex-center-between
+									p.fw-light.ff-Inter 12 кВт
+									+icon('arrow-down')
+
+								ul.select-drop.fs-14  
+									li 12 кВт
+									li 13 кВт
+							.counter.d-flex
+								button.btn-minus.counter-btn(type='button') -
+								input.counter-input(type='number' value='1')
+								button.btn-plus.counter-btn(type='button') +
+							button.btn-calc.align-items-center(type='button')
+								+icon('')
+								span Рассчет <br> мощноси
+
+
+
+
+
+
+
+					
+
+		section.popular-products 
+			.container
+				.flex-center-between.mb-20
+					h2 Рекомендованные товары
+					
+					.align-items-center
+						.slider-button.slider-button-prev
+							+icon('arrow-left')
+						.slider-button.slider-button-next
+							+icon('arrow-right')
+
+				.slider 
+					-var n = 6 
+					-var i = 2
+					while (n--)
+						.card 
+							a(href='#')
+								object
+									.card-top
+										img(src='img/common/product2.jpg' alt='product')
+										.sticky-right
+											button.btn-heart(type='button')
+												+icon('heart2')
+											button.btn-weigher(type='button')
+												+icon('weigher')
+									.flex-center-between.ff-opensans.mb-16.flex-wrap
+										.align-items-center
+											.rate-area.checked
+												input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+												label(for=`5-star${i}` title='Amazing') 
+												input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+												label(for=`4-star${i}` title='Good') 
+												input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+												label(for=`3-star${i}` title='Average')
+												input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+												label(for=`2-star${i}` title='Not Good') 
+												input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+												label(for=`1-star${i}` title='Bad')
+											.i-comments.align-items-center
+												+icon('comments')
+												p.text-small 21
+										p.text-small.c-gray Код: 79059000-1
+									p.card-title Котел твердопаливний <br> KRONAS EKO 
+							ul.card-info.ff-opensans.text-small
+								li.d-flex
+									p Производитель:
+									p Кronas
+								li.d-flex 
+									p Мощность:
+									p от 12 кВт
+							.flex-center-between
+								p.price от 12 800 грн
+								button.btn-cart.small(type='button')
+									+icon('cart')
+						-i++
+	
+block script 
+
+	
