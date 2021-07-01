@@ -50,7 +50,7 @@
 @media only screen and (max-width : 1459px)
     .header_right
         padding-left: 0
-    .menu ul a
+    .menu-link
         margin-left: 45px
     .catalog-m
         padding: 20px 16px
@@ -73,6 +73,20 @@
         width: 58px
     .burger 
         display: block
+    .menu-dropdown
+        position: static
+        opacity: 1
+        pointer-events: auto
+        padding: 0
+        display: none
+    .menu-dropdown ul
+        padding: 20px 15px 0
+        background: transparent
+        min-width: auto
+    .menu-dropdown a
+        margin: 0
+    .menu-dropdown ul:before
+        content: none
     .navbotom 
         position: fixed 
         bottom: 0
@@ -119,18 +133,19 @@
         margin: 0 -16px
         width: calc(100% + 32px)
         max-width: none
-    .menu ul a
+    .menu-link
         font-size: 18px 
         line-height: 14px 
         margin: 35px 0 0 0
-    .menu ul a, .menu a
+    .menu-link, .menu a
         color: $black
-    .menu a
-        margin: 0
     .menu .lang a 
         margin-left: 17px
         font-size: 16px
         line-height: 21px
+    .header .logo 
+        background-image: url('../img/logo/logo-little.svg')
+        +box(167px,41px)
     .logo
         line-height: 1
         .fs-30  
@@ -376,8 +391,10 @@
         padding: 0 5px
 @media only screen and (max-width : 575px)
     .popular-products .slider
-        margin: 27px -16px 0
+        margin: 0 -16px
         border-width: 0
+    .popular-products .slider .slick-track
+        padding-top: 27px
     .slider-one p
         font-size: 11px
         line-height: 14px

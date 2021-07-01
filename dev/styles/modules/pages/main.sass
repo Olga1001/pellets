@@ -65,10 +65,20 @@
 .popular-products 
     padding: 43px 0 72px
     .slider
-        margin-top: 35px
-        border-width: 0 0.5px 0  0.5px
-        border-style: solid 
-        border-color: transparent #DDDDDD transparent #DDDDDD
+        position: relative
+        &:before 
+            content: ''
+            position: absolute
+            right: 0
+            bottom: 0
+            height: calc(100% - 35px)
+            width: 100%
+            border-right: 1px solid #DDDDDD
+            border-left: 1px solid #DDDDDD
+            pointer-events: none
+        .slick-track
+            padding-top: 35px
+            padding-bottom: 10px
 
 .services
     .slider
@@ -118,6 +128,11 @@
         font-size: 18px
         padding: 0 31px
         margin-left: -4px
+        &:hover 
+            text-decoration: underline
+            color: #FFFFFF
+            background: #FFB321
+
 
 .content 
     height: 190px

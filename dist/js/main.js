@@ -189,6 +189,9 @@ $(document).ready(function () {
       $(this).siblings('.catalog-m').slideToggle(300).closest('li').siblings().find('.catalog-m').slideUp(300);
     });
     $('.main-s_item.full-v img').attr('src', 'img/common/depositphotos_43318949_xl-2015m2.jpg');
+    $('.menu-link').on('click', function () {
+      $(this).siblings('.menu-dropdown').slideToggle(300);
+    });
   } //stopPropagation
 
 

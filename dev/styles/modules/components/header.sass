@@ -56,10 +56,15 @@
         &.active
             border-bottom: 1px solid #2C2C2C
 
+.header .logo 
+    background: url('../img/logo/logo-main.svg') no-repeat center / contain
+    +box(282px,56px)
+
 .logo 
     svg 
         +box(27px,34px)
         margin: 0 5px
+        stroke-width: 2px
     .fs-30 
         letter-spacing: 0.02em
         text-transform: uppercase
@@ -295,12 +300,50 @@
 
 .menu
     margin-left: auto
-    ul
-        display: flex
-        a
-            text-transform: capitalize
-            color: $white
-            margin-left: 62px
-            transition: all 0.3s ease
-            &:hover 
-                color: #FFB321
+    a 
+        color: $white
+        display: block
+        
+    &-link
+        text-transform: capitalize
+        margin-left: 62px
+        transition: all 0.3s ease
+        color: $white
+        cursor: pointer
+    li
+        &:hover 
+            color: #FFB321
+            .menu-dropdown 
+                opacity: 1
+                pointer-events: auto 
+    &-dropdown 
+        position: absolute
+        left: 37px
+        top: 100%
+        z-index: 8
+        padding-top: 22px
+        opacity: 0
+        pointer-events: none 
+        transition: opacity 0.3s ease
+        ul
+            min-width: 322px
+            background: #E44937
+            padding: 34px 27px 15px
+            position: relative
+            &:before 
+                content: ''
+                +box(0px)
+                position: absolute
+                top: 0
+                left: 53px
+                border-style: solid
+                border-width: 10px 9.5px 0 9.5px
+                border-color: #333333 transparent transparent transparent
+        li 
+            margin-bottom: 16px
+        a 
+            display: block
+            &:hover
+                text-decoration: underline
+
+        

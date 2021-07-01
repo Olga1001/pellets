@@ -36,10 +36,7 @@
           <div class="container">
             <div class="align-items-center">
               <div class="header_left">
-                <button class="burger" type="button"></button><a class="logo d-xl-block d-none" href="#"> <span class="fs-30 align-items-baseline">Pellets
-                    <svg class="svg-sprite-icon icon-logo c-red">
-                      <use xlink:href="img/sprite/symbol/sprite.svg#logo"></use>
-                    </svg>Home</span><span class="fs-15">твердотопливные котлы №1 в Украине </span></a>
+                <button class="burger" type="button"></button><a class="logo d-xl-block d-none" href="#"></a>
               </div>
               <div class="header_right flex-center-between">
                 <div class="messenger relative">
@@ -425,19 +422,31 @@
             </div>
             <nav class="header_right align-items-xl-center">
               <div class="menu stopPropagation">
-                <div class="d-xl-none flex-center-between"><a class="logo" href="#"> <span class="fs-30 align-items-baseline">Pellets
-                      <svg class="svg-sprite-icon icon-logo c-red">
-                        <use xlink:href="img/sprite/symbol/sprite.svg#logo"></use>
-                      </svg>Home</span></a>
+                <div class="d-xl-none flex-center-between"><a class="logo" href="#"></a>
                   <div class="lang d-flex"> <a href="#">ua</a><a class="active" href="#">ru  </a></div>
                 </div>
-                <ul> 
-                  <li><a href="#">Акции %</a></li>
-                  <li><a href="#">Производители</a></li>
-                  <li><a href="#">Объекты</a></li>
-                  <li><a href="#">Монтаж</a></li>
-                  <li><a href="#">Клиентам</a></li>
-                  <li><a href="#">Контакты</a></li>
+                <ul class="d-flex"> 
+                  <li class="relative"><a class="menu-link" href="#">Акции %</a>
+                  </li>
+                  <li class="relative"><a class="menu-link" href="#">Производители</a>
+                  </li>
+                  <li class="relative"><a class="menu-link" href="#">Объекты</a>
+                  </li>
+                  <li class="relative"><a class="menu-link" href="#">Монтаж</a>
+                  </li>
+                  <li class="relative">
+                    <p class="menu-link">Клиентам</p>
+                    <div class="menu-dropdown"> 
+                      <ul>
+                        <li><a href="#">Оплата и доставка</a></li>
+                        <li><a href="#">Возврат товара</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Сертфикаты</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="relative"><a class="menu-link" href="#">Контакты</a>
+                  </li>
                 </ul>
               </div>
               <button class="btn-close d-xl-none" type="button"></button>
@@ -2293,6 +2302,7 @@
       </footer>
     </div>
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>

@@ -16,11 +16,7 @@ header.header
             .align-items-center
                 .header_left
                     button.burger(type="button")
-                    a.logo.d-xl-block.d-none(href='#')  
-                        span.fs-30.align-items-baseline Pellets
-                            +icon('logo', 'c-red')
-                            | Home
-                        span.fs-15 твердотопливные котлы №1 в Украине 
+                    a.logo.d-xl-block.d-none(href='#')
                 .header_right.flex-center-between
                     .messenger.relative
                         .align-items-center.messenger-item
@@ -119,15 +115,20 @@ header.header
             nav.header_right.align-items-xl-center
                 .menu.stopPropagation
                     .d-xl-none.flex-center-between
-                        a.logo(href='#')  
-                            span.fs-30.align-items-baseline Pellets
-                                +icon('logo', 'c-red')
-                                | Home
+                        a.logo(href='#')
                         .lang.d-flex 
                             a(href='#') ua
                             a.active(href='#') ru  
-                    ul 
-                        each val in ['Акции %','Производители','Объекты','Монтаж','Клиентам','Контакты']
-                            li
-                                a(href='#')=val
+                    ul.d-flex 
+                        each val, index in ['Акции %','Производители','Объекты','Монтаж','Клиентам','Контакты']
+                            li.relative
+                                if(index == 4)
+                                    p.menu-link=val 
+                                    .menu-dropdown 
+                                        ul
+                                            each val in ['Оплата и доставка','Возврат товара','О компании','Сертфикаты']
+                                                li
+                                                    a(href='#')=val
+                                else
+                                    a.menu-link(href='#')=val
                 button.btn-close.d-xl-none(type='button')
