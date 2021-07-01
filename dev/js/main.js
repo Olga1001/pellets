@@ -163,6 +163,27 @@ $(document).ready(function () {
       },
     ]
   });
+  $('.slider-nav').slick({
+    infinite: false,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    focusOnSelect: true,
+    asNavFor: '.slider-for',
+    vertical: true
+  });
+  $('.slider-for').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    cssEase: 'linear',
+    dots: false,
+    arrows: false,
+    focusOnSelect: true,
+    asNavFor: '.slider-nav'
+  });
 
   // menu
   $(".burger").on('click', function() {
@@ -212,6 +233,10 @@ $(document).ready(function () {
     });
   }
 
+  // tabs
+  $(".tabs li").on('click', function() {
+    $(this).addClass('active').siblings().removeClass('active');
+  });
   //stopPropagation
   $(".stopPropagation").on('click', function(e) {
     e.stopPropagation();

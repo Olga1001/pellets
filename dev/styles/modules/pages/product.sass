@@ -1,0 +1,212 @@
+.product 
+    border-top: 1px solid #EFEFEF
+    border-bottom: 1px solid #EFEFEF
+    margin: 15px 0
+    &-about
+        &_left
+            width: calc(100% - 700px)
+            padding: 40px 0
+            .relative 
+                margin: auto
+                max-width: 439px 
+                max-height: 439px
+        &_right
+            width: 799px
+            margin-right: -99px
+            background: #F5F5F5
+            padding-bottom: 50px
+        &_body 
+            padding: 0 90px 0 65px
+.product-stock
+    position: absolute
+    top: 10px
+    right: -41px
+    background: #E44937
+    border-radius: 50%
+    +box(81px)
+    z-index: 4
+    font-weight: 500
+    font-size: 27px
+    line-height: 81px
+    color: $white
+    text-align: center
+
+.slider-nav 
+    width: 89px
+    .slide
+        +box(89px)
+        border: 1px solid #E7E7E7
+        margin: 4px 0
+        +d-flex(center)
+        flex-direction: column
+        position: relative
+        img 
+            +box(74px)
+            margin: auto
+        p 
+            font-weight: 300
+            font-size: 12px
+            line-height: 15px
+        .play 
+            position: relative
+            transform: none
+            left: 0
+            top: 0 
+            +box(45px)
+            transform: none
+            margin-bottom: 9px
+            &:before
+                border-width: 6.5px 0 6.5px 6px
+.slide
+    +box(100%)
+    max-width: 439px 
+    max-height: 439px
+    img 
+        object-fit: contain
+        +box(100%)
+
+.tabs
+    border-bottom: 1px solid #D7D7D7
+    padding: 0 49px
+    margin-bottom: 35px
+    li
+        cursor: pointer
+        font-size: 14px
+        line-height: 17px
+        color: #0A0A0A
+        padding: 22px 0 18px
+        margin: 0 16px
+        border-bottom: 3px solid transparent
+        &.active 
+            border-color: #E44937
+
+.program-block
+    background: #E44937
+    border-radius: 6px
+    padding: 8px 10px
+    width: 100%
+    margin-top: 25px
+    img 
+        +box(144px,48px)
+        margin-right: 25px
+    span 
+        font-size: 14px
+        line-height: 131%
+
+.take-credit
+    margin: 20px 0
+    img 
+        margin-right: 18px
+
+.product-info 
+    padding-top: 28px
+    &_left
+        width: 180px
+        .text-through
+            margin-bottom: 4px
+    &_btns 
+        width: calc(100% - 180px)
+        button 
+            width: calc(50% - 7.5px)
+            &:first-child
+                margin-right: 15px
+        .btn.big
+            font-size: 20px
+    &_row
+        margin-top: 13px
+        &:last-child 
+            margin-top: 25px
+
+.power-row
+    width: calc(100% - 180px)
+
+.counter  
+    background: #FFFFFF
+    border: 1px solid #DADADA
+    border-radius: 4px
+    overflow: hidden
+    &-btn
+        +box(44px,42px) 
+        background: #E7E7E7
+    &-input
+        width: 54px
+        font-weight: 300
+        color: #000000
+        padding: 12px 0
+        text-align: center
+        border: none
+
+.product-card
+    img 
+       width: auto 
+       height: 195px
+       margin-right: 13px 
+    .lh-17 
+        max-width: 217px
+
+.plus
+    font-weight: 300
+    font-size: 101px
+    line-height: 130px
+    color: #E44937
+
+.profitable
+    padding: 30px 0
+    &_border
+        border: 1px solid #C5C5C5
+        border-radius: 6px
+        margin-top: 30px
+    &_left
+        width: calc(100% - 356px)
+        padding: 21px 38px 21px 38px
+    &_right
+        width: 356px
+        background: url('../img/common/border-arrow.svg') no-repeat left center / auto 100%
+        &:before 
+        .title2
+            font-size: 39px
+            line-height: 50px
+
+.recommended-products
+    padding: 20px 0
+    h2 
+        margin-bottom: 30px
+    .card 
+        width: 25%
+        &:first-child 
+            border-left: 1px solid #DDDDDD
+
+.instructions 
+    background: #E44937
+    padding: 15px 25px
+    width: 100%
+    margin-bottom: 40px
+    svg 
+        stroke: none
+        fill: $white 
+        +box(41px,50px)
+        margin: 0 28px
+
+.information
+    &_left
+        max-width: 680px 
+        padding-right: 20px
+        padding-top: 12px
+    &_right 
+        max-width: 644px 
+        padding-top: 12px
+
+.characteristics 
+    h2 
+        margin-bottom: 25px
+    p 
+        text-align: justify
+        line-height: 24px
+
+.list-characteristics
+    list-style-type: disc
+    margin-left: 24px
+    li 
+        margin-bottom: 5px
+
+

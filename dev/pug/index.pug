@@ -20,137 +20,179 @@ block content
 				h1.fs-40 ALTEP TRIO UNI PLUS (КТ-3ЕN)
 				.justify-content-end
 					button.btn-action.btn-action_compare(type='button')
-						+icon('weigher')
+						+icon('weigher2')
 					button.btn-action.btn-action_favorites(type='button')
-						+icon('heart2')
+						+icon('heart3')
 
 		section.product
 			.container.flex-wrap
-				.product-about_left.flex-wrap
+				.product-about_left.flex-wrap.align-items-center
 					.slider-nav 
 						-var n = 5
 						while (n--)
-							.slide 
-								img(src='img/common/product.png' alt='product')
+							if (n==1)
+								.slide 
+									.play 
+									p Видео
+							else
+								.slide 
+									img(src='img/common/product3.jpg' alt='product')
 					.relative
-						.product-stock
-						.slider-fun
+						.product-stock -15%
+						.slider-for
 							-var j = 5
 							while (j--)
-								.slide 
-									img(src='img/common/product.png' alt='product')
+								if (j==1)
+									.slide 
+										img(src='img/common/product3.jpg' alt='product')
+										.play
+								else
+									.slide 
+										img(src='img/common/product3.jpg' alt='product')
+								
 				.product-about_right
 					ul.tabs.d-flex 
-						each val in ['Все о товаре','Характеристики','Отзывы (21)','Инструкция','Оплата/доставка']
-							li=val
-					.flex-center-between 
-						.align-items-center
-							-var i = 1
-							.rate-area.checked
-								input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
-								label(for=`5-star${i}` title='Amazing') 
-								input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
-								label(for=`4-star${i}` title='Good') 
-								input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
-								label(for=`3-star${i}` title='Average')
-								input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
-								label(for=`2-star${i}` title='Not Good') 
-								input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
-								label(for=`1-star${i}` title='Bad')
-							.i-comments.align-items-center
-								+icon('comments')
-								p.fs-13 
-									span.underline отзывы 
-									| (21)
-						p.fs-13.c-gray Артикул    11294038
-					a.program-block.d-flex(href='#')
-						img(src='img/common/' alt='img') 
-						span.c-white Данный товар – участник программы 
-							b IQ ENERGY
-							|. Покупайте котлы 
-							b Альтеп в кредит 
-							| и получите 
-							b гарантировано компенсацию до 35% 
-							| от стоимости оборудования!
-					.flex-center-between 
-						a.take-credit.align-items-center(href='#')
-							img(src='img/common/take-credit.png' alt='take-credit')
-							span.fw-medium.fs-20 Купить в кредит
-						a.underline.c-gray-500(href='#') Условия кредитования
+						each val, index in ['Все о товаре','Характеристики','Отзывы (21)','Инструкция','Оплата/доставка']
+							li(class=index==0 ? 'active':'')=val
+					.product-about_body
+						.flex-center-between
+							.align-items-center
+								-var i = 1
+								.rate-area.checked
+									input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+									label(for=`5-star${i}` title='Amazing') 
+									input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+									label(for=`4-star${i}` title='Good') 
+									input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+									label(for=`3-star${i}` title='Average')
+									input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+									label(for=`2-star${i}` title='Not Good') 
+									input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+									label(for=`1-star${i}` title='Bad')
+								.i-comments.big.align-items-center
+									+icon('comments')
+									p.fs-13.c-black 
+										span.underline отзывы 
+										| (21)
+							p.fs-13.c-gray Артикул    11294038
+						a.program-block.align-items-center(href='#')
+							img(src='img/common/IQ_energy_logo_PT_Sans_hor_ua.jpg' alt='img') 
+							span.c-white Данный товар – участник программы 
+								b IQ ENERGY
+								|. Покупайте котлы 
+								b Альтеп в кредит 
+								| и получите 
+								b гарантировано компенсацию до 35% 
+								| от стоимости оборудования!
+						.flex-center-between 
+							a.take-credit.align-items-center(href='#')
+								img(src='img/common/take-credit.png' alt='take-credit')
+								span.fw-medium.fs-20 Купить в кредит
+							a.underline.c-gray-500(href='#') Условия кредитования
 
-					.product-info 
-						.d-flex.fs-18.fw-medium
-							p Производитель:
-							p ALTEP
-						.flex-wrap.fs-18.fw-medium
-							p Мощность:
-							.select.select-b 
-								.select-item.flex-center-between
-									p.fw-light.ff-Inter 12 кВт
-									+icon('arrow-down')
+						.product-info 
+							.d-flex.fs-18.fw-medium.product-info_row 
+								p.product-info_left.fw-medium Производитель:
+								p ALTEP
+							.flex-wrap.fs-18.fw-medium.align-items-center.product-info_row
+								p.product-info_left.fw-medium Мощность:
+								.justify-content-between.power-row
+									.select.select-b 
+										.select-item.flex-center-between
+											p.fw-light.ff-Inter 12 кВт
+											.arrow
+												+icon('arrow-down')
 
-								ul.select-drop.fs-14  
-									li 12 кВт
-									li 13 кВт
-							.counter.d-flex
-								button.btn-minus.counter-btn(type='button') -
-								input.counter-input(type='number' value='1')
-								button.btn-plus.counter-btn(type='button') +
-							button.btn-calc.align-items-center(type='button')
-								+icon('')
-								span Рассчет <br> мощноси
-
-
-
-
-
-
-
-					
-
-		section.popular-products 
+										ul.select-drop.fs-14  
+											li 12 кВт
+											li 13 кВт
+									.counter.d-flex
+										button.btn-minus.counter-btn(type='button') -
+										input.counter-input(type='number' value='1')
+										button.btn-plus.counter-btn(type='button') +
+									button.btn-calc.align-items-center(type='button')
+										img(src='img/common/calculate.svg')
+										span Рассчет<br>мощноси
+							.flex-wrap.align-items-end.product-info_row
+								.product-info_left
+									p.fs-20.text-through 13800 грн
+									p.title2.c-red.fw-medium 12500 грн
+								.justify-content-between.product-info_btns
+									button.btn.big.h-green(type='button') В корзину
+									button.btn-white(type='button') Купить в 1 клик
+		section.profitable
 			.container
-				.flex-center-between.mb-20
-					h2 Рекомендованные товары
-					
-					.align-items-center
-						.slider-button.slider-button-prev
-							+icon('arrow-left')
-						.slider-button.slider-button-next
-							+icon('arrow-right')
+				h2 Покупать вместе выгодней
+				.profitable_border.flex-wrap 
+					.profitable_left.flex-center-between
+						a.product-card.d-sm-flex(href='#')
+							img(src='img/common/product3.jpg' alt='product')
+							span.justify-content-around.flex-column
+								span.lh-17 Котел ALTEP PID 
+								span
+									span.fs-20.text-through.d-block 13800 грн
+									span.title2.c-red.fw-medium 12500 грн
+						p.plus +
+						a.product-card.d-sm-flex(href='#')
+							img(src='img/common/product3.jpg' alt='product')
+							span.justify-content-around.flex-column
+								span.lh-17 Автоматика ALTEP PID (контролер твердопаливного котла)
+								span
+									span.fs-20.text-through.d-block 13800 грн
+									span.title2.c-red.fw-medium 12500 грн
+						
+						
 
-				.slider 
-					-var n = 6 
+
+					.profitable_right.flex-center-center
+						div 
+							p.fs-24.text-through 13800 грн
+							p.title2.c-red.fw-medium.mb-20 12500 грн
+							button.btn-b-red(type='button') Купить
+
+
+					
+
+		section.recommended-products 
+			.container
+				h2 Рекомендованные товары
+				.flex-wrap
+					-var n = 4 
 					-var i = 2
 					while (n--)
 						.card 
+							if (i==4) 
+								.stock-new 
+									.stock -20%
+									.new NEW
+							if (i==2) 
+								.status-product Ожидается
 							a(href='#')
-								object
-									.card-top
-										img(src='img/common/product2.jpg' alt='product')
-										.sticky-right
-											button.btn-heart(type='button')
-												+icon('heart2')
-											button.btn-weigher(type='button')
-												+icon('weigher')
-									.flex-center-between.ff-opensans.mb-16.flex-wrap
-										.align-items-center
-											.rate-area.checked
-												input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
-												label(for=`5-star${i}` title='Amazing') 
-												input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
-												label(for=`4-star${i}` title='Good') 
-												input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
-												label(for=`3-star${i}` title='Average')
-												input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
-												label(for=`2-star${i}` title='Not Good') 
-												input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
-												label(for=`1-star${i}` title='Bad')
-											.i-comments.align-items-center
-												+icon('comments')
-												p.text-small 21
-										p.text-small.c-gray Код: 79059000-1
-									p.card-title Котел твердопаливний <br> KRONAS EKO 
+								.card-top
+									img(src='img/common/product2.jpg' alt='product')
+									.sticky-right
+										button.btn-heart(type='button')
+											+icon('heart2')
+										button.btn-weigher(type='button')
+											+icon('weigher')
+								.flex-center-between.ff-opensans.mb-16.flex-wrap
+									.align-items-center
+										.rate-area.checked
+											input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+											label(for=`5-star${i}` title='Amazing') 
+											input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+											label(for=`4-star${i}` title='Good') 
+											input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+											label(for=`3-star${i}` title='Average')
+											input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+											label(for=`2-star${i}` title='Not Good') 
+											input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+											label(for=`1-star${i}` title='Bad')
+										.i-comments.align-items-center
+											+icon('comments')
+											p.text-small 21
+									p.text-small.c-gray Код: 79059000-1
+								p.card-title Котел твердопаливний <br> KRONAS EKO 
 							ul.card-info.ff-opensans.text-small
 								li.d-flex
 									p Производитель:
@@ -161,9 +203,39 @@ block content
 							.flex-center-between
 								p.price от 12 800 грн
 								button.btn-cart.small(type='button')
-									+icon('cart')
+									+icon('cart') 
 						-i++
-	
+		section.information 
+			.tabs 
+				ul.container.d-flex
+					each val, index in ['Все о товаре','Характеристики','Отзывы (21)','Инструкция','Оплата/доставка']
+						li(class=index==0 ? 'active':'')=val
+			.container
+				.information-content.flex-wrap
+					.information_left
+						.information-item.active
+							a.instructions.flex-center-between.c-white.fs-24.fw-medium(href='#' download) 
+								span
+									span.d-block Инструкция по
+									span ALTEP TRIO UNI PLUS (КТ-3ЕN)
+								span.align-items-center 
+									+icon('dowload')
+									span.underline Скачать
+							.characteristics
+								h2.fs-28 Технические характеристики
+								p.fs-20.fw-medium.mb-20 Альтеп DUO PLUS (КТ-2Е) – это украинские твёрдотопливные котлы длительного горения высокого качества. Вся линейка оборудования сертифицированная. 
+								p.fs-15.ff-opensans.mb-20 Высокая эффективность (до 86%), длительное горение котла КТ-2Е (24–48 часов), качественная сварка, сборка, покраска, аттестированная сталь теплообменника не менее 6 мм, удобная автоматика – вот основные черты данного котла.
+								p.fs-15.ff-opensans Модельный ряд по мощности котлов ALTEP DUO PLUS : 17, 25, 31, 38, 50, 62, 75, 95, 120, 150, 200, 250 кВт.
+								p.fs-15.ff-opensans.mb-20 Автоматика котла управляет работой вентилятора наддува и насосом центрального отопления. Когда достигается заданная температура (которую можно выставить в пределах от 50 до 85 градусов), автоматика отключает вентилятор и котёл переходит в режим тления. Таким образом, достигается максимальная длительность горения и эффективность.
+								p.fs-15.ff-opensans.mb-20 Altep KT-2E – универсальные котлы, топливом может служить антрацит или каменный уголь, древесина и отходы из нее, а также торфобрикеты и другая биомасса. Полная заводская гарантия составляет 5 лет.м
+								h3.fs-20.fw-medium.mb-20 Преимущества
+								ul.list-characteristics.mb-20
+									each val in ['Высокая теплопродуктивность ALTEP TRIO UNI PLUS','Возможность подключения пеллетной горелки и перевода котла в автоматический режим подачи топлива','Наличие вентилятора','Наличие контроллера, управляющего температурным режимом работы котла','Высокое качество материалов']
+										li.fs-14=val
+								h3.fs-20.fw-medium.mb-20 Технические параметры
+						.information-item
+
+					.information_right
 block script 
 
 	
