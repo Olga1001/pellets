@@ -1,7 +1,7 @@
 extends layout/main
 
 block variables
-	-var title = 'Главная страница'
+	-var title = 'Карточка товара'
 	-var page = 'product-page'
 
 block link
@@ -17,14 +17,15 @@ block content
 					+breadcrumbs-item('ALTEP TRIO UNI PLUS (КТ-3ЕN)')
 		section
 			.container
-				h1.fs-40 ALTEP TRIO UNI PLUS (КТ-3ЕN)
-				.justify-content-end
-					button.btn-action.btn-action_compare(type='button')
-						+icon('weigher2')
-					button.btn-action.btn-action_favorites(type='button')
-						+icon('heart3')
+				.flex-center-between
+					h1.fs-40 ALTEP TRIO UNI PLUS (КТ-3ЕN)
+					div
+						button.btn-action.btn-action_compare(type='button')
+							+icon('weigher2')
+						button.btn-action.btn-action_favorites(type='button')
+							+icon('heart3')
 
-		section.product
+		.product
 			.container.flex-wrap
 				.product-about_left.flex-wrap.align-items-center
 					.slider-nav 
@@ -58,7 +59,7 @@ block content
 						.flex-center-between
 							.align-items-center
 								-var i = 1
-								.rate-area.checked
+								.rate-area.checked.big
 									input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
 									label(for=`5-star${i}` title='Amazing') 
 									input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
@@ -74,7 +75,9 @@ block content
 									p.fs-13.c-black 
 										span.underline отзывы 
 										| (21)
-							p.fs-13.c-gray Артикул    11294038
+							p.fs-13.c-gray 
+								span.mr-15 Артикул   
+								| 11294038
 						a.program-block.align-items-center(href='#')
 							img(src='img/common/IQ_energy_logo_PT_Sans_hor_ua.jpg' alt='img') 
 							span.c-white Данный товар – участник программы 
@@ -116,7 +119,7 @@ block content
 							.flex-wrap.align-items-end.product-info_row
 								.product-info_left
 									p.fs-20.text-through 13800 грн
-									p.title2.c-red.fw-medium 12500 грн
+									p.title2.c-red.fw-medium.lh-1 12500 грн
 								.justify-content-between.product-info_btns
 									button.btn.big.h-green(type='button') В корзину
 									button.btn-white(type='button') Купить в 1 клик
@@ -149,9 +152,6 @@ block content
 							p.fs-24.text-through 13800 грн
 							p.title2.c-red.fw-medium.mb-20 12500 грн
 							button.btn-b-red(type='button') Купить
-
-
-					
 
 		section.recommended-products 
 			.container
@@ -205,13 +205,13 @@ block content
 								button.btn-cart.small(type='button')
 									+icon('cart') 
 						-i++
-		section.information 
+		.information 
 			.tabs 
 				ul.container.d-flex
 					each val, index in ['Все о товаре','Характеристики','Отзывы (21)','Инструкция','Оплата/доставка']
-						li(class=index==0 ? 'active':'')=val
+						li(class=index==1 ? 'active':'')=val
 			.container
-				.information-content.flex-wrap
+				.information-content.flex-wrap.justify-content-between
 					.information_left
 						.information-item.active
 							a.instructions.flex-center-between.c-white.fs-24.fw-medium(href='#' download) 
@@ -233,9 +233,169 @@ block content
 									each val in ['Высокая теплопродуктивность ALTEP TRIO UNI PLUS','Возможность подключения пеллетной горелки и перевода котла в автоматический режим подачи топлива','Наличие вентилятора','Наличие контроллера, управляющего температурным режимом работы котла','Высокое качество материалов']
 										li.fs-14=val
 								h3.fs-20.fw-medium.mb-20 Технические параметры
+								table.table 
+									- 
+										var characteristics = [
+											{
+												name: 'Тип котла/мощность:',
+												value1: '15',
+												value2: '15',
+											},
+											{
+												name: 'Диапазон мощности:',
+												value1: 'кВт ',
+												value2: '4,5-15 ',
+											},
+											{
+												name: 'Отапливаемая площадь:',
+												value1: 'м² ',
+												value2: 'до 130 ',
+											},
+											{
+												name: 'Одноразовая загрузка топлива:',
+												value1: 'кг ',
+												value2: '~194 ',
+											},
+											{
+												name: 'Оптимальный КПД:',
+												value1: '% ',
+												value2: '~90,3-90,7 ',
+											},
+											{
+												name: 'Рабочая температура теплоносителя:',
+												value1: '°С ',
+												value2: '80 ',
+											},
+											{
+												name: 'Тяга дымохода:',
+												value1: 'Па',
+												value2: '24 ',
+											},
+											{
+												name: 'Максимальное рабочее давление:',
+												value1: ' бар ',
+												value2: '1,5 ',
+											},
+											{
+												name: 'Емкость котла по теплоносителю:',
+												value1: 'л',
+												value2: '86 ',
+											},
+											{
+												name: 'Площадь теплообменника:',
+												value1: ' м² ',
+												value2: '1,9 ',
+											},
+											{
+												name: 'Сечение дымохода:',
+												value1: 'см×см ',
+												value2: '14×14 ',
+											},
+											{
+												name: 'Сечение дымохода:',
+												value1: 'Øмм ',
+												value2: '160 ',
+											},
+											{
+												name: 'Минимальная высота дымохода:',
+												value1: 'м ',
+												value2: '7 ',
+											},
+											{
+												name: 'Диаметр дымового шибера:',
+												value1: 'Øмм ',
+												value2: '159 ',
+											},
+											{
+												name: 'Высота центра дымохода от пола:',
+												value1: 'мм ',
+												value2: '1258 ',
+											},
+											{
+												name: 'Диаметр подключения Dn:',
+												value1: '',
+												value2: 'G1½"',
+											},
+											{
+												name: 'Электропитание:',
+												value1: 'В/Гц   ',
+												value2: ' ~230/5',
+											},
+											{
+												name: 'Номинальная мощность:',
+												value1: 'Вт ',
+												value2: ' 0 ',
+											},
+											{
+												name: 'Ширина:',
+												value1: 'мм',
+												value2: '123 ',
+											},
+											{
+												name: 'Глубина:',
+												value1: ' мм ',
+												value2: '1270 ',
+											},
+											{
+												name: 'Высота:',
+												value1: 'мм',
+												value2: '918 ',
+											},
+											{
+												name: 'Вес котла:',
+												value1: 'кг',
+												value2: '1666',
+											},
+										]
+									each val in characteristics
+										tr 
+											td(width="60%")=val.name 
+											td(align="center" width="20%")=val.value1
+											td(align="center" width="20%")=val.value2
 						.information-item
 
 					.information_right
+						.flex-wrap 
+							.w-lg-50 
+								p.fs-20.fw-medium Доставка
+								ul.list 
+									each val, index in ['Бесплатная доставка по Украине при покупке на сумму от 10000 грн.','Самовывоз из магазинов',' Пн-Вс по графику магазинов','Курьерская доставка по Киеву','Самовывоз из отделения перевозчика'] 
+										li(class=index==0 ? 'fw-bold c-red':'')=val 
+							.w-lg-50 
+								p.fs-20.fw-medium Оплата
+								ul.list 
+									each val in ['При получении товара','Безналичная с НДС','Кредит'] 
+										li=val 
+						p.fs-12 *в случае наличия товара на складах
+						.banner.c-white 
+							img.banner-img(src='img/common/Depositphotos_118872734_xl-20151.jpg')
+							p.fs-27.fw-medium.lh-28
+								span.c-orange.d-block Хотите узнать 
+								span стоимость отопления?
+							p.fs-13 Воспользуйтесь нашим <br> калькулятором
+							a.btn.bg-orange.align-items-center(href='#')
+								img.mr-15(src='img/common/calculate.svg')
+								span Просчитать
+						.banner.c-white 
+							img.banner-img(src='img/common/img7.jpg')
+							p.fs-27.fw-medium.lh-28
+								span.c-orange.d-block Хотите узнать 
+								span стоимость отопления?
+							p.fs-13 Воспользуйтесь нашим <br> калькулятором
+							a.btn.bg-orange.align-items-center(href='#') Смотреть реализованные обьекты
+		section.subscription
+			.container 
+				.flex-wrap.justify-content-between.c-white
+					.subscription-left
+						h2.fs-30.fw-medium.mb-16.text-up Подпишись на рассылку
+						p.fs-18 Получайте последние новости о акционных предложениях на e-mail 
+					.subscription-right
+						form.form-subscription
+							input.bg-white(type='email' placeholder='E-mail *' required)
+							button.btn.bg-orange.c-white(type='submit') Подписатся
+						p.fs-13.c-pink *Оформляя подписку вы даете согласие на обработку персональных данных
+
+
 block script 
 
 	

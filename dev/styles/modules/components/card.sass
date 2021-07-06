@@ -86,7 +86,8 @@
     // float: left
     border-style: none
     margin-right: 8px
-
+    &.big:not(:checked) > label
+        +box(25px)
     &:not(:checked)
         & > input
             display: none

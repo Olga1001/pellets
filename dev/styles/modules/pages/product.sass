@@ -1,22 +1,25 @@
 .product 
     border-top: 1px solid #EFEFEF
     border-bottom: 1px solid #EFEFEF
-    margin: 15px 0
+    margin: 29px 0 14px
     &-about
         &_left
-            width: calc(100% - 700px)
-            padding: 40px 0
+            width: calc(100% - 706px)
+            padding: 30px 0
             .relative 
                 margin: auto
                 max-width: 439px 
                 max-height: 439px
         &_right
-            width: 799px
+            width: 805px
             margin-right: -99px
             background: #F5F5F5
             padding-bottom: 50px
         &_body 
             padding: 0 90px 0 65px
+            .rate-area
+                margin-right: 27px
+
 .product-stock
     position: absolute
     top: 10px
@@ -69,13 +72,13 @@
 .tabs
     border-bottom: 1px solid #D7D7D7
     padding: 0 49px
-    margin-bottom: 35px
+    margin-bottom: 32px
     li
         cursor: pointer
         font-size: 14px
         line-height: 17px
         color: #0A0A0A
-        padding: 22px 0 18px
+        padding: 22px 0 21px
         margin: 0 16px
         border-bottom: 3px solid transparent
         &.active 
@@ -100,7 +103,7 @@
         margin-right: 18px
 
 .product-info 
-    padding-top: 28px
+    padding-top: 22px
     &_left
         width: 180px
         .text-through
@@ -189,6 +192,8 @@
         margin: 0 28px
 
 .information
+    .tabs 
+        padding: 0
     &_left
         max-width: 680px 
         padding-right: 20px
@@ -196,6 +201,8 @@
     &_right 
         max-width: 644px 
         padding-top: 12px
+        .list 
+            padding: 30px 30px 30px 0
 
 .characteristics 
     h2 
@@ -210,4 +217,55 @@
     li 
         margin-bottom: 5px
 
+.table 
+    margin-bottom: 20px
+    tr 
+        border-bottom: 1px solid #E4E4E4
+        &:last-child
+            border: none
+    td 
+        border-right: 1px solid #E4E4E4
+        font-size: 14px
+        line-height: 33px
+        font-family: "OpenSans", sans-serif
+        &:last-child
+            border: none
 
+.banner
+    width: 100% 
+    margin-top: 23px
+    position: relative
+    z-index: 1
+    padding: 16px 30px 20px
+    &-img 
+        position: absolute
+        left: 0
+        top: 0 
+        +box(100%)
+        object-fit: cover
+        z-index: -1
+    .fs-13
+        line-height: 14px
+        margin-top: 10px
+    .btn 
+        width: fit-content
+        margin-top: 20px
+        font-size: 13px
+        line-height: 33px
+        padding: 0 15px
+        img 
+            +box(19px)
+
+.subscription
+    background: #E44937
+    &-left 
+        max-width: 500px
+        padding: 28px 0
+    &-right 
+        background: url('../img/common/fire-full.svg') no-repeat right center / 446px 557px
+        max-width: 614px 
+        width: 100%
+        padding: 28px 0
+        .form-subscription
+            max-width: 100%
+            margin: 0 0 15px 0
