@@ -474,7 +474,7 @@
             <div class="container">
               <div class="flex-center-between">
                 <h1 class="fs-40">ALTEP TRIO UNI PLUS (КТ-3ЕN)</h1>
-                <div>
+                <div class="align-items-center">
                   <button class="btn-action btn-action_compare" type="button">
                     <svg class="svg-sprite-icon icon-weigher2">
                       <use xlink:href="img/sprite/symbol/sprite.svg#weigher2"></use>
@@ -517,11 +517,11 @@
               </div>
               <div class="product-about_right">
                 <ul class="tabs d-flex"> 
-                  <li class="active">Все о товаре</li>
-                  <li>Характеристики</li>
-                  <li>Отзывы (21)</li>
-                  <li>Инструкция</li>
-                  <li>Оплата/доставка</li>
+                  <li class="active" data-scroll="about">Все о товаре</li>
+                  <li data-scroll="about">Характеристики</li>
+                  <li data-scroll="about">Отзывы (21)</li>
+                  <li data-scroll="about">Инструкция</li>
+                  <li data-scroll="about">Оплата/доставка</li>
                 </ul>
                 <div class="product-about_body">
                   <div class="flex-center-between">
@@ -585,7 +585,9 @@
                       </div>
                       <div class="justify-content-between product-info_btns">
                         <button class="btn big h-green" type="button">В корзину</button>
-                        <button class="btn-white" type="button">Купить в 1 клик</button>
+                        <button class="btn-white" type="button"> <span>Купить в 1 клик</span>
+                          <input class="input-phone" type="text">
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -597,13 +599,15 @@
             <div class="container">
               <h2>Покупать вместе выгодней</h2>
               <div class="profitable_border flex-wrap"> 
-                <div class="profitable_left flex-center-between"><a class="product-card d-xl-flex" href="#"><img src="img/common/product3.jpg" alt="product"><span class="justify-content-around flex-column"><span class="lh-17">Котел ALTEP PID </span><span><span class="fs-20 text-through d-block">13800 грн</span><span class="title2 c-red fw-medium">12500 грн</span></span></span></a>
-                  <p class="plus">+</p><a class="product-card d-xl-flex" href="#"><img src="img/common/product3.jpg" alt="product"><span class="justify-content-around flex-column"><span class="lh-17">Автоматика ALTEP PID (контролер твердопаливного котла)</span><span><span class="fs-20 text-through d-block">13800 грн</span><span class="title2 c-red fw-medium">12500 грн</span></span></span></a>
+                <div class="profitable_left justify-content-around"><a class="product-card d-xl-flex" href="#"><img src="img/common/product3.jpg" alt="product"><span class="justify-content-around flex-column"><span class="lh-17">Котел ALTEP PID </span><span><span class="fs-20 text-through d-block">13800 грн</span><span class="title2 c-red fw-medium">12500 грн</span></span></span></a>
+                  <p class="plus">+</p><a class="product-card d-xl-flex" href="#"><img src="img/common/product3.jpg" alt="product"><span class="justify-content-around flex-column"><span class="lh-17">Автоматика ALTEP PID (контролер твердопаливного котла)</span><span><span class="title2 c-red fw-medium">12500 грн</span></span></span></a>
                 </div>
                 <div class="profitable_right flex-center-center">
-                  <div> 
-                    <p class="fs-24 text-through">13800 грн</p>
-                    <p class="title2 c-red fw-medium mb-20">12500 грн</p>
+                  <div class="profitable_row">
+                    <div> 
+                      <p class="fs-24 text-through">13800 грн</p>
+                      <p class="title2 c-red fw-medium mb-md-20">12500 грн</p>
+                    </div>
                     <button class="btn-b-red" type="button">Купить</button>
                   </div>
                 </div>
@@ -612,7 +616,7 @@
           </section>
           <section class="recommended-products"> 
             <div class="container">
-              <h2>Рекомендованные товары</h2>
+              <h2>Рекомендованные <span class="d-sm-inline d-none">товары</span></h2>
               <div class="flex-wrap">
                 <div class="card"> 
                   <div class="status-product">Ожидается</div><a href="#">
@@ -867,7 +871,8 @@
             <div class="container">
               <div class="information-content flex-wrap justify-content-between">
                 <div class="information_left">
-                  <div class="information-item active"><a class="instructions flex-center-between c-white fs-24 fw-medium" href="#" download> <span><span class="d-block">Инструкция по</span><span>ALTEP TRIO UNI PLUS (КТ-3ЕN)</span></span><span class="align-items-center"> 
+                  <div class="information-item"></div>
+                  <div class="information-item"><a class="instructions flex-center-between c-white fs-24 fw-medium" href="#" download> <span><span class="d-block">Инструкция по</span><span>ALTEP TRIO UNI PLUS (КТ-3ЕN)</span></span><span class="align-items-center"> 
                         <svg class="svg-sprite-icon icon-dowload">
                           <use xlink:href="img/sprite/symbol/sprite.svg#dowload"></use>
                         </svg><span class="underline">Скачать</span></span></a>
@@ -1001,11 +1006,80 @@
                       </table>
                     </div>
                   </div>
-                  <div class="information-item"></div>
+                  <div class="information-item active">
+                    <h3 class="fs-20 fw-mwdium mb-9 pb-20">Здесь вы можете прочесть отзывы о товаре <br> или поделиться своим фидбеком о нем</h3>
+                    <form class="form-comment">
+                      <div class="flex-wrap"> 
+                        <div class="w-sm-50 pr-sm-11">
+                          <input class="input" type="text" placeholder="Имя">
+                        </div>
+                        <div class="w-sm-50 pl-sm-11">
+                          <input class="input" type="email" placeholder="E-mail">
+                        </div>
+                      </div>
+                      <textarea class="textarea" rows="4" cols="4">Ваш отзыв</textarea>
+                      <div class="flex-center-between">
+                        <div class="align-items-center"> 
+                          <p class="fs-14 ff-opensans mr-15">Оцените товар</p>
+                          <div class="rate-area big">
+                            <input id="5-star6" type="radio" name="rating6" value="5">
+                            <label for="5-star6" title="Amazing"> </label>
+                            <input id="4-star6" type="radio" name="rating6" value="4">
+                            <label for="4-star6" title="Good"> </label>
+                            <input id="3-star6" type="radio" name="rating6" value="3">
+                            <label for="3-star6" title="Average"></label>
+                            <input id="2-star6" type="radio" name="rating6" value="2">
+                            <label for="2-star6" title="Not Good"> </label>
+                            <input id="1-star6" type="radio" name="rating6" value="1">
+                            <label for="1-star6" title="Bad"></label>
+                          </div>
+                        </div>
+                        <button class="btn" type="sumbit">Оставьте свой отзыв</button>
+                      </div>
+                    </form>
+                    <ul class="comments">
+                      <li class="comments-item"> 
+                        <div class="flex-center-between"> 
+                          <p class="fw-semi">Игорь Ткачук /14.03.2021</p>
+                          <div class="rate-area big checked">
+                            <input id="5-star7" type="radio" name="rating7" value="5">
+                            <label for="5-star7" title="Amazing"> </label>
+                            <input id="4-star7" type="radio" name="rating7" value="4">
+                            <label for="4-star7" title="Good"> </label>
+                            <input id="3-star7" type="radio" name="rating7" value="3">
+                            <label for="3-star7" title="Average"></label>
+                            <input id="2-star7" type="radio" name="rating7" value="2">
+                            <label for="2-star7" title="Not Good"> </label>
+                            <input id="1-star7" type="radio" name="rating7" value="1">
+                            <label for="1-star7" title="Bad"></label>
+                          </div>
+                        </div>
+                        <p class="comments-text">Первый раз приобретал в этом магазине. Покупкой доволен. Все аккуратно запаковано. Порадовал подарок:)</p>
+                      </li>
+                      <li class="comments-item"> 
+                        <div class="flex-center-between"> 
+                          <p class="fw-semi">Игорь Ткачук /14.03.2021</p>
+                          <div class="rate-area big checked">
+                            <input id="5-star8" type="radio" name="rating8" value="5">
+                            <label for="5-star8" title="Amazing"> </label>
+                            <input id="4-star8" type="radio" name="rating8" value="4">
+                            <label for="4-star8" title="Good"> </label>
+                            <input id="3-star8" type="radio" name="rating8" value="3">
+                            <label for="3-star8" title="Average"></label>
+                            <input id="2-star8" type="radio" name="rating8" value="2">
+                            <label for="2-star8" title="Not Good"> </label>
+                            <input id="1-star8" type="radio" name="rating8" value="1">
+                            <label for="1-star8" title="Bad"></label>
+                          </div>
+                        </div>
+                        <p class="comments-text">С большим удовольствием захожу в магазин. Благодаря тому, что в нем представлен широкий ассортимент товара, могу "зависнуть" ни на один час.</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="information_right">
                   <div class="flex-wrap"> 
-                    <div class="w-lg-50"> 
+                    <div class="w-sm-50"> 
                       <p class="fs-20 fw-medium">Доставка</p>
                       <ul class="list"> 
                         <li class="fw-bold c-red">Бесплатная доставка по Украине при покупке на сумму от 10000 грн.</li>
@@ -1015,7 +1089,7 @@
                         <li>Самовывоз из отделения перевозчика</li>
                       </ul>
                     </div>
-                    <div class="w-lg-50"> 
+                    <div class="w-sm-50"> 
                       <p class="fs-20 fw-medium">Оплата</p>
                       <ul class="list"> 
                         <li>При получении товара</li>

@@ -73,6 +73,9 @@
     border-bottom: 1px solid #D7D7D7
     padding: 0 49px
     margin-bottom: 32px
+    overflow-x: auto 
+    &::-webkit-scrollbar 
+        display: none
     li
         cursor: pointer
         font-size: 14px
@@ -81,6 +84,7 @@
         padding: 22px 0 21px
         margin: 0 16px
         border-bottom: 3px solid transparent
+        white-space: nowrap
         &.active 
             border-color: #E44937
 
@@ -153,6 +157,8 @@
     font-size: 101px
     line-height: 130px
     color: #E44937
+    display: flex
+    align-items: center
 
 .profitable
     padding: 30px 0
@@ -162,7 +168,7 @@
         margin-top: 30px
     &_left
         width: calc(100% - 356px)
-        padding: 21px 38px 21px 38px
+        padding: 21px 0
     &_right
         width: 356px
         background: url('../img/common/border-arrow.svg') no-repeat left center / auto 100%
@@ -201,8 +207,13 @@
     &_right 
         max-width: 644px 
         padding-top: 12px
+        padding-bottom: 30px
         .list 
             padding: 30px 30px 30px 0
+    &-item
+        display: none
+        &.active 
+            display: block
 
 .characteristics 
     h2 
@@ -269,3 +280,14 @@
         .form-subscription
             max-width: 100%
             margin: 0 0 15px 0
+
+.comments
+    padding-bottom: 40px
+    &-item
+        background: #F5F5F5
+        padding: 25px 22px
+        font-size: 14px
+        line-height: 20px
+        margin-top: 20px
+    &-text 
+        margin-top: 16px

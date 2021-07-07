@@ -164,20 +164,28 @@ $(document).ready(function () {
     ]
   });
   $('.slider-nav').slick({
-    infinite: false,
     slidesToShow: 5,
     slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
     dots: false,
     arrows: false,
     focusOnSelect: true,
     asNavFor: '.slider-for',
-    vertical: true
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+    ]
   });
   $('.slider-for').slick({
-    infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
+    centerMode: true,
     cssEase: 'linear',
     dots: false,
     arrows: false,
@@ -234,9 +242,15 @@ $(document).ready(function () {
   }
 
   // tabs
-  $(".tabs li").on('click', function() {
-    $(this).addClass('active').siblings().removeClass('active');
-  });
+  for (let i = 0; i < $(".tabs li").length; i++) {
+    $(".tabs li").eq(i).on('click', function() {
+      let index = $(this).index();
+      $(this).addClass('active').siblings().removeClass('active');
+      $(".information-item").eq(index).addClass('active').siblings().removeClass('active');
+    });
+    
+  }
+
   //stopPropagation
   $(".stopPropagation").on('click', function(e) {
     e.stopPropagation();
@@ -279,8 +293,6 @@ function hideList () {
 
 hideList();
 
-
-
 });
 
 function showHide(item,showText) {
@@ -309,4 +321,3 @@ document.querySelectorAll('.search-more').forEach(function (item) {
     showHide(item, 'показать все <span class="d-sm-inline d-none">результаты поиска</span>');
   });
 });
-

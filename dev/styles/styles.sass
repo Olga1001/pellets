@@ -133,13 +133,28 @@ input, textarea
   line-height: 18px
   font-style: normal
   font-weight: normal
-  // padding: 10px 12px
-  // border: 1px solid $gray-100
-  // &:hover 
-  //   border-color: $gray-300
-  // &:focus 
-  //   border-color: $green4
 
+.input, .textarea
+  font-size: 13px
+  background: #FFFFFF
+  border: 1px solid #DDDDDD
+  padding: 14px 22px
+  margin-bottom: 25px
+  &::-webkit-input-placeholder
+    font-size: 13px
+    color: #000
+
+  &:-moz-placeholder
+    font-size: 13px
+    color: #000
+
+  &::-moz-placeholder
+    font-size: 13px
+    color: #000
+
+  &:-ms-input-placeholder
+    font-size: 13px
+    color: #000
 h1
   font-weight: 500
   font-size: 68px

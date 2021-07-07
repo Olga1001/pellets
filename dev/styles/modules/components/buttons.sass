@@ -26,18 +26,42 @@
 
     
 .btn-white
-    font-size: 20px
-    line-height: 65px
     color: #000000
-    border: 1px solid #B9B9B9
-    border-radius: 4px
-    padding: 0 20px 
     text-align: center
     transition: all 0.3s ease
-    &:hover 
-        background: #FFB321
-        border-color: #FFB321
+    position: relative
+    z-index: 1
+    font-size: 20px
+    span
+        border: 1px solid #B9B9B9
+        border-radius: 4px
+        line-height: 65px
+        background: #F5F5F5
+        padding: 0 20px 
+        display: block
+    &:hover, &:focus  
+        span
+            background: #FFB321
+            border-color: #FFB321
+        .input-phone
+            opacity: 1
+            right: calc(100% - 4px)
 
+.input-phone
+    background: #FFFFFF
+    border: 1px solid #B9B9B9
+    border-radius: 4px
+    position: absolute
+    right: 0
+    top: 0
+    +box(240px,100%)
+    font-size: 20px
+    line-height: 26px
+    color: #000000
+    padding: 19.5px 20px
+    z-index: -1
+    opacity: 0
+    transition: all 0.3s ease
 
 .btn-cart 
     border-radius: 50%

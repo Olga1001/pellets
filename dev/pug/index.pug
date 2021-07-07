@@ -19,7 +19,7 @@ block content
 			.container
 				.flex-center-between
 					h1.fs-40 ALTEP TRIO UNI PLUS (КТ-3ЕN)
-					div
+					.align-items-center
 						button.btn-action.btn-action_compare(type='button')
 							+icon('weigher2')
 						button.btn-action.btn-action_favorites(type='button')
@@ -54,7 +54,7 @@ block content
 				.product-about_right
 					ul.tabs.d-flex 
 						each val, index in ['Все о товаре','Характеристики','Отзывы (21)','Инструкция','Оплата/доставка']
-							li(class=index==0 ? 'active':'')=val
+							li(class=index==0 ? 'active':'' data-scroll='about')=val
 					.product-about_body
 						.flex-center-between
 							.align-items-center
@@ -122,12 +122,14 @@ block content
 									p.title2.c-red.fw-medium.lh-1 12500 грн
 								.justify-content-between.product-info_btns
 									button.btn.big.h-green(type='button') В корзину
-									button.btn-white(type='button') Купить в 1 клик
+									button.btn-white(type='button') 
+										span Купить в 1 клик
+										input.input-phone(type='text')
 		section.profitable
 			.container
 				h2 Покупать вместе выгодней
 				.profitable_border.flex-wrap 
-					.profitable_left.flex-center-between
+					.profitable_left.justify-content-around
 						a.product-card.d-xl-flex(href='#')
 							img(src='img/common/product3.jpg' alt='product')
 							span.justify-content-around.flex-column
@@ -141,21 +143,19 @@ block content
 							span.justify-content-around.flex-column
 								span.lh-17 Автоматика ALTEP PID (контролер твердопаливного котла)
 								span
-									span.fs-20.text-through.d-block 13800 грн
 									span.title2.c-red.fw-medium 12500 грн
-						
-						
-
 
 					.profitable_right.flex-center-center
-						div 
-							p.fs-24.text-through 13800 грн
-							p.title2.c-red.fw-medium.mb-20 12500 грн
+						.profitable_row
+							div 
+								p.fs-24.text-through 13800 грн
+								p.title2.c-red.fw-medium.mb-md-20 12500 грн
 							button.btn-b-red(type='button') Купить
 
 		section.recommended-products 
 			.container
-				h2 Рекомендованные товары
+				h2 Рекомендованные 
+					span.d-sm-inline.d-none товары
 				.flex-wrap
 					-var n = 4 
 					-var i = 2
@@ -213,7 +213,8 @@ block content
 			.container
 				.information-content.flex-wrap.justify-content-between
 					.information_left
-						.information-item.active
+						.information-item
+						.information-item
 							a.instructions.flex-center-between.c-white.fs-24.fw-medium(href='#' download) 
 								span
 									span.d-block Инструкция по
@@ -352,16 +353,75 @@ block content
 											td(width="60%")=val.name 
 											td(align="center" width="20%")=val.value1
 											td(align="center" width="20%")=val.value2
-						.information-item
+						.information-item.active
+							h3.fs-20.fw-mwdium.mb-9.pb-20 Здесь вы можете прочесть отзывы о товаре <br> или поделиться своим фидбеком о нем
+							form.form-comment
+								.flex-wrap 
+									.w-sm-50.pr-sm-11
+										input.input(type="text" placeholder="Имя")
+									.w-sm-50.pl-sm-11
+										input.input(type="email" placeholder="E-mail")
+								textarea.textarea(rows="4" cols="4") Ваш отзыв
+								.flex-center-between
+									.align-items-center 
+										p.fs-14.ff-opensans.mr-15 Оцените товар
+										-var i = 6
+										.rate-area.big
+											input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+											label(for=`5-star${i}` title='Amazing') 
+											input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+											label(for=`4-star${i}` title='Good') 
+											input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+											label(for=`3-star${i}` title='Average')
+											input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+											label(for=`2-star${i}` title='Not Good') 
+											input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+											label(for=`1-star${i}` title='Bad')
+									button.btn(type="sumbit") Оставьте свой отзыв
+							ul.comments
+								li.comments-item 
+									.flex-center-between 
+										p.fw-semi Игорь Ткачук /14.03.2021
+										-var i = 7
+										.rate-area.big.checked
+											input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+											label(for=`5-star${i}` title='Amazing') 
+											input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+											label(for=`4-star${i}` title='Good') 
+											input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+											label(for=`3-star${i}` title='Average')
+											input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+											label(for=`2-star${i}` title='Not Good') 
+											input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+											label(for=`1-star${i}` title='Bad')
+									p.comments-text Первый раз приобретал в этом магазине. Покупкой доволен. Все аккуратно запаковано. Порадовал подарок:)
+
+								li.comments-item 
+									.flex-center-between 
+										p.fw-semi Игорь Ткачук /14.03.2021
+										-var i = 8
+										.rate-area.big.checked
+											input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+											label(for=`5-star${i}` title='Amazing') 
+											input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+											label(for=`4-star${i}` title='Good') 
+											input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+											label(for=`3-star${i}` title='Average')
+											input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+											label(for=`2-star${i}` title='Not Good') 
+											input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+											label(for=`1-star${i}` title='Bad')
+									p.comments-text С большим удовольствием захожу в магазин. Благодаря тому, что в нем представлен широкий ассортимент товара, могу "зависнуть" ни на один час.
+
 
 					.information_right
 						.flex-wrap 
-							.w-lg-50 
+							.w-sm-50 
 								p.fs-20.fw-medium Доставка
 								ul.list 
 									each val, index in ['Бесплатная доставка по Украине при покупке на сумму от 10000 грн.','Самовывоз из магазинов',' Пн-Вс по графику магазинов','Курьерская доставка по Киеву','Самовывоз из отделения перевозчика'] 
 										li(class=index==0 ? 'fw-bold c-red':'')=val 
-							.w-lg-50 
+							.w-sm-50 
 								p.fs-20.fw-medium Оплата
 								ul.list 
 									each val in ['При получении товара','Безналичная с НДС','Кредит'] 
@@ -397,5 +457,6 @@ block content
 
 
 block script 
+	
 
 	
