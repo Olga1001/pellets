@@ -254,6 +254,8 @@ table
     border-radius: 5px
     display: none
     background: #F3F3F3
+    max-height: 250px
+    overflow-y: auto
     li 
       padding: 5px 10px
   &-b
@@ -272,6 +274,27 @@ table
         margin: auto
         +box(14px)
         stroke-width: 1px
+  &-i
+    width: 100%
+    &:before 
+      content: ''
+      +centerY
+      right: 19px 
+      background: url("../img/common/arrow-down.svg") no-repeat center / contain 
+      +box(11px)
+    .select-item
+      background: #FFFFFF
+      border: 1px solid #DADADA
+      border-radius: 5px
+      font-weight: 300
+      font-size: 14px
+      line-height: 160%
+      padding: 12px 20px
+    .select-drop
+      left: 0
+      li 
+        padding: 5px 20px
+        font-size: 13px
 
 // .scroll-x
 //   overflow-x: auto 
@@ -296,9 +319,15 @@ table
   position: absolute
   z-index: -1
   +box(100%)
-  
+
+.max-165
+  max-width: 165px
+
 .max-200
   max-width: 200px
+
+.max-241 
+  max-width: 241px
 
 .w-50
   width: 50%

@@ -1,0 +1,55 @@
+.popup 
+    position: fixed 
+    left: 0
+    top: 0 
+    +box(100%)
+    display: inline-flex 
+    overflow-y: auto 
+    padding: 16px
+    background: rgba($black,0.7)
+    z-index: 9
+    opacity: 0
+    pointer-events: none 
+    transition: all 0.3s ease
+    &.active 
+        opacity: 1
+        pointer-events: auto
+    &-container
+        background: #FFFFFF
+        border-radius: 5px
+        max-width: 901px
+        width: 100%
+        margin: auto
+        padding: 18px
+    .btn-close 
+        display: block
+        svg 
+            fill: #000000
+            +box(18px)
+    h2 
+        margin-bottom: 22px
+    &-calculation
+        &_left
+            padding-left: 36px
+            margin-bottom: 34px
+            width: 52%
+        &_right 
+            width: 48%
+.list-calculation
+    padding-top: 16px
+    li
+        margin-bottom: 11px
+    .input
+        margin: 0
+
+.carcass
+    margin: auto auto 34px
+
+.result
+    background: #E44937
+    border-radius: 5px
+    padding: 15px 20px
+    margin-top: 40px
+    input 
+        margin: 0
+        font-size: 16px

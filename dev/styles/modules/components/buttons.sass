@@ -23,6 +23,10 @@
     &.h-green:hover
         background: #6C9D15
         color: $white
+    &.big-xl 
+        line-height: 67px
+        font-size: 20px
+        font-weight: 500
 
     
 .btn-white
@@ -64,21 +68,40 @@
     transition: all 0.3s ease
 
 .btn-cart 
-    border-radius: 50%
-    background: #E44937
-    +box(55px)
-    padding-right: 3px
-    padding-top: 4px
-    flex-shrink: 0
-    svg 
-        +box(29px,100%)
-        margin: 0 auto
-        fill: $white
-        display: block
-    &.small 
-        +box(42px)
+    position: relative
+    &_item 
+        border-radius: 50%
+        background: #E44937
+        +box(55px)
+        padding-right: 3px
+        padding-top: 4px
+        flex-shrink: 0
+        position: relative
         svg 
-            +box(21px,100%)
+            +box(29px,100%)
+            margin: 0 auto
+            fill: $white
+            display: block
+        &.small 
+            +box(42px)
+            svg 
+                +box(21px,100%)
+        p 
+            position: absolute
+            right: 9px
+            top: 10px
+            border-radius: 50%
+            font-weight: 500
+            font-size: 12px
+            line-height: 17px
+            text-align: center
+            color: #000000
+            +box(16px)
+            background: #FFFFFF
+    &:hover .cart-popup
+        opacity: 1
+        pointer-events: auto
+
 
 .btn-more 
     font-size: 14px
@@ -121,10 +144,18 @@
     background: #DFDFDF
     border-radius: 4px
     padding: 9px 13px
+    transition: all 0.3s ease
     span
         font-size: 12px
         line-height: 105%
         margin-left: 15px
+    .calc-fill 
+        transition: all 0.3s ease
+    &:hover
+        background-color: #E44937
+        color: $white
+        .calc-fill 
+            fill: $white
 
 .btn-b-red
     font-weight: 500

@@ -3,6 +3,28 @@
     border-left-width: 0
     padding: 0 19px 19px
     position: relative
+    &.expected:before 
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        +box(100%)
+        background: rgba(255, 255, 255, 0.3)
+        z-index: 3
+
+    &.small 
+        .card-top 
+            height: 167px
+            img
+                height: 117px
+        .card-title
+            margin-bottom: 30px
+        .stock-new
+            left: 13px
+        .stock, .new
+            +box(39px)
+            font-size: 12px 
+            line-height: 39px
     &.disabled
         pointer-events: none
         p, a, li 
