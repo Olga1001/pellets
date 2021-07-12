@@ -1,8 +1,13 @@
 .breadcrumbs
     padding: 13px 0
+    ul
+        overflow-x: auto
+        &::-webkit-scrollbar
+            display: none
     &__item 
         font-size: 13px
         line-height: 36px
+        white-space: nowrap
     &__link
         display: flex
         margin: 0 5px 0 0

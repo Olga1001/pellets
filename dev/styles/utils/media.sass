@@ -46,6 +46,9 @@
         align-items: center
     .mb-md-20
         margin-bottom: 20px
+    .flex-md-row
+        display: flex
+        flex-direction: row
 @media only screen and (min-width : 576px)
     .pt-sm-30
         padding-top: 30px
@@ -66,6 +69,14 @@
     .align-items-sm-center
         display: flex
         align-items: center
+    .d-sm-none
+        display: none
+    .flex-sm-row
+        display: flex
+        flex-direction: row
+    .justify-content-sm-between
+        display: flex
+        justify-content: space-between
 @media only screen and (max-width : 1459px)
     .header_right
         padding-left: 0
@@ -398,6 +409,7 @@
         padding: 0 12px
     .footer-top .col:first-child p.c-white
         padding-left: 7px
+        word-break: break-all
     .socials a
         +box(38px)
         margin-right: 10px
@@ -490,6 +502,12 @@
         line-height: 39px
     .btn-b-red
         max-width: 145px
+    .popup-calculation_right, .popup-calculation_left
+        width: 100%
+    .popup-calculation_left
+        padding: 0
+    .list-calculation .max-241
+        max-width: 60%
 @media only screen and (max-width : 660px)
     .power-row
         flex-wrap: wrap
@@ -509,6 +527,17 @@
             width: 50%
             &:nth-child(2)
                 padding-left: 8px
+    .product-info_btns
+        width: 100%
+    .product-info_price
+        display: flex
+        align-items: center
+    .product-info_left .text-through
+        margin: 0
+    .product-info_power
+        margin-top: 18px
+    .counter-input
+        max-width: 100%
 
 @media only screen and (max-width : 575px)
     .popular-products .slider
@@ -742,7 +771,7 @@
     .product-about_left
         width: 100%
         padding: 14px 0
-    .tabs
+    .tabs, .tabs .container
         padding: 0
     .product-about_body .rate-area, .product-about_body .i-comments
         margin-bottom: 10px
@@ -756,6 +785,48 @@
         margin: 0
     .slider-nav .slide p
         display: none
+    .take-credit
+        .fs-20
+            font-size: 18px
+            line-height: 23px
+            margin-bottom: 7px
+        .underline
+            font-size: 13px
+            line-height: 17px
+    .product-info_btns, .product-info_btns button, .product-info_left
+        width: 100%
+    .product-info_price
+        p
+            width: fit-content
+            &:last-child
+                padding-left: 18px
+                font-size: 36px
+                line-height: 46px
+    .product-info_btns
+        .btn.big
+            line-height: 66px
+            font-size: 18px
+        button
+            margin-top: 15px
+    .product-about_right
+        padding-bottom: 28px
+    .instructions
+        font-size: 18px
+        line-height: 22px
+        padding: 13px 17px
+        .underline
+            font-size: 20px
+            line-height: 26px
+    .instructions svg
+        +box(30px)
+        margin: 0 11px
+    .characteristics h2
+        font-size: 24px
+        line-height: 31px
+    .characteristics p
+        text-align: initial
+    .input-phone
+        display: none
 @media only screen and (max-width : 360px)
     .footer_phones a
         font-size: 14px
@@ -763,3 +834,25 @@
         padding: 14px
     .banner .btn
         padding: 0 13px
+    .take-credit img
+        max-width: 124px
+    .take-credit .fs-20
+        margin: 0
+    .instructions
+        padding: 10px 9px
+    .instructions .underline
+        font-size: 18px
+    .footer-top .btn
+        font-size: 14px
+        padding: 0 5px
+    .payment-systems img
+        margin: 0 8px
+    .product-card
+        .title2
+            font-size: 21px
+    .profitable_row .btn-b-red
+        width: fit-content
+    .profitable_right .title2
+        font-size: 26px
+    .product-info_price p:last-child
+        font-size: 31px

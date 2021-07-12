@@ -87,6 +87,7 @@
         white-space: nowrap
         &.active 
             border-color: #E44937
+            color: #E44937
 
 .program-block
     background: #E44937
@@ -136,8 +137,10 @@
     &-btn
         +box(44px,42px) 
         background: #E7E7E7
+        flex-shrink: 0
     &-input
-        width: 54px
+        max-width: 54px
+        width: 100%
         font-weight: 300
         color: #000000
         padding: 12px 0

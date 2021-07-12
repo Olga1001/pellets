@@ -10,7 +10,7 @@ block content
 	main
 		.container
 			nav.breadcrumbs
-				ul.flex-wrap
+				ul.d-flex
 					+breadcrumbs-item('Главная', '#')
 					+breadcrumbs-item('Твердотопливные котлы ','#')
 					+breadcrumbs-item('Промышелнные твердотопливные котлы','#')
@@ -84,15 +84,15 @@ block content
 								b  IQ ENERGY
 								|. Покупайте котлы
 								b  Альтеп в кредит
-								| и получите
+								|  и получите
 								b  гарантировано компенсацию до 35%
-								| от стоимости оборудования!
+								|  от стоимости оборудования!
 						.flex-center-between
 							.take-credit.align-items-center
 								img(src='img/common/take-credit.png' alt='take-credit')
-								a.fw-medium.fs-20(href='#') Купить в кредит
-								a.underline.c-gray-500.d-sm-none.d-block(href='#') Условия кредитования
-
+								div
+									a.fw-medium.fs-20(href='#') Купить в кредит
+									a.underline.c-gray-500.d-sm-none.d-block(href='#') Условия кредитования
 							a.underline.c-gray-500.d-sm-block.d-none(href='#') Условия кредитования
 
 						.product-info
@@ -100,7 +100,7 @@ block content
 								p.product-info_left.fw-medium Производитель:
 								p ALTEP
 							.flex-wrap.fs-18.fw-medium.align-items-center.product-info_row
-								p.product-info_left.fw-medium Мощность:
+								p.product-info_left.fw-medium.product-info_power Мощность:
 								.justify-content-between.power-row
 									.select.select-b
 										.select-item.flex-center-between
@@ -144,10 +144,10 @@ block content
 
 										span Рассчет<br>мощноси
 							.flex-wrap.align-items-end.product-info_row
-								.product-info_left
+								.product-info_left.product-info_price
 									p.fs-20.text-through 13800 грн
 									p.title2.c-red.fw-medium.lh-1 12500 грн
-								.justify-content-between.product-info_btns
+								.justify-content-sm-between.product-info_btns
 									button.btn.big.h-green(type='button') В корзину
 									button.btn-white(type='button')
 										span Купить в 1 клик
@@ -521,7 +521,7 @@ block content
 			button.btn-close.ml-auto(type='button')
 				+icon('close2')
 			h2.text-up.text-center Рассчет мощности
-			.flex-wrap 
+			.flex-wrap.flex-md-row.flex-column-reverse
 				.popup-calculation_left
 					ul.list-calculation
 						li.flex-center-between 
@@ -546,6 +546,4 @@ block content
 						
 				.popup-calculation_right
 					img.carcass(src='img/common/carcass.png' alt='image carcass')
-
-
 block script
