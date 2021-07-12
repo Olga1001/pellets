@@ -182,7 +182,28 @@ $(document).ready(function () {
     arrows: true,
     focusOnSelect: true,
     prevArrow: $('.slider-button-prev'),
-    nextArrow: $('.slider-button-next')
+    nextArrow: $('.slider-button-next'),
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 5
+      }
+    }, {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 4
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 2
+      }
+    }]
   }); // menu
 
   $(".burger").on('click', function () {

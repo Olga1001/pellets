@@ -17,9 +17,9 @@ block content
 					+breadcrumbs-item('ALTEP TRIO UNI PLUS (КТ-3ЕN)')
 		section
 			.container
-				.flex-center-between
+				.flex-sm-center-between.justify-content-between
 					h1.fs-40 ALTEP TRIO UNI PLUS (КТ-3ЕN)
-					.align-items-center
+					.d-flex
 						button.btn-action.btn-action_compare(type='button')
 							+icon('weigher2')
 						button.btn-action.btn-action_favorites(type='button')
@@ -56,8 +56,8 @@ block content
 						each val, index in ['Все о товаре','Характеристики','Отзывы (21)','Инструкция','Оплата/доставка']
 							li(class=index==0 ? 'active':'')=val
 					.product-about_body
-						.flex-center-between
-							.align-items-center
+						.flex-sm-center-between
+							.flex-center-between
 								-var i = 1
 								.rate-area.checked.big
 									input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
@@ -78,20 +78,22 @@ block content
 							p.fs-13.c-gray
 								span.mr-15 Артикул
 								| 11294038
-						a.program-block.align-items-center(href='#')
+						a.program-block.align-items-sm-center(href='#')
 							img(src='img/common/IQ_energy_logo_PT_Sans_hor_ua.jpg' alt='img')
 							span.c-white Данный товар – участник программы
-								b IQ ENERGY
+								b  IQ ENERGY
 								|. Покупайте котлы
-								b Альтеп в кредит
+								b  Альтеп в кредит
 								| и получите
-								b гарантировано компенсацию до 35%
+								b  гарантировано компенсацию до 35%
 								| от стоимости оборудования!
 						.flex-center-between
-							a.take-credit.align-items-center(href='#')
+							.take-credit.align-items-center
 								img(src='img/common/take-credit.png' alt='take-credit')
-								span.fw-medium.fs-20 Купить в кредит
-							a.underline.c-gray-500(href='#') Условия кредитования
+								a.fw-medium.fs-20(href='#') Купить в кредит
+								a.underline.c-gray-500.d-sm-none.d-block(href='#') Условия кредитования
+
+							a.underline.c-gray-500.d-sm-block.d-none(href='#') Условия кредитования
 
 						.product-info
 							.d-flex.fs-18.fw-medium.product-info_row

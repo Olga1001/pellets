@@ -61,6 +61,11 @@
         padding-right: 11px
     .pl-sm-11
         padding-left: 11px
+    .flex-sm-center-between
+        +d-flex(space-between,center)
+    .align-items-sm-center
+        display: flex
+        align-items: center
 @media only screen and (max-width : 1459px)
     .header_right
         padding-left: 0
@@ -87,11 +92,11 @@
         right: -20px
     .profitable_left
         padding: 21px 25px 21px 25px
-@media only screen and (max-width : 1366px)
+@media only screen and (max-width: 1366px)
     .information_left, .information_right
         width: 50%
     
-@media only screen and (max-width : 1199px)
+@media only screen and (max-width: 1199px)
     .header .card-reverse
         display: none
     .btn-cart
@@ -485,6 +490,26 @@
         line-height: 39px
     .btn-b-red
         max-width: 145px
+@media only screen and (max-width : 660px)
+    .power-row
+        flex-wrap: wrap
+        width: 100%
+        margin-top: -32px
+        .select
+            width: 100%
+            margin-left: calc(50% + 8px)
+            margin-bottom: 30px
+        .counter, .btn-calc
+            width: calc(50% - 8px)
+    .product-info_left
+        width: 50%
+    .product-info_row
+        width: 100%
+        p
+            width: 50%
+            &:nth-child(2)
+                padding-left: 8px
+
 @media only screen and (max-width : 575px)
     .popular-products .slider
         margin: 0 -16px
@@ -685,6 +710,52 @@
             line-height: 15px
     .form-subscription .btn.bg-orange
         font-size: 14px
+    .slider-powers
+        margin: 0 -16px
+    .breadcrumbs__item
+        line-height: 1
+    .product-about_left .relative, .slider-for .slide
+        max-width: 300px
+        max-height: 300px
+    .btn-action
+        margin-left: 18px
+        height: fit-content
+        svg
+            +box(22px)
+    .slider-nav
+        width: 62px
+    .slider-nav .slide
+        height: 62px
+        margin: 2.5px 0
+        img
+            +box(46px)
+    .product-about_left .relative, .slider-for .slide
+        max-width: 217px
+        max-height: 217px
+    .product-stock
+        +box(60px)
+        line-height: 60px
+        font-size: 22px
+    .product
+        margin: 0
+        border: none
+    .product-about_left
+        width: 100%
+        padding: 14px 0
+    .tabs
+        padding: 0
+    .product-about_body .rate-area, .product-about_body .i-comments
+        margin-bottom: 10px
+    .program-block img
+        +box(91px,31px)
+        margin-bottom: 8px
+    .program-block, .program-block span
+        line-height: 19px
+    .slider-nav .slide .play
+        +box(30px)
+        margin: 0
+    .slider-nav .slide p
+        display: none
 @media only screen and (max-width : 360px)
     .footer_phones a
         font-size: 14px
