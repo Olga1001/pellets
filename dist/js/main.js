@@ -261,9 +261,26 @@ $(document).ready(function () {
   }); // }
 
   $(".product-about_right .tabs li").on('click', function () {
-    $('body,html').animate({
-      scrollTop: $('.information').offset().top + 'px'
-    }, 500);
+    var _this = $(this);
+
+    if (_this.text() === 'Оплата/доставка') {
+      $('body,html').animate({
+        scrollTop: $('.information_right').offset().top + 'px'
+      }, 500);
+    } else {
+      $('body,html').animate({
+        scrollTop: $('.information').offset().top + 'px'
+      }, 500);
+    }
+  });
+  $(".tabs li").on('click', function () {
+    var _this = $(this);
+
+    if (_this.text() === 'Оплата/доставка') {
+      $('body,html').animate({
+        scrollTop: $('.information_right').offset().top + 'px'
+      }, 500);
+    }
   }); //stopPropagation
 
   $(".stopPropagation").on('click', function (e) {

@@ -285,11 +285,24 @@ $(document).ready(function () {
 
       $(".information-item").eq(index).addClass('active').siblings().removeClass('active');
       $(".information .tabs li").eq(index).addClass('active').siblings().removeClass('active');
+    
     });
     
   // }
+
   $(".product-about_right .tabs li").on('click', function() { 
-    $('body,html').animate({scrollTop: $('.information').offset().top + 'px'}, 500);
+    let _this = $(this);
+    if (_this.text() === 'Оплата/доставка') {
+      $('body,html').animate({scrollTop: $('.information_right').offset().top + 'px'}, 500);
+    } else {
+      $('body,html').animate({scrollTop: $('.information').offset().top + 'px'}, 500);
+    }
+  });
+  $(".tabs li").on('click', function() { 
+    let _this = $(this);
+    if (_this.text() === 'Оплата/доставка') {
+      $('body,html').animate({scrollTop: $('.information_right').offset().top + 'px'}, 500);
+    }
   });
 
   //stopPropagation

@@ -269,6 +269,10 @@
     .product-about_right
         margin: 0 -16px
         width: calc(100% + 32px) 
+    .subscription-right
+        background: none
+    .subscription
+        background: #E44937 url('../img/common/fire-full.svg') no-repeat 160% top / 258px 323px
 @media only screen and (max-width : 991px)
     .footer-menu 
         display: none
@@ -506,8 +510,11 @@
         width: 100%
     .popup-calculation_left
         padding: 0
-    .list-calculation .max-241
-        max-width: 60%
+    .popup-calculation_left
+        .max-241
+            max-width: 60%
+        .max-165
+            max-width: 115px
 @media only screen and (max-width : 660px)
     .power-row
         flex-wrap: wrap
@@ -827,6 +834,10 @@
         text-align: initial
     .input-phone
         display: none
+    .rate-area.big:not(:checked) > label
+        +box(20px)
+    .comments-item
+        padding: 20px 14px
 @media only screen and (max-width : 360px)
     .footer_phones a
         font-size: 14px
@@ -856,3 +867,5 @@
         font-size: 26px
     .product-info_price p:last-child
         font-size: 31px
+    .price
+        font-size: 14px
