@@ -1,7 +1,7 @@
 extends layout/main
 
 block variables
-	-var title = 'Карточка товара'
+	-var title = 'Карточка товара общая'
 	-var page = 'product-page'
 
 block link
@@ -28,15 +28,15 @@ block content
 		.product
 			.container.flex-wrap
 				.product-about_left.d-flex.align-items-center
-					.slider-nav 
+					.slider-nav
 						-var n = 5
 						while (n--)
 							if (n==1)
-								.slide 
-									.play 
+								.slide
+									.play
 									p Видео
 							else
-								.slide 
+								.slide
 									img(src='img/common/product3.jpg' alt='product')
 					.relative
 						.product-stock -15%
@@ -44,15 +44,15 @@ block content
 							-var j = 5
 							while (j--)
 								if (j==1)
-									.slide 
+									.slide
 										img(src='img/common/product3.jpg' alt='product')
 										.play
 								else
-									.slide 
+									.slide
 										img(src='img/common/product3.jpg' alt='product')
-								
+
 				.product-about_right
-					ul.tabs.d-flex 
+					ul.tabs.d-flex
 						each val, index in ['Все о товаре','Характеристики','Отзывы (21)','Инструкция','Оплата/доставка']
 							li(class=index==0 ? 'active':'')=val
 					.product-about_body
@@ -61,52 +61,52 @@ block content
 								-var i = 1
 								.rate-area.checked.big
 									input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
-									label(for=`5-star${i}` title='Amazing') 
+									label(for=`5-star${i}` title='Amazing')
 									input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
-									label(for=`4-star${i}` title='Good') 
+									label(for=`4-star${i}` title='Good')
 									input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
 									label(for=`3-star${i}` title='Average')
 									input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
-									label(for=`2-star${i}` title='Not Good') 
+									label(for=`2-star${i}` title='Not Good')
 									input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
 									label(for=`1-star${i}` title='Bad')
 								.i-comments.big.align-items-center
 									+icon('comments')
-									p.fs-13.c-black 
-										span.underline отзывы 
+									p.fs-13.c-black
+										span.underline отзывы
 										| (21)
-							p.fs-13.c-gray 
-								span.mr-15 Артикул   
+							p.fs-13.c-gray
+								span.mr-15 Артикул
 								| 11294038
 						a.program-block.align-items-center(href='#')
-							img(src='img/common/IQ_energy_logo_PT_Sans_hor_ua.jpg' alt='img') 
-							span.c-white Данный товар – участник программы 
+							img(src='img/common/IQ_energy_logo_PT_Sans_hor_ua.jpg' alt='img')
+							span.c-white Данный товар – участник программы
 								b IQ ENERGY
-								|. Покупайте котлы 
-								b Альтеп в кредит 
-								| и получите 
-								b гарантировано компенсацию до 35% 
+								|. Покупайте котлы
+								b Альтеп в кредит
+								| и получите
+								b гарантировано компенсацию до 35%
 								| от стоимости оборудования!
-						.flex-center-between 
+						.flex-center-between
 							a.take-credit.align-items-center(href='#')
 								img(src='img/common/take-credit.png' alt='take-credit')
 								span.fw-medium.fs-20 Купить в кредит
 							a.underline.c-gray-500(href='#') Условия кредитования
 
-						.product-info 
-							.d-flex.fs-18.fw-medium.product-info_row 
+						.product-info
+							.d-flex.fs-18.fw-medium.product-info_row
 								p.product-info_left.fw-medium Производитель:
 								p ALTEP
 							.flex-wrap.fs-18.fw-medium.align-items-center.product-info_row
 								p.product-info_left.fw-medium Мощность:
 								.justify-content-between.power-row
-									.select.select-b 
+									.select.select-b
 										.select-item.flex-center-between
 											p.fw-light.ff-Inter 12 кВт
 											.arrow
 												+icon('arrow-down')
 
-										ul.select-drop.fs-14  
+										ul.select-drop.fs-14
 											li 12 кВт
 											li 13 кВт
 									.counter.d-flex
@@ -147,31 +147,31 @@ block content
 									p.title2.c-red.fw-medium.lh-1 12500 грн
 								.justify-content-between.product-info_btns
 									button.btn.big.h-green(type='button') В корзину
-									button.btn-white(type='button') 
+									button.btn-white(type='button')
 										span Купить в 1 клик
 										input.input-phone(type='text')
-		
+
 		section.available-powers
 			.container
 				.flex-center-between.mb-20
-					h2 Доступные мощности 
+					h2 Доступные мощности
 					.align-items-center
 						.slider-button.slider-button-prev
 							+icon('arrow-left')
 						.slider-button.slider-button-next
 							+icon('arrow-right')
 				.slider-powers
-					-var n = 7 
+					-var n = 7
 					while (n--)
-						.card.small(class=n==4 ? 'expected': '') 
-							if (n==3) 
-								.stock-new 
+						.card.small(class=n==4 ? 'expected': '')
+							if (n==3)
+								.stock-new
 									.stock -20%
 									.new NEW
-							if (n==5) 
-								.stock-new 
+							if (n==5)
+								.stock-new
 									.new NEW
-							if (n==4) 
+							if (n==4)
 								.status-product Ожидается
 							a(href='#')
 								.card-top
@@ -181,18 +181,18 @@ block content
 											+icon('heart2')
 										button.btn-weigher(type='button')
 											+icon('weigher')
-								p.card-title ALTEP TRIO UNI PLUS (КТ-3ЕN) 
+								p.card-title ALTEP TRIO UNI PLUS (КТ-3ЕN)
 									span.c-red.fw-medium 24 кВт
 							p.price 18 800 грн
 		section.profitable
 			.container
 				h2 Покупать вместе выгодней
-				.profitable_border.flex-wrap 
+				.profitable_border.flex-wrap
 					.profitable_left.justify-content-around
 						a.product-card.d-xl-flex(href='#')
 							img(src='img/common/product3.jpg' alt='product')
 							span.justify-content-around.flex-column
-								span.lh-17 Котел ALTEP PID 
+								span.lh-17 Котел ALTEP PID
 								span
 									span.fs-20.text-through.d-block 13800 грн
 									span.title2.c-red.fw-medium 12500 грн
@@ -206,13 +206,13 @@ block content
 
 					.profitable_right.flex-center-center
 						.profitable_row
-							div 
+							div
 								p.fs-24.text-through 13800 грн
 								p.title2.c-red.fw-medium.mb-md-20 12500 грн
 							button.btn-b-red(type='button') Купить
 
-		.information 
-			.tabs 
+		.information
+			.tabs
 				ul.container.d-flex
 					each val, index in ['Все о товаре','Характеристики','Отзывы (21)','Инструкция','Оплата/доставка']
 						li(class=index==1 ? 'active':'')=val
@@ -221,16 +221,16 @@ block content
 					.information_left
 						.information-item
 						.information-item.active
-							a.instructions.flex-center-between.c-white.fs-24.fw-medium(href='#' download) 
+							a.instructions.flex-center-between.c-white.fs-24.fw-medium(href='#' download)
 								span
 									span.d-block Инструкция по
 									span ALTEP TRIO UNI PLUS (КТ-3ЕN)
-								span.align-items-center 
+								span.align-items-center
 									+icon('dowload')
 									span.underline Скачать
 							.characteristics
 								h2.fs-28 Технические характеристики
-								p.fs-20.fw-medium.mb-20 Альтеп DUO PLUS (КТ-2Е) – это украинские твёрдотопливные котлы длительного горения высокого качества. Вся линейка оборудования сертифицированная. 
+								p.fs-20.fw-medium.mb-20 Альтеп DUO PLUS (КТ-2Е) – это украинские твёрдотопливные котлы длительного горения высокого качества. Вся линейка оборудования сертифицированная.
 								p.fs-15.ff-opensans.mb-20 Высокая эффективность (до 86%), длительное горение котла КТ-2Е (24–48 часов), качественная сварка, сборка, покраска, аттестированная сталь теплообменника не менее 6 мм, удобная автоматика – вот основные черты данного котла.
 								p.fs-15.ff-opensans Модельный ряд по мощности котлов ALTEP DUO PLUS : 17, 25, 31, 38, 50, 62, 75, 95, 120, 150, 200, 250 кВт.
 								p.fs-15.ff-opensans.mb-20 Автоматика котла управляет работой вентилятора наддува и насосом центрального отопления. Когда достигается заданная температура (которую можно выставить в пределах от 50 до 85 градусов), автоматика отключает вентилятор и котёл переходит в режим тления. Таким образом, достигается максимальная длительность горения и эффективность.
@@ -240,8 +240,8 @@ block content
 									each val in ['Высокая теплопродуктивность ALTEP TRIO UNI PLUS','Возможность подключения пеллетной горелки и перевода котла в автоматический режим подачи топлива','Наличие вентилятора','Наличие контроллера, управляющего температурным режимом работы котла','Высокое качество материалов']
 										li.fs-14=val
 								h3.fs-20.fw-medium.mb-20 Технические параметры
-								table.table 
-									- 
+								table.table
+									-
 										var characteristics = [
 											{
 												name: 'Тип котла/мощность:',
@@ -355,106 +355,159 @@ block content
 											},
 										]
 									each val in characteristics
-										tr 
-											td(width="60%")=val.name 
+										tr
+											td(width="60%")=val.name
 											td(align="center" width="20%")=val.value1
 											td(align="center" width="20%")=val.value2
 						.information-item
 							h3.fs-20.fw-medium.mb-9.pb-20 Здесь вы можете прочесть отзывы о товаре <br> или поделиться своим фидбеком о нем
 							form.form-comment
-								.flex-wrap 
+								.flex-wrap
 									.w-sm-50.pr-sm-11
 										input.input(type="text" placeholder="Имя")
 									.w-sm-50.pl-sm-11
 										input.input(type="email" placeholder="E-mail")
 								textarea.textarea(rows="4" cols="4") Ваш отзыв
 								.flex-center-between
-									.align-items-center 
+									.align-items-center
 										p.fs-14.ff-opensans.mr-15 Оцените товар
 										-var i = 6
 										.rate-area.big
 											input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
-											label(for=`5-star${i}` title='Amazing') 
+											label(for=`5-star${i}` title='Amazing')
 											input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
-											label(for=`4-star${i}` title='Good') 
+											label(for=`4-star${i}` title='Good')
 											input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
 											label(for=`3-star${i}` title='Average')
 											input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
-											label(for=`2-star${i}` title='Not Good') 
+											label(for=`2-star${i}` title='Not Good')
 											input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
 											label(for=`1-star${i}` title='Bad')
 									button.btn(type="sumbit") Оставьте свой отзыв
 							ul.comments
-								li.comments-item 
-									.flex-center-between 
+								li.comments-item
+									.flex-center-between
 										p.fw-semi Игорь Ткачук /14.03.2021
 										-var i = 7
 										.rate-area.big.checked
 											input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
-											label(for=`5-star${i}` title='Amazing') 
+											label(for=`5-star${i}` title='Amazing')
 											input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
-											label(for=`4-star${i}` title='Good') 
+											label(for=`4-star${i}` title='Good')
 											input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
 											label(for=`3-star${i}` title='Average')
 											input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
-											label(for=`2-star${i}` title='Not Good') 
+											label(for=`2-star${i}` title='Not Good')
 											input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
 											label(for=`1-star${i}` title='Bad')
 									p.comments-text Первый раз приобретал в этом магазине. Покупкой доволен. Все аккуратно запаковано. Порадовал подарок:)
 
-								li.comments-item 
-									.flex-center-between 
+								li.comments-item
+									.flex-center-between
 										p.fw-semi Игорь Ткачук /14.03.2021
 										-var i = 8
 										.rate-area.big.checked
 											input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
-											label(for=`5-star${i}` title='Amazing') 
+											label(for=`5-star${i}` title='Amazing')
 											input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
-											label(for=`4-star${i}` title='Good') 
+											label(for=`4-star${i}` title='Good')
 											input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
 											label(for=`3-star${i}` title='Average')
 											input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
-											label(for=`2-star${i}` title='Not Good') 
+											label(for=`2-star${i}` title='Not Good')
 											input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
 											label(for=`1-star${i}` title='Bad')
 									p.comments-text С большим удовольствием захожу в магазин. Благодаря тому, что в нем представлен широкий ассортимент товара, могу "зависнуть" ни на один час.
 
 
 					.information_right
-						.flex-wrap 
-							.w-sm-50 
+						.flex-wrap
+							.w-sm-50
 								p.fs-20.fw-medium Доставка
-								ul.list 
-									each val, index in ['Бесплатная доставка по Украине при покупке на сумму от 10000 грн.','Самовывоз из магазинов',' Пн-Вс по графику магазинов','Курьерская доставка по Киеву','Самовывоз из отделения перевозчика'] 
-										li(class=index==0 ? 'fw-bold c-red':'')=val 
-							.w-sm-50 
+								ul.list
+									each val, index in ['Бесплатная доставка по Украине при покупке на сумму от 10000 грн.','Самовывоз из магазинов',' Пн-Вс по графику магазинов','Курьерская доставка по Киеву','Самовывоз из отделения перевозчика']
+										li(class=index==0 ? 'fw-bold c-red':'')=val
+							.w-sm-50
 								p.fs-20.fw-medium Оплата
-								ul.list 
-									each val in ['При получении товара','Безналичная с НДС','Кредит'] 
-										li=val 
+								ul.list
+									each val in ['При получении товара','Безналичная с НДС','Кредит']
+										li=val
 						p.fs-12 *в случае наличия товара на складах
-						.banner.c-white 
+						.banner.c-white
 							img.banner-img(src='img/common/Depositphotos_118872734_xl-20151.jpg')
 							p.fs-27.fw-medium.lh-28
-								span.c-orange.d-block Хотите узнать 
+								span.c-orange.d-block Хотите узнать
 								span стоимость отопления?
 							p.fs-13 Воспользуйтесь нашим <br> калькулятором
 							a.btn.bg-orange.align-items-center(href='#')
 								img.mr-15(src='img/common/calculate.svg')
 								span Просчитать
-						.banner.c-white 
+						.banner.c-white
 							img.banner-img(src='img/common/img7.jpg')
 							p.fs-27.fw-medium.lh-28
-								span.c-orange.d-block Хотите узнать 
+								span.c-orange.d-block Хотите узнать
 								span стоимость отопления?
 							p.fs-13 Воспользуйтесь нашим <br> калькулятором
 							a.btn.bg-orange.align-items-center(href='#') Смотреть реализованные обьекты
+		section.recommended-products
+			.container
+				h2 Рекомендованные
+					span.d-sm-inline.d-none товары
+				.flex-wrap
+					-var n = 4
+					-var i = 2
+					while (n--)
+						.card
+							if (i==4)
+								.stock-new
+									.stock -20%
+									.new NEW
+							if (i==2)
+								.status-product Ожидается
+							a(href='#')
+								.card-top
+									img(src='img/common/product2.jpg' alt='product')
+									.sticky-right
+										button.btn-heart(type='button')
+											+icon('heart2')
+										button.btn-weigher(type='button')
+											+icon('weigher')
+								.flex-center-between.ff-opensans.mb-16.flex-wrap
+									.align-items-center
+										.rate-area.checked
+											input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+											label(for=`5-star${i}` title='Amazing')
+											input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+											label(for=`4-star${i}` title='Good')
+											input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+											label(for=`3-star${i}` title='Average')
+											input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+											label(for=`2-star${i}` title='Not Good')
+											input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+											label(for=`1-star${i}` title='Bad')
+										.i-comments.align-items-center
+											+icon('comments')
+											p.text-small 21
+									p.text-small.c-gray Код: 79059000-1
+								p.card-title Котел твердопаливний <br> KRONAS EKO
+							ul.card-info.ff-opensans.text-small
+								li.d-flex
+									p Производитель:
+									p Кronas
+								li.d-flex
+									p Мощность:
+									p от 12 кВт
+							.flex-center-between
+								p.price от 12 800 грн
+								button.btn-cart.small(type='button')
+									+icon('cart')
+						-i++
 		section.subscription
-			.container 
+			.container
 				.flex-wrap.justify-content-between.c-white
 					.subscription-left
 						h2.fs-30.fw-medium.mb-16.text-up Подпишись на рассылку
-						p.fs-18 Получайте последние новости о акционных предложениях на e-mail 
+						p.fs-18 Получайте последние новости о акционных предложениях на e-mail
 					.subscription-right
 						form.form-subscription
 							input.bg-white(type='email' placeholder='E-mail *' required)
@@ -493,7 +546,4 @@ block content
 					img.carcass(src='img/common/carcass.png' alt='image carcass')
 
 
-block script 
-	
-
-	
+block script

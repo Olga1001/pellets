@@ -3,6 +3,18 @@
     border-left-width: 0
     padding: 0 19px 19px
     position: relative
+    .btn-cart
+        border-radius: 50%
+        background: #E44937
+        +box(55px)
+        padding-right: 3px
+        padding-top: 4px
+        flex-shrink: 0
+        svg
+            +box(29px,100%)
+            margin: 0 auto
+            fill: $white
+            display: block
     &.expected:before 
         content: ''
         position: absolute
