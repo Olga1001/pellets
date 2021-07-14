@@ -18,6 +18,26 @@ block content
 				.flex-sm-center-between
 					h2 Оформление заказа
 					a.underline(href="#") продолжить покупки
+			.cart-row
+				.container
+					.flex-wrap
+						.col
+							.flex-center-between
+								p.fs-24.fw-medium Контактные данные
+								a.align-items-center(href="#")
+									+icon('user')
+									span.fs-18.c-gray-600 Войти в аккаут
+							.flex-wrap
+								.w-sm-50
+									input.input(type='text' value='Скоропадський' placeholder='Фамилия')
+								.w-sm-50
+									input.input(type='text' value='' placeholder='Имя')
+								.w-sm-50
+									input.input(type='text' value='' placeholder='+380 (  ) ___-__-__')
+								.w-sm-50
+									input.input(type='email' value='' placeholder='Email')
+							p.fs-24.fw-medium Выберите способ доставки
+						.col
 
 		section.recommended-products
 			.container
