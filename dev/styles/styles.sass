@@ -143,18 +143,31 @@ input, textarea
   &::-webkit-input-placeholder
     font-size: 13px
     color: #000
-
   &:-moz-placeholder
     font-size: 13px
     color: #000
-
   &::-moz-placeholder
     font-size: 13px
     color: #000
-
   &:-ms-input-placeholder
     font-size: 13px
     color: #000
+
+.input2, .textarea2
+  border: 1px solid #B9B9B9
+  border-radius: 5px
+  padding: 18px 22px
+  margin-bottom: 20px
+  color: #0A0A0A
+  &::-webkit-input-placeholder
+    font-size: 16px
+  &:-moz-placeholder
+    font-size: 16px
+  &::-moz-placeholder
+    font-size: 16px
+  &:-ms-input-placeholder
+    font-size: 16px
+
 h1
   font-weight: 500
   font-size: 68px
@@ -186,6 +199,8 @@ table
   display: none 
   &:checked ~ .check:before 
     content: ''
+  &:checked ~ .check-radio:before
+    content: ''
 
 .check
   background: #FFFFFF
@@ -200,7 +215,23 @@ table
     +centerXY 
     +box(15px)
     background: #B9B9B9
-  
+  &-radio
+    border: 1px solid #A9A9A9
+    border-radius: 50%
+    +box(26px)
+    display: block
+    margin-right: 25px
+    position: relative
+    &:before
+      content: none
+      +centerXY
+      +box(15px)
+      background: #A9A9A9
+      border-radius: 50%
+
+.label-radio
+  margin-bottom: 23px
+
 .text-small
   font-size: 12px
   line-height: 20px

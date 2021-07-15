@@ -505,9 +505,9 @@
                 <h2>Оформление заказа</h2><a class="underline" href="#">продолжить покупки</a>
               </div>
             </div>
-            <div class="cart-row">
+            <form class="cart-row">
               <div class="container">
-                <div class="flex-wrap">
+                <div class="flex-wrap justify-content-between">
                   <div class="col">
                     <div class="flex-center-between">
                       <p class="fs-24 fw-medium">Контактные данные</p><a class="align-items-center" href="#">
@@ -515,26 +515,89 @@
                           <use xlink:href="img/sprite/symbol/sprite.svg#user"></use>
                         </svg><span class="fs-18 c-gray-600">Войти в аккаут</span></a>
                     </div>
-                    <div class="flex-wrap">
-                      <div class="w-sm-50">
-                        <input class="input" type="text" value="Скоропадський" placeholder="Фамилия">
+                    <div class="flex-wrap row-form">
+                      <div class="w-sm-50 pr-sm-15">
+                        <input class="input2" type="text" value="Скоропадський" placeholder="Фамилия">
                       </div>
-                      <div class="w-sm-50">
-                        <input class="input" type="text" value="" placeholder="Имя">
+                      <div class="w-sm-50 pl-sm-15">
+                        <input class="input2" type="text" value="" placeholder="Имя">
                       </div>
-                      <div class="w-sm-50">
-                        <input class="input" type="text" value="" placeholder="+380 (  ) ___-__-__">
+                      <div class="w-sm-50 pr-sm-15">
+                        <input class="input2" type="text" value="" placeholder="+380 (  ) ___-__-__">
                       </div>
-                      <div class="w-sm-50">
-                        <input class="input" type="email" value="" placeholder="Email">
+                      <div class="w-sm-50 pl-sm-15">
+                        <input class="input2" type="email" value="" placeholder="Email">
                       </div>
                     </div>
                     <p class="fs-24 fw-medium">Выберите способ доставки</p>
+                    <div class="row-form">
+                      <label class="align-items-center label-radio">
+                        <input class="checkbox" type="radio" name="delivery method" checked><span class="check-radio"></span><span><span class="mr-15">Доставка курьєром</span><span class="c-gray-700">/бессплатно от 10000 грн/</span></span>
+                      </label>
+                      <div class="flex-wrap">
+                        <div class="w-sm-50 pr-sm-15">
+                          <input class="input2" type="text" value="" placeholder="Улица">
+                        </div>
+                        <div class="w-sm-50 pl-sm-15 flex-wrap">
+                          <div class="w-sm-60 pr-sm-15">
+                            <input class="input2" type="text" value="" placeholder="Дом">
+                          </div>
+                          <div class="w-sm-40 pl-sm-15">
+                            <input class="input2" type="text" value="" placeholder="Квартира">
+                          </div>
+                        </div>
+                      </div>
+                      <label class="align-items-center label-radio">
+                        <input class="checkbox" type="radio" name="delivery method"><span class="check-radio"></span><span>Нова Почта - Отделение</span>
+                      </label>
+                      <label class="align-items-center label-radio">
+                        <input class="checkbox" type="radio" name="delivery method"><span class="check-radio"></span><span>Самовывоз из склада</span>
+                      </label>
+                    </div>
+                    <p class="fs-24 fw-medium">Выберите способ оплаты
+                      <div class="row-form">
+                        <label class="align-items-center label-radio">
+                          <input class="checkbox" type="radio" name="order method" checked><span class="check-radio"></span><span>Наличными при получении</span>
+                        </label>
+                        <label class="align-items-center label-radio">
+                          <input class="checkbox" type="radio" name="order method"><span class="check-radio"></span><span class="align-items-center"><span class="mr-15">Оплата онлайн</span><img class="mr-15" src="img/common/mastercard.svg" alt="mastercard"><img src="img/common/visa.svg" alt="visa"></span>
+                        </label>
+                        <label class="align-items-center label-radio">
+                          <input class="checkbox" type="radio" name="order method"><span class="check-radio"></span><span>Безналичный расчет</span>
+                        </label>
+                      </div>
+                    </p>
+                    <div class="row-form">
+                      <textarea class="textarea2" rows="7" cols="7">Комментарий к заказу</textarea>
+                    </div>
                   </div>
-                  <div class="col"></div>
+                  <div class="col">
+                    <div class="fs-24 fw-medium">Ваши покупки
+                      <ul class="list-product">
+                        <li class="d-flex"><a class="list-product_img" href="#"><img src="" alt=""></a>
+                          <div class="flex-column justify-content-between"><a href="#">Котел Аltep твердотопливный</a>
+                            <div class="counter d-flex">
+                              <button class="btn-minus counter-btn" type="button">-</button>
+                              <input class="counter-input" type="number" value="1">
+                              <button class="btn-plus counter-btn" type="button">+</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="d-flex"><a class="list-product_img" href="#"><img src="" alt=""></a>
+                          <div class="flex-column justify-content-between"><a href="#">Котел Аltep твердотопливный</a>
+                            <div class="counter d-flex">
+                              <button class="btn-minus counter-btn" type="button">-</button>
+                              <input class="counter-input" type="number" value="1">
+                              <button class="btn-plus counter-btn" type="button">+</button>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </form>
           </section>
           <section class="recommended-products">
             <div class="container">

@@ -18,26 +18,82 @@ block content
 				.flex-sm-center-between
 					h2 Оформление заказа
 					a.underline(href="#") продолжить покупки
-			.cart-row
+			form.cart-row
 				.container
-					.flex-wrap
+					.flex-wrap.justify-content-between
 						.col
 							.flex-center-between
 								p.fs-24.fw-medium Контактные данные
 								a.align-items-center(href="#")
 									+icon('user')
 									span.fs-18.c-gray-600 Войти в аккаут
-							.flex-wrap
-								.w-sm-50
-									input.input(type='text' value='Скоропадський' placeholder='Фамилия')
-								.w-sm-50
-									input.input(type='text' value='' placeholder='Имя')
-								.w-sm-50
-									input.input(type='text' value='' placeholder='+380 (  ) ___-__-__')
-								.w-sm-50
-									input.input(type='email' value='' placeholder='Email')
+							.flex-wrap.row-form
+								.w-sm-50.pr-sm-15
+									input.input2(type='text' value='Скоропадський' placeholder='Фамилия')
+								.w-sm-50.pl-sm-15
+									input.input2(type='text' value='' placeholder='Имя')
+								.w-sm-50.pr-sm-15
+									input.input2(type='text' value='' placeholder='+380 (  ) ___-__-__')
+								.w-sm-50.pl-sm-15
+									input.input2(type='email' value='' placeholder='Email')
 							p.fs-24.fw-medium Выберите способ доставки
+							.row-form
+								label.align-items-center.label-radio
+									input.checkbox(type='radio' name='delivery method' checked)
+									span.check-radio
+									span
+										span.mr-15 Доставка курьєром
+										span.c-gray-700 /бессплатно от 10000 грн/
+								.flex-wrap
+									.w-sm-50.pr-sm-15
+										input.input2(type='text' value='' placeholder='Улица')
+									.w-sm-50.pl-sm-15.flex-wrap
+										.w-sm-60.pr-sm-15
+											input.input2(type='text' value='' placeholder='Дом')
+										.w-sm-40.pl-sm-15
+											input.input2(type='text' value='' placeholder='Квартира')
+								label.align-items-center.label-radio
+									input.checkbox(type='radio' name='delivery method')
+									span.check-radio
+									span Нова Почта - Отделение
+								label.align-items-center.label-radio
+									input.checkbox(type='radio' name='delivery method')
+									span.check-radio
+									span Самовывоз из склада
+							p.fs-24.fw-medium Выберите способ оплаты
+								.row-form
+									label.align-items-center.label-radio
+										input.checkbox(type='radio' name='order method' checked)
+										span.check-radio
+										span Наличными при получении
+									label.align-items-center.label-radio
+										input.checkbox(type='radio' name='order method')
+										span.check-radio
+										span.align-items-center
+											span.mr-15 Оплата онлайн
+											img.mr-15(src='img/common/mastercard.svg' alt='mastercard')
+											img(src='img/common/visa.svg' alt='visa')
+									label.align-items-center.label-radio
+										input.checkbox(type='radio' name='order method')
+										span.check-radio
+										span Безналичный расчет
+							.row-form
+								textarea.textarea2(rows='7' cols='7') Комментарий к заказу
 						.col
+							.fs-24.fw-medium Ваши покупки
+								ul.list-product
+									-var n = 2
+									while (n--)
+										li.d-flex
+											a.list-product_img(href='#')
+												img(src='' alt='')
+											.flex-column.justify-content-between
+												a(href='#') Котел Аltep твердотопливный
+												.counter.d-flex
+													button.btn-minus.counter-btn(type='button') -
+													input.counter-input(type='number' value='1')
+													button.btn-plus.counter-btn(type='button') +
+
 
 		section.recommended-products
 			.container
