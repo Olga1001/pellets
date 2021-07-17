@@ -516,16 +516,16 @@
                         </svg><span class="fs-18 c-gray-600">Войти в аккаут</span></a>
                     </div>
                     <div class="flex-wrap row-form">
-                      <div class="w-sm-50 pr-sm-15">
+                      <div class="w-lg-50 pr-lg-15 w-100">
                         <input class="input2" type="text" value="Скоропадський" placeholder="Фамилия">
                       </div>
-                      <div class="w-sm-50 pl-sm-15">
+                      <div class="w-lg-50 pl-lg-15 w-100">
                         <input class="input2" type="text" value="" placeholder="Имя">
                       </div>
-                      <div class="w-sm-50 pr-sm-15">
+                      <div class="w-lg-50 pr-lg-15 w-100">
                         <input class="input2" type="text" value="" placeholder="+380 (  ) ___-__-__">
                       </div>
-                      <div class="w-sm-50 pl-sm-15">
+                      <div class="w-lg-50 pl-lg-15 w-100">
                         <input class="input2" type="email" value="" placeholder="Email">
                       </div>
                     </div>
@@ -535,10 +535,10 @@
                         <input class="checkbox" type="radio" name="delivery method" checked><span class="check-radio"></span><span><span class="mr-15">Доставка курьєром</span><span class="c-gray-700">/бессплатно от 10000 грн/</span></span>
                       </label>
                       <div class="flex-wrap">
-                        <div class="w-sm-50 pr-sm-15">
+                        <div class="w-lg-50 pr-lg-15 w-100">
                           <input class="input2" type="text" value="" placeholder="Улица">
                         </div>
-                        <div class="w-sm-50 pl-sm-15 flex-wrap">
+                        <div class="w-lg-50 pl-lg-15 flex-wrap w-100">
                           <div class="w-sm-60 pr-sm-15">
                             <input class="input2" type="text" value="" placeholder="Дом">
                           </div>
@@ -572,27 +572,80 @@
                     </div>
                   </div>
                   <div class="col">
-                    <div class="fs-24 fw-medium">Ваши покупки
-                      <ul class="list-product">
-                        <li class="d-flex"><a class="list-product_img" href="#"><img src="" alt=""></a>
-                          <div class="flex-column justify-content-between"><a href="#">Котел Аltep твердотопливный</a>
+                    <div class="fs-24 fw-medium">Ваши покупки</div>
+                    <ul class="list-product">
+                      <li class="d-flex"><a class="list-product_img" href="#"><img src="img/common/product3.jpg" alt="product" width="81px" height="83px"></a>
+                        <div class="flex-column justify-content-between min-h-116 w-100">
+                          <div class="justify-content-between"><a href="#">Котел Аltep <br>твердотопливный</a>
+                            <button class="btn-close" type="button">
+                              <svg class="svg-sprite-icon icon-close2">
+                                <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="flex-center-between w-100">
                             <div class="counter d-flex">
                               <button class="btn-minus counter-btn" type="button">-</button>
                               <input class="counter-input" type="number" value="1">
                               <button class="btn-plus counter-btn" type="button">+</button>
                             </div>
+                            <p> <span class="text-through mr-15">500 грн</span><span class="c-red">16500 грн</span></p>
                           </div>
-                        </li>
-                        <li class="d-flex"><a class="list-product_img" href="#"><img src="" alt=""></a>
-                          <div class="flex-column justify-content-between"><a href="#">Котел Аltep твердотопливный</a>
+                        </div>
+                      </li>
+                      <li class="d-flex"><a class="list-product_img" href="#"><img src="img/common/product3.jpg" alt="product" width="81px" height="83px"></a>
+                        <div class="flex-column justify-content-between min-h-116 w-100">
+                          <div class="justify-content-between"><a href="#">Котел Аltep <br>твердотопливный</a>
+                            <button class="btn-close" type="button">
+                              <svg class="svg-sprite-icon icon-close2">
+                                <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="flex-center-between w-100">
                             <div class="counter d-flex">
                               <button class="btn-minus counter-btn" type="button">-</button>
                               <input class="counter-input" type="number" value="1">
                               <button class="btn-plus counter-btn" type="button">+</button>
                             </div>
+                            <p> <span class="text-through mr-15">500 грн</span><span class="c-red">16500 грн</span></p>
                           </div>
-                        </li>
-                      </ul>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="promocode">
+                      <div class="promocode-item align-items-center"> 
+                        <p>Есть промокод на скидку</p>
+                        <svg class="svg-sprite-icon icon-arrow-light-down">
+                          <use xlink:href="img/sprite/symbol/sprite.svg#arrow-light-down"></use>
+                        </svg>
+                      </div>
+                      <div class="promocode-form d-flex"> 
+                        <input class="input-promocode" type="text" placeholder="Введіть код">
+                        <button class="btn fs-18" type="button">Применить</button>
+                      </div>
+                    </div>
+                    <div class="total">
+                      <div class="flex-center-between mb-10 ff-opensans"> 
+                        <p>Всего</p>
+                        <p>1650 грн</p>
+                      </div>
+                      <div class="flex-center-between mb-10 ff-opensans"> 
+                        <p>Стоимость доставки</p>
+                        <p>1000 грн</p>
+                      </div>
+                      <div class="flex-center-between mb-20 ff-opensans"> 
+                        <p>Сума скидки</p>
+                        <p>500 грн</p>
+                      </div>
+                      <div class="flex-center-between">
+                        <p class="fs-30 fw-medium">Итого</p>
+                        <p class="fs-28 fw-medium">1750 грн</p>
+                      </div>
+                      <label class="align-items-center"> 
+                        <input class="checkbox" type="checkbox"><span class="check check-red mr-15"> </span><span class="fs-13 ff-opensans c-gray-700">Подтверждая заказ я принимаю условия пользовательского соглашения</span>
+                      </label>
+                      <button class="btn btn-lg mx-auto d-block" type="submit">Оформить заказ</button>
                     </div>
                   </div>
                 </div>
@@ -601,7 +654,7 @@
           </section>
           <section class="recommended-products">
             <div class="container">
-              <h2>Вас может заинтересовать<span class="d-sm-inline d-none">товары</span></h2>
+              <h2>Вас может заинтересовать</h2>
               <div class="flex-wrap">
                 <div class="card">
                   <div class="status-product">Ожидается</div><a href="#">

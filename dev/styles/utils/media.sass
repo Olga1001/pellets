@@ -26,6 +26,10 @@
     .catalog-drop li:hover .catalog-m
         opacity: 1
         pointer-events: auto
+    .pr-lg-15
+        padding-right: 15px
+    .pl-lg-15
+        padding-left: 15px
 @media only screen and (min-width : 768px)
     .d-md-none
         display: none
@@ -281,6 +285,14 @@
         background: none
     .subscription
         background: #E44937 url('../img/common/fire-full.svg') no-repeat 160% top / 258px 323px
+    .list-product li p .c-red
+        display: block
+    .cart-row .col:last-child
+        width: 440px
+    .cart-row .col:first-child
+        width: calc(100% - 440px)
+    .cart-row .col:last-child .fs-24, .list-product, .promocode, .total
+        padding-left: 16px
 @media only screen and (max-width : 991px)
     .footer-menu 
         display: none
@@ -341,6 +353,17 @@
 
     .recommended-products .card
         width: 50%
+    .list-product_img
+        +box(86px)
+        margin-right: 14px
+        img 
+            transform: scale(0.8)
+    .min-h-116
+        min-height: 86px
+    .list-product li a
+        font-size: 14px
+        br 
+            display: none
 @media only screen and (max-width : 767px)
     .main-f_block
         height: 378px

@@ -228,6 +228,12 @@ table
       +box(15px)
       background: #A9A9A9
       border-radius: 50%
+  &-red
+    +box(24px)
+    border-color: #E44937
+    background-color: transparent
+    &:before 
+      background: url('../img/common/check.svg') no-repeat center / contain
 
 .label-radio
   margin-bottom: 23px
@@ -344,6 +350,11 @@ table
   +box(15px)
   margin-right: 12px
   fill: #AEAEAE
+
+.icon-close2
+  +box(15px)
+  fill: #DADADA
+
 @import "modules/modules"
 
 .isVisible
