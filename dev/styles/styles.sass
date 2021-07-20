@@ -134,6 +134,30 @@ input, textarea
   font-style: normal
   font-weight: normal
 
+.invalid
+  input
+    border: 1px solid #B9B9B9!important
+    box-shadow: 0px 0px 6px rgba(239, 0, 0, 0.5)!important
+  .error
+    display: block
+
+.error
+  font-family: "OpenSans", sans-serif
+  font-size: 11px
+  line-height: 17px
+  color: #CC1D1D
+  position: absolute
+  left: 0
+  top: calc(100% - 23px)
+
+.valid:before
+  content: ''
+  position: absolute
+  top: 19px
+  right: 20px
+  background: url("../img/common/check-green.svg") no-repeat center / contain
+  +box(19px)
+
 .input, .textarea
   font-size: 13px
   background: #FFFFFF

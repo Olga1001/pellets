@@ -29,14 +29,18 @@ block content
 									span.fs-18.c-gray-600 Войти
 										span.d-lg-inline.d-none в аккаут
 							.flex-wrap.row-form
-								.w-lg-50.pr-lg-15.w-100
-									input.input2(type='text' value='Скоропадський' placeholder='Фамилия')
-								.w-lg-50.pl-lg-15.w-100
-									input.input2(type='text' value='' placeholder='Имя')
-								.w-lg-50.pr-lg-15.w-100
-									input.input2(type='text' value='' placeholder='+380 (  ) ___-__-__')
-								.w-lg-50.pl-lg-15.w-100
-									input.input2(type='email' value='' placeholder='Email')
+								.w-lg-50.pr-lg-15.w-100.relative.invalid
+									input.input2(type='text' value='Скоропадський' placeholder='Фамилия' required)
+									.error Необхідно вказати прізвище
+								.w-lg-50.pl-lg-15.w-100.relative.valid
+									input.input2(type='text' value='' placeholder='Имя' required)
+									.error
+								.w-lg-50.pr-lg-15.w-100.relative.invalid
+									input.input2(type='text' value='' placeholder='+380 (  ) ___-__-__' required)
+									.error Номер вказано не вірно
+								.w-lg-50.pl-lg-15.w-100.relative
+									input.input2(type='email' value='' placeholder='Email' required)
+									.error
 							p.fs-24.fw-medium Выберите способ доставки
 							.row-form
 								label.align-items-center.label-radio

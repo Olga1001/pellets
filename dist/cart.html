@@ -518,17 +518,21 @@
                         </svg><span class="fs-18 c-gray-600">Войти<span class="d-lg-inline d-none">в аккаут</span></span></a>
                     </div>
                     <div class="flex-wrap row-form">
-                      <div class="w-lg-50 pr-lg-15 w-100">
-                        <input class="input2" type="text" value="Скоропадський" placeholder="Фамилия">
+                      <div class="w-lg-50 pr-lg-15 w-100 relative invalid">
+                        <input class="input2" type="text" value="Скоропадський" placeholder="Фамилия" required>
+                        <div class="error">Необхідно вказати прізвище</div>
                       </div>
-                      <div class="w-lg-50 pl-lg-15 w-100">
-                        <input class="input2" type="text" value="" placeholder="Имя">
+                      <div class="w-lg-50 pl-lg-15 w-100 relative valid">
+                        <input class="input2" type="text" value="" placeholder="Имя" required>
+                        <div class="error"></div>
                       </div>
-                      <div class="w-lg-50 pr-lg-15 w-100">
-                        <input class="input2" type="text" value="" placeholder="+380 (  ) ___-__-__">
+                      <div class="w-lg-50 pr-lg-15 w-100 relative invalid">
+                        <input class="input2" type="text" value="" placeholder="+380 (  ) ___-__-__" required>
+                        <div class="error">Номер вказано не вірно</div>
                       </div>
-                      <div class="w-lg-50 pl-lg-15 w-100">
-                        <input class="input2" type="email" value="" placeholder="Email">
+                      <div class="w-lg-50 pl-lg-15 w-100 relative">
+                        <input class="input2" type="email" value="" placeholder="Email" required>
+                        <div class="error"></div>
                       </div>
                     </div>
                     <p class="fs-24 fw-medium">Выберите способ доставки</p>

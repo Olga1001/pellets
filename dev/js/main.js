@@ -343,6 +343,7 @@ $(document).ready(function () {
   if (window.matchMedia("(max-width: 991px)").matches) {
     $('.cart-row .col:first-child').before($('.total-bottom'))
   }
+
 });
 
 function showHide(item,showText) {
