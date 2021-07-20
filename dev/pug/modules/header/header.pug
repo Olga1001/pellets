@@ -19,7 +19,7 @@ header.header
                     a.logo.d-xl-block.d-none(href='#')
                 .header_right.flex-center-between
                     .messenger.relative
-                        .align-items-center.messenger-item
+                        .align-items-center.messenger-item(data-toggle)
                             +icon('phone2')
                             p (044) 384-25-65 
                             +icon('arrow-down')
@@ -80,12 +80,13 @@ header.header
                                     li.justify-content-between 
                                         a.cart-list_img(href="#")
                                             img(src='img/common/category6.png' alr='product')
-                                        .cart-list_title 
-                                            a(href='#') ALTEP TRIO UNI PLUS (КТ-3ЕN) 
-                                            p.fs-13.c-gray-500 Артикул 11294038
-                                        div
-                                            p.fs-12.text-through.c-dark.d-block.text-nowrap 13800 грн
-                                            p.fs-18.c-red.fw-medium.lh-1.text-nowrap 12500 грн
+                                        .flex-sm-row.flex-column.justify-content-between
+                                            .cart-list_title
+                                                a(href='#') ALTEP TRIO UNI PLUS (КТ-3ЕN)
+                                                p.fs-13.c-gray-500 Артикул 11294038
+                                            .d-sm-block.align-items-end.flex-wrap
+                                                p.fs-12.text-through.c-dark.d-block.text-nowrap 13800 грн
+                                                p.fs-18.c-red.fw-medium.lh-1.text-nowrap 12500 грн
                                         button.btn-delete(type='button')
                                             +icon('delete')
                                 .cart-popup_total.justify-content-end 

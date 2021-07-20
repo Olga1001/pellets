@@ -5,7 +5,7 @@
 .cart-row
   border-top: 1px solid #EFEFEF
   border-bottom: 1px solid #EFEFEF
-  margin-bottom: 24px
+  margin: 24px 0
   .col
     &:first-child
       padding-top: 35px
@@ -39,6 +39,8 @@
     padding: 0 5px
   li 
     padding: 30px 0
+    .counter
+      margin-top: auto
     a 
       line-height: 140%
     p .c-red 
@@ -74,10 +76,16 @@
   svg 
     +box(20px, 10px)
     stroke: #000000
+    transition: all 0.3s ease
   &-form 
     padding-top: 25px
+    display: none
   &-item
     cursor: pointer
+    &.active
+      svg
+        transform: scaleY(-1)
+
   .btn 
     max-width: 200px
 

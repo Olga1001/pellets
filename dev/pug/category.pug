@@ -25,7 +25,7 @@ block content
 					.align-items-md-center.d-none
 						p.fs-15.mr-5 Сортировать:
 						.select 
-							.select-item.flex-center-between
+							.select-item.flex-center-between(data-toggle)
 								p.fs-15.fw-medium по популярности
 								+icon('arrow-down')
 
@@ -68,7 +68,7 @@ block content
 									input.input-small.amount2(type='text' value='971767')
 							.range 
 						.filter-i 
-							.filter-i_click.flex-center-between.active
+							.filter-i_click.flex-center-between.active(data-toggle)
 								p.fs-18.fw-medium Производитель
 								+icon('arrow-up')
 							.filter-list
@@ -82,7 +82,7 @@ block content
 													span.c-gray-400=val.count
 								button.btn-all(type='button') Показать все
 						.filter-i 
-							.filter-i_click.flex-center-between.active
+							.filter-i_click.flex-center-between.active(data-toggle)
 								p.fs-18.fw-medium Мощность
 								+icon('arrow-up')
 							.filter-list
@@ -96,7 +96,7 @@ block content
 													span.c-gray-400=val.count
 								button.btn-all(type='button') Показать все
 						.filter-i 
-							.filter-i_click.flex-center-between.active
+							.filter-i_click.flex-center-between.active(data-toggle)
 								p.fs-18.fw-medium Страна 
 								+icon('arrow-up')
 							.filter-list
@@ -110,7 +110,7 @@ block content
 													span.c-gray-400=val.count
 								button.btn-all(type='button') Показать все
 						.filter-i 
-							.filter-i_click.flex-center-between.active
+							.filter-i_click.flex-center-between.active(data-toggle)
 								p.fs-18.fw-medium Тип котла 
 								+icon('arrow-up')
 							.filter-list
@@ -123,7 +123,7 @@ block content
 												span.fs-14=val.name
 													span.c-gray-400=val.count
 						.filter-i 
-							.filter-i_click.flex-center-between.active
+							.filter-i_click.flex-center-between.active(data-toggle)
 								p.fs-18.fw-medium Материал
 								+icon('arrow-up')
 							.filter-list
@@ -136,7 +136,7 @@ block content
 												span.fs-14=val.name
 													span.c-gray-400=val.count
 						.filter-i 
-							.filter-i_click.flex-center-between.active
+							.filter-i_click.flex-center-between.active(data-toggle)
 								p.fs-18.fw-medium Гарантия
 								+icon('arrow-up')
 							.filter-list
@@ -149,7 +149,7 @@ block content
 												span.fs-14=val.name
 													span.c-gray-400=val.count
 						.filter-i 
-							.filter-i_click.flex-center-between.active
+							.filter-i_click.flex-center-between.active(data-toggle)
 								p.fs-18.fw-medium Тип автоматики
 								+icon('arrow-up')
 							.filter-list

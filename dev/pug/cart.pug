@@ -17,16 +17,17 @@ block content
 			.container
 				.flex-sm-center-between
 					h2 Оформление заказа
-					a.underline(href="#") продолжить покупки
+					a.underline.d-md-block.d-none(href="#") продолжить покупки
 			form.cart-row
 				.container
-					.flex-wrap.justify-content-between
+					.flex-wrap.justify-content-between.flex-lg-row.flex-column-reverse
 						.col
 							.flex-center-between
 								p.fs-24.fw-medium Контактные данные
 								a.align-items-center(href="#")
 									+icon('user')
-									span.fs-18.c-gray-600 Войти в аккаут
+									span.fs-18.c-gray-600 Войти
+										span.d-lg-inline.d-none в аккаут
 							.flex-wrap.row-form
 								.w-lg-50.pr-lg-15.w-100
 									input.input2(type='text' value='Скоропадський' placeholder='Фамилия')
@@ -48,9 +49,9 @@ block content
 									.w-lg-50.pr-lg-15.w-100
 										input.input2(type='text' value='' placeholder='Улица')
 									.w-lg-50.pl-lg-15.flex-wrap.w-100
-										.w-sm-60.pr-sm-15
+										.w-sm-60.pr-sm-15.w-100
 											input.input2(type='text' value='' placeholder='Дом')
-										.w-sm-40.pl-sm-15
+										.w-sm-40.pl-sm-15.w-100
 											input.input2(type='text' value='' placeholder='Квартира')
 								label.align-items-center.label-radio
 									input.checkbox(type='radio' name='delivery method')
@@ -100,32 +101,39 @@ block content
 												p 
 													span.text-through.mr-15 500 грн
 													span.c-red 16500 грн
-							.promocode
-								.promocode-item.align-items-center 
-									p Есть промокод на скидку
-									+icon('arrow-light-down')
-								.promocode-form.d-flex 
-									input.input-promocode(type='text' placeholder='Введіть код')
-									button.btn.fs-18(type='button') Применить
-							.total
-								.flex-center-between.mb-10.ff-opensans 
-									p Всего
-									p 1650 грн
-								.flex-center-between.mb-10.ff-opensans  
-									p Стоимость доставки
-									p 1000 грн
-								.flex-center-between.mb-20.ff-opensans 
-									p Сума скидки
-									p 500 грн
-								.flex-center-between
-									p.fs-30.fw-medium Итого
-									p.fs-28.fw-medium 1750 грн
-							
-								label.align-items-center 
-									input.checkbox(type='checkbox')
-									span.check.check-red.mr-15 
-									span.fs-13.ff-opensans.c-gray-700 Подтверждая заказ я принимаю условия пользовательского соглашения
-								button.btn.btn-lg.mx-auto.d-block(type='submit') Оформить заказ
+
+							.total-mob.d-lg-none.justify-content-between
+								p.fs-20.fw-medium Всего
+								p.fs-20.fw-medium 33000 грн
+							.total-bottom
+								.promocode
+									.promocode-item.align-items-center(data-toggle)
+										p Есть промокод на скидку
+										+icon('arrow-light-down')
+									.promocode-form
+										.d-flex
+											input.input-promocode(type='text' placeholder='Введіть код')
+											button.btn.fs-18(type='button') Применить
+								.total
+									.flex-center-between.mb-10.ff-opensans
+										p Всего
+										p 1650 грн
+									.flex-center-between.mb-10.ff-opensans
+										p Стоимость доставки
+										p 1000 грн
+									.flex-center-between.mb-20.ff-opensans
+										p Сума скидки
+										p 500 грн
+									.flex-center-between
+										p.fs-30.fw-medium Итого
+										p.fs-28.fw-medium 1750 грн
+
+									label.align-items-center
+										input.checkbox(type='checkbox')
+										span.check.check-red.mr-15
+										span.fs-13.ff-opensans.c-gray-700 Подтверждая заказ я принимаю
+											a.underline.d-sm-inline.c-gray-700(href='#')  условия пользовательского соглашения
+									button.btn.btn-lg.mx-auto.d-block(type='submit') Оформить заказ
 
 		section.recommended-products
 			.container

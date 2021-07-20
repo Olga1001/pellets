@@ -40,7 +40,7 @@
               </div>
               <div class="header_right flex-center-between">
                 <div class="messenger relative">
-                  <div class="align-items-center messenger-item">
+                  <div class="align-items-center messenger-item" data-toggle>
                     <svg class="svg-sprite-icon icon-phone2">
                       <use xlink:href="img/sprite/symbol/sprite.svg#phone2"></use>
                     </svg>
@@ -135,12 +135,14 @@
                       <h2 class="fs-20 fw-medium">Корзина</h2>
                       <ul class="cart-list"> 
                         <li class="justify-content-between"> <a class="cart-list_img" href="#"><img src="img/common/category6.png" alr="product"></a>
-                          <div class="cart-list_title"> <a href="#">ALTEP TRIO UNI PLUS (КТ-3ЕN) </a>
-                            <p class="fs-13 c-gray-500">Артикул 11294038</p>
-                          </div>
-                          <div>
-                            <p class="fs-12 text-through c-dark d-block text-nowrap">13800 грн</p>
-                            <p class="fs-18 c-red fw-medium lh-1 text-nowrap">12500 грн</p>
+                          <div class="flex-sm-row flex-column justify-content-between">
+                            <div class="cart-list_title"><a href="#">ALTEP TRIO UNI PLUS (КТ-3ЕN)</a>
+                              <p class="fs-13 c-gray-500">Артикул 11294038</p>
+                            </div>
+                            <div class="d-sm-block align-items-end flex-wrap">
+                              <p class="fs-12 text-through c-dark d-block text-nowrap">13800 грн</p>
+                              <p class="fs-18 c-red fw-medium lh-1 text-nowrap">12500 грн</p>
+                            </div>
                           </div>
                           <button class="btn-delete" type="button">
                             <svg class="svg-sprite-icon icon-delete">
@@ -502,18 +504,18 @@
           <section>
             <div class="container">
               <div class="flex-sm-center-between">
-                <h2>Оформление заказа</h2><a class="underline" href="#">продолжить покупки</a>
+                <h2>Оформление заказа</h2><a class="underline d-md-block d-none" href="#">продолжить покупки</a>
               </div>
             </div>
             <form class="cart-row">
               <div class="container">
-                <div class="flex-wrap justify-content-between">
+                <div class="flex-wrap justify-content-between flex-lg-row flex-column-reverse">
                   <div class="col">
                     <div class="flex-center-between">
                       <p class="fs-24 fw-medium">Контактные данные</p><a class="align-items-center" href="#">
                         <svg class="svg-sprite-icon icon-user">
                           <use xlink:href="img/sprite/symbol/sprite.svg#user"></use>
-                        </svg><span class="fs-18 c-gray-600">Войти в аккаут</span></a>
+                        </svg><span class="fs-18 c-gray-600">Войти<span class="d-lg-inline d-none">в аккаут</span></span></a>
                     </div>
                     <div class="flex-wrap row-form">
                       <div class="w-lg-50 pr-lg-15 w-100">
@@ -539,10 +541,10 @@
                           <input class="input2" type="text" value="" placeholder="Улица">
                         </div>
                         <div class="w-lg-50 pl-lg-15 flex-wrap w-100">
-                          <div class="w-sm-60 pr-sm-15">
+                          <div class="w-sm-60 pr-sm-15 w-100">
                             <input class="input2" type="text" value="" placeholder="Дом">
                           </div>
-                          <div class="w-sm-40 pl-sm-15">
+                          <div class="w-sm-40 pl-sm-15 w-100">
                             <input class="input2" type="text" value="" placeholder="Квартира">
                           </div>
                         </div>
@@ -613,39 +615,47 @@
                         </div>
                       </li>
                     </ul>
-                    <div class="promocode">
-                      <div class="promocode-item align-items-center"> 
-                        <p>Есть промокод на скидку</p>
-                        <svg class="svg-sprite-icon icon-arrow-light-down">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#arrow-light-down"></use>
-                        </svg>
-                      </div>
-                      <div class="promocode-form d-flex"> 
-                        <input class="input-promocode" type="text" placeholder="Введіть код">
-                        <button class="btn fs-18" type="button">Применить</button>
-                      </div>
+                    <div class="total-mob d-lg-none justify-content-between">
+                      <p class="fs-20 fw-medium">Всего</p>
+                      <p class="fs-20 fw-medium">33000 грн</p>
                     </div>
-                    <div class="total">
-                      <div class="flex-center-between mb-10 ff-opensans"> 
-                        <p>Всего</p>
-                        <p>1650 грн</p>
+                    <div class="total-bottom">
+                      <div class="promocode">
+                        <div class="promocode-item align-items-center" data-toggle>
+                          <p>Есть промокод на скидку</p>
+                          <svg class="svg-sprite-icon icon-arrow-light-down">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#arrow-light-down"></use>
+                          </svg>
+                        </div>
+                        <div class="promocode-form">
+                          <div class="d-flex">
+                            <input class="input-promocode" type="text" placeholder="Введіть код">
+                            <button class="btn fs-18" type="button">Применить</button>
+                          </div>
+                        </div>
                       </div>
-                      <div class="flex-center-between mb-10 ff-opensans"> 
-                        <p>Стоимость доставки</p>
-                        <p>1000 грн</p>
+                      <div class="total">
+                        <div class="flex-center-between mb-10 ff-opensans">
+                          <p>Всего</p>
+                          <p>1650 грн</p>
+                        </div>
+                        <div class="flex-center-between mb-10 ff-opensans">
+                          <p>Стоимость доставки</p>
+                          <p>1000 грн</p>
+                        </div>
+                        <div class="flex-center-between mb-20 ff-opensans">
+                          <p>Сума скидки</p>
+                          <p>500 грн</p>
+                        </div>
+                        <div class="flex-center-between">
+                          <p class="fs-30 fw-medium">Итого</p>
+                          <p class="fs-28 fw-medium">1750 грн</p>
+                        </div>
+                        <label class="align-items-center">
+                          <input class="checkbox" type="checkbox"><span class="check check-red mr-15"></span><span class="fs-13 ff-opensans c-gray-700">Подтверждая заказ я принимаю<a class="underline d-sm-inline c-gray-700" href="#"> условия пользовательского соглашения</a></span>
+                        </label>
+                        <button class="btn btn-lg mx-auto d-block" type="submit">Оформить заказ</button>
                       </div>
-                      <div class="flex-center-between mb-20 ff-opensans"> 
-                        <p>Сума скидки</p>
-                        <p>500 грн</p>
-                      </div>
-                      <div class="flex-center-between">
-                        <p class="fs-30 fw-medium">Итого</p>
-                        <p class="fs-28 fw-medium">1750 грн</p>
-                      </div>
-                      <label class="align-items-center"> 
-                        <input class="checkbox" type="checkbox"><span class="check check-red mr-15"> </span><span class="fs-13 ff-opensans c-gray-700">Подтверждая заказ я принимаю условия пользовательского соглашения</span>
-                      </label>
-                      <button class="btn btn-lg mx-auto d-block" type="submit">Оформить заказ</button>
                     </div>
                   </div>
                 </div>
