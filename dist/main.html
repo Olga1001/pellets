@@ -39,7 +39,7 @@
                 <button class="burger" type="button"></button><a class="logo d-xl-block d-none" href="#"></a>
               </div>
               <div class="header_right flex-center-between">
-                <div class="messenger relative">
+                <div class="messenger relative" data-item="messenger" data-button="messenger">
                   <div class="align-items-center messenger-item" data-toggle>
                     <svg class="svg-sprite-icon icon-phone2">
                       <use xlink:href="img/sprite/symbol/sprite.svg#phone2"></use>
@@ -49,9 +49,9 @@
                       <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
                     </svg>
                   </div>
-                  <div class="dropdowm"> 
+                  <div class="dropdowm stopPropagation">
                     <ul>
-                      <li class="align-items-center"> 
+                      <li class="align-items-center">
                         <div class="circle bg-blue">
                           <svg class="svg-sprite-icon icon-messenger">
                             <use xlink:href="img/sprite/symbol/sprite.svg#messenger"></use>
@@ -59,7 +59,7 @@
                         </div>
                         <p class="fs-14">Messenger</p>
                       </li>
-                      <li class="align-items-center"> 
+                      <li class="align-items-center">
                         <div class="circle bg-purple">
                           <svg class="svg-sprite-icon icon-viber">
                             <use xlink:href="img/sprite/symbol/sprite.svg#viber"></use>
@@ -67,7 +67,7 @@
                         </div>
                         <p class="fs-14">Viber</p>
                       </li>
-                      <li class="align-items-center"> 
+                      <li class="align-items-center">
                         <div class="circle bg-blue2">
                           <svg class="svg-sprite-icon icon-telegram">
                             <use xlink:href="img/sprite/symbol/sprite.svg#telegram"></use>
@@ -75,18 +75,18 @@
                         </div>
                         <p class="fs-14">Telegram</p>
                       </li>
-                      <li class="align-items-center"> 
+                      <li class="align-items-center">
                         <div class="circle bg-red">
                           <svg class="svg-sprite-icon icon-phone">
                             <use xlink:href="img/sprite/symbol/sprite.svg#phone"></use>
                           </svg>
                         </div>
                         <div>
-                          <p class="fs-17">(044) 384-25-65 </p>
-                          <p class="fs-12 c-gray-light">пн-пт 09:00 - 19:00 </p>
+                          <p class="fs-17">(044) 384-25-65</p>
+                          <p class="fs-12 c-gray-light">пн-пт 09:00 - 19:00</p>
                         </div>
                       </li>
-                    </ul><a class="btn" href="#">Консультация</a>
+                    </ul><a class="btn d-xl-block d-none" href="#">Консультация</a>
                   </div>
                 </div>
                 <form class="search"> 
@@ -117,22 +117,29 @@
                           <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
                         </svg><span class="d-xl-none d-block">Обране</span></a></li>
                     <li><a href="#"><img src="img/common/calculate.svg"><span class="d-xl-none d-block">Калькулятор</span></a></li>
-                    <li class="d-xl-none"><a href="#">
+                    <li class="d-xl-none" data-button="messenger"><a href="#">
                         <svg class="svg-sprite-icon icon-phone2">
                           <use xlink:href="img/sprite/symbol/sprite.svg#phone2"></use>
                         </svg><span class="d-xl-none d-block">Подзвонити</span></a></li>
                   </ul>
                 </nav>
                 <div class="btn-cart">
-                  <div class="btn-cart_item"> 
+                  <div class="btn-cart_item" data-button="cart">
                     <svg class="svg-sprite-icon icon-cart">
                       <use xlink:href="img/sprite/symbol/sprite.svg#cart"></use>
                     </svg>
                     <p>1</p>
                   </div>
-                  <div class="cart-popup">
-                    <div class="cart-popup_container">
-                      <h2 class="fs-20 fw-medium">Корзина</h2>
+                  <div class="cart-popup" data-item="cart" data-button="cart">
+                    <div class="cart-popup_container stopPropagation">
+                      <div class="flex-center-between">
+                        <h2 class="fs-20 fw-medium">Корзина</h2>
+                        <button class="d-sm-none" type="button" data-button="cart">
+                          <svg class="svg-sprite-icon icon-close2">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
+                          </svg>
+                        </button>
+                      </div>
                       <ul class="cart-list"> 
                         <li class="justify-content-between"> <a class="cart-list_img" href="#"><img src="img/common/category6.png" alr="product"></a>
                           <div class="flex-sm-row flex-column justify-content-between">
@@ -151,13 +158,14 @@
                           </button>
                         </li>
                       </ul>
-                      <div class="cart-popup_total justify-content-end"> 
+                      <div class="cart-popup_total justify-content-sm-end d-flex">
                         <p class="fs-12 mr-15">Всього без доставки:</p>
                         <div>
                           <p class="fs-12 text-through c-dark d-block text-nowrap">13800 грн</p>
                           <p class="fs-18 c-red fw-medium lh-1">12500 грн</p>
                         </div>
                       </div><a class="btn big-xl" href="#">Оформить заказ</a>
+                      <button class="d-sm-none fs-12 text-center mt-20 w-100" type="button" data-button="cart">Продолжить покупки</button>
                     </div>
                   </div>
                 </div>
@@ -897,8 +905,8 @@
           </section>
           <section class="main-s"> 
             <div class="container"> 
-              <div class="flex-wrap"> <a class="main-s_item full-v" href="#"><img src="img/common/depositphotos_43318949_xl-2015m.jpg"><span class="main-s_title big">Монтаж твердотопливных котлов</span><span>Подробнее</span></a>
-                <div class="flex-wrap w-md-75 w-100"><a class="main-s_item" href="#"><img src="img/common/img1.jpg"><span class="justify-content-between"><span class="main-s_title">Акционные <br>товары</span><span class="stock big">-20%</span></span><span>Все акции</span></a><a class="main-s_item full-h" href="#"><img src="img/common/img2.jpg"><span class="main-s_title big">Твердотопливные котлы</span><span>Все котлы</span></a><a class="main-s_item" href="#"><img src="img/common/img3.jpg"><span class="main-s_title">Котельное <br>оборудование</span><span>Cмотреть все</span></a><a class="main-s_item" href="#"><img src="img/common/img4.jpg"><span class="main-s_title">Водонагреватели</span><span>Все продукты</span></a><a class="main-s_item" href="#"><img src="img/common/img5.jpg"><span class="main-s_title">Обслуживание <br>и чистка котлов <br>и каминов</span><span>Подробнее</span></a></div>
+              <div class="flex-wrap"> <a class="main-s_item full-v" href="#"><img src="img/common/depositphotos_43318949_xl-2015m.jpg"><span class="main-s_title big">Монтаж твердотопливных котлов</span><span class="main-s_item-link">Подробнее</span></a>
+                <div class="flex-wrap w-md-75 w-100"><a class="main-s_item" href="#"><img src="img/common/img1.jpg"><span class="justify-content-between"><span class="main-s_title">Акционные <br>товары</span><span class="stock big">-20%</span></span><span class="main-s_item-link">Все акции</span></a><a class="main-s_item full-h" href="#"><img src="img/common/img2.jpg"><span class="main-s_title big">Твердотопливные котлы</span><span class="main-s_item-link">Все котлы</span></a><a class="main-s_item" href="#"><img src="img/common/img3.jpg"><span class="main-s_title">Котельное <br>оборудование</span><span class="main-s_item-link">Cмотреть все</span></a><a class="main-s_item" href="#"><img src="img/common/img4.jpg"><span class="main-s_title">Водонагреватели</span><span class="main-s_item-link">Все продукты</span></a><a class="main-s_item" href="#"><img src="img/common/img5.jpg"><span class="main-s_title">Обслуживание <br>и чистка котлов <br>и каминов</span><span class="main-s_item-link">Подробнее</span></a></div>
               </div>
             </div>
           </section>
@@ -1796,10 +1804,7 @@
       <footer class="footer">
         <div class="footer-top">
           <div class="container flex-wrap justify-content-between">
-            <div class="col justify-content-md-between flex-md-column flex-wrap"><a class="logo c-white" href="#"><span class="fs-30 align-items-baseline">Pellets
-                  <svg class="svg-sprite-icon icon-logo c-red">
-                    <use xlink:href="img/sprite/symbol/sprite.svg#logo"></use>
-                  </svg>Home</span><span class="fs-15">твердотопливные котлы №1 в Украине </span></a>
+            <div class="col justify-content-md-between flex-md-column flex-wrap"><a class="logo c-white" href="#"></a>
               <div class="c-white lh-23">
                 <p>Киев, ул. Большая Кольцевая, 4, оф.333 <br> ТРЦ "Променада Парк", "Ашан"</p>
                 <p class="d-md-block d-none">пн-пт 09:00-18:00</p>
@@ -1823,7 +1828,7 @@
                     </svg></a></li>
               </ul>
               <div class="footer_btn"><a class="btn bg-orange big max-200" href="#">Обратний звонок</a></div>
-              <div class="payment-systems w-50 d-md-none align-items-center"> <img src="img/common/visa.png" alt="visa"><img src="img/common/mastercard.png" alt="mastercard"></div>
+              <div class="payment-systems w-50 d-md-none align-items-center"> <img src="img/common/visa.svg" alt="visa"><img src="img/common/mastercard.svg" alt="mastercard"></div>
             </div>
             <ul class="col footer-menu">
               <li> <a class="c-white" href="#">Твердотопливные котлы</a></li>
@@ -1849,7 +1854,7 @@
             <div class="col"> 
               <p class="fs-13">© Copyright pelletshome.com.ua © 2011–2021</p>
             </div>
-            <div class="col align-items-md-center d-none"> <img src="img/common/visa.png" alt="visa"><img src="img/common/mastercard.png" alt="mastercard"></div>
+            <div class="col align-items-md-center d-none"> <img src="img/common/visa.svg" alt="visa"><img src="img/common/mastercard.svg" alt="mastercard"></div>
             <div class="col"><a class="c-gray-300" href="#">Политика конфиденциальности</a></div>
             <div class="col">
               <p>Design by DDForce</p>

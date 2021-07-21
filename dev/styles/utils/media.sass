@@ -21,6 +21,12 @@
     .catalog-drop .catalog-item:hover p
         text-decoration: underline
 @media only screen and (min-width : 992px)
+    .cart-popup:hover
+        opacity: 1
+        pointer-events: auto
+    .btn-cart:hover .cart-popup
+        opacity: 1
+        pointer-events: auto
     .d-lg-inline
         display: inline
     .d-lg-none
@@ -96,6 +102,9 @@
     .justify-content-sm-between
         display: flex
         justify-content: space-between
+    .justify-content-sm-end
+        display: flex
+        justify-content: flex-end
 @media only screen and (max-width : 1459px)
     .header_right
         padding-left: 0
@@ -174,8 +183,30 @@
     .header-b .lang 
         position: static
         transform: none
-    .messenger, .catalog-drop 
+    .messenger-item, .catalog-drop
         display: none
+    .messenger
+        position: fixed
+        left: 0
+        top: 0
+        +box(100%)
+        opacity: 0
+        pointer-events: none
+        display: inline-flex
+        transition: all 0.3s ease
+        background: rgba(0, 0, 0, 0.5)
+        z-index: 9999
+        &.active
+            opacity: 1
+            pointer-events: auto
+    .messenger .dropdowm
+        transform: none
+        padding: 23px 18px
+        max-width: 260px
+        margin: auto
+        width: 100%
+        display: block
+        position: static
     .header-b .header_right
         opacity: 0
         pointer-events: none 
@@ -215,17 +246,6 @@
     .header .logo 
         background-image: url('../img/logo/logo-little.svg')
         +box(167px,41px)
-    .logo
-        line-height: 1
-        .fs-30  
-            font-size: 16px     
-            line-height: 5px
-        .fs-15 
-            font-size: 8px 
-    .logo svg
-        width: 17px
-        height: 21px
-        margin: 0 3px
     .main-f_block
         padding: 68px 15px
     .main-s_item.full-v
@@ -317,6 +337,7 @@
         width: calc(100% + 32px)
         padding: 0
         background: #FFFFFF
+        box-shadow: 0px 4px 4px rgba(0, 0, 0,0.25)
     .catalog-m .col
         max-width: 100%
         width: calc(50% - 15px)
@@ -410,6 +431,23 @@
         line-height: 21px
     .cart-row
         border: none
+
+    .cart-popup
+        position: fixed
+        left: 0
+        top: 0
+        +box(100%)
+        max-width: 100%
+        padding: 16px
+        display: inline-flex
+        background: rgba(0, 0, 0, 0.5)
+        &.active
+            opacity: 1
+            pointer-events: auto
+
+    .cart-popup_container
+        margin: auto
+        max-width: 525px
 @media only screen and (max-width : 767px)
     .main-f_block
         height: 378px
@@ -449,11 +487,6 @@
         padding-bottom: 14px
     .footer .logo 
         margin-bottom: 21px
-    .footer .logo .fs-15
-        font-size: 10px
-    .footer .logo .fs-30
-        font-size: 20px
-        line-height: 23px
     .footer-top .col 
         width: 100%
         min-width: auto
@@ -637,7 +670,7 @@
     .header-t
         padding: 8px 0
     .search input
-        font-size: 14px
+        font-size: 16px
         line-height: 18px
         padding: 10px 12px
         &::-webkit-input-placeholder
@@ -658,6 +691,8 @@
             color: #000
     .header-c
         padding: 7px 0 11px
+    .footer .logo
+        height: 43px
     .btn-search
         width: 38px
     .catalog-h p
@@ -697,8 +732,12 @@
         padding-top: 50px
     .section-articles
         padding-bottom: 40px
+    .slider-services
+        margin-right: -16px
+    .slider-articles
+        margin-bottom: 30px
     .card-s
-        margin: 0
+        margin: 0 16px 0 0
     .card-article
         width: 225px 
         margin: 0 15px 0 0
@@ -954,29 +993,14 @@
         .btn-lg
             margin-top: 30px
     .cart-popup_container
-        max-width: 290px
-        padding: 22px 16px
-    .cart-list_img
-        +box(76px)
-        margin-right: 10px
-        img
-            transform: scale(0.7)
+        max-width: 345px
+        padding: 25px 22px 20px
     .cart-list_title
-        font-size: 13px
-        line-height: 1
+        font-size: 14px
+        line-height: 120%
         padding-right: 10px
     .btn-delete
         margin-left: 10px
-    .cart-list
-        .fs-13
-            font-size: 9px
-        .fs-12
-            font-size: 10px
-            line-height: 1
-        .fs-18
-            font-size: 14px
-            line-height: 1
-            margin-left: 5px
     .cart-popup_total
         padding-right: 0
     .thank-order_block
@@ -996,6 +1020,29 @@
     .thank-order
         padding: 37px 16px 100px
 @media only screen and (max-width : 360px)
+    .navbotom li
+        padding: 0
+    .cart-popup_container
+        max-width: 290px
+        padding: 22px 16px
+    .cart-list_img
+        +box(76px)
+        margin-right: 10px
+        img
+            transform: scale(0.7)
+    .cart-list_title
+        font-size: 13px
+        line-height: 1
+    .cart-list
+        .fs-13
+            font-size: 9px
+        .fs-12
+            font-size: 10px
+            line-height: 1
+        .fs-18
+            font-size: 14px
+            line-height: 1
+            margin-left: 5px
     .footer_phones a
         font-size: 14px
     .banner

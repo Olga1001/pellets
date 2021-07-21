@@ -18,25 +18,25 @@ header.header
                     button.burger(type="button")
                     a.logo.d-xl-block.d-none(href='#')
                 .header_right.flex-center-between
-                    .messenger.relative
+                    .messenger.relative(data-item='messenger' data-button='messenger')
                         .align-items-center.messenger-item(data-toggle)
                             +icon('phone2')
                             p (044) 384-25-65 
                             +icon('arrow-down')
-                        .dropdowm 
+                        .dropdowm.stopPropagation
                             ul
                                 each val in [{icon: 'messenger', text: 'Messenger', bg: 'bg-blue'}, {icon: 'viber', text: 'Viber', bg: 'bg-purple'},{icon: 'telegram', text: 'Telegram', bg: 'bg-blue2'}]
-                                    li.align-items-center 
+                                    li.align-items-center
                                         .circle(class=val.bg)
-                                            +icon(val.icon) 
+                                            +icon(val.icon)
                                         p.fs-14=val.text
-                                li.align-items-center 
+                                li.align-items-center
                                     .circle.bg-red
-                                        +icon('phone') 
+                                        +icon('phone')
                                     div
-                                        p.fs-17 (044) 384-25-65 
-                                        p.fs-12.c-gray-light пн-пт 09:00 - 19:00 
-                            a.btn(href='#') Консультация
+                                        p.fs-17 (044) 384-25-65
+                                        p.fs-12.c-gray-light пн-пт 09:00 - 19:00
+                            a.btn.d-xl-block.d-none(href='#') Консультация
                     form.search 
                         input(type='text' placeholder='Поиск товаров' required)
                         button.btn-search(type='submit')
@@ -60,7 +60,7 @@ header.header
 
                     nav.navbotom.stopPropagation 
                         ul.flex-center-around 
-                            each val, index in [{name: 'Вхід', icon: 'user'},{name: 'Обране', icon: 'heart'},{name: 'Калькулятор', icon: 'calculate.svg'},{name: 'Подзвонити', icon: 'phone2'}]
+                            each val, index in [{name: 'Вхід', icon: 'user'},{name: 'Обране', icon: 'heart'},{name: 'Калькулятор', icon: 'calculate.svg'}]
                                 li(class=index==3 ? 'd-xl-none': '')
                                     a(href='#')
                                         if (index==2)
@@ -68,14 +68,21 @@ header.header
                                         else
                                             +icon(val.icon)
                                         span.d-xl-none.d-block=val.name
+                            li.d-xl-none(data-button='messenger')
+                                a(href='#')
+                                    +icon('phone2')
+                                    span.d-xl-none.d-block Подзвонити
                     
                     .btn-cart
-                        .btn-cart_item 
+                        .btn-cart_item(data-button='cart')
                             +icon('cart')
                             p 1
-                        .cart-popup
-                            .cart-popup_container
-                                h2.fs-20.fw-medium Корзина
+                        .cart-popup(data-item='cart' data-button='cart')
+                            .cart-popup_container.stopPropagation
+                                .flex-center-between
+                                    h2.fs-20.fw-medium Корзина
+                                    button.d-sm-none(type="button" data-button='cart')
+                                        +icon('close2')
                                 ul.cart-list 
                                     li.justify-content-between 
                                         a.cart-list_img(href="#")
@@ -89,15 +96,13 @@ header.header
                                                 p.fs-18.c-red.fw-medium.lh-1.text-nowrap 12500 грн
                                         button.btn-delete(type='button')
                                             +icon('delete')
-                                .cart-popup_total.justify-content-end 
+                                .cart-popup_total.justify-content-sm-end.d-flex
                                     p.fs-12.mr-15 Всього без доставки:
                                     div
                                         p.fs-12.text-through.c-dark.d-block.text-nowrap 13800 грн
                                         p.fs-18.c-red.fw-medium.lh-1 12500 грн
                                 a.btn.big-xl(href='#') Оформить заказ
-
-
-
+                                button.d-sm-none.fs-12.text-center.mt-20.w-100(type='button' data-button='cart') Продолжить покупки
 
     .header-b 
         .justify-content-xl-center
