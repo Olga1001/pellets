@@ -104,14 +104,14 @@ block content
 								.justify-content-between.power-row
 									.select.select-b
 										.select-item.flex-center-between(data-toggle)
-											p.fw-light.ff-Inter 12 кВт
+											p.fw-light.ff-Inter.fs-16 12 кВт
 											.arrow
 												+icon('arrow-down')
 
-										ul.select-drop.fs-14
+										ul.select-drop.fs-16
 											li 12 кВт
 											li 13 кВт
-									.counter.d-flex
+									.counter.align-items-center
 										button.btn-minus.counter-btn(type='button') -
 										input.counter-input(type='number' value='1')
 										button.btn-plus.counter-btn(type='button') +
@@ -151,7 +151,9 @@ block content
 									button.btn.big.h-green(type='button') В корзину
 									button.btn-white(type='button')
 										span Купить в 1 клик
-										input.input-phone(type='text')
+										.drop-phone
+											input.input-phone(type='text' placeholder='+38 0_________')
+											input.d-sm-none.btn.bg-orange(type="button" value="Отправить")
 
 		section.profitable
 			.container
@@ -389,7 +391,7 @@ block content
 										input.input(type="text" placeholder="Имя")
 									.w-sm-50.pl-sm-11.w-100
 										input.input(type="email" placeholder="E-mail")
-								textarea.textarea(rows="4" cols="4") Ваш отзыв
+								textarea.textarea(rows="4" cols="4" placeholder="Ваш отзыв")
 								.flex-center-between
 									.align-items-sm-center 
 										p.fs-14.ff-opensans.mr-15.d-sm-inline.d-none Оцените товар
@@ -517,7 +519,9 @@ block content
 				.popup-calculation_right
 					img.carcass(src='img/common/carcass.png' alt='image carcass')
 
-block script 
-	
+block sliderScripts
+	script(src="js/jquery.maskedinput.min.js")
+	script(src="js/mask.js")
+
 
 	

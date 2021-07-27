@@ -605,19 +605,19 @@
                       <div class="justify-content-between power-row">
                         <div class="select select-b">
                           <div class="select-item flex-center-between" data-toggle>
-                            <p class="fw-light ff-Inter">12 кВт</p>
+                            <p class="fw-light ff-Inter fs-16">12 кВт</p>
                             <div class="arrow">
                               <svg class="svg-sprite-icon icon-arrow-down">
                                 <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
                               </svg>
                             </div>
                           </div>
-                          <ul class="select-drop fs-14">
+                          <ul class="select-drop fs-16">
                             <li>12 кВт</li>
                             <li>13 кВт</li>
                           </ul>
                         </div>
-                        <div class="counter d-flex">
+                        <div class="counter align-items-center">
                           <button class="btn-minus counter-btn" type="button">-</button>
                           <input class="counter-input" type="number" value="1">
                           <button class="btn-plus counter-btn" type="button">+</button>
@@ -660,7 +660,10 @@
                       <div class="justify-content-sm-between product-info_btns">
                         <button class="btn big h-green" type="button">В корзину</button>
                         <button class="btn-white" type="button"><span>Купить в 1 клик</span>
-                          <input class="input-phone" type="text">
+                          <div class="drop-phone">
+                            <input class="input-phone" type="text" placeholder="+38 0_________">
+                            <input class="d-sm-none btn bg-orange" type="button" value="Отправить">
+                          </div>
                         </button>
                       </div>
                     </div>
@@ -1091,7 +1094,7 @@
                           <input class="input" type="email" placeholder="E-mail">
                         </div>
                       </div>
-                      <textarea class="textarea" rows="4" cols="4">Ваш отзыв</textarea>
+                      <textarea class="textarea" rows="4" cols="4" placeholder="Ваш отзыв"></textarea>
                       <div class="flex-center-between">
                         <div class="align-items-sm-center"> 
                           <p class="fs-14 ff-opensans mr-15 d-sm-inline d-none">Оцените товар</p>
@@ -1254,7 +1257,7 @@
                 <p>Киев, ул. Большая Кольцевая, 4, оф.333 <br> ТРЦ "Променада Парк", "Ашан"</p>
                 <p class="d-md-block d-none">пн-пт 09:00-18:00</p>
               </div>
-              <p class="c-white"> <span class="d-md-none d-block">пн-пт 09:00-18:00</span>info@pelletshome.com.ua</p>
+              <p><span class="d-md-none d-block c-white">пн-пт 09:00-18:00</span><a class="c-white" href="mailto:info@pelletshome.com.ua">info@pelletshome.com.ua</a></p>
             </div>
             <div class="col justify-content-md-between flex-md-column flex-wrap"> 
               <div class="footer_phones"><a class="fs-24 c-white mb-9 fw-medium" href="tel:380674617749‬">+380 (67) 461-77-49‬</a><a class="fs-24 c-white mb-9 fw-medium" href="tel:380443842565">+380 (44) 384-25-65</a></div>
@@ -1311,6 +1314,8 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/mask.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

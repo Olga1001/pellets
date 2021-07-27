@@ -512,7 +512,7 @@
           <section>
             <div class="container">
               <div class="flex-sm-center-between">
-                <h2>Оформление заказа</h2><a class="underline d-md-block d-none" href="#">продолжить покупки</a>
+                <h2 class="text-up">Оформление заказа</h2><a class="underline d-md-block d-none" href="#">продолжить покупки</a>
               </div>
             </div>
             <form class="cart-row">
@@ -523,7 +523,7 @@
                       <p class="fs-24 fw-medium">Контактные данные</p><a class="align-items-center" href="#">
                         <svg class="svg-sprite-icon icon-user">
                           <use xlink:href="img/sprite/symbol/sprite.svg#user"></use>
-                        </svg><span class="fs-18 c-gray-600">Войти<span class="d-lg-inline d-none">в аккаут</span></span></a>
+                        </svg><span class="fs-18 c-gray-600">Войти<span class="d-lg-inline d-none"> в аккаут</span></span></a>
                     </div>
                     <div class="flex-wrap row-form">
                       <div class="w-lg-50 pr-lg-15 w-100 relative invalid">
@@ -535,7 +535,7 @@
                         <div class="error"></div>
                       </div>
                       <div class="w-lg-50 pr-lg-15 w-100 relative invalid">
-                        <input class="input2" type="text" value="" placeholder="+380 (  ) ___-__-__" required>
+                        <input class="input2 phone-mask" type="text" value="" placeholder="+380 (  ) ___-__-__" required>
                         <div class="error">Номер вказано не вірно</div>
                       </div>
                       <div class="w-lg-50 pl-lg-15 w-100 relative">
@@ -574,7 +574,7 @@
                           <input class="checkbox" type="radio" name="order method" checked><span class="check-radio"></span><span>Наличными при получении</span>
                         </label>
                         <label class="align-items-center label-radio">
-                          <input class="checkbox" type="radio" name="order method"><span class="check-radio"></span><span class="align-items-center"><span class="mr-15">Оплата онлайн</span><img class="mr-15" src="img/common/mastercard.svg" alt="mastercard"><img src="img/common/visa.svg" alt="visa"></span>
+                          <input class="checkbox" type="radio" name="order method"><span class="check-radio"></span><span class="align-items-center"><span class="mr-15">Оплата онлайн</span><img class="mr-15" src="img/common/mastercard-color.svg" alt="mastercard"><img src="img/common/visa-color.svg" alt="visa"></span>
                         </label>
                         <label class="align-items-center label-radio">
                           <input class="checkbox" type="radio" name="order method"><span class="check-radio"></span><span>Безналичный расчет</span>
@@ -598,7 +598,7 @@
                             </button>
                           </div>
                           <div class="flex-center-between w-100">
-                            <div class="counter d-flex">
+                            <div class="counter align-items-center">
                               <button class="btn-minus counter-btn" type="button">-</button>
                               <input class="counter-input" type="number" value="1">
                               <button class="btn-plus counter-btn" type="button">+</button>
@@ -617,7 +617,7 @@
                             </button>
                           </div>
                           <div class="flex-center-between w-100">
-                            <div class="counter d-flex">
+                            <div class="counter align-items-center">
                               <button class="btn-minus counter-btn" type="button">-</button>
                               <input class="counter-input" type="number" value="1">
                               <button class="btn-plus counter-btn" type="button">+</button>
@@ -945,7 +945,7 @@
                 <p>Киев, ул. Большая Кольцевая, 4, оф.333 <br> ТРЦ "Променада Парк", "Ашан"</p>
                 <p class="d-md-block d-none">пн-пт 09:00-18:00</p>
               </div>
-              <p class="c-white"> <span class="d-md-none d-block">пн-пт 09:00-18:00</span>info@pelletshome.com.ua</p>
+              <p><span class="d-md-none d-block c-white">пн-пт 09:00-18:00</span><a class="c-white" href="mailto:info@pelletshome.com.ua">info@pelletshome.com.ua</a></p>
             </div>
             <div class="col justify-content-md-between flex-md-column flex-wrap"> 
               <div class="footer_phones"><a class="fs-24 c-white mb-9 fw-medium" href="tel:380674617749‬">+380 (67) 461-77-49‬</a><a class="fs-24 c-white mb-9 fw-medium" href="tel:380443842565">+380 (44) 384-25-65</a></div>
@@ -1002,6 +1002,8 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/mask.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

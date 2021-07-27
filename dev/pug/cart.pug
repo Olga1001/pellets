@@ -16,7 +16,7 @@ block content
 		section
 			.container
 				.flex-sm-center-between
-					h2 Оформление заказа
+					h2.text-up Оформление заказа
 					a.underline.d-md-block.d-none(href="#") продолжить покупки
 			form.cart-row
 				.container
@@ -27,7 +27,7 @@ block content
 								a.align-items-center(href="#")
 									+icon('user')
 									span.fs-18.c-gray-600 Войти
-										span.d-lg-inline.d-none в аккаут
+										span.d-lg-inline.d-none  в аккаут
 							.flex-wrap.row-form
 								.w-lg-50.pr-lg-15.w-100.relative.invalid
 									input.input2(type='text' value='Скоропадський' placeholder='Фамилия' required)
@@ -36,7 +36,7 @@ block content
 									input.input2(type='text' value='' placeholder='Имя' required)
 									.error
 								.w-lg-50.pr-lg-15.w-100.relative.invalid
-									input.input2(type='text' value='' placeholder='+380 (  ) ___-__-__' required)
+									input.input2.phone-mask(type='text' value='' placeholder='+380 (  ) ___-__-__' required)
 									.error Номер вказано не вірно
 								.w-lg-50.pl-lg-15.w-100.relative
 									input.input2(type='email' value='' placeholder='Email' required)
@@ -76,8 +76,8 @@ block content
 										span.check-radio
 										span.align-items-center
 											span.mr-15 Оплата онлайн
-											img.mr-15(src='img/common/mastercard.svg' alt='mastercard')
-											img(src='img/common/visa.svg' alt='visa')
+											img.mr-15(src='img/common/mastercard-color.svg' alt='mastercard')
+											img(src='img/common/visa-color.svg' alt='visa')
 									label.align-items-center.label-radio
 										input.checkbox(type='radio' name='order method')
 										span.check-radio
@@ -98,7 +98,7 @@ block content
 												button.btn-close(type='button')
 													+icon('close2')
 											.flex-center-between.w-100
-												.counter.d-flex
+												.counter.align-items-center
 													button.btn-minus.counter-btn(type='button') -
 													input.counter-input(type='number' value='1')
 													button.btn-plus.counter-btn(type='button') +
@@ -202,4 +202,6 @@ block content
 							input.bg-white(type='email' placeholder='E-mail *' required)
 							button.btn.bg-orange.c-white(type='submit') Подписатся
 						p.fs-13.c-pink *Оформляя подписку вы даете согласие на обработку персональных данных
-block script
+block sliderScripts
+	script(src="js/jquery.maskedinput.min.js")
+	script(src="js/mask.js")

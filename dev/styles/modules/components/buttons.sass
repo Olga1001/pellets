@@ -8,6 +8,7 @@
     text-align: center
     width: 100%
     transition: all 0.3s ease
+    border: none
     &.bg-orange
         color: $black
         font-size: 14px
@@ -51,25 +52,58 @@
         span
             background: #FFB321
             border-color: #FFB321
-        .input-phone
+        .drop-phone
             opacity: 1
             right: calc(100% - 4px)
+
+.drop-phone
+    position: absolute
+    right: 0
+    top: 0
+    +box(243px,100%)
+    z-index: -1
+    opacity: 0
+    transition: all 0.3s ease
+    .btn
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+        width: 144px
+        font-size: 18px
 
 .input-phone
     background: #FFFFFF
     border: 1px solid #B9B9B9
     border-radius: 4px
-    position: absolute
-    right: 0
-    top: 0
-    +box(243px,100%)
     font-size: 20px
+    +box(100%)
     line-height: 26px
     color: #000000
     padding: 19.5px 20px
-    z-index: -1
-    opacity: 0
-    transition: all 0.3s ease
+    &::-webkit-input-placeholder
+        font-family: "TTFirsNeue", sans-serif
+        font-size: 20px
+        line-height: 26px
+        color: #000000
+
+    &:-moz-placeholder
+        font-family: "TTFirsNeue", sans-serif
+        font-size: 20px
+        line-height: 26px
+        color: #000000
+
+    &::-moz-placeholder
+        font-family: "TTFirsNeue", sans-serif
+        font-size: 20px
+        line-height: 26px
+        color: #000000
+
+    &:-ms-input-placeholder
+        font-family: "TTFirsNeue", sans-serif
+        font-size: 20px
+        line-height: 26px
+        color: #000000
 
 .btn-cart 
     position: relative
@@ -145,6 +179,7 @@
     border-radius: 4px
     padding: 9px 13px
     transition: all 0.3s ease
+    text-align: left
     span
         font-size: 12px
         line-height: 105%
