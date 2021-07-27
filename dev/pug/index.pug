@@ -1,0 +1,145 @@
+extends layout/main
+
+block variables
+	-var title = 'Карточка товара'
+	-var page = 'mounting-page'
+
+block link
+
+block content
+	main
+		.container
+			nav.breadcrumbs
+				ul.d-flex
+					+breadcrumbs-item('Главная', '#')
+					+breadcrumbs-item('Твердотопливные котлы ','#')
+					+breadcrumbs-item('Промышелнные твердотопливные котлы','#')
+					+breadcrumbs-item('ALTEP TRIO UNI PLUS (КТ-3ЕN)')
+		section
+			.container
+				h1.fs-40 Монтаж твердотолплевных котлов
+				.banner.c-white
+					img.banner-img(src='img/common/banner-montaj.jpg')
+					p.fs-45.fw-medium
+						span.c-orange.d-block Монтаж и установка
+						span твердотопливных котлов <br> и систем отопления
+					p.fs-30 Только лучшие проффессионалы <br> своего дела
+				.flex-wrap.mounting-info
+					.col
+						p.fs-24.fw-medium.mb-30.lh-35 Наша компания имеет большой опыт монтажа котельных на базе твердотопливного отопительного оборудования, а также возобновляемых источников тепла – солнечных коллекторов, тепловых насосов и др
+						p.fs-18.lh-28.mb-30.pb-20 За время существования нами успешно реализовано множество объектов – бытовых и коммерческих. Коллектив компании имеет все необходимые навыки и возможности, а также опыт для построения современной, экономичной, безопасной и надежной системы отопления. Работая с нами Вы получаете гибкий подход, качественную работу, гарантийную ответственность, пост гарантийную поддержку на высоком уровне и многие другие преимущества. География нашей деятельности – Киев и Киевская область. Также возможны командировки по всей территории Украины.
+						h3.fs-30.fw-medium.mb-30.pt-20 КАК МЫ РАБОТАЕМ
+						ul.list-characteristics.mb-30
+							each val in ['Предварительная консультация (при необходимости);','Выезд на объект и составление спецификации (бесплатно);','Подписание договора с гарантийными обязательствами;','Закупка и поставка основного и дополнительного оборудования;','Произведение монтажных и пуско-наладочных работ;','Демонстрация работы, инструктаж.']
+								li=val
+						h3.fs-30.fw-medium.mb-30.pt-20 ПРЕИМУЩЕСТВА РАБОТЫ С НАМИ
+						ul.list-characteristics.mb-30
+							each val in ['Мы монтируем современные, энергоэффективные и безопасные системы отопления','Осуществляем гибкий подход к каждому клиенту\n','Оперативно реагируем по сервисным вопросам\n','Качественная работа, что подтверждает гарантия на протяжении 24 месяцев.','Используем только качественное оборудование и надежные комплектующие, что подтверждает гарантия от официальных представителей в Украине или производителей.']
+								li=val
+					.col
+						p.fs-30.fw-medium.mb-20 ОРИЕНТИРОВОЧНЫЕ ЦЕНЫ <br> НА МОНТАЖНЫЕ РАБОТЫ
+						p.fs-20.c-red.fw-medium Внимание! Нижеприведенные цены ориентировочные, точная цена после составления сметы. При больших объемах действуют скидки.
+						.d-flex
+							table.fs-12
+								tr
+									td.fs-14(valign="middle" align="center" rowspan="11") Котлы
+									td
+										p.pb-20 Пуско-наладка пеллетного котла
+									td
+										p.pb-20 шт
+									td
+										p.pb-20 2800-3500
+								-var n = 9
+								while (n--)
+									tr
+										td
+											p.pb-20 Установка твердотопливного котла ручной загрузки до 30 кВт
+										td
+											p.pb-20 шт
+										td
+											p.pb-20 2800-3500
+								tr
+									td.fs-14(valign="middle" align="center" rowspan="2") Дымоходы
+									td
+										p.pb-20 Дымоход	Установка дымохода из нержавеющей стали	м.п.
+									td
+										p.pb-20 шт
+									td
+										p.pb-20 1000-1500
+								tr
+									td
+									td
+										p.pb-20 Дымоход	Установка дымохода из нержавеющей стали	м.п.
+									td
+										p.pb-20 шт
+									td
+										p.pb-20 1000-1500
+								tr
+									td.fs-14(valign="middle" align="center" rowspan="3") Бойлеры
+									td
+										p.pb-20 Бойлеры и аккумулирующие
+									td
+										p.pb-20 шт
+									td
+										p.pb-20 1000-1500
+								each val in [{name: 'Установка бойлера электрического  до 50 л' , counts: 'от 1000'}, {name: 'Установка бойлера электрического  до 100 л' , counts: '500-600'}]
+									tr
+										td
+										td
+											p.pb-20=val.name
+										td
+											p.pb-20 шт
+										td
+											p.pb-20=val.counts
+
+
+		section.subscription
+			.container 
+				.flex-wrap.justify-content-between.c-white
+					.subscription-left
+						h2.fs-30.fw-medium.mb-16.text-up Подпишись на рассылку
+						p.fs-18 Получайте последние новости о акционных предложениях на e-mail 
+					.subscription-right
+						form.form-subscription
+							input.bg-white(type='email' placeholder='E-mail *' required)
+							button.btn.bg-orange.c-white(type='submit') Подписатся
+						p.fs-13.c-pink *Оформляя подписку вы даете согласие на обработку персональных данных
+
+
+	.popup(data-item='calculation')
+		.popup-container.stopPropagation 
+			button.btn-close.ml-auto(type='button')
+				+icon('close2')
+			h2.text-up.text-center Рассчет мощности
+			.flex-wrap.flex-md-row.flex-column-reverse
+				.popup-calculation_left
+					ul.list-calculation
+						li.flex-center-between 
+							p.fw-medium Высота, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Ширина, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Длина, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Степень утепления
+							.select.select-i.max-241
+								.select-item(data-toggle) Неутепленное, 100 Вт/м2
+								ul.select-drop 
+									li Неутепленное, 100 Вт/м2
+					.result.flex-center-between 
+						p.fs-18.fw-medium.c-white Необходимая <br> мощность, кВт
+						input.input.max-165(type='text' value='5')
+
+						
+				.popup-calculation_right
+					img.carcass(src='img/common/carcass.png' alt='image carcass')
+
+block sliderScripts
+	script(src="js/jquery.maskedinput.min.js")
+	script(src="js/mask.js")
+
+
+	
