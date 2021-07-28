@@ -11,3 +11,91 @@
     &:first-child
       width: calc(100% - 585px)
       padding-right: 70px
+
+.table-mounting
+  border: 1px solid #DDDDDD
+  border-radius: 5px
+  margin-top: 30px
+  table
+    border-collapse: separate
+    border-bottom: 1px solid #DDDDDD
+    &:last-child
+      border: none
+  td
+    padding: 10px
+    width: 120px
+  td:nth-last-child(2)
+    padding: 9px 12px
+    border-left: 1px solid #DDDDDD
+    text-align: center
+    width: 45px
+  td:nth-last-child(1)
+    padding: 9px 20px
+    border-left: 1px solid #DDDDDD
+  td:nth-last-child(3)
+    width: 300px
+    padding: 9px 30px
+    border-left: 1px solid #DDDDDD
+  tr:first-child td
+    padding-top: 22px
+  tr:last-child td
+    padding-bottom: 22px
+
+.object
+  width: calc(33.33% - 10px)
+  margin-right: 15px
+  margin-bottom: 15px
+  &:last-child, &:nth-child(3n+3)
+    margin-right: 0
+  &_img
+    margin-bottom: 39px
+    img
+      +box(100%,300px)
+      object-fit: cover
+
+.implemented-objects
+  padding: 70px 0 90px
+
+.table_type-fuel
+  border: 1px solid #C8C8C8
+  border-right: none
+  border-collapse: separate
+  margin-top: 29px
+  margin-bottom: 170px
+  th
+    font-weight: 500
+    text-align: left
+    padding: 17px 15px
+    font-size: 14px
+    line-height: 110%
+  tr:nth-child(2) th, tr:nth-child(1) th
+    text-align: center
+  tr:nth-child(1) th
+    padding: 17px 5px
+  td
+    text-align: center
+    padding: 17px 15px
+    font-size: 12px
+    line-height: 12px
+  tr:nth-child(1) th
+    font-size: 24px
+    background: #F2F2F2
+    border: 1px solid #C8C8C8
+    border-top: 0
+  tr td, tr th
+    border-bottom: 1px solid #C8C8C8
+    border-right: 1px solid #C8C8C8
+  tr:last-child td, tr:last-child th
+    border-bottom: none
+    background: #E44937
+    border-color: #C8C8C8
+
+.objects
+  padding-bottom: 50px
+  .object
+    margin-bottom: 75px
+  .pagination
+    padding-top: 0
+    padding-bottom: 80px
+
+

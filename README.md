@@ -5,6 +5,9 @@
 - http://m99935yr.beget.tech/pellets/product-general.html
 - http://m99935yr.beget.tech/pellets/cart.html
 - http://m99935yr.beget.tech/pellets/thank-order.html
+- http://m99935yr.beget.tech/pellets/mounting.html
+- http://m99935yr.beget.tech/pellets/calc-cost-heating.html
+- http://m99935yr.beget.tech/pellets/objects.html
 
 # Стартовый шаблон
 Используется связка `Gulp` + `Pug` + `SASS` + `BrowserSync` + `Linters`

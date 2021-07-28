@@ -1,0 +1,187 @@
+extends layout/main
+
+block variables
+	-var title = 'Карточка товара'
+	-var page = 'mounting-page calcCostHeating-page'
+
+block link
+
+block content
+	main
+		.container
+			nav.breadcrumbs
+				ul.d-flex
+					+breadcrumbs-item('Главная', '#')
+					+breadcrumbs-item('Твердотопливные котлы ','#')
+					+breadcrumbs-item('Промышелнные твердотопливные котлы','#')
+					+breadcrumbs-item('ALTEP TRIO UNI PLUS (КТ-3ЕN)')
+		section
+			.container
+				h1.fs-40 Рассчет стоимости отопления
+				.banner.c-white
+					img.banner-img(src='img/common/banner-montaj2.jpg')
+					p.fs-45.fw-medium
+						span.c-orange.d-block Хотите узнать
+						span стоимости отопления <br> для вашего дома?
+					p.fs-30 Восспользейтесь нашим <br> калькулятором
+				h3.fs-27.text-up.fw-medium Введите данные для расчета
+				form.flex-wrap.form-calc
+					.w-lg-50.w-100
+						.flex-sm-center-between
+							p.fw-medium.mr-15.mb-10 Площадь помещения, м2
+							input.input.max-241.mb-10(type='text' value='5')
+						.flex-sm-center-between
+							p.fw-medium.mr-15.mb-10 Высота потолков, м
+							input.input.max-241.mb-10(type='text' value='10')
+						.flex-sm-center-between
+							p.fw-medium.mr-15.mb-10 Утепление дома
+							input.input.max-241.mb-10(type='text' value='14')
+					.w-lg-50.w-100
+						.flex-sm-center-between
+							p.fw-medium.mr-15.mb-10 Температура в помещении, °С
+							input.input.max-241.mb-10(type='text' value='10')
+						.flex-sm-center-between
+							p.fw-medium.mr-15.mb-10 Длительность отопительного сезона, дней
+							input.input.max-241.mb-10(type='text' value='10')
+						.flex-sm-center-between
+							p.fw-medium.mr-15.mb-10 Минимальная необходимая мощность котла, кВт
+							input.input.max-241.mb-10(type='text' value='10')
+				h3.fs-27.text-up.fw-medium Затраты на отопление
+				.scroll-x
+					table.table_type-fuel
+						tr
+							th(colspan="12") Вид топлива
+						tr
+							th
+							th Пеллеты
+							th Брикеты
+							th Дрова дубовые
+							th Эл. энергия (население)
+							th Эл. энергия (юр.лица)
+							th Газ (население)
+							th Газ (юр.лица)
+							th Уголь каменный
+							th Отработанное масло
+							th Дизель
+							th Центральное отопление (Киевэнерго)
+						tr
+							th Необходимый объем
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+						tr
+							th Ед. изм.
+							td т
+							td т
+							td м3
+							td кВт×ч
+							td кВт×ч
+							td м3
+							td м3
+							td т
+							td л
+							td л
+							td Гкал
+						tr
+							th Цена <br> топлива
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+						tr
+							th Ед. изм.
+							td т
+							td т
+							td м3
+							td кВт×ч
+							td кВт×ч
+							td м3
+							td м3
+							td т
+							td л
+							td л
+							td Гкал
+						tr.c-white
+							th Затраты на отопление, грн
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+							td 2.23
+
+
+
+
+
+
+		section.subscription
+			.container 
+				.flex-wrap.justify-content-between.c-white
+					.subscription-left
+						h2.fs-30.fw-medium.mb-16.text-up Подпишись на рассылку
+						p.fs-18 Получайте последние новости о акционных предложениях на e-mail 
+					.subscription-right
+						form.form-subscription
+							input.bg-white(type='email' placeholder='E-mail *' required)
+							button.btn.bg-orange.c-white(type='submit') Подписатся
+						p.fs-13.c-pink *Оформляя подписку вы даете согласие на обработку персональных данных
+
+
+	.popup(data-item='calculation')
+		.popup-container.stopPropagation 
+			button.btn-close.ml-auto(type='button')
+				+icon('close2')
+			h2.text-up.text-center Рассчет мощности
+			.flex-wrap.flex-md-row.flex-column-reverse
+				.popup-calculation_left
+					ul.list-calculation
+						li.flex-center-between 
+							p.fw-medium Высота, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Ширина, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Длина, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Степень утепления
+							.select.select-i.max-241
+								.select-item(data-toggle) Неутепленное, 100 Вт/м2
+								ul.select-drop 
+									li Неутепленное, 100 Вт/м2
+					.result.flex-center-between 
+						p.fs-18.fw-medium.c-white Необходимая <br> мощность, кВт
+						input.input.max-165(type='text' value='5')
+
+						
+				.popup-calculation_right
+					img.carcass(src='img/common/carcass.png' alt='image carcass')
+
+block sliderScripts
+	script(src="js/jquery.maskedinput.min.js")
+	script(src="js/mask.js")
+
+
+	

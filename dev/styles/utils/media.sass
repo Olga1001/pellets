@@ -31,6 +31,8 @@
         display: inline
     .d-lg-none
         display: none
+    .d-lg-block
+        display: block
     .w-lg-50
         width: 50% 
     .catalog-drop li:hover .catalog-m
@@ -43,6 +45,7 @@
     .flex-lg-row
         display: flex
         flex-direction: row
+
 @media only screen and (min-width : 768px)
     .d-md-none
         display: none
@@ -50,6 +53,8 @@
         width: 75%
     .w-md-50
         width: 50%
+    .w-md-100
+        width: 100%
     .d-md-block
         display: block
     .justify-content-md-between
@@ -131,6 +136,9 @@
         right: -20px
     .profitable_left
         padding: 21px 25px 21px 25px
+@media only screen and (max-width : 1449px)
+    .object_img img
+        height: 20.7vw
 @media only screen and (max-width: 1366px)
     .information_left, .information_right
         width: 50%
@@ -320,6 +328,17 @@
         width: calc(100% - 440px)
     .cart-row .col:last-child .fs-24, .list-product, .promocode, .total
         padding-left: 16px
+    .mounting-info .col
+        width: 495px
+    .mounting-info .col:first-child
+        padding-right: 30px
+        width: calc(100% - 495px)
+    .table-mounting td
+        width: 100px
+    .table-mounting td:nth-last-child(1)
+        padding: 9px 13px
+    .table-mounting td:nth-last-child(3)
+        width: 250px
 @media only screen and (max-width : 991px)
     .footer-menu 
         display: none
@@ -449,6 +468,19 @@
     .cart-popup_container
         margin: auto
         max-width: 525px
+    .mounting-info .col:first-child
+        width: 100%
+        padding: 0
+    .mounting-info .col, .table-mounting
+        width: 100%
+    .table-mounting td:nth-last-child(3)
+        width: calc(100% - 245px)
+    .form-calc .w-100:last-child, .form-calc .w-100:first-child
+        padding: 0
+    .table_type-fuel tr:nth-child(1) th
+        text-align: left
+    .calcCostHeating-page .scroll-x
+        margin-right: -16px
 @media only screen and (max-width : 767px)
     .main-f_block
         height: 378px
@@ -492,13 +524,13 @@
         width: 100%
         min-width: auto
         &:first-child 
-            .c-white
-                width: 50%
+            .w-md-100
                 font-size: 13px
                 line-height: 16px
-                &.logo 
-                    width: 100%
-        &:nth-child(2)
+                a
+                    word-break: break-all
+            .logo
+                width: 100%
     .footer_phones
         width: 50% 
         order: 1
@@ -626,6 +658,21 @@
             max-width: 60%
         .max-165
             max-width: 115px
+    .object
+        width: calc(50% - 7.5px)
+        &:nth-child(3n+3)
+            margin-right: 15px
+        &:nth-child(2n+2)
+            margin-right: 0
+    .object_img img
+        height: 29.7vw
+    .mounting-page .banner
+        padding: 35px 20px 46px
+        margin-bottom: 40px
+        .fs-30
+            font-size: 22px
+    .fs-45
+        font-size: 38px
 @media only screen and (max-width : 660px)
     .power-row
         flex-wrap: wrap
@@ -1042,6 +1089,47 @@
         margin-top: 35px
     .thank-order
         padding: 37px 16px 100px
+    .fs-45
+        font-size: 25px
+    .mounting-page .banner .fs-30
+        line-height: 20px
+        font-size: 14px
+    .mounting-info
+        .fs-24
+            font-size: 18px
+            line-height: 26px
+        .fs-18
+            font-size: 16px
+            line-height: 24px
+    .table-mounting td
+        width: 80px
+        padding: 9px 0
+    .table-mounting td:nth-last-child(3)
+        padding: 9px
+        width: calc(100% - 150px - 35px)
+    .table-mounting td:nth-last-child(2)
+        padding: 9px
+        width: 35px
+    .table-mounting td:nth-last-child(1)
+        padding: 9px
+        width: 70px
+    .object
+        width: 100%
+        margin-right: 0!important
+        margin: 0 0 20px
+
+    .object_img img
+        height: auto
+    .object_img
+        margin-bottom: 20px
+    .implemented-objects
+        padding: 40px 0 70px
+    .table_type-fuel
+        margin-bottom: 100px
+    .form-calc input
+        max-width: 100%
+    .objects .object
+        margin-bottom: 40px
 @media only screen and (max-width : 360px)
     .navbotom li
         padding: 0
@@ -1110,3 +1198,26 @@
         font-size: 21px
     .thank-order_block .fs-36
         font-size: 28px
+    .mounting-info
+        .fs-30
+            font-size: 24px
+        .fs-20
+            font-size: 18px
+    .table-mounting tr td
+        font-size: 10px
+    .table-mounting td
+        width: 70px
+    .table-mounting td:nth-last-child(1)
+        width: 60px
+    .table-mounting td:nth-last-child(2)
+        width: 30px
+    .table-mounting td:nth-last-child(3)
+        width: calc(100% - 160px)
+    .fs-45
+        font-size: 21px
+    .mounting-page .banner
+        padding: 20px 15px
+    .mounting-page .banner .fs-30
+        font-size: 12px
+    .mounting-page .banner .fs-45
+        margin-bottom: 18px
