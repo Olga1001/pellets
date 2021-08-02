@@ -190,7 +190,17 @@ $(document).ready(function () {
     dots: false,
     arrows: false,
     focusOnSelect: true,
-    asNavFor: '.slider-nav',
+    asNavFor: '.slider-nav, .slider-nav2',
+  });
+  $('.slider-nav2').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    dots: false,
+    arrows: true,
+    focusOnSelect: true,
+    asNavFor: '.slider-for',
   });
   $('.slider-powers').slick({
     slidesToShow: 6,

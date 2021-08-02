@@ -139,6 +139,10 @@
 @media only screen and (max-width : 1449px)
     .object_img img
         height: 20.7vw
+    .objects-more .slider-for
+        max-width: 400px
+        max-height: 250px
+        margin: auto
 @media only screen and (max-width: 1366px)
     .information_left, .information_right
         width: 50%
@@ -339,6 +343,18 @@
         padding: 9px 13px
     .table-mounting td:nth-last-child(3)
         width: 250px
+    .objects-more .col:last-child
+        padding: 0
+        max-width: 100%
+        width: 100%
+        margin-bottom: 0
+    .objects-more .col:first-child
+        max-width: 800px 
+        width: 100%
+        margin: 0 auto 30px
+    .objects-more .slider-for
+        max-width: 600px
+        max-height: 600px
 @media only screen and (max-width : 991px)
     .footer-menu 
         display: none
@@ -673,6 +689,31 @@
             font-size: 22px
     .fs-45
         font-size: 38px
+    .objects-more .slider-for
+        max-width: 285px
+        max-height: 189px
+        margin-right: 0
+    .objects-more .slider-nav2 
+        width: 46px
+        .slide
+            height: 46px
+    .objects-more .col:first-child
+        max-width: 345px
+    .objects-more .slider-nav2 .play
+        +box(23px)
+        margin: auto
+        top: 50%
+        transform: translateY(-50%)
+    .objects-more .slider-nav2 .play:before
+        border-width: 3.5px 0 3.5px 4px
+    .objects-more .slider-nav2 .slick-arrow
+        +box(14px)
+    .objects-more .slider-nav2
+        padding: 21px 0
+    .objects-more .slider-nav2 .slide
+        margin: 2px 0
+    .objects-more-page .fs-40
+        line-height: 120%
 @media only screen and (max-width : 660px)
     .power-row
         flex-wrap: wrap
@@ -1130,6 +1171,14 @@
         max-width: 100%
     .objects .object
         margin-bottom: 40px
+    .objects-more .banner
+        padding: 16px 20px
+        .fs-27
+            font-size: 20px
+        .btn 
+            margin-top: 20px!important
+            padding: 0 22px
+
 @media only screen and (max-width : 360px)
     .navbotom li
         padding: 0
@@ -1221,3 +1270,12 @@
         font-size: 12px
     .mounting-page .banner .fs-45
         margin-bottom: 18px
+    .objects-more .slider-for
+        max-width: 240px
+        max-height: 180px
+    .objects-more .slider-nav2 
+        width: 40px
+        .slide
+            height: 40px
+    .objects-more .slider-nav2
+        padding: 15px 0

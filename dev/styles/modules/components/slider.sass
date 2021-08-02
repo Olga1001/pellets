@@ -63,3 +63,55 @@
     
 .category-slider .slick-track
     margin-left: 0
+
+.objects-more 
+    .slider-nav2
+        width: 89px
+        height: fit-content
+        padding: 30px 0
+        .slide 
+            height: 89px
+            margin: 4px 0
+            position: relative
+        img 
+            object-fit: cover
+            +box(100%)
+        .slick-track
+            display: inherit
+        .play 
+            position: relative
+            transform: none
+            left: 0
+            top: 10px
+            +box(45px)
+            transform: none
+            margin: 0 auto 9px
+            &:before
+                border-width: 6.5px 0 6.5px 6px
+        p
+            text-align: center
+            font-size: 12px
+            font-weight: 300
+        .slick-arrow
+            left: 50%
+            right: auto
+            background: url('../img/common/arrow.svg') no-repeat center / contain 
+            +box(27px)
+            transform: translateX(-50%)
+            top: auto
+            margin: 0
+        .slick-next 
+            bottom: 0
+            transform: translateX(-50%) scaleY(-1)
+        .slick-prev 
+            top: 0
+    .slider-for
+        +box(100%)
+        margin-left: 30px
+        max-width: 585px
+        max-height: 390px
+        img 
+            object-fit: cover
+        .slide 
+            max-width: 100%
+            max-height: 100%
