@@ -9,6 +9,8 @@
 - http://m99935yr.beget.tech/pellets/calc-cost-heating.html
 - http://m99935yr.beget.tech/pellets/objects.html
 - http://m99935yr.beget.tech/pellets/objects-more.html
+- http://m99935yr.beget.tech/pellets/articles.html
+- http://m99935yr.beget.tech/pellets/article.html
 
 # Стартовый шаблон
 Используется связка `Gulp` + `Pug` + `SASS` + `BrowserSync` + `Linters`

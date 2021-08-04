@@ -1,0 +1,151 @@
+extends layout/main
+
+block variables
+	-var title = 'Карточка товара'
+	-var page = 'article-page'
+
+block link
+
+block content
+	main
+		.container
+			nav.breadcrumbs
+				ul.d-flex
+					+breadcrumbs-item('Главная', '#')
+					+breadcrumbs-item('Статьи', '#')
+					+breadcrumbs-item('Химическая чистка дымохода')
+		section.article
+			.container
+				.flex-wrap.justify-content-between 
+					.col.mb-30
+						h1.fs-40.mb-30 Химическая чистка дымохода
+						p.fs-14.mb-30 Химические продукты, предназначенные для обработки отложений креозота, доступны в многочисленных формах, включая химически пропитанные опилочные/восковые брикеты (полена), порошки, предназначенные для бросания на горящий огонь, и спреи для нанесения на дрова перед возгоранием.
+						.flex-wrap.mb-30 
+							.w-md-50.pr-md-15.mb-30.w-100
+								img.w-100(src='img/common/object.jpg' alt='image')
+							.w-md-50.pl-md-15.mb-30.w-100
+								img.w-100(src='img/common/object.jpg' alt='image')
+						p.fs-20.mb-9 Преимущество применения химических методов очистки
+						ul.list-characteristics.mb-20.pt-20.fs-14
+							each val in ['Уменьшает количество отложений на стенках котла','Экономит топливо','Продляет операционный срок работы котла между чистками','Улучшает работоспособность котла','Уменьшает сроки и стоимость очистки отопительного агрегата']
+								li.mb-9=val
+						p.fs-14.mb-20 Поскольку дрова, сжигаемые в камине или дровяной печи, редко подвергаются полному сгоранию, дым, содержащий испаренные остатки древесины, поднимается вместе с теплом, а затем конденсируется и собирается на внутренних стенках дымохода или дымового канала. 
+						p.fs-14.mb-20 Эти остатки, известные как креозот, являются легковоспламеняющимися и могут приводить к пожарам. Отложения в дымоходе или соединительных трубах также могут препятствовать прохождению дыма. Поэтому желательно, чтобы отложения креозота были минимальными.
+						p.fs-14.mb-30 Кроме того, толщина отложений напрямую влияет на эффективность работы отопительного оборудования и расход топлива. Следующая таблица показывает влияние отложений на теплопередачу поверхностей
+						.scroll-x
+							table.table-info 
+								tr 
+									td Толщина отложений
+									td(align="center") 1мм
+									td(align="center") 2мм
+									td(align="center") 3мм
+								tr 
+									td Снижение коэффициента теплопередачи
+									td(align="center") 10%
+									td(align="center") 25%
+									td(align="center") 45%
+								tr 
+									td Увеличение потребления топлива
+									td(align="center") 2,5%
+									td(align="center") 4,5%
+									td(align="center") 8,5%
+						p.fs-20.mb-30.lh-28 Использование химических методов очистки позволяет достичь следующих результатов
+						ol.mb-30
+							each val in ['Толщины отложений с 2.5 мм до 0.5 мм','Количества углеродной составляющей в отложениях с 19% до 6.8%','Периода между чистками с 330 часов до 700','Отложения могут быть легкими и порошкообразными, толстыми и липкими, или даже твердыми и стекловидными, как гладкая черная смола, в зависимости от условий горения и дымохода. Первый тип отложений легко вычищается из дымохода, в то время как другие типы могут прочно прилипать к поверхности трубы. Эти отложения трудно удалить со стен дымохода даже с помощью острых скребков.']
+								li=val
+						p.fs-14.mb-20 С другой стороны,  
+							a.underline(href="#") химические чистящие  
+							| средства для дымоходов могут или не могут быть эффективными в каждой конкретной ситуации. Дымовые системы, которые имеют тенденцию вырабатывать избыток креозота, обычно относительно холодны по сравнению с более эффективными системами из-за таких факторов, как плохое сгорание или неоптимальная конструкция дымохода. В системе может не хватить тепла для химических реакций, необходимых для ослабления креозота с поверхностей дымохода. Поэтому не стоит возлагать все надежды только на химические добавки.
+						.flex-wrap 
+							a.social-b(href='#') facebook
+							a.social-b(href='#') twitter
+							a.social-b(href='#') =
+							a.social-b(href='#') google
+					.col.mb-30.d-md-block.d-none
+						h2.mb-20 Похожие статьи
+						a.mb-30.pt-20(href='#')
+							img.mb-20(src='img/common/object.jpg' alt='image')
+							span.fs-18.fw-medium Все о пеллетных котлах
+						a.mb-30.pb-20(href='#')
+							img.mb-20(src='img/common/object.jpg' alt='image')
+							span.fs-18.fw-medium Все о пеллетных котлах
+						.pt-20
+							.card-reverse.big.w-100.h-480
+								img(src='img/common/img10.jpg' alt='image')
+								.c-white
+									p.fs-30.fw-medium.mb-20
+										span.c-orange.d-block Хотите узнать 
+										| стоимость <br> отопления?
+									p.fs-13 Хотите узнать стоимость отопления? Воспользуйтесь нашим калькулятором
+								a.btn.bg-orange.fw-medium(href='#') Подробнее
+		section.recommended-products
+			.container
+				h2 Вас может заинтересовать
+				.flex-wrap.pb-20.mb-30
+					-var n = 4
+					-var i = 2
+					while (n--)
+						.card
+							if (i==4)
+								.stock-new
+									.stock -20%
+									.new NEW
+							if (i==2)
+								.status-product Ожидается
+							a(href='#')
+								.card-top
+									img(src='img/common/product2.jpg' alt='product')
+									.sticky-right
+										button.btn-heart(type='button')
+											+icon('heart2')
+										button.btn-weigher(type='button')
+											+icon('weigher')
+								.flex-center-between.ff-opensans.mb-16.flex-wrap
+									.align-items-center
+										.rate-area.checked
+											input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+											label(for=`5-star${i}` title='Amazing')
+											input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+											label(for=`4-star${i}` title='Good')
+											input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+											label(for=`3-star${i}` title='Average')
+											input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+											label(for=`2-star${i}` title='Not Good')
+											input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+											label(for=`1-star${i}` title='Bad')
+										.i-comments.align-items-center
+											+icon('comments')
+											p.text-small 21
+									p.text-small.c-gray Код: 79059000-1
+								p.card-title Котел твердопаливний <br> KRONAS EKO
+							ul.card-info.ff-opensans.text-small
+								li.d-flex
+									p Производитель:
+									p Кronas
+								li.d-flex
+									p Мощность:
+									p от 12 кВт
+							.flex-center-between
+								p.price от 12 800 грн
+								button.btn-cart.small(type='button')
+									+icon('cart')
+						-i++
+		section.subscription
+			.container 
+				.flex-wrap.justify-content-between.c-white
+					.subscription-left
+						h2.fs-30.fw-medium.mb-16.text-up Подпишись на рассылку
+						p.fs-18 Получайте последние новости о акционных предложениях на e-mail 
+					.subscription-right
+						form.form-subscription
+							input.bg-white(type='email' placeholder='E-mail *' required)
+							button.btn.bg-orange.c-white(type='submit') Подписатся
+						p.fs-13.c-pink *Оформляя подписку вы даете согласие на обработку персональных данных
+
+
+block sliderScripts
+	script(src="js/jquery.maskedinput.min.js")
+	script(src="js/mask.js")
+
+
+	
