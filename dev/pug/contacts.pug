@@ -1,0 +1,105 @@
+extends layout/main
+
+block variables
+	-var title = 'Контактная информация'
+	-var page = 'contacts-page'
+
+block link
+
+block content
+	main
+		.container
+			nav.breadcrumbs
+				ul.d-flex
+					+breadcrumbs-item('Главная', '#')
+					+breadcrumbs-item('Контакты')
+		section.contacts
+			.container
+				h1.fs-40.mb-20 Контактная информация
+				.flex-wrap.justify-content-between
+					.col.pt-20
+						.flex-wrap.justify-content-between.contacts-row
+							div
+								.contacts-item
+									p.fw-medium Адрес офиса 
+									p Киев, ул. Большая Кольцевая, 4, 
+									p Офис 333 (ТРЦ "Променада Парк", "Ашан") 
+								.contacts-item
+									p.fw-medium Номер телефона 
+									p +38 (044) 384-25-65
+									p +38 (067) 461-77-49‬
+							div
+								.contacts-item
+									p.fw-medium График работы
+									p Офис: пн-пт 09:00-18:00
+									p Консультация: пн-сб 09:00-19:00
+								.contacts-item
+									p.fw-medium E-mail 
+									p info@pelletshome.com.ua
+						h2.mb-30.pt-20 Вы нас легко сможете найти 
+						#map map
+					.col.pt-20
+						.banner.c-white
+							img.banner-img.d-sm-block.d-none(src='img/common/banner-cons.jpg')
+							img.banner-img.d-sm-none(src='img/common/banner-cons-mob.jpg')
+							p.fs-36.fw-medium.mb-20
+								span.c-orange.d-block Консультация
+								span специалиста
+							p.fs-15.d-sm-block.d-none Если у вас возникают вопросы с покупкой товара <br class="d-sm-block d-none">или технические вопросы, наши специалисты и менеджеры <br class="d-sm-block d-none">всегда рады вам ответить и помочь с выбором!
+							p.fs-10.d-sm-none Успей поставить котел, <br> пока не отключили <br> отопление! 
+						h2.mb-30.pt-20 
+							span.d-sm-block.d-none Вы нас легко сможете найти 
+							span.d-sm-none Напишите нам
+						form.flex-wrap 
+							.w-sm-50.pr-sm-8.w-100
+								input.input2.mb-16(type='text' placeholder='Имя' required)
+							.w-sm-50.pl-sm-8.w-100
+								input.input2.mb-16(type='text' placeholder='Email' required)
+							.w-100
+								textarea.textarea2(rows='6' cols='6' placeholder='Ваше сообщение')
+							button.btn.big.max-285(type='submit') Отправить сообщение
+
+			
+		section.subscription
+			.container 
+				.flex-wrap.justify-content-between.c-white
+					.subscription-left
+						h2.fs-30.fw-medium.mb-16.text-up Подпишись на рассылку
+						p.fs-18 Получайте последние новости о акционных предложениях на e-mail 
+					.subscription-right
+						form.form-subscription
+							input.bg-white(type='email' placeholder='E-mail *' required)
+							button.btn.bg-orange.c-white(type='submit') Подписатся
+						p.fs-13.c-pink *Оформляя подписку вы даете согласие на обработку персональных данных
+
+
+	.popup(data-item='calculation')
+		.popup-container.stopPropagation 
+			button.btn-close.ml-auto(type='button')
+				+icon('close2')
+			h2.text-up.text-center Рассчет мощности
+			.flex-wrap.flex-md-row.flex-column-reverse
+				.popup-calculation_left
+					ul.list-calculation
+						li.flex-center-between 
+							p.fw-medium Высота, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Ширина, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Длина, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Степень утепления
+							.select.select-i.max-241
+								.select-item(data-toggle) Неутепленное, 100 Вт/м2
+								ul.select-drop 
+									li Неутепленное, 100 Вт/м2
+					.result.flex-center-between 
+						p.fs-18.fw-medium.c-white Необходимая <br> мощность, кВт
+						input.input.max-165(type='text' value='5')
+
+						
+				.popup-calculation_right
+					img.carcass(src='img/common/carcass.png' alt='image carcass')

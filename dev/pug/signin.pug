@@ -1,0 +1,96 @@
+extends layout/main
+
+block variables
+	-var title = 'Вход в личный кабинет'
+	-var page = 'signin-page'
+
+block link
+
+block content
+	main
+		.container
+			nav.breadcrumbs
+				ul.d-flex
+					+breadcrumbs-item('Главная', '#')
+					+breadcrumbs-item('Вход в личный кабинет')
+		section.signin
+			.container
+				h1.fs-40.mb-20.d-md-block.d-none Вход в личный кабинет
+				.flex-wrap.signin-row
+					.w-lg-50.w-100.br-lg-1.mb-30
+						form.max-371.mx-auto
+							h2.fs-24.fw-medium.text-up.mb-20 Вход в личный кабинет
+							p.pt-20.flex-center-center.mb-30 
+								span.mr-15.fs-18 Вход с помощью
+								a(href='#')
+									img(src='img/common/google_icon.svg' alt='google')
+							input.input2(type='text' placeholder='Логин' required)
+							input.input2(type='text' placeholder='Пароль' required)
+							a.text-center.fs-18.c-gray.mb-30(href='#') Забыли пароль?
+							button.btn.big.max-285.mx-auto(type='submit') Войти
+					.w-lg-50.w-100
+						form.max-371.mx-auto
+							h2.fs-24.fw-medium.text-up.mb-20 Создать  Учетную запись
+							p.pt-20.flex-center-center.mb-30 
+								span.mr-15.fs-18 Регистрация с помощью
+								a.mr-15(href='#')
+									img(src='img/common/google_icon.svg' alt='google')
+								a(href='#')
+									img(src='img/common/facebook.png' alt='facebook')
+							input.input2(type='mail' placeholder='E-mail' required)
+							input.input2.phone-mask2(type='text' placeholder='+38(___)___-__-__' required)
+							input.input2(type='text' placeholder='Пароль' required)
+							input.input2(type='text' placeholder='Повториь пароль' required)
+							label.justify-content-center.mb-30 
+								input.checkbox(type='checkbox')
+								span.check.mr-15
+								span.c-gray.lh-21 Даю согласие на обработку <br>персональный данных
+							button.btn.big.max-285.mx-auto(type='submit') Зарегистрироваться
+
+			
+		section.subscription
+			.container 
+				.flex-wrap.justify-content-between.c-white
+					.subscription-left
+						h2.fs-30.fw-medium.mb-16.text-up Подпишись на рассылку
+						p.fs-18 Получайте последние новости о акционных предложениях на e-mail 
+					.subscription-right
+						form.form-subscription
+							input.bg-white(type='email' placeholder='E-mail *' required)
+							button.btn.bg-orange.c-white(type='submit') Подписатся
+						p.fs-13.c-pink *Оформляя подписку вы даете согласие на обработку персональных данных
+
+
+	.popup(data-item='calculation')
+		.popup-container.stopPropagation 
+			button.btn-close.ml-auto(type='button')
+				+icon('close2')
+			h2.text-up.text-center Рассчет мощности
+			.flex-wrap.flex-md-row.flex-column-reverse
+				.popup-calculation_left
+					ul.list-calculation
+						li.flex-center-between 
+							p.fw-medium Высота, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Ширина, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Длина, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Степень утепления
+							.select.select-i.max-241
+								.select-item(data-toggle) Неутепленное, 100 Вт/м2
+								ul.select-drop 
+									li Неутепленное, 100 Вт/м2
+					.result.flex-center-between 
+						p.fs-18.fw-medium.c-white Необходимая <br> мощность, кВт
+						input.input.max-165(type='text' value='5')
+
+						
+				.popup-calculation_right
+					img.carcass(src='img/common/carcass.png' alt='image carcass')
+block sliderScripts
+	script(src="js/jquery.maskedinput.min.js")
+	script(src="js/mask.js")

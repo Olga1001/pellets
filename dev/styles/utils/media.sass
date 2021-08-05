@@ -20,6 +20,12 @@
         text-align: right
     .catalog-drop .catalog-item:hover p
         text-decoration: underline
+    .contacts 
+        .col
+            width: calc(100% - 585px)
+            max-width: 785px
+            &:last-child 
+                width: 585px
 @media only screen and (min-width : 992px)
     .cart-popup:hover
         opacity: 1
@@ -51,6 +57,12 @@
             width: calc(100% - 345px)!important
             &:last-child
                 width: 345px!important
+    .contacts 
+        padding-bottom: 114px
+        .col:first-child
+            padding-right: 20px
+    .br-lg-1 
+        border-right: 1px solid #DDDDDD
 @media only screen and (min-width : 768px)
     .d-md-none
         display: none
@@ -101,6 +113,10 @@
         width: 60%
     .w-sm-40
         width: 40%
+    .pr-sm-8
+        padding-right: 8px
+    .pl-sm-8
+        padding-left: 8px
     .pr-sm-11
         padding-right: 11px
     .pl-sm-11
@@ -370,6 +386,12 @@
     .objects-more .slider-for
         max-width: 600px
         max-height: 600px
+    
+    .contacts 
+        .col
+            width: calc(100% - 500px)
+            &:last-child 
+                width: 500px
 @media only screen and (max-width : 991px)
     .footer-menu 
         display: none
@@ -512,6 +534,16 @@
         text-align: left
     .calcCostHeating-page .scroll-x
         margin-right: -16px
+    .contacts .col:last-child, .contacts .col:first-child
+        width: 100%
+    .contacts
+        padding-bottom: 52px
+    #map
+        margin: 0 -16px 10px
+        width: calc(100% + 32px)
+        height: 425px 
+    .signin-row
+        padding: 40px 0
 @media only screen and (max-width : 767px)
     .main-f_block
         height: 378px
@@ -759,7 +791,9 @@
         margin-top: 18px
     .counter-input
         max-width: 100%
-
+    .contacts-item
+        margin-bottom: 30px
+        min-height: auto
 @media only screen and (max-width : 575px)
     .icon-user
         margin-bottom: 4px
@@ -1194,7 +1228,25 @@
         .btn 
             margin-top: 20px!important
             padding: 0 22px
-
+    .contacts 
+        .banner
+            padding: 27px 28px
+            margin-bottom: 20px
+            .fs-36
+                font-size: 22px 
+                line-height: 24px
+                margin-bottom: 45px
+            .fs-15 
+                font-size: 10px
+                line-height: 13px
+        .btn 
+            margin: 8px auto
+        .fs-40
+            text-transform: uppercase
+        h2
+            font-size: 20px 
+            line-height: 27px
+    
 @media only screen and (max-width : 360px)
     .navbotom li
         padding: 0

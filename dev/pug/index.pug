@@ -1,8 +1,8 @@
 extends layout/main
 
 block variables
-	-var title = 'Объекты'
-	-var page = 'objects-page'
+	-var title = 'Моя учетная запись'
+	-var page = 'account-page'
 
 block link
 
@@ -12,26 +12,27 @@ block content
 			nav.breadcrumbs
 				ul.d-flex
 					+breadcrumbs-item('Главная', '#')
-					+breadcrumbs-item('Твердотопливные котлы ','#')
-					+breadcrumbs-item('Промышелнные твердотопливные котлы','#')
-					+breadcrumbs-item('ALTEP TRIO UNI PLUS (КТ-3ЕN)')
-		section.objects
+					+breadcrumbs-item('Моя учетная запись')
+		section.account
 			.container
-				h1.fs-40.mb-20 Объекты
-				.flex-wrap
-					-var n = 9
-					while (n--)
-						.object
-							a.object_img(href='#')
-								img(src='img/common/object.jpg' alt='image')
-							.align-items-center.mb-16
-								p 22 апреля 2021
-								p.mx-20 |
-								p Киев
-							a.fs-18.fw-medium(href='#') Установка котлов на твердом топливе в каскаде ALTEP TRIO UNI PLUS 400 кВт - 2 шт
-				.w-fit-content
-					+pagination(adjacents, 6, 6, 1, base, arrow)
-				p В настоящее время на рынке Украины существует широкий ассортимент моделей твердотопливных котлов различных типов и на любой диапазон по цене. В нашем интернет магазине представлены современные экономичные котлы на твердое топливо, которые удобны для использования, эффективные, простые и безопасные. Кроме того, благодаря использованию современных технологий они позволяют получить большую экономию топлива.
+				h1.fs-40.mb-30 Моя учетная запись
+				.flex-wrap.account-row
+					ul
+						each val in ['Моя личная инфмация',]
+							li=val
+
+					form.max-371.mx-auto
+						h2.fs-24.fw-medium.text-up.mb-20 Ваша учетная запись
+						input.input2(type='mail' placeholder='E-mail' required)
+						input.input2.phone-mask2(type='text' placeholder='+38(___)___-__-__' required)
+						input.input2(type='text' placeholder='Повториь пароль' required)
+						button.btn.big.max-285.mx-auto(type='submit') Сохранить изменения
+						label.justify-content-center.mb-30 
+							input.checkbox(type='checkbox')
+							span.check.mr-15
+							span.c-gray.lh-21 Хочу полчучать уведомления о скидках
+
+			
 		section.subscription
 			.container 
 				.flex-wrap.justify-content-between.c-white
@@ -75,3 +76,6 @@ block content
 						
 				.popup-calculation_right
 					img.carcass(src='img/common/carcass.png' alt='image carcass')
+block sliderScripts
+	script(src="js/jquery.maskedinput.min.js")
+	script(src="js/mask.js")

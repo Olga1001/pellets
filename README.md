@@ -11,6 +11,8 @@
 - http://m99935yr.beget.tech/pellets/objects-more.html
 - http://m99935yr.beget.tech/pellets/articles.html
 - http://m99935yr.beget.tech/pellets/article.html
+- http://m99935yr.beget.tech/pellets/contacts.html
+- http://m99935yr.beget.tech/pellets/signin.html
 
 # Стартовый шаблон
 Используется связка `Gulp` + `Pug` + `SASS` + `BrowserSync` + `Linters`
