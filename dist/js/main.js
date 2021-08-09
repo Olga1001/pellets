@@ -251,16 +251,25 @@ $(document).ready(function () {
     $('.menu-link').on('click', function () {
       $(this).siblings('.menu-dropdown').slideToggle(300);
     });
-  } // tabs
-  // for (let i = 0; i < $(".tabs li").length; i++) {
+  }
 
+  function tabActive(item, drop, scrollTo) {
+    $(item).on('click', function () {
+      var index = $(this).index();
+      $(this).addClass('active').siblings().removeClass('active');
+      $(drop).eq(index).addClass('active').siblings().removeClass('active');
 
-  $(".tabs li").on('click', function () {
-    var index = $(this).index();
-    $(this).addClass('active').siblings().removeClass('active');
-    $(".information-item").eq(index).addClass('active').siblings().removeClass('active');
-    $(".information .tabs li").eq(index).addClass('active').siblings().removeClass('active');
-  }); // }
+      if (scrollTo && window.matchMedia("(max-width: 660px)").matches) {
+        $('body,html').animate({
+          scrollTop: $(scrollTo).offset().top + 'px'
+        }, 500);
+      }
+    });
+  }
+
+  tabActive(".tabs li", ".information-item");
+  tabActive(".tabs li", ".information .tabs li");
+  tabActive(".account-tabs li", ".account-item", ".account-right"); //account tabs
 
   $(".product-about_right .tabs li").on('click', function () {
     var _this = $(this);

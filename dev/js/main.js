@@ -278,20 +278,20 @@ $(document).ready(function () {
     });
   }
 
-  // tabs
-  // for (let i = 0; i < $(".tabs li").length; i++) {
-
-    $(".tabs li").on('click', function() {
-      let index = $(this).index();
-      $(this).addClass('active').siblings().removeClass('active');
-
-      $(".information-item").eq(index).addClass('active').siblings().removeClass('active');
-      $(".information .tabs li").eq(index).addClass('active').siblings().removeClass('active');
-    
+  function tabActive(item,drop,scrollTo) {
+    $(item).on('click', function() {
+        let index = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+        $(drop).eq(index).addClass('active').siblings().removeClass('active');
+        if(scrollTo && window.matchMedia("(max-width: 660px)").matches) {
+          $('body,html').animate({scrollTop: $(scrollTo).offset().top + 'px'}, 500);
+        }
     });
-    
-  // }
-
+  }
+  tabActive(".tabs li",".information-item");
+  tabActive(".tabs li",".information .tabs li");
+  tabActive(".account-tabs li",".account-item",".account-right"); //account tabs
+  
   $(".product-about_right .tabs li").on('click', function() { 
     let _this = $(this);
     if (_this.text() === 'Оплата/доставка') {
@@ -353,6 +353,7 @@ $(document).ready(function () {
   if (window.matchMedia("(max-width: 991px)").matches) {
     $('.cart-row .col:first-child').before($('.total-bottom'))
   }
+
 });
 
 function showHide(item,showText) {

@@ -1,0 +1,136 @@
+extends layout/main
+
+block variables
+	-var title = 'Моя учетная запись'
+	-var page = 'account-page'
+
+block link
+
+block content
+	main
+		.container
+			nav.breadcrumbs
+				ul.d-flex
+					+breadcrumbs-item('Главная', '#')
+					+breadcrumbs-item('Моя учетная запись')
+		section.account
+			.container
+				h1.fs-40.mb-30 Моя учетная запись
+				.flex-wrap.account-row
+					.account-left.pt-20
+						ul.account-tabs.mb-30
+							each val, index in ['Моя личная инфмация','История заказов','Мои адреса','Мои закладки','Измениь пароль']
+								li(class=index==0? 'active':'')=val
+						a.underline.text-center.c-gray-light(href='#') Выйти с личного кабинета
+					.account-right.pt-20
+						.account-item.active
+							.flex-wrap
+								form.max-371
+									h2.fs-24.fw-medium.text-up.mb-30 Ваша учетная запись
+									.d-xl-none
+										a.align-items-center.mb-30(href='#')
+											span.mr-15 Связанные аккаунты
+											img(src='img/common/google_icon.svg' alt='google')
+									input.input2(type='text' placeholder='Имя' value='Дима' required)
+									input.input2(type='text' placeholder='Фамилия' value='Кравчук' required)
+									input.input2.phone-mask(type='text' placeholder='+380 (__) ___-__-__' value='+380 (97) 234-23-23' required)
+									input.input2.mb-30(type='password' placeholder='Повториь пароль' required)
+									button.btn.big.max-285.mx-auto.mb-30(type='submit') Сохранить изменения
+									p.fs-20.fw-medium.text-up.mb-30.pt-20 Подписка на новости
+									label.align-items-center
+										input.checkbox(type='checkbox')
+										span.check.mr-15
+										span Хочу полчучать уведомления о скидках
+								.d-xl-block.d-none
+									a.align-items-center.linked-accounts(href='#')
+										span.mr-15 Связанные аккаунты
+										img(src='img/common/google_icon.svg' alt='google')
+						.account-item
+						.account-item
+							.flex-xl-row.flex-column-reverse
+								form.max-371
+									h2.fs-24.fw-medium.text-up.mb-30 Добавить новый адрес
+									input.input2(type='text' placeholder='Имя' required)
+									input.input2(type='text' placeholder='Фамилия' required)
+									input.input2(type='text' placeholder='Город' required)
+									input.input2(type='text' placeholder='Область' required)
+									input.input2.mb-30(type='text' placeholder='Адрес' required)
+									p.fs-24.mb-30 Основной адрес
+									.d-flex.mb-30
+										label.align-items-center.mr-15
+											input.checkbox(type='radio' name='radio' checked)
+											span.check.mr-15
+											span.mr-15 Да
+										label.align-items-center
+											input.checkbox(type='radio' name='radio')
+											span.check.mr-15
+											span Нет
+									button.btn.big.max-285.mx-auto.mb-30(type='submit') Добавиь адрес
+								.w-100.max-285
+									h2.fs-24.fw-medium.text-up.mb-30 Ваши адреса
+									ul.your-addresses 
+										li
+											p.mb-20 Ксения Пупкина <br> ул. Вацлава Гавела 4 <br> Київ, Київська обл
+											.flex-center-between 
+												a.underline.c-red.mr-15(href='#') редактировать
+												button(type='button') 
+													+icon('close2','c-gray-400')
+													span.c-gray-400 удалить  
+										li
+											p.mb-20 Ксения Пупкина <br> ул. Вацлава Гавела 4 <br> Київ, Київська обл
+											.flex-center-between 
+												a.underline.c-red.mr-15(href='#') редактировать
+												button(type='button') 
+													+icon('close2','c-gray-400')
+													span.c-gray-400 удалить 
+						.account-item
+						.account-item
+
+
+			
+		section.subscription
+			.container 
+				.flex-wrap.justify-content-between.c-white
+					.subscription-left
+						h2.fs-30.fw-medium.mb-16.text-up Подпишись на рассылку
+						p.fs-18 Получайте последние новости о акционных предложениях на e-mail 
+					.subscription-right
+						form.form-subscription
+							input.bg-white(type='email' placeholder='E-mail *' required)
+							button.btn.bg-orange.c-white(type='submit') Подписатся
+						p.fs-13.c-pink *Оформляя подписку вы даете согласие на обработку персональных данных
+
+
+	.popup(data-item='calculation')
+		.popup-container.stopPropagation 
+			button.btn-close.ml-auto(type='button')
+				+icon('close2')
+			h2.text-up.text-center Рассчет мощности
+			.flex-wrap.flex-md-row.flex-column-reverse
+				.popup-calculation_left
+					ul.list-calculation
+						li.flex-center-between 
+							p.fw-medium Высота, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Ширина, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Длина, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Степень утепления
+							.select.select-i.max-241
+								.select-item(data-toggle) Неутепленное, 100 Вт/м2
+								ul.select-drop 
+									li Неутепленное, 100 Вт/м2
+					.result.flex-center-between 
+						p.fs-18.fw-medium.c-white Необходимая <br> мощность, кВт
+						input.input.max-165(type='text' value='5')
+
+						
+				.popup-calculation_right
+					img.carcass(src='img/common/carcass.png' alt='image carcass')
+block sliderScripts
+	script(src="js/jquery.maskedinput.min.js")
+	script(src="js/mask.js")
