@@ -1,0 +1,70 @@
+extends layout/main
+
+block variables
+	-var title = 'Оплата и доставка'
+	-var page = 'payment-delivery-page'
+
+block link
+
+block content
+	main
+		section.error
+			.container
+				.flex-wrap.justify-content-between
+					.col
+						img.error-img(src='img/common/error.svg' alt='404')
+						.flex-center-between.flex-wrap 
+							p.fs-22.ff-opensans Запрашиваемая <br> страница не найдена! 
+							a.btn(href='#') ВЕРНУТСЯ НА ГРАВНУЮ
+					.col.flex-wrap 
+						each val, index in ['Котлы на дровах и угле традиционного горения','Котлы длительного горения','Пиролизные котлы (газогенераторные)','Пеллетные котлы с автоматической подачей топлива','Твердотопливные теплогенераторы','Котлы-плиты с варочной поверхностью','Котлы на щепе']
+							a.category-i(href='#')
+								.category-i_border
+									img(src=`img/common/category${index}.png` alt='catefory image')
+								span.fs-12.d-block=val	
+		section.subscription
+			.container 
+				.flex-wrap.justify-content-between.c-white
+					.subscription-left
+						h2.fs-30.fw-medium.mb-16.text-up Подпишись на рассылку
+						p.fs-18 Получайте последние новости о акционных предложениях на e-mail 
+					.subscription-right
+						form.form-subscription
+							input.bg-white(type='email' placeholder='E-mail *' required)
+							button.btn.bg-orange.c-white(type='submit') Подписатся
+						p.fs-13.c-pink *Оформляя подписку вы даете согласие на обработку персональных данных
+
+
+	.popup(data-item='calculation')
+		.popup-container.stopPropagation 
+			button.btn-close.ml-auto(type='button')
+				+icon('close2')
+			h2.text-up.text-center Рассчет мощности
+			.flex-wrap.flex-md-row.flex-column-reverse
+				.popup-calculation_left
+					ul.list-calculation
+						li.flex-center-between 
+							p.fw-medium Высота, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Ширина, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Длина, м
+							input.input.max-241(type='number' value='5')
+						li.flex-center-between 
+							p.fw-medium Степень утепления
+							.select.select-i.max-241
+								.select-item(data-toggle) Неутепленное, 100 Вт/м2
+								ul.select-drop 
+									li Неутепленное, 100 Вт/м2
+					.result.flex-center-between 
+						p.fs-18.fw-medium.c-white Необходимая <br> мощность, кВт
+						input.input.max-165(type='text' value='5')
+
+						
+				.popup-calculation_right
+					img.carcass(src='img/common/carcass.png' alt='image carcass')
+block sliderScripts
+	script(src="js/jquery.maskedinput.min.js")
+	script(src="js/mask.js")

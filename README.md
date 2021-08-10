@@ -15,6 +15,8 @@
 - http://m99935yr.beget.tech/pellets/signin.html
 - http://m99935yr.beget.tech/pellets/account.html
 - http://m99935yr.beget.tech/pellets/certifications.html
+- http://m99935yr.beget.tech/pellets/payment-delivery.html
+- http://m99935yr.beget.tech/pellets/error.html
 
 # Стартовый шаблон
 Используется связка `Gulp` + `Pug` + `SASS` + `BrowserSync` + `Linters`
