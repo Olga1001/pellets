@@ -2,7 +2,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Оплата и доставка</title><!--[if IE]>
+    <title>404</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
-    <div class="wrapper payment-delivery-page">
+    <div class="wrapper error-page">
       <header class="header">
         <div class="header-t">
           <div class="container relative">
@@ -499,22 +499,21 @@
       </header>
       <div class="wrapper-content">
         <main>
-          <section class="error">
+          <section class="error-section">
             <div class="container">
-              <div class="flex-wrap"> 
-                <div class="col"><img class="error-img" src="img/common/error.svg">
+              <div class="flex-wrap justify-content-between">
+                <div class="col"><img class="error-img" src="img/common/error.svg" alt="404">
                   <div class="flex-center-between flex-wrap"> 
-                    <p class="fs-22 ff-opensans">Запрашиваемая <br> страница не найдена! </p><a class="btn" href="#">ВЕРНУТСЯ НА ГРАВНУЮ</a>
+                    <p class="fs-22 ff-opensans mb-20">Запрашиваемая <br> страница не найдена!</p><a class="btn big mb-20" href="#">вернутся на главную</a>
                   </div>
                 </div>
-                <div class="col flex-wrap"> <a class="category-i" href="#">
-                    <div class="category-i_border"><img src="img/common/category0.png" alt="catefory image"></div><span class="fs-12 d-block">Котлы на дровах и угле традиционного горения</span></a><a class="category-i" href="#">
-                    <div class="category-i_border"><img src="img/common/category1.png" alt="catefory image"></div><span class="fs-12 d-block">Котлы длительного горения</span></a><a class="category-i" href="#">
-                    <div class="category-i_border"><img src="img/common/category2.png" alt="catefory image"></div><span class="fs-12 d-block">Пиролизные котлы (газогенераторные)</span></a><a class="category-i" href="#">
-                    <div class="category-i_border"><img src="img/common/category3.png" alt="catefory image"></div><span class="fs-12 d-block">Пеллетные котлы с автоматической подачей топлива</span></a><a class="category-i" href="#">
-                    <div class="category-i_border"><img src="img/common/category4.png" alt="catefory image"></div><span class="fs-12 d-block">Твердотопливные теплогенераторы</span></a><a class="category-i" href="#">
-                    <div class="category-i_border"><img src="img/common/category5.png" alt="catefory image"></div><span class="fs-12 d-block">Котлы-плиты с варочной поверхностью</span></a><a class="category-i" href="#">
-                    <div class="category-i_border"><img src="img/common/category6.png" alt="catefory image"></div><span class="fs-12 d-block">Котлы на щепе</span></a>
+                <div class="col flex-wrap justify-content-between"> <a class="category-i" href="#">
+                    <div class="category-i_border"><img src="img/common/category0.png" alt="catefory image"></div><span class="fs-12 d-block">Котлы длительного горения</span></a><a class="category-i" href="#">
+                    <div class="category-i_border"><img src="img/common/category1.png" alt="catefory image"></div><span class="fs-12 d-block">Пиролизные котлы (газогенераторные)</span></a><a class="category-i" href="#">
+                    <div class="category-i_border"><img src="img/common/category2.png" alt="catefory image"></div><span class="fs-12 d-block">Пеллетные котлы с автоматической подачей топлива</span></a><a class="category-i" href="#">
+                    <div class="category-i_border"><img src="img/common/category3.png" alt="catefory image"></div><span class="fs-12 d-block">Твердотопливные теплогенераторы</span></a><a class="category-i" href="#">
+                    <div class="category-i_border"><img src="img/common/category4.png" alt="catefory image"></div><span class="fs-12 d-block">Котлы-плиты с варочной поверхностью</span></a><a class="category-i" href="#">
+                    <div class="category-i_border"><img src="img/common/category5.png" alt="catefory image"></div><span class="fs-12 d-block">Котлы на щепе</span></a>
                 </div>
               </div>
             </div>
@@ -524,7 +523,7 @@
               <div class="flex-wrap justify-content-between c-white">
                 <div class="subscription-left">
                   <h2 class="fs-30 fw-medium mb-16 text-up">Подпишись на рассылку</h2>
-                  <p class="fs-18">Получайте последние новости о акционных предложениях на e-mail </p>
+                  <p class="fs-18">Получайте последние новости о акционных предложениях на e-mail</p>
                 </div>
                 <div class="subscription-right">
                   <form class="form-subscription">
@@ -537,48 +536,6 @@
             </div>
           </section>
         </main>
-        <div class="popup" data-item="calculation">
-          <div class="popup-container stopPropagation"> 
-            <button class="btn-close ml-auto" type="button">
-              <svg class="svg-sprite-icon icon-close2">
-                <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
-              </svg>
-            </button>
-            <h2 class="text-up text-center">Рассчет мощности</h2>
-            <div class="flex-wrap flex-md-row flex-column-reverse">
-              <div class="popup-calculation_left">
-                <ul class="list-calculation">
-                  <li class="flex-center-between"> 
-                    <p class="fw-medium">Высота, м</p>
-                    <input class="input max-241" type="number" value="5">
-                  </li>
-                  <li class="flex-center-between"> 
-                    <p class="fw-medium">Ширина, м</p>
-                    <input class="input max-241" type="number" value="5">
-                  </li>
-                  <li class="flex-center-between"> 
-                    <p class="fw-medium">Длина, м</p>
-                    <input class="input max-241" type="number" value="5">
-                  </li>
-                  <li class="flex-center-between"> 
-                    <p class="fw-medium">Степень утепления</p>
-                    <div class="select select-i max-241">
-                      <div class="select-item" data-toggle>Неутепленное, 100 Вт/м2</div>
-                      <ul class="select-drop"> 
-                        <li>Неутепленное, 100 Вт/м2</li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-                <div class="result flex-center-between"> 
-                  <p class="fs-18 fw-medium c-white">Необходимая <br> мощность, кВт</p>
-                  <input class="input max-165" type="text" value="5">
-                </div>
-              </div>
-              <div class="popup-calculation_right"><img class="carcass" src="img/common/carcass.png" alt="image carcass"></div>
-            </div>
-          </div>
-        </div>
       </div>
       <footer class="footer">
         <div class="footer-top">
@@ -645,8 +602,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/jquery.maskedinput.min.js"></script>
-    <script src="js/mask.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -336,6 +336,16 @@ $(document).ready(function () {
   if (window.matchMedia("(max-width: 991px)").matches) {
     $('.cart-row .col:first-child').before($('.total-bottom'));
   }
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 300) {
+      $(".header-c").addClass('fixed-1');
+      $(".header-b").addClass('fixed-1');
+    } else {
+      $(".header-c").removeClass('fixed-1');
+      $(".header-b").removeClass('fixed-1');
+    }
+  });
 });
 
 function showHide(item, showText) {

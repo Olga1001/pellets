@@ -1,0 +1,35 @@
+extends layout/main
+
+block variables
+	-var title = '404'
+	-var page = 'error-page'
+
+block link
+
+block content
+	main
+		section.error-section
+			.container
+				.flex-wrap.justify-content-between
+					.col
+						img.error-img(src='img/common/error.svg' alt='404')
+						.flex-center-between.flex-wrap 
+							p.fs-22.ff-opensans.mb-20 Запрашиваемая <br> страница не найдена!
+							a.btn.big.mb-20(href='#') вернутся на главную
+					.col.flex-wrap.justify-content-between 
+						each val, index in ['Котлы длительного горения','Пиролизные котлы (газогенераторные)','Пеллетные котлы с автоматической подачей топлива','Твердотопливные теплогенераторы','Котлы-плиты с варочной поверхностью','Котлы на щепе']
+							a.category-i(href='#')
+								.category-i_border
+									img(src=`img/common/category${index}.png` alt='catefory image')
+								span.fs-12.d-block=val
+		section.subscription
+			.container 
+				.flex-wrap.justify-content-between.c-white
+					.subscription-left
+						h2.fs-30.fw-medium.mb-16.text-up Подпишись на рассылку
+						p.fs-18 Получайте последние новости о акционных предложениях на e-mail
+					.subscription-right
+						form.form-subscription
+							input.bg-white(type='email' placeholder='E-mail *' required)
+							button.btn.bg-orange.c-white(type='submit') Подписатся
+						p.fs-13.c-pink *Оформляя подписку вы даете согласие на обработку персональных данных
