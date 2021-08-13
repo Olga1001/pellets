@@ -2,7 +2,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Карточка товара</title><!--[if IE]>
+    <title>Моя учетная запись</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
@@ -13,7 +13,8 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
-    <div class="wrapper article-page">
+    <div class="wrapper account-page">
+      <div class="overlay"></div>
       <header class="header">
         <div class="header-t">
           <div class="container relative">
@@ -184,7 +185,7 @@
                   <svg class="svg-sprite-icon icon-close">
                     <use xlink:href="img/sprite/symbol/sprite.svg#close"></use>
                   </svg>
-                  <p class="fs-15 fw-medium c-white text-up">Каталог товаров</p>
+                  <p class="fs-18 fw-medium c-white text-up">Каталог товаров</p>
                 </div>
                 <ul class="catalog-drop"> 
                   <li>
@@ -478,7 +479,11 @@
                   <li class="relative"><a class="menu-link" href="#">Монтаж</a>
                   </li>
                   <li class="relative">
-                    <p class="menu-link">Клиентам</p>
+                    <p class="menu-link"><span class="mr-5">Клиентам</span>
+                      <svg class="svg-sprite-icon icon-arrow-down d-lg-none">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </p>
                     <div class="menu-dropdown"> 
                       <ul>
                         <li><a href="#">Оплата и доставка</a></li>
@@ -504,322 +509,99 @@
               <ul class="d-flex">
                 <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#"><span>Главная</span>></a>
                 </li>
-                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#"><span>Статьи</span>></a>
-                </li>
-                <li class="breadcrumbs__item"><span class="breadcrumbs__text">Химическая чистка дымохода</span>
+                <li class="breadcrumbs__item"><span class="breadcrumbs__text">Моя учетная запись</span>
                 </li>
               </ul>
             </nav>
           </div>
-          <section class="article">
+          <section class="account">
             <div class="container">
-              <div class="flex-wrap justify-content-between"> 
-                <div class="col mb-30">
-                  <h1 class="fs-40 mb-30">Химическая чистка дымохода</h1>
-                  <p class="fs-14 mb-30">Химические продукты, предназначенные для обработки отложений креозота, доступны в многочисленных формах, включая химически пропитанные опилочные/восковые брикеты (полена), порошки, предназначенные для бросания на горящий огонь, и спреи для нанесения на дрова перед возгоранием.</p>
-                  <div class="flex-wrap mb-30"> 
-                    <div class="w-md-50 pr-md-15 mb-30 w-100"><img class="w-100" src="img/common/object.jpg" alt="image"></div>
-                    <div class="w-md-50 pl-md-15 mb-30 w-100"><img class="w-100" src="img/common/object.jpg" alt="image"></div>
-                  </div>
-                  <p class="fs-20 mb-9">Преимущество применения химических методов очистки</p>
-                  <ul class="list-characteristics mb-20 pt-20 fs-14">
-                    <li class="mb-9">Уменьшает количество отложений на стенках котла</li>
-                    <li class="mb-9">Экономит топливо</li>
-                    <li class="mb-9">Продляет операционный срок работы котла между чистками</li>
-                    <li class="mb-9">Улучшает работоспособность котла</li>
-                    <li class="mb-9">Уменьшает сроки и стоимость очистки отопительного агрегата</li>
-                  </ul>
-                  <p class="fs-14 mb-20">Поскольку дрова, сжигаемые в камине или дровяной печи, редко подвергаются полному сгоранию, дым, содержащий испаренные остатки древесины, поднимается вместе с теплом, а затем конденсируется и собирается на внутренних стенках дымохода или дымового канала. </p>
-                  <p class="fs-14 mb-20">Эти остатки, известные как креозот, являются легковоспламеняющимися и могут приводить к пожарам. Отложения в дымоходе или соединительных трубах также могут препятствовать прохождению дыма. Поэтому желательно, чтобы отложения креозота были минимальными.</p>
-                  <p class="fs-14 mb-30">Кроме того, толщина отложений напрямую влияет на эффективность работы отопительного оборудования и расход топлива. Следующая таблица показывает влияние отложений на теплопередачу поверхностей</p>
-                  <div class="scroll-x">
-                    <table class="table-info"> 
-                      <tr> 
-                        <td>Толщина отложений</td>
-                        <td align="center">1мм</td>
-                        <td align="center">2мм</td>
-                        <td align="center">3мм</td>
-                      </tr>
-                      <tr> 
-                        <td>Снижение коэффициента теплопередачи</td>
-                        <td align="center">10%</td>
-                        <td align="center">25%</td>
-                        <td align="center">45%</td>
-                      </tr>
-                      <tr> 
-                        <td>Увеличение потребления топлива</td>
-                        <td align="center">2,5%</td>
-                        <td align="center">4,5%</td>
-                        <td align="center">8,5%</td>
-                      </tr>
-                    </table>
-                  </div>
-                  <p class="fs-20 mb-30 lh-28">Использование химических методов очистки позволяет достичь следующих результатов</p>
-                  <ol class="mb-30">
-                    <li>Толщины отложений с 2.5 мм до 0.5 мм</li>
-                    <li>Количества углеродной составляющей в отложениях с 19% до 6.8%</li>
-                    <li>Периода между чистками с 330 часов до 700</li>
-                    <li>Отложения могут быть легкими и порошкообразными, толстыми и липкими, или даже твердыми и стекловидными, как гладкая черная смола, в зависимости от условий горения и дымохода. Первый тип отложений легко вычищается из дымохода, в то время как другие типы могут прочно прилипать к поверхности трубы. Эти отложения трудно удалить со стен дымохода даже с помощью острых скребков.</li>
-                  </ol>
-                  <p class="fs-14 mb-20">С другой стороны,  <a class="underline" href="#">химические чистящие  </a>средства для дымоходов могут или не могут быть эффективными в каждой конкретной ситуации. Дымовые системы, которые имеют тенденцию вырабатывать избыток креозота, обычно относительно холодны по сравнению с более эффективными системами из-за таких факторов, как плохое сгорание или неоптимальная конструкция дымохода. В системе может не хватить тепла для химических реакций, необходимых для ослабления креозота с поверхностей дымохода. Поэтому не стоит возлагать все надежды только на химические добавки.</p>
-                  <div class="flex-wrap"> <a class="social-b" href="#">facebook</a><a class="social-b" href="#">twitter</a><a class="social-b" href="#">=</a><a class="social-b" href="#">google</a></div>
+              <h1 class="fs-40 mb-30">Моя учетная запись</h1>
+              <div class="flex-wrap account-row">
+                <div class="account-left pt-20">
+                  <ul class="account-tabs mb-30">
+                    <li class="active">Моя личная информация</li>
+                    <li>История заказов</li>
+                    <li>Мои адреса</li>
+                    <li>Мои закладки</li>
+                  </ul><a class="underline text-center c-gray-light" href="#">Выйти с личного кабинета</a>
                 </div>
-                <div class="col mb-30 d-md-block d-none">
-                  <h2 class="mb-20">Похожие статьи</h2><a class="mb-30 pt-20 object w-100" href="#">
-                    <div class="mb-20 object_img"><img src="img/common/object.jpg" alt="image"></div><span class="fs-18 fw-medium">Все о пеллетных котлах</span></a><a class="mb-30 pb-20 object w-100" href="#">
-                    <div class="mb-20 object_img"><img src="img/common/object.jpg" alt="image"></div><span class="fs-18 fw-medium">Все о пеллетных котлах</span></a>
-                  <div class="pt-20">
-                    <div class="card-reverse big w-100 h-480"><img src="img/common/img10.jpg" alt="image">
-                      <div class="c-white">
-                        <p class="fs-30 fw-medium mb-20"><span class="c-orange d-block">Хотите узнать </span>стоимость <br> отопления?</p>
-                        <p class="fs-13">Хотите узнать стоимость отопления? Воспользуйтесь нашим калькулятором</p>
-                      </div><a class="btn bg-orange fw-medium" href="#">Подробнее</a>
+                <div class="account-right pt-20">
+                  <div class="account-item active">
+                    <div class="flex-wrap">
+                      <div>
+                        <form class="max-371 mb-30 pb-20">
+                          <h2 class="fs-24 fw-medium text-up mb-30">Ваша учетная запись</h2>
+                          <div class="d-xl-none"><a class="align-items-center mb-30" href="#"><span class="mr-15">Связанные аккаунты</span><img src="img/common/google_icon.svg" alt="google"></a></div>
+                          <input class="input2" type="text" placeholder="Имя" value="Дима" required>
+                          <input class="input2" type="text" placeholder="Фамилия" value="Кравчук" required>
+                          <input class="input2 phone-mask" type="text" placeholder="+380 (__) ___-__-__" value="+380 (97) 234-23-23" required>
+                          <input class="input2 mb-30" type="password" placeholder="Повториь пароль" required>
+                          <button class="btn big max-285 mx-auto mb-30" type="submit">Сохранить изменения</button>
+                        </form>
+                        <form class="max-371">
+                          <h2 class="fs-24 fw-medium text-up mb-30">Измениь пароль</h2>
+                          <input class="input2" type="зфыыцщкв" placeholder="Пароль" required>
+                          <input class="input2" type="зфыыцщкв" placeholder="Повториь пароль" required>
+                          <button class="btn big max-285 mx-auto mb-30" type="submit">Сохранить изменения</button>
+                          <p class="fs-20 fw-medium text-up mb-30 pt-20">Подписка на новости</p>
+                          <label class="align-items-center">
+                            <input class="checkbox" type="checkbox"><span class="check mr-15"></span><span>Хочу полчучать уведомления о скидках</span>
+                          </label>
+                        </form>
+                      </div>
+                      <div class="d-xl-block d-none"><a class="align-items-center linked-accounts" href="#"><span class="mr-15">Связанные аккаунты</span><img src="img/common/google_icon.svg" alt="google"></a></div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="recommended-products">
-            <div class="container">
-              <h2>Вас может заинтересовать</h2>
-              <div class="flex-wrap pb-20 mb-30">
-                <div class="card">
-                  <div class="status-product">Ожидается</div><a href="#">
-                    <div class="card-top"><img src="img/common/product2.jpg" alt="product">
-                      <div class="sticky-right">
-                        <button class="btn-heart" type="button">
-                          <svg class="svg-sprite-icon icon-heart2">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#heart2"></use>
-                          </svg>
-                        </button>
-                        <button class="btn-weigher" type="button">
-                          <svg class="svg-sprite-icon icon-weigher">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#weigher"></use>
-                          </svg>
-                        </button>
+                  <div class="account-item"></div>
+                  <div class="account-item">
+                    <div class="flex-xl-row flex-column-reverse">
+                      <form class="max-371">
+                        <h2 class="fs-24 fw-medium text-up mb-30">Добавить новый адрес</h2>
+                        <input class="input2" type="text" placeholder="Имя" required>
+                        <input class="input2" type="text" placeholder="Фамилия" required>
+                        <input class="input2" type="text" placeholder="Город" required>
+                        <input class="input2" type="text" placeholder="Область" required>
+                        <input class="input2 mb-30" type="text" placeholder="Адрес" required>
+                        <p class="fs-24 mb-30">Основной адрес</p>
+                        <div class="d-flex mb-30">
+                          <label class="align-items-center mr-15">
+                            <input class="checkbox" type="radio" name="radio" checked><span class="check mr-15"></span><span class="mr-15">Да</span>
+                          </label>
+                          <label class="align-items-center">
+                            <input class="checkbox" type="radio" name="radio"><span class="check mr-15"></span><span>Нет</span>
+                          </label>
+                        </div>
+                        <button class="btn big max-285 mx-auto mb-30" type="submit">Добавиь адрес</button>
+                      </form>
+                      <div class="w-100 max-285">
+                        <h2 class="fs-24 fw-medium text-up mb-30">Ваши адреса</h2>
+                        <ul class="your-addresses"> 
+                          <li>
+                            <p class="mb-20">Ксения Пупкина <br> ул. Вацлава Гавела 4 <br> Київ, Київська обл</p>
+                            <div class="flex-center-between"> <a class="c-gray-400 mr-15" href="#">редактировать</a>
+                              <button type="button"> 
+                                <svg class="svg-sprite-icon icon-close2 c-gray-400">
+                                  <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
+                                </svg><span class="c-gray-400">удалить  </span>
+                              </button>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="mb-20">Ксения Пупкина <br> ул. Вацлава Гавела 4 <br> Київ, Київська обл</p>
+                            <div class="flex-center-between"> <a class="c-gray-400 mr-15" href="#">редактировать</a>
+                              <button type="button"> 
+                                <svg class="svg-sprite-icon icon-close2 c-gray-400">
+                                  <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
+                                </svg><span class="c-gray-400">удалить </span>
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                    <div class="flex-center-between ff-opensans mb-16 flex-wrap">
-                      <div class="align-items-center">
-                        <div class="rate-area checked">
-                          <input id="5-star2" type="radio" name="rating2" value="5">
-                          <label for="5-star2" title="Amazing"></label>
-                          <input id="4-star2" type="radio" name="rating2" value="4">
-                          <label for="4-star2" title="Good"></label>
-                          <input id="3-star2" type="radio" name="rating2" value="3">
-                          <label for="3-star2" title="Average"></label>
-                          <input id="2-star2" type="radio" name="rating2" value="2">
-                          <label for="2-star2" title="Not Good"></label>
-                          <input id="1-star2" type="radio" name="rating2" value="1">
-                          <label for="1-star2" title="Bad"></label>
-                        </div>
-                        <div class="i-comments align-items-center">
-                          <svg class="svg-sprite-icon icon-comments">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#comments"></use>
-                          </svg>
-                          <p class="text-small">21</p>
-                        </div>
-                      </div>
-                      <p class="text-small c-gray">Код: 79059000-1</p>
-                    </div>
-                    <p class="card-title">Котел твердопаливний <br> KRONAS EKO</p></a>
-                  <ul class="card-info ff-opensans text-small">
-                    <li class="d-flex">
-                      <p>Производитель:</p>
-                      <p>Кronas</p>
-                    </li>
-                    <li class="d-flex">
-                      <p>Мощность:</p>
-                      <p>от 12 кВт</p>
-                    </li>
-                  </ul>
-                  <div class="flex-center-between">
-                    <p class="price">от 12 800 грн</p>
-                    <button class="btn-cart small" type="button">
-                      <svg class="svg-sprite-icon icon-cart">
-                        <use xlink:href="img/sprite/symbol/sprite.svg#cart"></use>
-                      </svg>
-                    </button>
                   </div>
-                </div>
-                <div class="card"><a href="#">
-                    <div class="card-top"><img src="img/common/product2.jpg" alt="product">
-                      <div class="sticky-right">
-                        <button class="btn-heart" type="button">
-                          <svg class="svg-sprite-icon icon-heart2">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#heart2"></use>
-                          </svg>
-                        </button>
-                        <button class="btn-weigher" type="button">
-                          <svg class="svg-sprite-icon icon-weigher">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#weigher"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="flex-center-between ff-opensans mb-16 flex-wrap">
-                      <div class="align-items-center">
-                        <div class="rate-area checked">
-                          <input id="5-star3" type="radio" name="rating3" value="5">
-                          <label for="5-star3" title="Amazing"></label>
-                          <input id="4-star3" type="radio" name="rating3" value="4">
-                          <label for="4-star3" title="Good"></label>
-                          <input id="3-star3" type="radio" name="rating3" value="3">
-                          <label for="3-star3" title="Average"></label>
-                          <input id="2-star3" type="radio" name="rating3" value="2">
-                          <label for="2-star3" title="Not Good"></label>
-                          <input id="1-star3" type="radio" name="rating3" value="1">
-                          <label for="1-star3" title="Bad"></label>
-                        </div>
-                        <div class="i-comments align-items-center">
-                          <svg class="svg-sprite-icon icon-comments">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#comments"></use>
-                          </svg>
-                          <p class="text-small">21</p>
-                        </div>
-                      </div>
-                      <p class="text-small c-gray">Код: 79059000-1</p>
-                    </div>
-                    <p class="card-title">Котел твердопаливний <br> KRONAS EKO</p></a>
-                  <ul class="card-info ff-opensans text-small">
-                    <li class="d-flex">
-                      <p>Производитель:</p>
-                      <p>Кronas</p>
-                    </li>
-                    <li class="d-flex">
-                      <p>Мощность:</p>
-                      <p>от 12 кВт</p>
-                    </li>
-                  </ul>
-                  <div class="flex-center-between">
-                    <p class="price">от 12 800 грн</p>
-                    <button class="btn-cart small" type="button">
-                      <svg class="svg-sprite-icon icon-cart">
-                        <use xlink:href="img/sprite/symbol/sprite.svg#cart"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="stock-new">
-                    <div class="stock">-20%</div>
-                    <div class="new">NEW</div>
-                  </div><a href="#">
-                    <div class="card-top"><img src="img/common/product2.jpg" alt="product">
-                      <div class="sticky-right">
-                        <button class="btn-heart" type="button">
-                          <svg class="svg-sprite-icon icon-heart2">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#heart2"></use>
-                          </svg>
-                        </button>
-                        <button class="btn-weigher" type="button">
-                          <svg class="svg-sprite-icon icon-weigher">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#weigher"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="flex-center-between ff-opensans mb-16 flex-wrap">
-                      <div class="align-items-center">
-                        <div class="rate-area checked">
-                          <input id="5-star4" type="radio" name="rating4" value="5">
-                          <label for="5-star4" title="Amazing"></label>
-                          <input id="4-star4" type="radio" name="rating4" value="4">
-                          <label for="4-star4" title="Good"></label>
-                          <input id="3-star4" type="radio" name="rating4" value="3">
-                          <label for="3-star4" title="Average"></label>
-                          <input id="2-star4" type="radio" name="rating4" value="2">
-                          <label for="2-star4" title="Not Good"></label>
-                          <input id="1-star4" type="radio" name="rating4" value="1">
-                          <label for="1-star4" title="Bad"></label>
-                        </div>
-                        <div class="i-comments align-items-center">
-                          <svg class="svg-sprite-icon icon-comments">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#comments"></use>
-                          </svg>
-                          <p class="text-small">21</p>
-                        </div>
-                      </div>
-                      <p class="text-small c-gray">Код: 79059000-1</p>
-                    </div>
-                    <p class="card-title">Котел твердопаливний <br> KRONAS EKO</p></a>
-                  <ul class="card-info ff-opensans text-small">
-                    <li class="d-flex">
-                      <p>Производитель:</p>
-                      <p>Кronas</p>
-                    </li>
-                    <li class="d-flex">
-                      <p>Мощность:</p>
-                      <p>от 12 кВт</p>
-                    </li>
-                  </ul>
-                  <div class="flex-center-between">
-                    <p class="price">от 12 800 грн</p>
-                    <button class="btn-cart small" type="button">
-                      <svg class="svg-sprite-icon icon-cart">
-                        <use xlink:href="img/sprite/symbol/sprite.svg#cart"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="card"><a href="#">
-                    <div class="card-top"><img src="img/common/product2.jpg" alt="product">
-                      <div class="sticky-right">
-                        <button class="btn-heart" type="button">
-                          <svg class="svg-sprite-icon icon-heart2">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#heart2"></use>
-                          </svg>
-                        </button>
-                        <button class="btn-weigher" type="button">
-                          <svg class="svg-sprite-icon icon-weigher">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#weigher"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="flex-center-between ff-opensans mb-16 flex-wrap">
-                      <div class="align-items-center">
-                        <div class="rate-area checked">
-                          <input id="5-star5" type="radio" name="rating5" value="5">
-                          <label for="5-star5" title="Amazing"></label>
-                          <input id="4-star5" type="radio" name="rating5" value="4">
-                          <label for="4-star5" title="Good"></label>
-                          <input id="3-star5" type="radio" name="rating5" value="3">
-                          <label for="3-star5" title="Average"></label>
-                          <input id="2-star5" type="radio" name="rating5" value="2">
-                          <label for="2-star5" title="Not Good"></label>
-                          <input id="1-star5" type="radio" name="rating5" value="1">
-                          <label for="1-star5" title="Bad"></label>
-                        </div>
-                        <div class="i-comments align-items-center">
-                          <svg class="svg-sprite-icon icon-comments">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#comments"></use>
-                          </svg>
-                          <p class="text-small">21</p>
-                        </div>
-                      </div>
-                      <p class="text-small c-gray">Код: 79059000-1</p>
-                    </div>
-                    <p class="card-title">Котел твердопаливний <br> KRONAS EKO</p></a>
-                  <ul class="card-info ff-opensans text-small">
-                    <li class="d-flex">
-                      <p>Производитель:</p>
-                      <p>Кronas</p>
-                    </li>
-                    <li class="d-flex">
-                      <p>Мощность:</p>
-                      <p>от 12 кВт</p>
-                    </li>
-                  </ul>
-                  <div class="flex-center-between">
-                    <p class="price">от 12 800 грн</p>
-                    <button class="btn-cart small" type="button">
-                      <svg class="svg-sprite-icon icon-cart">
-                        <use xlink:href="img/sprite/symbol/sprite.svg#cart"></use>
-                      </svg>
-                    </button>
-                  </div>
+                  <div class="account-item"></div>
                 </div>
               </div>
             </div>
@@ -842,6 +624,48 @@
             </div>
           </section>
         </main>
+        <div class="popup" data-item="calculation">
+          <div class="popup-container stopPropagation"> 
+            <button class="btn-close ml-auto" type="button">
+              <svg class="svg-sprite-icon icon-close2">
+                <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
+              </svg>
+            </button>
+            <h2 class="text-up text-center">Рассчет мощности</h2>
+            <div class="flex-wrap flex-md-row flex-column-reverse">
+              <div class="popup-calculation_left">
+                <ul class="list-calculation">
+                  <li class="flex-center-between"> 
+                    <p class="fw-medium">Высота, м</p>
+                    <input class="input max-241" type="number" value="5">
+                  </li>
+                  <li class="flex-center-between"> 
+                    <p class="fw-medium">Ширина, м</p>
+                    <input class="input max-241" type="number" value="5">
+                  </li>
+                  <li class="flex-center-between"> 
+                    <p class="fw-medium">Длина, м</p>
+                    <input class="input max-241" type="number" value="5">
+                  </li>
+                  <li class="flex-center-between"> 
+                    <p class="fw-medium">Степень утепления</p>
+                    <div class="select select-i max-241">
+                      <div class="select-item" data-toggle>Неутепленное, 100 Вт/м2</div>
+                      <ul class="select-drop"> 
+                        <li>Неутепленное, 100 Вт/м2</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <div class="result flex-center-between"> 
+                  <p class="fs-18 fw-medium c-white">Необходимая <br> мощность, кВт</p>
+                  <input class="input max-165" type="text" value="5">
+                </div>
+              </div>
+              <div class="popup-calculation_right"><img class="carcass" src="img/common/carcass.png" alt="image carcass"></div>
+            </div>
+          </div>
+        </div>
       </div>
       <footer class="footer">
         <div class="footer-top">
@@ -908,6 +732,8 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/mask.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

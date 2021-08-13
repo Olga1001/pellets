@@ -401,6 +401,19 @@ table
   +box(15px)
   fill: #DADADA
 
+.overlay
+  position: fixed 
+  top: 0
+  left: 0
+  +box(100%)
+  z-index: 6
+  opacity: 0
+  pointer-events: none 
+  background: rgba(0, 0, 0, 0.5)
+  &.active 
+    opacity: 1
+    pointer-events: auto 
+
 @import "modules/modules"
 
 .h-480

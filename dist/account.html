@@ -14,6 +14,7 @@
   </head>
   <body>
     <div class="wrapper account-page">
+      <div class="overlay"></div>
       <header class="header">
         <div class="header-t">
           <div class="container relative">
@@ -184,7 +185,7 @@
                   <svg class="svg-sprite-icon icon-close">
                     <use xlink:href="img/sprite/symbol/sprite.svg#close"></use>
                   </svg>
-                  <p class="fs-15 fw-medium c-white text-up">Каталог товаров</p>
+                  <p class="fs-18 fw-medium c-white text-up">Каталог товаров</p>
                 </div>
                 <ul class="catalog-drop"> 
                   <li>
@@ -478,7 +479,11 @@
                   <li class="relative"><a class="menu-link" href="#">Монтаж</a>
                   </li>
                   <li class="relative">
-                    <p class="menu-link">Клиентам</p>
+                    <p class="menu-link"><span class="mr-5">Клиентам</span>
+                      <svg class="svg-sprite-icon icon-arrow-down d-lg-none">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </p>
                     <div class="menu-dropdown"> 
                       <ul>
                         <li><a href="#">Оплата и доставка</a></li>
@@ -515,29 +520,36 @@
               <div class="flex-wrap account-row">
                 <div class="account-left pt-20">
                   <ul class="account-tabs mb-30">
-                    <li class="active">Моя личная инфмация</li>
+                    <li class="active">Моя личная информация</li>
                     <li>История заказов</li>
                     <li>Мои адреса</li>
                     <li>Мои закладки</li>
-                    <li>Измениь пароль</li>
                   </ul><a class="underline text-center c-gray-light" href="#">Выйти с личного кабинета</a>
                 </div>
                 <div class="account-right pt-20">
                   <div class="account-item active">
                     <div class="flex-wrap">
-                      <form class="max-371">
-                        <h2 class="fs-24 fw-medium text-up mb-30">Ваша учетная запись</h2>
-                        <div class="d-xl-none"><a class="align-items-center mb-30" href="#"><span class="mr-15">Связанные аккаунты</span><img src="img/common/google_icon.svg" alt="google"></a></div>
-                        <input class="input2" type="text" placeholder="Имя" value="Дима" required>
-                        <input class="input2" type="text" placeholder="Фамилия" value="Кравчук" required>
-                        <input class="input2 phone-mask" type="text" placeholder="+380 (__) ___-__-__" value="+380 (97) 234-23-23" required>
-                        <input class="input2 mb-30" type="password" placeholder="Повториь пароль" required>
-                        <button class="btn big max-285 mx-auto mb-30" type="submit">Сохранить изменения</button>
-                        <p class="fs-20 fw-medium text-up mb-30 pt-20">Подписка на новости</p>
-                        <label class="align-items-center">
-                          <input class="checkbox" type="checkbox"><span class="check mr-15"></span><span>Хочу полчучать уведомления о скидках</span>
-                        </label>
-                      </form>
+                      <div>
+                        <form class="max-371 mb-30 pb-20">
+                          <h2 class="fs-24 fw-medium text-up mb-30">Ваша учетная запись</h2>
+                          <div class="d-xl-none"><a class="align-items-center mb-30" href="#"><span class="mr-15">Связанные аккаунты</span><img src="img/common/google_icon.svg" alt="google"></a></div>
+                          <input class="input2" type="text" placeholder="Имя" value="Дима" required>
+                          <input class="input2" type="text" placeholder="Фамилия" value="Кравчук" required>
+                          <input class="input2 phone-mask" type="text" placeholder="+380 (__) ___-__-__" value="+380 (97) 234-23-23" required>
+                          <input class="input2 mb-30" type="password" placeholder="Повториь пароль" required>
+                          <button class="btn big max-285 mx-auto mb-30" type="submit">Сохранить изменения</button>
+                        </form>
+                        <form class="max-371">
+                          <h2 class="fs-24 fw-medium text-up mb-30">Измениь пароль</h2>
+                          <input class="input2" type="зфыыцщкв" placeholder="Пароль" required>
+                          <input class="input2" type="зфыыцщкв" placeholder="Повториь пароль" required>
+                          <button class="btn big max-285 mx-auto mb-30" type="submit">Сохранить изменения</button>
+                          <p class="fs-20 fw-medium text-up mb-30 pt-20">Подписка на новости</p>
+                          <label class="align-items-center">
+                            <input class="checkbox" type="checkbox"><span class="check mr-15"></span><span>Хочу полчучать уведомления о скидках</span>
+                          </label>
+                        </form>
+                      </div>
                       <div class="d-xl-block d-none"><a class="align-items-center linked-accounts" href="#"><span class="mr-15">Связанные аккаунты</span><img src="img/common/google_icon.svg" alt="google"></a></div>
                     </div>
                   </div>
@@ -567,7 +579,7 @@
                         <ul class="your-addresses"> 
                           <li>
                             <p class="mb-20">Ксения Пупкина <br> ул. Вацлава Гавела 4 <br> Київ, Київська обл</p>
-                            <div class="flex-center-between"> <a class="underline c-red mr-15" href="#">редактировать</a>
+                            <div class="flex-center-between"> <a class="c-gray-400 mr-15" href="#">редактировать</a>
                               <button type="button"> 
                                 <svg class="svg-sprite-icon icon-close2 c-gray-400">
                                   <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
@@ -577,7 +589,7 @@
                           </li>
                           <li>
                             <p class="mb-20">Ксения Пупкина <br> ул. Вацлава Гавела 4 <br> Київ, Київська обл</p>
-                            <div class="flex-center-between"> <a class="underline c-red mr-15" href="#">редактировать</a>
+                            <div class="flex-center-between"> <a class="c-gray-400 mr-15" href="#">редактировать</a>
                               <button type="button"> 
                                 <svg class="svg-sprite-icon icon-close2 c-gray-400">
                                   <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
@@ -589,7 +601,6 @@
                       </div>
                     </div>
                   </div>
-                  <div class="account-item"></div>
                   <div class="account-item"></div>
                 </div>
               </div>
