@@ -123,7 +123,8 @@
     position: relative
     width: 50.5%
     z-index: 4
-    input 
+    input
+        font-family: 'TTFirsNeue', sans-serif
         font-size: 14px
         line-height: 18px
         background: #E8E8E8
@@ -133,6 +134,19 @@
             background: #F4F4F4
         &:valid ~ .search-drop 
             display: block
+        &::-webkit-input-placeholder
+            font-family: 'TTFirsNeue', sans-serif
+            font-size: 14px
+        &:-moz-placeholder
+            font-family: 'TTFirsNeue', sans-serif
+            font-size: 14px
+        &:-moz-placeholder
+            font-family: 'TTFirsNeue', sans-serif
+            font-size: 14px
+        &:-moz-placeholder
+            font-family: 'TTFirsNeue', sans-serif
+            font-size: 14px
+
     &-drop
         position: absolute
         top: calc(100% - 4px)
@@ -315,7 +329,6 @@
         transition: all 0.3s ease
         color: $white
         cursor: pointer
-
         &:hover
             color: $orange
     li
@@ -408,3 +421,5 @@
 .btn-delete 
     display: flex
     margin-left: 30px
+    &:hover svg
+        fill: $red

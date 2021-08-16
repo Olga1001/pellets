@@ -1,3 +1,9 @@
+.header .slick-prev:hover, .slick-prev:focus
+    background: url('../img/common/arrow-left.svg') no-repeat center / contain
+
+.header .slick-next:hover, .slick-next:focus
+    background: url('../img/common/arrow-right.svg') no-repeat center / contain
+
 .slider-one
     width: fit-content 
     margin: 0  
@@ -8,7 +14,8 @@
     margin: 0 32px
     +box(12px)
     stroke: $black
-    background: no-repeat center / contain 
+    background: no-repeat center / contain
+    z-index: 2
     &:before 
         content: none
 

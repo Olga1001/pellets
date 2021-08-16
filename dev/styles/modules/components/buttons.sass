@@ -152,6 +152,14 @@
     svg
         +box(100%)
         stroke: #DDDDDD
+    &:hover, &.active
+        svg
+            fill: $red
+
+.btn-heart
+    &:hover, &.active
+        svg
+            stroke: $red
 
 .btn-weigher svg
     stroke: none
@@ -207,3 +215,17 @@
     &:hover 
         color: $white 
         background-color: $red
+
+.btn-up
+    background: #FFB321
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2)
+    +box(42px)
+    border-radius: 50%
+    position: fixed
+    bottom: 15px
+    right: 15px
+    display: none
+    svg
+        +box(18px,100%)
+        transform: scaleY(1)
+        stroke: $white

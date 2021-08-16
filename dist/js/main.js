@@ -252,8 +252,12 @@ $(document).ready(function () {
       $(this).siblings('.catalog-m').slideToggle(300).closest('li').siblings().find('.catalog-m').slideUp(300);
     });
     $('.main-s_item.full-v img').attr('src', 'img/common/depositphotos_43318949_xl-2015m2.jpg');
+  }
+
+  if (window.matchMedia("(max-width: 1199px)").matches) {
     $('.menu-link').on('click', function () {
       $(this).siblings('.menu-dropdown').slideToggle(300);
+      $('.menu-link svg').toggleClass('active');
     });
   }
 
@@ -339,7 +343,16 @@ $(document).ready(function () {
 
   if (window.matchMedia("(max-width: 991px)").matches) {
     $('.cart-row .col:first-child').before($('.total-bottom'));
-  } // $(window).scroll(function () {
+  }
+
+  $('.btn-heart, .btn-weigher').on('click', function () {
+    $(this).toggleClass('active');
+  });
+  $('.btn-up').on('click', function () {
+    $('body,html').animate({
+      scrollTop: window.offset().top
+    }, 500);
+  }); // $(window).scroll(function () {
   //   if ($(window).scrollTop() > 300 && !$('.overlay.active')) {
   //     $(".header-c").addClass('fixed-1');
   //     $(".header-b").addClass('fixed-1');
@@ -348,7 +361,6 @@ $(document).ready(function () {
   //     $(".header-b").removeClass('fixed-1');
   //   }
   // });
-
 });
 
 function showHide(item, showText) {

@@ -406,6 +406,13 @@
         width: calc(100% - 420px)
     .error-section .col:last-child
         max-width: 420px
+    .bookmarks-cards .card
+        width: 50%
+
+    .menu-link:hover
+        color: #F53C3C
+        svg
+            stroke: #F53C3C
 @media only screen and (max-width : 991px)
     .footer-menu 
         display: none
@@ -565,6 +572,8 @@
     .payment-delivery .w-lg-50:first-child
         max-width: 100%
 @media only screen and (max-width : 767px)
+    .btn-up
+        display: block
     .main-f_block
         height: 378px
     h1
@@ -811,10 +820,10 @@
             top: 63px
             left: 0
             width: 100%
-    .menu-link:hover 
-        color: #F53C3C
-        svg 
-            stroke: #F53C3C
+    .bookmarks-cards .card
+        width: 100%
+        &:not(:last-child)
+            border-bottom: none
 @media only screen and (max-width : 660px)
     .power-row
         flex-wrap: wrap
@@ -884,19 +893,19 @@
         line-height: 18px
         padding: 10px 12px
         &::-webkit-input-placeholder
-            font-size: 14px
+            font-size: 16px
             line-height: 18px
             color: #000
         &:-moz-placeholder 
-            font-size: 14px
+            font-size: 16px
             line-height: 18px
             color: #000
         &::-moz-placeholder
-            font-size: 14px
+            font-size: 16px
             line-height: 18px
             color: #000
         &:-ms-input-placeholder
-            font-size: 14px
+            font-size: 16px
             line-height: 18px
             color: #000
     .header-c

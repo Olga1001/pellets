@@ -90,9 +90,56 @@ block content
 													+icon('close2','c-gray-400')
 													span.c-gray-400 удалить 
 						.account-item
-
-
-			
+							p.fs-24.fw-medium.text-up.mb-20.pb-20 Мои закладки
+							.flex-wrap.bookmarks-cards
+								-var n = 3
+								-var i = 0
+								while (n--)
+									.card
+										if (i == 4)
+											.stock-new
+												.stock -20%
+												.new NEW
+										if (i == 2)
+											.status-product Ожидается
+										a(href='#')
+											.card-top
+												img(src='img/common/product2.jpg' alt='product')
+												.sticky-right
+													button.btn-heart(type='button')
+														+icon('heart2')
+													button.btn-weigher(type='button')
+														+icon('weigher')
+											.flex-center-between.ff-opensans.mb-16.flex-wrap
+												.align-items-center
+													.rate-area.checked
+														input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
+														label(for=`5-star${i}` title='Amazing')
+														input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
+														label(for=`4-star${i}` title='Good')
+														input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
+														label(for=`3-star${i}` title='Average')
+														input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
+														label(for=`2-star${i}` title='Not Good')
+														input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
+														label(for=`1-star${i}` title='Bad')
+													.i-comments.align-items-center
+														+icon('comments')
+														p.text-small 21
+												p.text-small.c-gray Код: 79059000-1
+											p.card-title Котел твердопаливний <br> KRONAS EKO
+										ul.card-info.ff-opensans.text-small
+											li.d-flex
+												p Производитель:
+												p Кronas
+											li.d-flex
+												p Мощность:
+												p от 12 кВт
+										.flex-center-between
+											p.price от 12 800 грн
+											button.btn-cart.small(type='button')
+												+icon('cart')
+									-i++
 		section.subscription
 			.container 
 				.flex-wrap.justify-content-between.c-white
