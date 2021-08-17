@@ -366,15 +366,18 @@ $(document).ready(function () {
   })
 
   $('.btn-up').on('click', function () {
-    $('body,html').animate({scrollTop:  window.offset().top}, 500);
+    console.log('click')
+    $('body,html').animate({scrollTop: $('.header').offset().top + 'px'}, 500);
   })
   $('video').on('click', function () {
-    $(this).siblings().toggleClass('active');
+    $(this).parent().find('.play').toggleClass('active');
   })
   $(window).scroll(function () {
-    if ($(window).scrollTop() > 300 && !$('.overlay.active')) {
-      $(".header-c").addClass('fixed-1');
-      $(".header-b").addClass('fixed-1');
+    if ($(window).scrollTop() > 300) {
+      if (!$('.overlay').hasClass('active')) {
+        $(".header-c").addClass('fixed-1');
+        $(".header-b").addClass('fixed-1');
+      }
     } else {
       $(".header-c").removeClass('fixed-1');
       $(".header-b").removeClass('fixed-1');
