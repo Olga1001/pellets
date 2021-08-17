@@ -273,6 +273,7 @@
     border-radius: 50%
     +centerXY
     cursor: pointer
+    pointer-events: none
     &:before
         content: ''
         +centerXY
@@ -281,3 +282,14 @@
         border-style: solid
         border-width: 13.5px 0 13.5px 11px
         border-color: transparent transparent transparent $white
+    &.active
+        opacity: 0
+        transition: all 0.3s ease
+        &:before
+            border: none
+            +box(27px)
+            background: $white
+video
+    margin: auto
+    &:hover ~ .play
+        opacity: 1
