@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/libs.css">
     <link rel="shortcut icon" href="img/logo/favicon.svg" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
@@ -536,7 +535,7 @@
                     <div class="slide"> <img src="img/common/object.jpg" alt="product"></div>
                     <div class="slide"> 
                       <!--img(src='img/common/object.jpg' alt='product')-->
-                      <video controls="controls" poster="img/common/object.jpg" width="100%" height="100%">
+                      <video class="video" controls width="100%" height="100%">
                         <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
                         <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
                         <p>This browser does not support the video element.</p>
@@ -609,48 +608,6 @@
             </div>
           </section>
         </main>
-        <div class="popup" data-item="calculation">
-          <div class="popup-container stopPropagation"> 
-            <button class="btn-close ml-auto" type="button">
-              <svg class="svg-sprite-icon icon-close2">
-                <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
-              </svg>
-            </button>
-            <h2 class="text-up text-center">Рассчет мощности</h2>
-            <div class="flex-wrap flex-md-row flex-column-reverse">
-              <div class="popup-calculation_left">
-                <ul class="list-calculation">
-                  <li class="flex-center-between"> 
-                    <p class="fw-medium">Высота, м</p>
-                    <input class="input max-241" type="number" value="5">
-                  </li>
-                  <li class="flex-center-between"> 
-                    <p class="fw-medium">Ширина, м</p>
-                    <input class="input max-241" type="number" value="5">
-                  </li>
-                  <li class="flex-center-between"> 
-                    <p class="fw-medium">Длина, м</p>
-                    <input class="input max-241" type="number" value="5">
-                  </li>
-                  <li class="flex-center-between"> 
-                    <p class="fw-medium">Степень утепления</p>
-                    <div class="select select-i max-241">
-                      <div class="select-item" data-toggle>Неутепленное, 100 Вт/м2</div>
-                      <ul class="select-drop"> 
-                        <li>Неутепленное, 100 Вт/м2</li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-                <div class="result flex-center-between"> 
-                  <p class="fs-18 fw-medium c-white">Необходимая <br> мощность, кВт</p>
-                  <input class="input max-165" type="text" value="5">
-                </div>
-              </div>
-              <div class="popup-calculation_right"><img class="carcass" src="img/common/carcass.png" alt="image carcass"></div>
-            </div>
-          </div>
-        </div>
       </div>
       <footer class="footer">
         <div class="footer-top">

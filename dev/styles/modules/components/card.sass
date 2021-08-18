@@ -206,6 +206,7 @@
     position: absolute
     left: 14px 
     top: 14px
+    z-index: 1
 
     
 .card-s
@@ -273,7 +274,8 @@
     border-radius: 50%
     +centerXY
     cursor: pointer
-    pointer-events: none
+    z-index: 1
+    // pointer-events: none
     &:before
         content: ''
         +centerXY
@@ -293,3 +295,23 @@ video
     margin: auto
     &:hover ~ .play
         opacity: 1
+
+.controls
+    position: absolute
+    left: 0
+    bottom: 0 
+    width: 100%
+    display: flex
+    align-items: center
+    padding: 10px
+    background: #000
+
+.video-range
+    height: 5px
+    background: #fff
+.video-timer 
+    color: $white
+    padding-left: 10px
+
+.controls button 
+    +box(30px)

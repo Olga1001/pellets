@@ -149,9 +149,11 @@
     svg
         +box(100%)
         stroke: #DDDDDD
-    &:hover, &.active
+    &.active
         svg
             fill: $red
+    &:hover
+        stroke: $red
 
 .btn-heart
     &:hover, &.active
@@ -223,7 +225,13 @@
     right: 15px
     display: none
     z-index: 5
+    opacity: 0
+    pointer-events: none
+    transition: all 0.3s ease
     svg
         +box(18px,100%)
         transform: scaleY(1)
         stroke: $white
+    &.active 
+        opacity: 1
+        pointer-events: auto

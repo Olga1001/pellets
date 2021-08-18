@@ -34,7 +34,7 @@ block content
 												img(src='img/common/google_icon.svg' alt='google')
 										input.input2(type='text' placeholder='Имя' value='Дима' required)
 										input.input2(type='text' placeholder='Фамилия' value='Кравчук' required)
-										input.input2.phone-mask(type='text' placeholder='+380 (__) ___-__-__' value='+380 (97) 234-23-23' required)
+										input.input2.phone-mask2(type='text' placeholder='+380 (__) ___-__-__' value='+380 (97) 234-23-23' required)
 										input.input2.mb-30(type='password' placeholder='Повториь пароль' required)
 										button.btn.big.max-285.mx-auto.mb-30(type='submit') Сохранить изменения
 									form.max-371
@@ -106,7 +106,7 @@ block content
 											.card-top
 												img(src='img/common/product2.jpg' alt='product')
 												.sticky-right
-													button.btn-heart(type='button')
+													button.btn-heart(type='button' class=n==2? 'active':'')
 														+icon('heart2')
 													button.btn-weigher(type='button')
 														+icon('weigher')

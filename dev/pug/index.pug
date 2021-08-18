@@ -35,13 +35,17 @@ block content
 								if (j==1)
 									.slide 
 										//img(src='img/common/object.jpg' alt='product')
-										video(controls="controls" poster="img/common/object.jpg" width="100%" height="100%")
+										video.video(controls width="100%" height="100%")
 											source(src='https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm' type='video/webm')
 											source(src='https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4' type='video/mp4')
 
 											p This browser does not support the video element.
-
 										.play
+										//- .controls
+										//- 	input(type="range" class="video-range" value="0")
+										//- 	p.video-timer 00:00
+										//- 	button.loop.loop-off(title="Loop Video")
+										//- 	button.expand(title="full screen")
 
 								else
 									.slide 
@@ -98,35 +102,3 @@ block content
 							input.bg-white(type='email' placeholder='E-mail *' required)
 							button.btn.bg-orange.c-white(type='submit') Подписатся
 						p.fs-13.c-pink *Оформляя подписку вы даете согласие на обработку персональных данных
-
-
-	.popup(data-item='calculation')
-		.popup-container.stopPropagation 
-			button.btn-close.ml-auto(type='button')
-				+icon('close2')
-			h2.text-up.text-center Рассчет мощности
-			.flex-wrap.flex-md-row.flex-column-reverse
-				.popup-calculation_left
-					ul.list-calculation
-						li.flex-center-between 
-							p.fw-medium Высота, м
-							input.input.max-241(type='number' value='5')
-						li.flex-center-between 
-							p.fw-medium Ширина, м
-							input.input.max-241(type='number' value='5')
-						li.flex-center-between 
-							p.fw-medium Длина, м
-							input.input.max-241(type='number' value='5')
-						li.flex-center-between 
-							p.fw-medium Степень утепления
-							.select.select-i.max-241
-								.select-item(data-toggle) Неутепленное, 100 Вт/м2
-								ul.select-drop 
-									li Неутепленное, 100 Вт/м2
-					.result.flex-center-between 
-						p.fs-18.fw-medium.c-white Необходимая <br> мощность, кВт
-						input.input.max-165(type='text' value='5')
-
-						
-				.popup-calculation_right
-					img.carcass(src='img/common/carcass.png' alt='image carcass')

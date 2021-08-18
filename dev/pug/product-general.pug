@@ -50,9 +50,9 @@ block content
 								else
 									.slide
 										img(src='img/common/product3.jpg' alt='product')
-
+								
 				.product-about_right
-					ul.tabs.d-flex
+					ul.tabs.d-flex 
 						each val, index in ['Все о товаре','Характеристики','Отзывы (21)','Инструкция','Оплата/доставка']
 							li(class=index==0 ? 'active':'')=val
 					.product-about_body
@@ -61,33 +61,33 @@ block content
 								-var i = 1
 								.rate-area.checked.big
 									input(id=`5-star${i}` type='radio' name=`rating${i}` value='5')
-									label(for=`5-star${i}` title='Amazing')
+									label(for=`5-star${i}` title='Amazing') 
 									input(id=`4-star${i}` type='radio' name=`rating${i}` value='4')
-									label(for=`4-star${i}` title='Good')
+									label(for=`4-star${i}` title='Good') 
 									input(id=`3-star${i}` type='radio' name=`rating${i}` value='3')
 									label(for=`3-star${i}` title='Average')
 									input(id=`2-star${i}` type='radio' name=`rating${i}` value='2')
-									label(for=`2-star${i}` title='Not Good')
+									label(for=`2-star${i}` title='Not Good') 
 									input(id=`1-star${i}` type='radio' name=`rating${i}` value='1')
 									label(for=`1-star${i}` title='Bad')
 								.i-comments.big.align-items-center
 									+icon('comments')
-									p.fs-13.c-black
-										span.underline отзывы
+									p.fs-13.c-black 
+										span.underline отзывы 
 										| (21)
-							p.fs-13.c-gray
-								span.mr-15 Артикул
+							p.fs-13.c-gray 
+								span.mr-15 Артикул   
 								| 11294038
 						a.program-block.align-items-sm-center(href='#')
-							img(src='img/common/IQ_energy_logo_PT_Sans_hor_ua.jpg' alt='img')
-							span.c-white Данный товар – участник программы
-								b  IQ ENERGY
-								|. Покупайте котлы
-								b  Альтеп в кредит
-								|  и получите
-								b  гарантировано компенсацию до 35%
-								|  от стоимости оборудования!
-						.flex-center-between
+							img(src='img/common/IQ_energy_logo_PT_Sans_hor_ua.jpg' alt='img') 
+							span.c-white Данный товар – участник программы 
+								b IQ ENERGY
+								|. Покупайте котлы 
+								b Альтеп в кредит 
+								| и получите 
+								b гарантировано компенсацию до 35% 
+								| от стоимости оборудования!
+						.flex-center-between 
 							.take-credit.align-items-center
 								img(src='img/common/take-credit.png' alt='take-credit')
 								div
@@ -104,13 +104,14 @@ block content
 								.justify-content-between.power-row
 									.select.select-b
 										.select-item.flex-center-between(data-toggle)
-											p.fw-light 12 кВт
+											p.fw-light.fs-16 12 кВт
 											.arrow
 												+icon('arrow-down')
-										ul.select-drop.fs-14
+
+										ul.select-drop.fs-16
 											li 12 кВт
 											li 13 кВт
-									.counter.d-flex
+									.counter.align-items-center
 										button.btn-minus.counter-btn(type='button') -
 										input.counter-input(type='number' value='1')
 										button.btn-plus.counter-btn(type='button') +
@@ -150,8 +151,9 @@ block content
 									button.btn.big.h-green(type='button') В корзину
 									button.btn-white(type='button')
 										span Купить в 1 клик
-										input.input-phone(type='text')
-
+										.drop-phone
+											input.input-phone(type='text' placeholder='+38 0_________')
+											input.d-sm-none.btn.bg-orange(type="button" value="Отправить")
 		section.available-powers
 			.container
 				.flex-center-between.mb-20
