@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
     <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="vendor/mediaelementplayer.min.css">
     <link rel="shortcut icon" href="img/logo/favicon.svg" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
@@ -535,12 +536,12 @@
                     <div class="slide"> <img src="img/common/object.jpg" alt="product"></div>
                     <div class="slide"> 
                       <!--img(src='img/common/object.jpg' alt='product')-->
-                      <video class="video" controls width="100%" height="100%">
-                        <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+                      <video class="video" controls="" loop="" height="100%" width="100%" muted="" poster="img/common/object.jpg" preload="none" style="max-width: 100%" tabindex="0" title="MediaElement">
                         <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
+                        <track srclang="en" kind="subtitles" src="mediaelement.vtt">
+                        <track srclang="en" kind="chapters" src="chapters.vtt">
                         <p>This browser does not support the video element.</p>
                       </video>
-                      <div class="play"></div>
                     </div>
                     <div class="slide"> <img src="img/common/object.jpg" alt="product"></div>
                   </div>
@@ -677,6 +678,8 @@
       </button>
     </div>
     <script src="js/jquery.min.js"></script>
+    <script src="js/mediaelement-and-player.min.js"></script>
+    <script src="js/video.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>

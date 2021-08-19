@@ -4,7 +4,8 @@ block variables
 	-var title = 'Объекты Подробнее'
 	-var page = 'objects-page objects-more-page'
 
-block link
+block link 
+	link(rel="stylesheet" type='text/css' href="vendor/mediaelementplayer.min.css")
 
 block content
 	main
@@ -35,18 +36,11 @@ block content
 								if (j==1)
 									.slide 
 										//img(src='img/common/object.jpg' alt='product')
-										video.video(controls width="100%" height="100%")
-											source(src='https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm' type='video/webm')
+										video.video(controls='' loop='' height='100%' width='100%'  muted='' poster='img/common/object.jpg' preload='none' style='max-width: 100%' tabindex='0' title='MediaElement')
 											source(src='https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4' type='video/mp4')
-
+											track(srclang='en' kind='subtitles' src='mediaelement.vtt')
+											track(srclang='en' kind='chapters' src='chapters.vtt')
 											p This browser does not support the video element.
-										.play
-										//- .controls
-										//- 	input(type="range" class="video-range" value="0")
-										//- 	p.video-timer 00:00
-										//- 	button.loop.loop-off(title="Loop Video")
-										//- 	button.expand(title="full screen")
-
 								else
 									.slide 
 										img(src='img/common/object.jpg' alt='product')
@@ -102,3 +96,7 @@ block content
 							input.bg-white(type='email' placeholder='E-mail *' required)
 							button.btn.bg-orange.c-white(type='submit') Подписатся
 						p.fs-13.c-pink *Оформляя подписку вы даете согласие на обработку персональных данных
+						
+block script
+	script(src="js/mediaelement-and-player.min.js")
+	script(src='js/video.js')

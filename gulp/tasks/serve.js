@@ -26,6 +26,7 @@ module.exports = function serve(cb) {
   gulp.watch('dev/js/**/*.js', gulp.series(script)).on('change', server.reload);
   gulp.watch('dev/pug/**/*.pug', gulp.series(pug2html));
   gulp.watch('dist/*.html').on('change', server.reload);
+  gulp.watch('dist/*.vtt').on('change', server.reload);
 
   return cb()
 };

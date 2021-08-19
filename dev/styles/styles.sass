@@ -418,6 +418,54 @@ table
 
 @import "modules/modules"
 
+.play
+  background: #E96D5F
+  +box(87px)
+  border-radius: 50%
+  +centerXY
+  cursor: pointer
+  z-index: 1
+  // pointer-events: none
+  &:before
+    content: ''
+    +centerXY
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 13.5px 0 13.5px 11px
+    border-color: transparent transparent transparent $white
+  &.active
+    opacity: 0
+    transition: all 0.3s ease
+    &:before
+      border: none
+      +box(27px)
+      background: $white
+
+.mejs__overlay-button 
+  background: #E96D5F
+  border-radius: 50%
+  +box(87px)
+  &:before
+    content: ''
+    +centerXY
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 13.5px 0 13.5px 11px
+    border-color: transparent transparent transparent $white
+
+video
+  margin: auto
+  width: 100%
+
+.mejs__container
+  width: 100%
+  // margin: auto
+  
+.mejs__captions-button, .mejs__chapters-button
+    display: none
+
 .h-480
   height: 480px
 

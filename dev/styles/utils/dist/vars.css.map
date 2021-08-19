@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["vars.sass"],"sourcesContent":["// Colors\n$white: #fff\n$black: #000\n$red: #F53C3C\n$gray: #EDEDED\n$gray-light: #969696\n$orange: #FFB321\n\n\n// Sizes\n$base-font-size: 16px\n\n// $tablet: 768\n// $large: 1024\n$desktop: 1450px\n\n//shadow \n$shadow: 0px 0px 6px rgba(0, 0, 0, 0.25)"],"file":"vars.css"}

@@ -177,6 +177,12 @@
         max-width: 400px
         max-height: 250px
         margin: auto
+    .mejs__container
+        height: auto
+        max-height: 250px
+    .objects-more video
+        max-height: 250px
+
 @media only screen and (max-width: 1366px)
     .information_left, .information_right
         width: 50%
@@ -413,6 +419,10 @@
         color: #F53C3C
         svg
             stroke: #F53C3C
+    .mejs__container
+        max-height: 350px
+    .objects-more video
+        max-height: 350px
 @media only screen and (max-width : 991px)
     .footer-menu 
         display: none
@@ -830,6 +840,16 @@
             border-bottom: none
     .header .btn-close
         margin-bottom: -75.6px
+    .mejs__container
+        height: 200px
+    .mejs__overlay-button
+        +box(47px)
+    .mejs__overlay-button:before
+        border-width: 7.5px 0 7.5px 6px
+    .mejs__container
+        max-height: 193px
+    .objects-more video
+        max-height: 193px
 @media only screen and (max-width : 660px)
     .power-row
         flex-wrap: wrap
