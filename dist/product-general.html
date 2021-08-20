@@ -1434,7 +1434,9 @@
                       <use xlink:href="img/sprite/symbol/sprite.svg#messenger"></use>
                     </svg></a></li>
               </ul>
-              <div class="footer_btn"><a class="btn bg-orange big max-200" href="#">Обратний звонок</a></div>
+              <div class="footer_btn">
+                <button class="btn bg-orange big max-200" type="button" data-button="callback">Обратний звонок</button>
+              </div>
               <div class="payment-systems w-50 d-md-none align-items-center"> <img src="img/common/visa.svg" alt="visa"><img src="img/common/mastercard.svg" alt="mastercard"></div>
             </div>
             <ul class="col footer-menu">
@@ -1474,6 +1476,18 @@
           <use xlink:href="img/sprite/symbol/sprite.svg#arrow-up-long"></use>
         </svg>
       </button>
+      <div class="popup popup-callback" data-item="callback">
+        <form class="popup-container stopPropagation">
+          <button class="btn-close ml-auto" type="button">
+            <svg class="svg-sprite-icon icon-close2">
+              <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
+            </svg>
+          </button>
+          <h2 class="fs-20 fw-medium mb-30 text-center">ЗАКАЗАТЬ <br> ОБРАТНЫЙ ЗВОНОК</h2>
+          <input class="input" type="text" placeholder="">
+          <button class="btn bg-orange big" type="submit">Отправить</button>
+        </form>
+      </div>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>

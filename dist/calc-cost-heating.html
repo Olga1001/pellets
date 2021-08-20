@@ -668,48 +668,6 @@
             </div>
           </section>
         </main>
-        <div class="popup" data-item="calculation">
-          <div class="popup-container stopPropagation"> 
-            <button class="btn-close ml-auto" type="button">
-              <svg class="svg-sprite-icon icon-close2">
-                <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
-              </svg>
-            </button>
-            <h2 class="text-up text-center">Рассчет мощности</h2>
-            <div class="flex-wrap flex-md-row flex-column-reverse">
-              <div class="popup-calculation_left">
-                <ul class="list-calculation">
-                  <li class="flex-center-between"> 
-                    <p class="fw-medium">Высота, м</p>
-                    <input class="input max-241" type="number" value="5">
-                  </li>
-                  <li class="flex-center-between"> 
-                    <p class="fw-medium">Ширина, м</p>
-                    <input class="input max-241" type="number" value="5">
-                  </li>
-                  <li class="flex-center-between"> 
-                    <p class="fw-medium">Длина, м</p>
-                    <input class="input max-241" type="number" value="5">
-                  </li>
-                  <li class="flex-center-between"> 
-                    <p class="fw-medium">Степень утепления</p>
-                    <div class="select select-i max-241">
-                      <div class="select-item" data-toggle>Неутепленное, 100 Вт/м2</div>
-                      <ul class="select-drop"> 
-                        <li>Неутепленное, 100 Вт/м2</li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-                <div class="result flex-center-between"> 
-                  <p class="fs-18 fw-medium c-white">Необходимая <br> мощность, кВт</p>
-                  <input class="input max-165" type="text" value="5">
-                </div>
-              </div>
-              <div class="popup-calculation_right"><img class="carcass" src="img/common/carcass.png" alt="image carcass"></div>
-            </div>
-          </div>
-        </div>
       </div>
       <footer class="footer">
         <div class="footer-top">
@@ -737,7 +695,9 @@
                       <use xlink:href="img/sprite/symbol/sprite.svg#messenger"></use>
                     </svg></a></li>
               </ul>
-              <div class="footer_btn"><a class="btn bg-orange big max-200" href="#">Обратний звонок</a></div>
+              <div class="footer_btn">
+                <button class="btn bg-orange big max-200" type="button" data-button="callback">Обратний звонок</button>
+              </div>
               <div class="payment-systems w-50 d-md-none align-items-center"> <img src="img/common/visa.svg" alt="visa"><img src="img/common/mastercard.svg" alt="mastercard"></div>
             </div>
             <ul class="col footer-menu">
@@ -777,6 +737,18 @@
           <use xlink:href="img/sprite/symbol/sprite.svg#arrow-up-long"></use>
         </svg>
       </button>
+      <div class="popup popup-callback" data-item="callback">
+        <form class="popup-container stopPropagation">
+          <button class="btn-close ml-auto" type="button">
+            <svg class="svg-sprite-icon icon-close2">
+              <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
+            </svg>
+          </button>
+          <h2 class="fs-20 fw-medium mb-30 text-center">ЗАКАЗАТЬ <br> ОБРАТНЫЙ ЗВОНОК</h2>
+          <input class="input" type="text" placeholder="">
+          <button class="btn bg-orange big" type="submit">Отправить</button>
+        </form>
+      </div>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>

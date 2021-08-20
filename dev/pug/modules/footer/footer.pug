@@ -19,7 +19,7 @@ footer.footer
                             a(href='#' class=val.color)
                                 +icon(val.social)
                 .footer_btn
-                    a.btn.bg-orange.big.max-200(href='#') Обратний звонок
+                    button.btn.bg-orange.big.max-200(type='button' data-button='callback') Обратний звонок
                 .payment-systems.w-50.d-md-none.align-items-center 
                     img(src='img/common/visa.svg' alt='visa')
                     img(src='img/common/mastercard.svg' alt='mastercard')
@@ -42,5 +42,15 @@ footer.footer
                 a.c-gray-300.fs-12(href='#') Политика конфиденциальности
             .col
                 p.fs-12 Design by DDForce
+
 button.btn-up(type='button')
     +icon('arrow-up-long')
+
+.popup.popup-callback(data-item='callback')
+    form.popup-container.stopPropagation
+        button.btn-close.ml-auto(type='button')
+            +icon('close2')
+        h2.fs-20.fw-medium.mb-30.text-center ЗАКАЗАТЬ <br> ОБРАТНЫЙ ЗВОНОК
+        input.input(type='text' placeholder='')
+        button.btn.bg-orange.big(type='submit') Отправить
+
