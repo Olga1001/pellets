@@ -325,7 +325,6 @@
     .newsletter-left
         padding: 60px 15px 35px
     .footer-bottom .col
-        width: 100%
         min-width: auto
     .footer-top .col
         width: 50%
@@ -412,9 +411,10 @@
         width: calc(100% - 420px)
     .error-section .col:last-child
         max-width: 420px
+    .bookmarks-cards
+        margin: 0 -16px
     .bookmarks-cards .card
         width: 50%
-
     .menu-link:hover
         color: #F53C3C
         svg
@@ -424,6 +424,8 @@
     .objects-more video
         max-height: 350px
 @media only screen and (max-width : 991px)
+    .footer-bottom .col
+        width: 50%
     .footer-menu 
         display: none
     .catalog-m
@@ -831,11 +833,10 @@
         &.fixed-1
             z-index: 9
             position: fixed
-            top: 63px
+            top: 73px
             left: 0
             width: 100%
     .bookmarks-cards .card
-        width: 100%
         &:not(:last-child)
             border-bottom: none
     .header .btn-close
@@ -850,6 +851,11 @@
         max-height: 193px
     .objects-more video
         max-height: 193px
+    .btn-sort .select-drop.active
+        display: block
+        left: 0
+        li:hover
+            text-decoration: underline
 @media only screen and (max-width : 660px)
     .power-row
         flex-wrap: wrap
@@ -898,6 +904,9 @@
             p br 
                 display: none
 @media only screen and (max-width : 575px)
+    .header-b
+        &.fixed-1
+            top: 63px
     .header
         min-height: 181px
     .icon-user

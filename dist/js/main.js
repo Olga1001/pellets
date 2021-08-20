@@ -267,7 +267,7 @@ $(document).ready(function () {
       $(this).addClass('active').siblings().removeClass('active');
       $(drop).eq(index).addClass('active').siblings().removeClass('active');
 
-      if (scrollTo && window.matchMedia("(max-width: 660px)").matches) {
+      if (scrollTo && window.matchMedia("(max-width: 767px)").matches) {
         $('body,html').animate({
           scrollTop: $(scrollTo).offset().top + 'px'
         }, 500);

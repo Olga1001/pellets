@@ -34,21 +34,21 @@ block content
 								li по популярности
 								li по рейтингу
 				.flex-wrap 
-					.sort(data-item='sort') 
-						.filter_head
-							p.fs-18.fw-medium Сортировать
-							button.btn-close(type='button')
-								+icon('close2')
-						.sort_body
-							label.align-items-center 
-								input.checkbox(type='radio' name='radio' checked)
-								span.check 
-								span.fs-14 по популярности
-							label.align-items-center 
-								input.checkbox(type='radio' name='radio')
-								span.check 
-								span.fs-14 по рейтингу
-						button.filter_footer.text-center.fs-18.fw-medium.c-white.w-100(type='button') Применить
+					//.sort(data-item='sort')
+					//	.filter_head
+					//		p.fs-18.fw-medium Сортировать
+					//		button.btn-close(type='button')
+					//			+icon('close2')
+					//	.sort_body
+					//		label.align-items-center
+					//			input.checkbox(type='radio' name='radio' checked)
+					//			span.check
+					//			span.fs-14 по популярности
+					//		label.align-items-center
+					//			input.checkbox(type='radio' name='radio')
+					//			span.check
+					//			span.fs-14 по рейтингу
+					//	button.filter_footer.text-center.fs-18.fw-medium.c-white.w-100(type='button') Применить
 
 					.filter(data-item='filter')
 						.filter_head.d-md-none 
@@ -63,10 +63,10 @@ block content
 							.filter-price.d-flex
 								.mr-15
 									p.fs-15 от
-									input.input-small.amount1(type='number' value='4445')
+									input.input-small.amount1(type='text' value='4445' readonly)
 								div
 									p.fs-15 до
-									input.input-small.amount2(type='number' value='971767')
+									input.input-small.amount2(type='text' value='971767' readonly)
 							.range 
 						.filter-i 
 							.filter-i_click.flex-center-between.active(data-toggle)
@@ -177,8 +177,11 @@ block content
 							button.btn-filter.align-items-center(type='button' data-button='filter') 
 								img(src='img/common/filter.svg' alt='filter icon')
 								span.fw-medium Фильтрация
-							button.btn-sort(type='button' data-button='sort') 
+							button.btn-sort(type='button' data-button='sort')
 								span.fw-medium Сортировка
+								ul.select-drop.fs-14(data-item='sort')
+									li по популярности
+									li по рейтингу
 
 						.flex-wrap.products-content 
 							-var n = 23

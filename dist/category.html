@@ -543,25 +543,21 @@
                 </div>
               </div>
               <div class="flex-wrap"> 
-                <div class="sort" data-item="sort"> 
-                  <div class="filter_head">
-                    <p class="fs-18 fw-medium">Сортировать</p>
-                    <button class="btn-close" type="button">
-                      <svg class="svg-sprite-icon icon-close2">
-                        <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="sort_body">
-                    <label class="align-items-center"> 
-                      <input class="checkbox" type="radio" name="radio" checked><span class="check"> </span><span class="fs-14">по популярности</span>
-                    </label>
-                    <label class="align-items-center"> 
-                      <input class="checkbox" type="radio" name="radio"><span class="check"> </span><span class="fs-14">по рейтингу</span>
-                    </label>
-                  </div>
-                  <button class="filter_footer text-center fs-18 fw-medium c-white w-100" type="button">Применить</button>
-                </div>
+                <!--.sort(data-item='sort')-->
+                <!--	.filter_head-->
+                <!--		p.fs-18.fw-medium Сортировать-->
+                <!--		button.btn-close(type='button')-->
+                <!--			+icon('close2')-->
+                <!--	.sort_body-->
+                <!--		label.align-items-center-->
+                <!--			input.checkbox(type='radio' name='radio' checked)-->
+                <!--			span.check-->
+                <!--			span.fs-14 по популярности-->
+                <!--		label.align-items-center-->
+                <!--			input.checkbox(type='radio' name='radio')-->
+                <!--			span.check-->
+                <!--			span.fs-14 по рейтингу-->
+                <!--	button.filter_footer.text-center.fs-18.fw-medium.c-white.w-100(type='button') Применить-->
                 <div class="filter" data-item="filter">
                   <div class="filter_head d-md-none"> 
                     <div class="align-items-center"> <img class="icon-filter" src="img/common/filter.svg" alt="filter icon">
@@ -579,11 +575,11 @@
                     <div class="filter-price d-flex">
                       <div class="mr-15">
                         <p class="fs-15">от</p>
-                        <input class="input-small amount1" type="number" value="4445">
+                        <input class="input-small amount1" type="text" value="4445" readonly>
                       </div>
                       <div>
                         <p class="fs-15">до</p>
-                        <input class="input-small amount2" type="number" value="971767">
+                        <input class="input-small amount2" type="text" value="971767" readonly>
                       </div>
                     </div>
                     <div class="range"> </div>
@@ -912,7 +908,12 @@
                 <div class="products">
                   <div class="d-md-none d-flex btns"> 
                     <button class="btn-filter align-items-center" type="button" data-button="filter"> <img src="img/common/filter.svg" alt="filter icon"><span class="fw-medium">Фильтрация</span></button>
-                    <button class="btn-sort" type="button" data-button="sort"> <span class="fw-medium">Сортировка</span></button>
+                    <button class="btn-sort" type="button" data-button="sort"><span class="fw-medium">Сортировка</span>
+                      <ul class="select-drop fs-14" data-item="sort">
+                        <li>по популярности</li>
+                        <li>по рейтингу</li>
+                      </ul>
+                    </button>
                   </div>
                   <div class="flex-wrap products-content"> 
                     <div class="card"> <a href="#">
