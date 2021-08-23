@@ -54,3 +54,53 @@
         +box(11px)
         margin-right: 9px
 
+.btn-eye
+    background: #FFB321
+    border-radius: 4px
+    +box(30px,27px)
+    svg 
+        fill: $black 
+        +box(14px,100%)
+
+.list-history
+    &_img
+        +box(52px,61px)
+        flex-shrink: 0
+        margin-right: 30px
+    &_item  
+        margin-bottom: 15px
+    &_head
+        background: #E8E8E8
+        border-radius: 3px
+        padding: 14px 30px 14px 17px
+        +d-flex(space-between,center)
+        .col-1
+            width: 10% 
+        .col-2
+            width: 30%
+        .col-3
+            width: calc(30% - 30px)
+    &_body
+        display: none
+        ul
+            border-right: 1px solid #E8E8E8
+            border-left: 1px solid #E8E8E8
+            li
+                padding: 14px 30px 14px 17px
+            li:not(:last-child)
+                border-bottom: 1px solid #E8E8E8
+        .col-1
+            width: 42.5% 
+        .col-2
+            width: 27.5%
+        .col-3
+            width: 30%
+    &_delivery  
+        padding: 22px 30px
+        border: 1px solid #E8E8E8
+    &_footer
+        background: #E8E8E8
+        border-radius: 0 0 3px 3px
+        padding: 25px 30px
+
+            

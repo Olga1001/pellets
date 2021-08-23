@@ -527,7 +527,7 @@
                   </ul><a class="underline text-center c-gray-light" href="#">Выйти с личного кабинета</a>
                 </div>
                 <div class="account-right pt-20">
-                  <div class="account-item active">
+                  <div class="account-item">
                     <div class="flex-wrap">
                       <div>
                         <form class="max-371 mb-30 pb-20">
@@ -541,8 +541,8 @@
                         </form>
                         <form class="max-371">
                           <h2 class="fs-24 fw-medium text-up mb-30">Измениь пароль</h2>
-                          <input class="input2" type="зфыыцщкв" placeholder="Пароль" required>
-                          <input class="input2" type="зфыыцщкв" placeholder="Повториь пароль" required>
+                          <input class="input2" type="password" placeholder="Пароль" required>
+                          <input class="input2" type="password" placeholder="Повториь пароль" required>
                           <button class="btn big max-285 mx-auto mb-30" type="submit">Сохранить изменения</button>
                           <p class="fs-20 fw-medium text-up mb-30 pt-20">Подписка на новости</p>
                           <label class="align-items-center">
@@ -553,7 +553,152 @@
                       <div class="d-xl-block d-none"><a class="align-items-center linked-accounts" href="#"><span class="mr-15">Связанные аккаунты</span><img src="img/common/google_icon.svg" alt="google"></a></div>
                     </div>
                   </div>
-                  <div class="account-item"></div>
+                  <div class="account-item active">
+                    <p class="fs-24 fw-medium text-up mb-20 pb-20">История заказов</p>
+                    <ul class="list-history">
+                      <li class="list-history_item"> 
+                        <div class="list-history_head fs-14" data-toggle>
+                          <div class="col-1">
+                            <p class="fw-medium">№7500</p>
+                          </div>
+                          <div class="col-2">
+                            <p>12.10.2020</p>
+                          </div>
+                          <div class="col-2">
+                            <p>Сумма 13020 грн.</p>
+                          </div>
+                          <div class="align-items-center col-3"><img class="mr-15" src="img/common/inProcessing.svg" alt="image">
+                            <p>в обработке</p>
+                          </div>
+                          <button class="btn-eye" type="button">
+                            <svg class="svg-sprite-icon icon-eye">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#eye"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="list-history_body">
+                          <ul>
+                            <li class="flex-center-between"><a class="col-1 align-items-center" href="#"><img class="list-history_img" src="img/common/product2.jpg"><span class="lh-21">Котел твердопаливний <br> KRONAS EKO 24кВТ</span></a>
+                              <div class="col-2"> 
+                                <p class="fs-14">Модель: retra-4-m-trio</p>
+                              </div>
+                              <div class="col-3 flex-center-between"> 
+                                <p class="fs-14">Кол: 1</p>
+                                <p class="fs-16">18000 грн</p>
+                              </div>
+                            </li>
+                          </ul>
+                          <div class="flex-center-between list-history_delivery"> 
+                            <p> <span class="fw-medium">Доставка: </span>Новая Почта - отделение</p>
+                            <div class="w-50 flex-center-between">
+                              <p class="fs-14">Івано-Франківськ, Відділення 49 <br>(вул. Богдана Хмельницького 235/9)</p>
+                              <p class="fs-14">358 грн</p>
+                            </div>
+                          </div>
+                          <div class="list-history_footer"> 
+                            <div class="w-50 flex-center-between ml-auto">
+                              <p class="fs-18 fw-medium">Всего к оплате</p>
+                              <p class="fs-18 fw-medium">40018 грн</p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-history_item"> 
+                        <div class="list-history_head fs-14" data-toggle>
+                          <div class="col-1">
+                            <p class="fw-medium">№7500</p>
+                          </div>
+                          <div class="col-2">
+                            <p>12.10.2020</p>
+                          </div>
+                          <div class="col-2">
+                            <p>Сумма 13020 грн.</p>
+                          </div>
+                          <div class="align-items-center col-3"><img class="mr-15" src="img/common/checkmark.svg" alt="image">
+                            <p>получен</p>
+                          </div>
+                          <button class="btn-eye" type="button">
+                            <svg class="svg-sprite-icon icon-eye">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#eye"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="list-history_body">
+                          <ul>
+                            <li class="flex-center-between"><a class="col-1 align-items-center" href="#"><img class="list-history_img" src="img/common/product2.jpg"><span class="lh-21">Котел твердопаливний <br> KRONAS EKO 24кВТ</span></a>
+                              <div class="col-2"> 
+                                <p class="fs-14">Модель: retra-4-m-trio</p>
+                              </div>
+                              <div class="col-3 flex-center-between"> 
+                                <p class="fs-14">Кол: 1</p>
+                                <p class="fs-16">18000 грн</p>
+                              </div>
+                            </li>
+                          </ul>
+                          <div class="flex-center-between list-history_delivery"> 
+                            <p> <span class="fw-medium">Доставка: </span>Новая Почта - отделение</p>
+                            <div class="w-50 flex-center-between">
+                              <p class="fs-14">Івано-Франківськ, Відділення 49 <br>(вул. Богдана Хмельницького 235/9)</p>
+                              <p class="fs-14">358 грн</p>
+                            </div>
+                          </div>
+                          <div class="list-history_footer"> 
+                            <div class="w-50 flex-center-between ml-auto">
+                              <p class="fs-18 fw-medium">Всего к оплате</p>
+                              <p class="fs-18 fw-medium">40018 грн</p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-history_item"> 
+                        <div class="list-history_head fs-14" data-toggle>
+                          <div class="col-1">
+                            <p class="fw-medium">№7500</p>
+                          </div>
+                          <div class="col-2">
+                            <p>12.10.2020</p>
+                          </div>
+                          <div class="col-2">
+                            <p>Сумма 13020 грн.</p>
+                          </div>
+                          <div class="align-items-center col-3"><img class="mr-15" src="img/common/canceled.svg" alt="image">
+                            <p>отменен</p>
+                          </div>
+                          <button class="btn-eye" type="button">
+                            <svg class="svg-sprite-icon icon-eye">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#eye"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="list-history_body">
+                          <ul>
+                            <li class="flex-center-between"><a class="col-1 align-items-center" href="#"><img class="list-history_img" src="img/common/product2.jpg"><span class="lh-21">Котел твердопаливний <br> KRONAS EKO 24кВТ</span></a>
+                              <div class="col-2"> 
+                                <p class="fs-14">Модель: retra-4-m-trio</p>
+                              </div>
+                              <div class="col-3 flex-center-between"> 
+                                <p class="fs-14">Кол: 1</p>
+                                <p class="fs-16">18000 грн</p>
+                              </div>
+                            </li>
+                          </ul>
+                          <div class="flex-center-between list-history_delivery"> 
+                            <p> <span class="fw-medium">Доставка: </span>Новая Почта - отделение</p>
+                            <div class="w-50 flex-center-between">
+                              <p class="fs-14">Івано-Франківськ, Відділення 49 <br>(вул. Богдана Хмельницького 235/9)</p>
+                              <p class="fs-14">358 грн</p>
+                            </div>
+                          </div>
+                          <div class="list-history_footer"> 
+                            <div class="w-50 flex-center-between ml-auto">
+                              <p class="fs-18 fw-medium">Всего к оплате</p>
+                              <p class="fs-18 fw-medium">40018 грн</p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                   <div class="account-item">
                     <div class="flex-xl-row flex-column-reverse">
                       <form class="max-371">
@@ -879,9 +1024,11 @@
               <use xlink:href="img/sprite/symbol/sprite.svg#close2"></use>
             </svg>
           </button>
-          <h2 class="fs-20 fw-medium mb-30 text-center">ЗАКАЗАТЬ <br> ОБРАТНЫЙ ЗВОНОК</h2>
-          <input class="input" type="text" placeholder="">
-          <button class="btn bg-orange big" type="submit">Отправить</button>
+          <div class="popup-callback_content">
+            <h2 class="fs-20 fw-medium mb-30 text-center">ЗАКАЗАТЬ <br> ОБРАТНЫЙ ЗВОНОК</h2>
+            <input class="input phone-mask" type="text" placeholder="+380 (__) ___-__-__" required>
+            <button class="btn bg-orange big" type="submit">Отправить</button>
+          </div>
         </form>
       </div>
     </div>

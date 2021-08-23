@@ -23,7 +23,7 @@ block content
 								li(class=index==0? 'active':'')=val
 						a.underline.text-center.c-gray-light(href='#') Выйти с личного кабинета
 					.account-right.pt-20
-						.account-item.active
+						.account-item
 							.flex-wrap
 								div
 									form.max-371.mb-30.pb-20
@@ -39,8 +39,8 @@ block content
 										button.btn.big.max-285.mx-auto.mb-30(type='submit') Сохранить изменения
 									form.max-371
 										h2.fs-24.fw-medium.text-up.mb-30 Измениь пароль
-										input.input2(type='зфыыцщкв' placeholder='Пароль' required)
-										input.input2(type='зфыыцщкв' placeholder='Повториь пароль' required)
+										input.input2(type='password' placeholder='Пароль' required)
+										input.input2(type='password' placeholder='Повториь пароль' required)
 										button.btn.big.max-285.mx-auto.mb-30(type='submit') Сохранить изменения
 										p.fs-20.fw-medium.text-up.mb-30.pt-20 Подписка на новости
 										label.align-items-center
@@ -51,7 +51,120 @@ block content
 									a.align-items-center.linked-accounts(href='#')
 										span.mr-15 Связанные аккаунты
 										img(src='img/common/google_icon.svg' alt='google')
-						.account-item
+						.account-item.active
+							p.fs-24.fw-medium.text-up.mb-20.pb-20 История заказов
+							ul.list-history
+								li.list-history_item 
+									.list-history_head.fs-14(data-toggle)
+										.col-1
+											p.fw-medium №7500
+										.col-2
+											p 12.10.2020
+										.col-2
+											p Сумма 13020 грн.
+										.align-items-center.col-3
+											img.mr-15(src='img/common/inProcessing.svg' alt='image')
+											p в обработке
+										button.btn-eye(type='button')
+											+icon('eye')
+
+									.list-history_body
+										ul
+											li.flex-center-between
+												a.col-1.align-items-center(href='#')
+													img.list-history_img(src='img/common/product2.jpg')
+													span.lh-21 Котел твердопаливний <br> KRONAS EKO 24кВТ
+												.col-2 
+													p.fs-14 Модель: retra-4-m-trio
+												.col-3.flex-center-between 
+													p.fs-14 Кол: 1
+													p.fs-16 18000 грн
+										.flex-center-between.list-history_delivery 
+											p 
+												span.fw-medium Доставка: 
+												|Новая Почта - отделение
+											.w-50.flex-center-between
+												p.fs-14 Івано-Франківськ, Відділення 49 <br>(вул. Богдана Хмельницького 235/9)
+												p.fs-14 358 грн
+										.list-history_footer 
+											.w-50.flex-center-between.ml-auto
+												p.fs-18.fw-medium Всего к оплате
+												p.fs-18.fw-medium 40018 грн
+								li.list-history_item 
+									.list-history_head.fs-14(data-toggle)
+										.col-1
+											p.fw-medium №7500
+										.col-2
+											p 12.10.2020
+										.col-2
+											p Сумма 13020 грн.
+										.align-items-center.col-3
+											img.mr-15(src='img/common/checkmark.svg' alt='image')
+											p получен
+										button.btn-eye(type='button')
+											+icon('eye')
+
+									.list-history_body
+										ul
+											li.flex-center-between
+												a.col-1.align-items-center(href='#')
+													img.list-history_img(src='img/common/product2.jpg')
+													span.lh-21 Котел твердопаливний <br> KRONAS EKO 24кВТ
+												.col-2 
+													p.fs-14 Модель: retra-4-m-trio
+												.col-3.flex-center-between 
+													p.fs-14 Кол: 1
+													p.fs-16 18000 грн
+										.flex-center-between.list-history_delivery 
+											p 
+												span.fw-medium Доставка: 
+												|Новая Почта - отделение
+											.w-50.flex-center-between
+												p.fs-14 Івано-Франківськ, Відділення 49 <br>(вул. Богдана Хмельницького 235/9)
+												p.fs-14 358 грн
+										.list-history_footer 
+											.w-50.flex-center-between.ml-auto
+												p.fs-18.fw-medium Всего к оплате
+												p.fs-18.fw-medium 40018 грн
+								li.list-history_item 
+									.list-history_head.fs-14(data-toggle)
+										.col-1
+											p.fw-medium №7500
+										.col-2
+											p 12.10.2020
+										.col-2
+											p Сумма 13020 грн.
+										.align-items-center.col-3
+											img.mr-15(src='img/common/canceled.svg' alt='image')
+											p отменен
+										button.btn-eye(type='button')
+											+icon('eye')
+
+									.list-history_body
+										ul
+											li.flex-center-between
+												a.col-1.align-items-center(href='#')
+													img.list-history_img(src='img/common/product2.jpg')
+													span.lh-21 Котел твердопаливний <br> KRONAS EKO 24кВТ
+												.col-2 
+													p.fs-14 Модель: retra-4-m-trio
+												.col-3.flex-center-between 
+													p.fs-14 Кол: 1
+													p.fs-16 18000 грн
+										.flex-center-between.list-history_delivery 
+											p 
+												span.fw-medium Доставка: 
+												|Новая Почта - отделение
+											.w-50.flex-center-between
+												p.fs-14 Івано-Франківськ, Відділення 49 <br>(вул. Богдана Хмельницького 235/9)
+												p.fs-14 358 грн
+										.list-history_footer 
+											.w-50.flex-center-between.ml-auto
+												p.fs-18.fw-medium Всего к оплате
+												p.fs-18.fw-medium 40018 грн
+
+
+										
 
 						.account-item
 							.flex-xl-row.flex-column-reverse

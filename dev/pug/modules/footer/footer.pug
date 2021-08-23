@@ -50,7 +50,8 @@ button.btn-up(type='button')
     form.popup-container.stopPropagation
         button.btn-close.ml-auto(type='button')
             +icon('close2')
-        h2.fs-20.fw-medium.mb-30.text-center ЗАКАЗАТЬ <br> ОБРАТНЫЙ ЗВОНОК
-        input.input(type='text' placeholder='')
-        button.btn.bg-orange.big(type='submit') Отправить
+        .popup-callback_content
+            h2.fs-20.fw-medium.mb-30.text-center ЗАКАЗАТЬ <br> ОБРАТНЫЙ ЗВОНОК
+            input.input.phone-mask(type='text' placeholder='+380 (__) ___-__-__' required)
+            button.btn.bg-orange.big(type='submit') Отправить
 
