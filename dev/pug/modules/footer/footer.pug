@@ -14,9 +14,9 @@ footer.footer
                     a.fs-24.c-white.mb-9.fw-medium(href='tel:380674617749‬') +380 (67) 461-77-49‬
                     a.fs-24.c-white.mb-9.fw-medium(href='tel:380443842565') +380 (44) 384-25-65
                 ul.socials.d-flex
-                    each val in [{social: 'telegram', color: 'bg-blue2'},{social: 'viber', color: 'bg-purple'},{social: 'messenger', color: 'bg-blue'}]
+                    each val in [{social: 'telegram', color: 'bg-blue2', href: '#'},{social: 'viber', color: 'bg-purple', href: 'viber://chat?number=%2B380674617749'},{social: 'messenger', color: 'bg-blue', href: 'https://www.facebook.com/messages/t/pelletshome.com.ua/'}]
                         li 
-                            a(href='#' class=val.color)
+                            a(href=val.href class=val.color)
                                 +icon(val.social)
                 .footer_btn
                     button.btn.bg-orange.big.max-200(type='button' data-button='callback') Обратний звонок
