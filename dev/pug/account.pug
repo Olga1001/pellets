@@ -15,15 +15,15 @@ block content
 					+breadcrumbs-item('Моя учетная запись')
 		section.account
 			.container
-				h1.fs-40.mb-30 Моя учетная запись
+				h1.fs-40.mb-md-30 Моя учетная запись
 				.flex-wrap.account-row
 					.account-left.pt-20
-						ul.account-tabs.mb-30
+						ul.account-tabs.mb-md-30
 							each val, index in ['Моя личная информация','История заказов','Мои адреса','Мои закладки']
 								li(class=index==0? 'active':'')=val
 						a.underline.text-center.c-gray-light(href='#') Выйти с личного кабинета
 					.account-right.pt-20
-						.account-item
+						.account-item.active
 							.flex-wrap
 								div
 									form.max-371.mb-30.pb-20
@@ -51,7 +51,7 @@ block content
 									a.align-items-center.linked-accounts(href='#')
 										span.mr-15 Связанные аккаунты
 										img(src='img/common/google_icon.svg' alt='google')
-						.account-item.active
+						.account-item
 							p.fs-24.fw-medium.text-up.mb-20.pb-20 История заказов
 							ul.list-history
 								li.list-history_item 
@@ -60,7 +60,7 @@ block content
 											p.fw-medium №7500
 										.col-2
 											p 12.10.2020
-										.col-2
+										.col-2.d-xl-block.d-none
 											p Сумма 13020 грн.
 										.align-items-center.col-3
 											img.mr-15(src='img/common/inProcessing.svg' alt='image')
@@ -70,7 +70,7 @@ block content
 
 									.list-history_body
 										ul
-											li.flex-center-between
+											li.flex-center-between.flex-wrap
 												a.col-1.align-items-center(href='#')
 													img.list-history_img(src='img/common/product2.jpg')
 													span.lh-21 Котел твердопаливний <br> KRONAS EKO 24кВТ
@@ -80,14 +80,16 @@ block content
 													p.fs-14 Кол: 1
 													p.fs-16 18000 грн
 										.flex-center-between.list-history_delivery 
-											p 
-												span.fw-medium Доставка: 
-												|Новая Почта - отделение
-											.w-50.flex-center-between
-												p.fs-14 Івано-Франківськ, Відділення 49 <br>(вул. Богдана Хмельницького 235/9)
-												p.fs-14 358 грн
+											div
+												p.lh-23 
+													span.fw-medium Доставка: 
+													|Новая Почта - отделение
+												p.fs-12.d-xl-none.mt-8 Івано-Франківськ, Відділення 49 <br>(вул. Богдана Хмельницького 235/9)
+											.w-sm-50.w-40.flex-xl-center-between
+												p.fs-14.d-xl-block.d-none Івано-Франківськ, Відділення 49 <br>(вул. Богдана Хмельницького 235/9)
+												p.fs-14.text-right 358 грн
 										.list-history_footer 
-											.w-50.flex-center-between.ml-auto
+											.w-lg-50.flex-center-between.ml-auto
 												p.fs-18.fw-medium Всего к оплате
 												p.fs-18.fw-medium 40018 грн
 								li.list-history_item 
@@ -96,7 +98,7 @@ block content
 											p.fw-medium №7500
 										.col-2
 											p 12.10.2020
-										.col-2
+										.col-2.d-xl-block.d-none
 											p Сумма 13020 грн.
 										.align-items-center.col-3
 											img.mr-15(src='img/common/checkmark.svg' alt='image')
@@ -106,7 +108,7 @@ block content
 
 									.list-history_body
 										ul
-											li.flex-center-between
+											li.flex-center-between.flex-wrap
 												a.col-1.align-items-center(href='#')
 													img.list-history_img(src='img/common/product2.jpg')
 													span.lh-21 Котел твердопаливний <br> KRONAS EKO 24кВТ
@@ -116,14 +118,16 @@ block content
 													p.fs-14 Кол: 1
 													p.fs-16 18000 грн
 										.flex-center-between.list-history_delivery 
-											p 
-												span.fw-medium Доставка: 
-												|Новая Почта - отделение
-											.w-50.flex-center-between
-												p.fs-14 Івано-Франківськ, Відділення 49 <br>(вул. Богдана Хмельницького 235/9)
-												p.fs-14 358 грн
+											div
+												p.lh-23 
+													span.fw-medium Доставка: 
+													|Новая Почта - отделение
+												p.fs-12.d-xl-none.mt-8 Івано-Франківськ, Відділення 49 <br>(вул. Богдана Хмельницького 235/9)
+											.w-sm-50.w-40.flex-xl-center-between
+												p.fs-14.d-xl-block.d-none Івано-Франківськ, Відділення 49 <br>(вул. Богдана Хмельницького 235/9)
+												p.fs-14.text-right 358 грн
 										.list-history_footer 
-											.w-50.flex-center-between.ml-auto
+											.w-lg-50.flex-center-between.ml-auto
 												p.fs-18.fw-medium Всего к оплате
 												p.fs-18.fw-medium 40018 грн
 								li.list-history_item 
@@ -132,7 +136,7 @@ block content
 											p.fw-medium №7500
 										.col-2
 											p 12.10.2020
-										.col-2
+										.col-2.d-xl-block.d-none
 											p Сумма 13020 грн.
 										.align-items-center.col-3
 											img.mr-15(src='img/common/canceled.svg' alt='image')
@@ -142,7 +146,7 @@ block content
 
 									.list-history_body
 										ul
-											li.flex-center-between
+											li.flex-center-between.flex-wrap
 												a.col-1.align-items-center(href='#')
 													img.list-history_img(src='img/common/product2.jpg')
 													span.lh-21 Котел твердопаливний <br> KRONAS EKO 24кВТ
@@ -152,19 +156,18 @@ block content
 													p.fs-14 Кол: 1
 													p.fs-16 18000 грн
 										.flex-center-between.list-history_delivery 
-											p 
-												span.fw-medium Доставка: 
-												|Новая Почта - отделение
-											.w-50.flex-center-between
-												p.fs-14 Івано-Франківськ, Відділення 49 <br>(вул. Богдана Хмельницького 235/9)
-												p.fs-14 358 грн
+											div
+												p.lh-23 
+													span.fw-medium Доставка: 
+													|Новая Почта - отделение
+												p.fs-12.d-xl-none.mt-8 Івано-Франківськ, Відділення 49 <br>(вул. Богдана Хмельницького 235/9)
+											.w-sm-50.w-40.flex-xl-center-between
+												p.fs-14.d-xl-block.d-none Івано-Франківськ, Відділення 49 <br>(вул. Богдана Хмельницького 235/9)
+												p.fs-14.text-right 358 грн
 										.list-history_footer 
-											.w-50.flex-center-between.ml-auto
+											.w-lg-50.flex-center-between.ml-auto
 												p.fs-18.fw-medium Всего к оплате
 												p.fs-18.fw-medium 40018 грн
-
-
-										
 
 						.account-item
 							.flex-xl-row.flex-column-reverse

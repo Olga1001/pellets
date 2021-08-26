@@ -29,6 +29,8 @@
     .flex-xl-row
         display: flex
         flex-direction: row
+    .flex-xl-center-between
+        +d-flex(space-between,center)
 @media only screen and (min-width : 992px)
     .cart-popup:hover
         opacity: 1
@@ -101,6 +103,8 @@
         &:last-child
             padding-right: 0
             width: 290px
+    .mb-md-30
+        margin-bottom: 30px
 @media only screen and (min-width : 576px)
     .pt-sm-30
         padding-top: 30px
@@ -423,6 +427,43 @@
         max-height: 350px
     .objects-more video
         max-height: 350px
+        
+    .list-history
+        &_head
+            padding: 15px 10px 15px 15px
+            .col-1
+                width: 24% 
+            .col-2
+                width: 26%
+                font-size: 12px
+            .col-3
+                width: calc(50% - 26px)
+                font-size: 12px
+                img.mr-15 
+                    margin-right: 10px
+    .btn-eye
+        +box(26px,24px)
+    .btn-eye svg
+        width: 12px
+    .list-history_body 
+        .col-1
+            width: 100%
+            padding-bottom: 30px
+        .col-2
+            width: 33%
+        .col-3
+            width: 67%
+            .fs-14
+                width: 50%
+                text-align: center
+            .fs-16
+                font-size: 14px
+    .list-history_body ul li, .list-history_delivery
+        padding: 20px 15px
+        align-items: flex-start
+    .list-history_footer
+        padding: 19px 13px
+
 @media only screen and (max-width : 991px)
     .footer-bottom .col
         width: 50%
@@ -823,19 +864,31 @@
          height: calc(100% - 76px)
     .header-c
         background-color: #fff
-        &.fixed-1
-            z-index: 8
-            position: fixed
-            top: 0
-            left: 0
-            width: 100%
-    .header-b
-        &.fixed-1
-            z-index: 9
-            position: fixed
-            top: 73px
-            left: 0
-            width: 100%
+    .header-t
+        transition: all 0.3s ease
+    .header 
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 8
+        &.active .header-t
+            margin-top: -37px
+    .wrapper-content
+        padding-top: 183px
+    //     &.fixed-1
+    //         z-index: 8
+    //         position: fixed
+    //         top: 0
+    //         left: 0
+    //         width: 100%
+    // .header-b
+    //     &.fixed-1
+    //         z-index: 9
+    //         position: fixed
+    //         top: 73px
+    //         left: 0
+    //         width: 100%
     .bookmarks-cards .card
         &:not(:last-child)
             border-bottom: none
@@ -856,6 +909,15 @@
         left: 0
         li:hover
             text-decoration: underline
+    
+    .list-history_img
+        margin-right: 20px
+        width: 40px
+        height: 53px
+    .list-history_footer
+        .fs-18
+            font-size: 16px
+            line-height: 140%
 @media only screen and (max-width : 660px)
     .power-row
         flex-wrap: wrap
@@ -903,7 +965,24 @@
 
             p br 
                 display: none
+    .account-tabs 
+        display: flex 
+        flex-wrap: wrap
+        li
+            width: calc(50% - 7.5px)
+            margin: 0 15px 15px 0
+            font-size: 16px
+            line-height: 17px
+            padding: 10px 20px
+            min-height: 55px
+            +d-flex(center)
+            &:nth-child(2n+2)
+                margin-right: 0
+    .account-left
+        padding-bottom: 30px     
 @media only screen and (max-width : 575px)
+    .wrapper-content
+        padding-top: 181px
     .header-b
         &.fixed-1
             top: 63px
@@ -1383,6 +1462,8 @@
         padding: 15px 0   
     .certifications-row .w-lg-50
         margin-bottom: 40px  
+    .header.active .header-t
+        margin-top: -45px
 @media only screen and (max-width : 360px)
     .navbotom li
         padding: 0

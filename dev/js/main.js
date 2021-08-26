@@ -243,8 +243,6 @@ $(document).ready(function () {
     $('.navbotom').addClass('active');
     $('.header-b .header_right').addClass('active');
     $('.overlay').addClass('active');
-    $('.header-c').removeClass('fixed-1');
-    $('.header-b').removeClass('fixed-1');
   });
 
   $(".btn-close, .header-b .header_right, .popup").on('click', function() {
@@ -291,7 +289,7 @@ $(document).ready(function () {
         $(this).addClass('active').siblings().removeClass('active');
         $(drop).eq(index).addClass('active').siblings().removeClass('active');
         if(scrollTo && window.matchMedia("(max-width: 767px)").matches) {
-          $('body,html').animate({scrollTop: $(scrollTo).offset().top + 'px'}, 500);
+          $('body,html').animate({scrollTop: $(scrollTo).offset().top - 150 + 'px'}, 500);
         }
     });
   }
@@ -301,16 +299,28 @@ $(document).ready(function () {
   
   $(".product-about_right .tabs li").on('click', function() { 
     let _this = $(this);
-    if (_this.text() === 'Оплата/доставка') {
-      $('body,html').animate({scrollTop: $('.information_right').offset().top + 'px'}, 500);
+    if(window.matchMedia("(max-width: 767px)").matches) {
+      if (_this.text() === 'Оплата/доставка') {
+        $('body,html').animate({scrollTop: $('.information_right').offset().top - 150 + 'px'}, 500);
+      } else {
+        $('body,html').animate({scrollTop: $('.information').offset().top - 150 + 'px'}, 500);
+      }
     } else {
-      $('body,html').animate({scrollTop: $('.information').offset().top + 'px'}, 500);
+      if (_this.text() === 'Оплата/доставка') {
+        $('body,html').animate({scrollTop: $('.information_right').offset().top + 'px'}, 500);
+      } else {
+        $('body,html').animate({scrollTop: $('.information').offset().top + 'px'}, 500);
+      }
     }
   });
   $(".tabs li").on('click', function() { 
     let _this = $(this);
     if (_this.text() === 'Оплата/доставка') {
-      $('body,html').animate({scrollTop: $('.information_right').offset().top + 'px'}, 500);
+      if(window.matchMedia("(max-width: 767px)").matches) {
+        $('body,html').animate({scrollTop: $('.information_right').offset().top - 150 + 'px'}, 500);
+      } else {
+        $('body,html').animate({scrollTop: $('.information_right').offset().top - 150 + 'px'}, 500);
+      }
     }
   });
 
@@ -372,15 +382,13 @@ $(document).ready(function () {
 
 });
 $(window).scroll(function () {
-  if ($(window).scrollTop() > 300) {
+  if ($(window).scrollTop() > 100) {
     if (!$('.overlay').hasClass('active')) {
-      $(".header-c").addClass('fixed-1');
-      $(".header-b").addClass('fixed-1');
+      $(".header").addClass('active');
       $('.btn-up').addClass('active');
     }
   } else {
-    $(".header-c").removeClass('fixed-1');
-    $(".header-b").removeClass('fixed-1');
+    $(".header").removeClass('active');
     $('.btn-up').removeClass('active');
   }
 });
