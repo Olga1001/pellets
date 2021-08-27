@@ -214,6 +214,12 @@ $(document).ready(function () {
         slidesToShow: 2
       }
     }]
+  }); //up
+
+  $('.btn-up').on('click', function () {
+    $('body, html').animate({
+      scrollTop: $('body, html').offset().top + 'px'
+    }, 500);
   }); // menu
 
   $(".burger").on('click', function () {
@@ -346,11 +352,6 @@ $(document).ready(function () {
   $('.btn-heart, .btn-weigher').on('click', function (e) {
     e.preventDefault();
     $(this).toggleClass('active');
-  });
-  $('.btn-up').on('click', function () {
-    $('body, html').animate({
-      scrollTop: $('.header').offset().top + 'px'
-    }, 500);
   }); //hide list
 
   function hideList() {

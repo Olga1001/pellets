@@ -238,6 +238,11 @@ $(document).ready(function () {
     ]
   });
 
+  //up
+  $('.btn-up').on('click', function() {
+    $('body, html').animate({scrollTop: $('body, html').offset().top + 'px'}, 500);
+  });
+
   // menu
   $(".burger").on('click', function() {
     $('.navbotom').addClass('active');
@@ -359,9 +364,6 @@ $(document).ready(function () {
     $(this).toggleClass('active');
   })
 
-  $('.btn-up').on('click', function () {
-    $('body, html').animate({scrollTop: $('.header').offset().top + 'px'}, 500);
-  });
 
   //hide list
   function hideList() {
