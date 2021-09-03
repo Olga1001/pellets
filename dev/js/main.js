@@ -329,6 +329,11 @@ $(document).ready(function () {
     }
   });
 
+  $(window).on('click', function () {
+    $('.dropdowm').slideUp(300);
+    $('.messenger-item').removeClass('active');
+  })
+
   //stopPropagation
   $(".stopPropagation").on('click', function(e) {
     e.stopPropagation();

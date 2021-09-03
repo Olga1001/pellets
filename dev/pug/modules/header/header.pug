@@ -19,24 +19,26 @@ header.header
                     button.burger(type="button")
                     a.logo.d-xl-block.d-none(href='#')
                 .header_right.flex-center-between
-                    .messenger.relative(data-item='messenger' data-button='messenger')
+                    .messenger.relative.stopPropagation(data-item='messenger' data-button='messenger')
                         .align-items-center.messenger-item(data-toggle)
                             +icon('phone2')
                             p (044) 384-25-65 
                             +icon('arrow-down')
-                        .dropdowm.stopPropagation
+                        .dropdowm
                             ul
-                                each val in [{icon: 'messenger', text: 'Messenger', bg: 'bg-blue'}, {icon: 'viber', text: 'Viber', bg: 'bg-purple'},{icon: 'telegram', text: 'Telegram', bg: 'bg-blue2'}]
-                                    li.align-items-center
-                                        .circle(class=val.bg)
-                                            +icon(val.icon)
-                                        p.fs-14=val.text
-                                li.align-items-center
-                                    .circle.bg-red
-                                        +icon('phone')
-                                    div
-                                        p.fs-17 (044) 384-25-65
-                                        p.fs-12.c-gray-light пн-пт 09:00 - 19:00
+                                each val in [{icon: 'messenger', text: 'Messenger', bg: 'bg-blue', href: 'https://www.facebook.com/messages/t/pelletshome.com.ua/'}, {icon: 'viber', text: 'Viber', bg: 'bg-purple', href: 'viber://chat?number=%2B380674617749'},{icon: 'telegram', text: 'Telegram', bg: 'bg-blue2', href: 'tg://resolve?domain=name'}]
+                                    li
+                                        a.align-items-center(href=val.href)
+                                            span.circle(class=val.bg)
+                                                +icon(val.icon)
+                                            span.fs-14=val.text
+                                li
+                                    a.align-items-center(href='tel:0443842565')
+                                        span.circle.bg-red
+                                            +icon('phone')
+                                        span
+                                            span.fs-17 (044) 384-25-65
+                                            span.fs-12.c-gray-light.d-block пн-пт 09:00 - 19:00
                             a.btn.d-xl-block.d-none(href='#') Консультация
                     form.search 
                         input(type='text' placeholder='Поиск товаров' required)
