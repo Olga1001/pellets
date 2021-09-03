@@ -1466,6 +1466,28 @@
         margin-top: -45px
     .footer-bottom .col
         width: 100%
+    .mejs__button
+        width: 14px
+        height: 14px
+    .mejs__time-rail, .mejs__time
+        height: 14px
+        padding: 0 5px
+    .mejs__button > button
+        margin: 0 5px
+        +box(14px)
+    .mejs__button > button, .mejs__time-rail
+        padding: 0 5px
+        margin: 0
+        display: flex
+        align-items: center
+    .slider-gallery .slick-arrow
+        +box(25px)
+    .slider-gallery .slick-prev
+        left: 5px
+    .slider-gallery .slick-next
+        right: 5px
+    [data-item='gallery'] .popup-container
+        padding: 5px
 @media only screen and (max-width : 360px)
     .navbotom li
         padding: 0

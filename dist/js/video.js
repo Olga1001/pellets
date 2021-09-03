@@ -7,14 +7,6 @@ $(document).ready(function () {
     // (by default, this is set as `sameDomain`)
     shimScriptAccess: "always",
     // more configuration
-    defaultVideoWidth: "100%",
-    defaultVideoHeight: "",
-    videoWidth: -1,
-    videoHeight: 'auto',
-    defaultAudioWidth: "100%",
-    defaultAudioHeight: "100px",
-    audioWidth: -1,
-    audioHeight: -1,
     startVolume: 0.8,
     loop: false,
     timeFormat: 'hh:mm:ss',

@@ -237,6 +237,12 @@ $(document).ready(function () {
       },
     ]
   });
+  $(".slider-gallery").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true,
+  });
 
   //up
   $('.btn-up').on('click', function() {

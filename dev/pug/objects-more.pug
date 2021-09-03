@@ -34,15 +34,12 @@ block content
 							-var j = 4
 							while (j--)
 								if (j==1)
-									.slide 
-										//img(src='img/common/object.jpg' alt='product')
+									.slide
 										video.video(controls='' loop='' height='100%' width='100%'  muted='' poster='img/common/object.jpg' preload='none' style='max-width: 100%' tabindex='0' title='MediaElement')
-											source(src='https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4' type='video/mp4')
-											track(srclang='en' kind='subtitles' src='mediaelement.vtt')
-											track(srclang='en' kind='chapters' src='chapters.vtt')
+											source(src='img/video.mp4' type='video/mp4')
 											p This browser does not support the video element.
 								else
-									.slide 
+									.slide(data-button='gallery')
 										img(src='img/common/object.jpg' alt='product')
 					.col.flex-column.justify-content-between
 						div
@@ -96,7 +93,14 @@ block content
 							input.bg-white(type='email' placeholder='E-mail *' required)
 							button.btn.bg-orange.c-white(type='submit') Подписатся
 						p.fs-13.c-pink *Оформляя подписку вы даете согласие на обработку персональных данных
-						
+	.popup(data-item='gallery')
+		.popup-container.stopPropagation 
+			.slider-gallery
+				-var n = 3
+				while (n--)
+					.slide 
+						img(src='img/common/object.jpg' alt='object')
+
 block script
 	script(src="js/mediaelement-and-player.min.js")
 	script(src='js/video.js')

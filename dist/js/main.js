@@ -214,6 +214,12 @@ $(document).ready(function () {
         slidesToShow: 2
       }
     }]
+  });
+  $(".slider-gallery").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true
   }); //up
 
   $('.btn-up').on('click', function () {
