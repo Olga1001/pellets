@@ -242,6 +242,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     dots: false,
     arrows: true,
+    asNavFor: '.slider-for, .slider-nav2',
   });
 
   //up

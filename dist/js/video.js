@@ -10,7 +10,7 @@ $(document).ready(function () {
     startVolume: 0.8,
     loop: false,
     timeFormat: 'hh:mm:ss',
-    features: ['playpause', 'tracks', 'volume', 'fullscreen', 'current', 'duration', 'progress'],
+    // features: ['playpause', 'tracks', 'volume', 'fullscreen','current','duration', 'progress'],
     audioVolume: 'vertical',
     // start with English automatically turned on
     startLanguage: 'en',
@@ -24,6 +24,8 @@ $(document).ready(function () {
       this.player.pause();
     });
   });
-  $('.mejs__button.mejs__play').after($('.mejs__time-rail'));
-  $('.mejs__time-rail').after($('.mejs__time'));
+});
+document.querySelectorAll('.video').forEach(function (el) {
+  el.querySelector('.mejs__button.mejs__play').after(el.querySelector('.mejs__time-rail'));
+  el.querySelector('.mejs__time-rail').after(el.querySelector('.mejs__time'));
 });

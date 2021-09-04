@@ -624,6 +624,10 @@
         width: calc(100% - 320px)
     .payment-delivery .w-lg-50:first-child
         max-width: 100%
+    .slider-gallery .slide
+        height: 420px
+    .slider-gallery .slick-arrow
+        margin: 0
 @media only screen and (max-width : 767px)
     .objects-more .slider-for .slide
         min-height: auto
@@ -876,19 +880,6 @@
             margin-top: -37px
     .wrapper-content
         padding-top: 183px
-    //     &.fixed-1
-    //         z-index: 8
-    //         position: fixed
-    //         top: 0
-    //         left: 0
-    //         width: 100%
-    // .header-b
-    //     &.fixed-1
-    //         z-index: 9
-    //         position: fixed
-    //         top: 73px
-    //         left: 0
-    //         width: 100%
     .bookmarks-cards .card
         &:not(:last-child)
             border-bottom: none
@@ -909,7 +900,8 @@
         left: 0
         li:hover
             text-decoration: underline
-    
+    .slider-gallery .slide
+        height: 300px
     .list-history_img
         margin-right: 20px
         width: 40px
@@ -1488,6 +1480,8 @@
         right: 5px
     [data-item='gallery'] .popup-container
         padding: 5px
+    .slider-gallery .slide
+        height: 250px
 @media only screen and (max-width : 360px)
     .navbotom li
         padding: 0

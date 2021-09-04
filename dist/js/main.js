@@ -219,7 +219,8 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: false,
-    arrows: true
+    arrows: true,
+    asNavFor: '.slider-for, .slider-nav2'
   }); //up
 
   $('.btn-up').on('click', function () {
