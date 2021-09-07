@@ -44,9 +44,13 @@ block content
 							-var j = 5
 							while (j--)
 								if (j==1)
-									.slide 
-										img(src='img/common/product3.jpg' alt='product')
-										.play
+									//- .slide 
+									//- 	img(src='img/common/product3.jpg' alt='product')
+									//- 	.play
+									.slide
+										video.video(controls='' height='100%' width='100%'  poster='img/common/product3.jpg' preload='none' style='max-width: 100%' tabindex='0' title='MediaElement')
+											source(src='img/video.mp4' type='video/mp4')
+											p This browser does not support the video element.
 								else
 									.slide 
 										img(src='img/common/product3.jpg' alt='product')
@@ -519,3 +523,7 @@ block content
 						
 				.popup-calculation_right
 					img.carcass(src='img/common/carcass.png' alt='image carcass')
+
+block script
+	script(src="js/mediaelement-and-player.min.js")
+	script(src='js/video.js')

@@ -95,7 +95,7 @@
                           <use xlink:href="img/sprite/symbol/sprite.svg#heart"></use>
                         </svg><span class="d-xl-none d-block">Обране</span></a></li>
                     <li><a href="#"><img src="img/common/calculate.svg"><span class="d-xl-none d-block">Калькулятор</span></a></li>
-                    <li class="d-xl-none" data-button="messenger"><a href="#">
+                    <li class="d-xl-none" data-button="messenger"><a href="tel:0443842565">
                         <svg class="svg-sprite-icon icon-phone2">
                           <use xlink:href="img/sprite/symbol/sprite.svg#phone2"></use>
                         </svg><span class="d-xl-none d-block">Подзвонити</span></a></li>
@@ -512,8 +512,11 @@
                     <div class="slide"> <img src="img/common/product3.jpg" alt="product"></div>
                     <div class="slide"> <img src="img/common/product3.jpg" alt="product"></div>
                     <div class="slide"> <img src="img/common/product3.jpg" alt="product"></div>
-                    <div class="slide"> <img src="img/common/product3.jpg" alt="product">
-                      <div class="play"></div>
+                    <div class="slide">
+                      <video class="video" controls="" height="100%" width="100%" poster="img/common/product3.jpg" preload="none" style="max-width: 100%" tabindex="0" title="MediaElement">
+                        <source src="img/video.mp4" type="video/mp4">
+                        <p>This browser does not support the video element.</p>
+                      </video>
                     </div>
                     <div class="slide"> <img src="img/common/product3.jpg" alt="product"></div>
                   </div>
@@ -1294,6 +1297,8 @@
       </div>
     </div>
     <script src="js/jquery.min.js"></script>
+    <script src="js/mediaelement-and-player.min.js"></script>
+    <script src="js/video.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
