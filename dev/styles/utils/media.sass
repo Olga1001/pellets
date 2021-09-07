@@ -483,6 +483,8 @@
         width: calc(100% + 32px)
         padding: 0
         background: #FFFFFF
+        max-height: calc(100vh - 183px)
+        overflow-y: auto
         box-shadow: 0px 4px 4px rgba(0, 0, 0,0.25)
     .catalog-m .col
         max-width: 100%
@@ -878,6 +880,7 @@
         z-index: 8
         &.active .header-t
             margin-top: -37px
+            
     .wrapper-content
         padding-top: 183px
     .bookmarks-cards .card
@@ -910,6 +913,8 @@
         .fs-18
             font-size: 16px
             line-height: 140%
+    .header.active.catalog-drop
+        max-height: calc(100vh - 146px)
 @media only screen and (max-width : 660px)
     .power-row
         flex-wrap: wrap
@@ -972,14 +977,20 @@
                 margin-right: 0
     .account-left
         padding-bottom: 30px     
+    .catalog-item:after
+        content: none
 @media only screen and (max-width : 575px)
+    .catalog-drop
+        max-height: calc(100vh - 209px)
+    .header.active.catalog-drop
+        max-height: calc(100vh - 136px)
     .wrapper-content
-        padding-top: 181px
+        padding-top: 209px
     .header-b
         &.fixed-1
             top: 63px
     .header
-        min-height: 181px
+        min-height: 209px
     .icon-user
         margin-bottom: 4px
     .input, .textarea, input, textarea, input[type="email"]
@@ -1455,7 +1466,7 @@
     .certifications-row .w-lg-50
         margin-bottom: 40px  
     .header.active .header-t
-        margin-top: -45px
+        margin-top: -73px
     .footer-bottom .col
         width: 100%
     .mejs__button
