@@ -340,6 +340,8 @@ $(document).ready(function () {
     $('.dropdowm').slideUp(300);
     $('.catalog-drop').slideUp(300);
     $('.messenger-item').removeClass('active');
+    $('.icon-close').removeClass('active');
+    $('.icon-menu').addClass('active');
   })
 
   //stopPropagation
