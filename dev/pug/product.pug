@@ -4,8 +4,9 @@ block variables
 	-var title = 'Карточка товара'
 	-var page = 'product-page'
 
-block link
-
+block link 
+	link(rel="stylesheet" type='text/css' href="vendor/mediaelementplayer.min.css")
+	
 block content
 	main
 		.container
@@ -44,9 +45,6 @@ block content
 							-var j = 5
 							while (j--)
 								if (j==1)
-									//- .slide 
-									//- 	img(src='img/common/product3.jpg' alt='product')
-									//- 	.play
 									.slide
 										video.video(controls='' height='100%' width='100%' poster='img/common/product3.jpg' preload='none' style='max-width: 100%' title='MediaElement')
 											source(src='img/video.mp4' type='video/mp4')

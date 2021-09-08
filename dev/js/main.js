@@ -338,6 +338,7 @@ $(document).ready(function () {
 
   $(window).on('click', function () {
     $('.dropdowm').slideUp(300);
+    $('.catalog-drop').slideUp(300);
     $('.messenger-item').removeClass('active');
   })
 
