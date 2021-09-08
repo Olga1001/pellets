@@ -444,10 +444,15 @@ table
       background: $white
 .mejs__overlay-error
   background: #000
+.mejs__poster.mejs__layer, .mejs__offscreen
+  display: none
+.mejs__container
+  background: #000
 .mejs__overlay-button 
   background: #E96D5F
   border-radius: 50%
   +box(87px)
+  +centerXY
   &:before
     content: ''
     +centerXY
@@ -490,6 +495,14 @@ video
   width: 100%
 .mejs__controls
   align-items: center
+  display: flex
+  justify-content: space-between
+  position: absolute
+  left: 0
+  bottom: 0
+  width: 100%
+.mejs__button.mejs__volume-button.mejs__mute
+  +box(18px)
 .mejs__container
   width: 100%
   min-width: auto!important
