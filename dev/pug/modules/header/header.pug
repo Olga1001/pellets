@@ -28,7 +28,7 @@ header.header
                             ul
                                 each val in [{icon: 'messenger', text: 'Messenger', bg: 'bg-blue', href: 'https://www.facebook.com/messages/t/pelletshome.com.ua/'}, {icon: 'viber', text: 'Viber', bg: 'bg-purple', href: 'viber://chat?number=%2B380674617749'},{icon: 'telegram', text: 'Telegram', bg: 'bg-blue2', href: 'tg://resolve?domain=name'}]
                                     li
-                                        a.align-items-center(href=val.href)
+                                        a.align-items-center(href=val.href target="_blank")
                                             span.circle(class=val.bg)
                                                 +icon(val.icon)
                                             span.fs-14=val.text
