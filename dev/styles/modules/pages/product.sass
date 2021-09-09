@@ -64,7 +64,7 @@
                 border-width: 6.5px 0 6.5px 6px
 .slider-for
     .slide
-        +box(100%)
+        +box(100%!important)
         max-width: 439px 
         max-height: 439px
         img 
@@ -219,6 +219,10 @@
 .information
     .tabs 
         padding: 0
+        li 
+            margin: 0 30px
+            &:first-child
+                margin-left: 0
     &_left
         max-width: 680px 
         padding-right: 20px

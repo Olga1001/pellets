@@ -290,6 +290,10 @@ $(document).ready(function () {
   tabActive(".tabs li", ".information .tabs li");
   tabActive(".account-tabs li", ".account-item", ".account-right"); //account tabs
 
+  $("#forgot-pass").on('click', function () {
+    $(this).closest('form').find('input, .c-gray, button').hide();
+    $('.send-pass').show();
+  });
   $(".product-about_right .tabs li").on('click', function () {
     var _this = $(this);
 

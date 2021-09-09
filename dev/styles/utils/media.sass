@@ -167,8 +167,6 @@
         width: 750px
     .tabs
         padding: 0 15px
-    .product-about_left .relative
-        max-width: 360px
     .product-stock
         top: 0
         right: -20px
@@ -178,14 +176,17 @@
     .object_img img
         height: 20.7vw
     .objects-more .slider-for
-        max-width: 400px
-        max-height: 250px
+        max-width: 500px
+        max-height: 350px
         margin: auto
     .mejs__container
         height: auto
         max-height: 250px
-    .objects-more video
-        max-height: 250px
+    .objects-more 
+        video
+            max-height: 100%
+        .mejs__container
+            max-height: 325px
     .product .mejs__container, .product video
         height: 30.27vw!important
         max-height: 100%
@@ -195,7 +196,13 @@
         width: 50%
     .account-left, .account-right form
         margin-right: 40px
-    
+    .product-about_left .relative
+        max-width: 360px
+    .objects-more .slider-for
+        max-width: 450px
+        max-height: 300px
+    .objects-more .mejs__container
+        max-height: 290px
 @media only screen and (max-width: 1199px)
     .header .card-reverse
         display: none
@@ -468,6 +475,9 @@
         padding: 19px 13px
     .product .mejs__container, .product video
         height: 600px !important
+    .objects-more .mejs__container
+        max-height: 385px
+
 @media only screen and (max-width : 991px)
     .footer-bottom .col
         width: 50%
@@ -921,7 +931,11 @@
             line-height: 140%
     .header.active.catalog-drop
         max-height: calc(100vh - 146px)
+    .objects-more .mejs__container
+        max-height: 180px
 @media only screen and (max-width : 660px)
+    .information .tabs li 
+        margin: 0 20px
     .power-row
         flex-wrap: wrap
         width: 100%
@@ -1502,6 +1516,10 @@
     .product .mejs__container, .product video
         height: 217px!important
 @media only screen and (max-width : 360px)
+    .mejs__container
+        max-height: 160px
+    .objects-more .mejs__container
+        max-height: 155px
     .navbotom li
         padding: 0
     .cart-popup_container

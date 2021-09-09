@@ -18,7 +18,7 @@ block content
 				h1.fs-40.mb-20.d-md-block.d-none Вход в личный кабинет
 				.flex-wrap.signin-row
 					.w-lg-50.w-100.br-lg-1.mb-30
-						form.max-371.mx-auto
+						form.form-signin.max-371.mx-auto
 							h2.fs-24.fw-medium.text-up.mb-20 Вход в личный кабинет
 							p.pt-20.flex-center-center.mb-30 
 								span.mr-15.fs-18 Вход с помощью
@@ -26,8 +26,11 @@ block content
 									img(src='img/common/google_icon.svg' alt='google')
 							input.input2(type='text' placeholder='Логин' required)
 							input.input2(type='text' placeholder='Пароль' required)
-							a.text-center.fs-18.c-gray.mb-30(href='#') Забыли пароль?
+							a.text-center.fs-18.c-gray.mb-30#forgot-pass(href='#') Забыли пароль?
 							button.btn.big.max-285.mx-auto(type='submit') Войти
+						form.send-pass.max-371.mx-auto(hidden)
+							input.input2.mb-30(type='email' placeholder='E-mail' required)
+							button.btn.big.max-285.mx-auto(type='submit') отправить пароль
 					.w-lg-50.w-100
 						form.max-371.mx-auto
 							h2.fs-24.fw-medium.text-up.mb-20 Создать  Учетную запись
