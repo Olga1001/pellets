@@ -50,7 +50,7 @@ block content
 											source(src='img/video.mp4' type='video/mp4')
 											p This browser does not support the video element.
 								else
-									.slide 
+									.slide(data-button='gallery') 
 										img(src='img/common/product3.jpg' alt='product')
 								
 				.product-about_right
@@ -490,7 +490,19 @@ block content
 							button.btn.bg-orange.c-white(type='submit') Подписатся
 						p.fs-13.c-pink *Оформляя подписку вы даете согласие на обработку персональных данных
 
-
+	.popup(data-item='gallery')
+		.popup-container.stopPropagation 
+			.slider-gallery
+				-var n = 5
+				while (n--)
+					if (n==1)
+						.slide
+							video.video(controls='' height='100%' width='100%'  poster='img/common/product3.jpg' preload='none' style='max-width: 100%' tabindex='0' title='MediaElement')
+								source(src='img/video.mp4' type='video/mp4')
+								p This browser does not support the video element.
+					else 
+						.slide 
+							img(src='img/common/product3.jpg' alt='product')
 	.popup(data-item='calculation')
 		.popup-container.stopPropagation 
 			button.btn-close.ml-auto(type='button')

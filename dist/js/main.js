@@ -220,7 +220,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     dots: false,
     arrows: true,
-    asNavFor: '.slider-for, .slider-nav2'
+    asNavFor: '.slider-for, .slider-nav2, .slider-nav'
   }); //up
 
   $('.btn-up').on('click', function () {
